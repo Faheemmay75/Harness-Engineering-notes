@@ -1,0 +1,396 @@
+In video one, we covered why harnesses In video one, we covered why harnesses
+matter. In video two, we dissected matter. In video two, we dissected matter. In video two, we dissected
+anthropics implementation. anthropics implementation. anthropics implementation.
+Now, let's build your own using Now, let's build your own using Now, let's build your own using
+universal patterns that work with any universal patterns that work with any universal patterns that work with any
+model, any language, any tech stack. model, any language, any tech stack. model, any language, any tech stack.
+These aren't Python patterns or clawed These aren't Python patterns or clawed These aren't Python patterns or clawed
+patterns. They're architectural patterns patterns. They're architectural patterns patterns. They're architectural patterns
+that solve fundamental problems every that solve fundamental problems every that solve fundamental problems every
+harness faces. memory, startup, harness faces. memory, startup, harness faces. memory, startup,
+orchestration, efficiency, and safety. orchestration, efficiency, and safety. orchestration, efficiency, and safety.
+Whether you're using GPT4 with Whether you're using GPT4 with Whether you're using GPT4 with
+TypeScript, Claude with Python, or TypeScript, Claude with Python, or TypeScript, Claude with Python, or
+Gemini with Go, these five patterns Gemini with Go, these five patterns Gemini with Go, these five patterns
+apply. The implementations vary, the apply. The implementations vary, the apply. The implementations vary, the
+patterns are universal. In 2026, you patterns are universal. In 2026, you patterns are universal. In 2026, you
+don't write harness code line by line. don't write harness code line by line. don't write harness code line by line.
+You direct an LLM to build it for you. You direct an LLM to build it for you. You direct an LLM to build it for you.
+This video gives you the prompts, the This video gives you the prompts, the This video gives you the prompts, the
+validation checklists, and the decision validation checklists, and the decision validation checklists, and the decision
+frameworks to build these patterns your frameworks to build these patterns your frameworks to build these patterns your
+way in your stack. way in your stack. way in your stack.
+Let's start with the absolute minimum. Let's start with the absolute minimum. Let's start with the absolute minimum.
+Three components: a progress file, an Three components: a progress file, an Three components: a progress file, an
+init script, and a loop. That's it. init script, and a loop. That's it. init script, and a loop. That's it.
+Here's what you need to understand Here's what you need to understand Here's what you need to understand
+conceptually. The progress file saves conceptually. The progress file saves conceptually. The progress file saves
+state between sessions. The init script state between sessions. The init script state between sessions. The init script
+ensures every session starts with a ensures every session starts with a ensures every session starts with a
+working environment. The loop working environment. The loop working environment. The loop
+orchestrates sessions until the project orchestrates sessions until the project orchestrates sessions until the project
+completes. Now, here's the prompt you completes. Now, here's the prompt you completes. Now, here's the prompt you
+give your LLM. Build a minimal agent give your LLM. Build a minimal agent give your LLM. Build a minimal agent
+harness with three files. Progress MD harness with three files. Progress MD harness with three files. Progress MD
+for context persistence, init.sh for for context persistence, init.sh for for context persistence, init.sh for
+environment setup, and hardest.py that environment setup, and hardest.py that environment setup, and hardest.py that
+loops sessions and loads context from loops sessions and loads context from loops sessions and loads context from
+ProgressMD before each run. The LLM ProgressMD before each run. The LLM ProgressMD before each run. The LLM
+generates the code in 30 seconds. Your generates the code in 30 seconds. Your generates the code in 30 seconds. Your
+job is validation. Three tests. First, job is validation. Three tests. First, job is validation. Three tests. First,
+run two sessions. Does session two run two sessions. Does session two run two sessions. Does session two
+successfully read what session one successfully read what session one successfully read what session one
+wrote? Second, does a nit.sh run wrote? Second, does a nit.sh run wrote? Second, does a nit.sh run
+reliably multiple times without reliably multiple times without reliably multiple times without
+breaking? Third, does the loop continue breaking? Third, does the loop continue breaking? Third, does the loop continue
+until you signal completion? If all until you signal completion? If all until you signal completion? If all
+three pass, you have a working minimal three pass, you have a working minimal three pass, you have a working minimal
+harness. If any fail, refine your prompt harness. If any fail, refine your prompt harness. If any fail, refine your prompt
+and regenerate. Add error handling from and regenerate. Add error handling from and regenerate. Add error handling from
+missing progress file or make missing progress file or make missing progress file or make
+init.shidton. init.shidton. init.shidton.
+Iterate until validation passes. Iterate until validation passes. Iterate until validation passes.
+This is the modern workflow. Specify the This is the modern workflow. Specify the This is the modern workflow. Specify the
+pattern. Prompt the LLM. Validate the pattern. Prompt the LLM. Validate the pattern. Prompt the LLM. Validate the
+behavior. Start here before adding any behavior. Start here before adding any behavior. Start here before adding any
+complexity. complexity. complexity.
+First pattern progress files. Let me First pattern progress files. Let me First pattern progress files. Let me
+show you how to direct an LLM to build show you how to direct an LLM to build show you how to direct an LLM to build
+this without writing any code yourself. this without writing any code yourself. this without writing any code yourself.
+The concept is simple. Agents need to The concept is simple. Agents need to The concept is simple. Agents need to
+read their own history from disk, not read their own history from disk, not read their own history from disk, not
+from memory. Each session writes, from memory. Each session writes, from memory. Each session writes,
+"Here's what I did. Here's what's next. "Here's what I did. Here's what's next. "Here's what I did. Here's what's next.
+The next session reads that before The next session reads that before The next session reads that before
+starting work. Here's the prompt. starting work. Here's the prompt. starting work. Here's the prompt.
+Implement a progress file system where Implement a progress file system where Implement a progress file system where
+agents append session summaries to agents append session summaries to agents append session summaries to
+progress.md progress.md progress.md
+format markdown with session number, format markdown with session number, format markdown with session number,
+timestamp, completed tasks, current timestamp, completed tasks, current timestamp, completed tasks, current
+status, and next steps. Make it human status, and next steps. Make it human status, and next steps. Make it human
+readable. The LLM generates the readable. The LLM generates the readable. The LLM generates the
+implementation. Now validate. Test one. implementation. Now validate. Test one. implementation. Now validate. Test one.
+Run three agent sessions. Can you read Run three agent sessions. Can you read Run three agent sessions. Can you read
+progress.md and understand the full progress.md and understand the full progress.md and understand the full
+journey? Test two, delete progress.mmd journey? Test two, delete progress.mmd journey? Test two, delete progress.mmd
+and start fresh. Does it handle the and start fresh. Does it handle the and start fresh. Does it handle the
+missing file gracefully? Test three, missing file gracefully? Test three, missing file gracefully? Test three,
+have session five reference something have session five reference something have session five reference something
+from session two. Does the context from session two. Does the context from session two. Does the context
+loading work? If validation passes, loading work? If validation passes, loading work? If validation passes,
+you're done. If not, refine. Add more you're done. If not, refine. Add more you're done. If not, refine. Add more
+structure to the markdown or include structure to the markdown or include structure to the markdown or include
+error context when tasks fail. The LLM error context when tasks fail. The LLM error context when tasks fail. The LLM
+regenerates. You revalidate. Notice what regenerates. You revalidate. Notice what regenerates. You revalidate. Notice what
+we didn't do. We didn't debate JSON we didn't do. We didn't debate JSON we didn't do. We didn't debate JSON
+versus markdown versus plain text. We versus markdown versus plain text. We versus markdown versus plain text. We
+didn't write parsing logic. We specified didn't write parsing logic. We specified didn't write parsing logic. We specified
+the pattern. The LLM implemented it and the pattern. The LLM implemented it and the pattern. The LLM implemented it and
+we validated the behavior. That's the we validated the behavior. That's the we validated the behavior. That's the
+2026 way. 2026 way. 2026 way.
+Second pattern initialization scripts. Second pattern initialization scripts. Second pattern initialization scripts.
+Every session needs a working Every session needs a working Every session needs a working
+environment. Server running, environment. Server running, environment. Server running,
+dependencies installed, database ready. dependencies installed, database ready. dependencies installed, database ready.
+Without an init script, the agent wastes Without an init script, the agent wastes Without an init script, the agent wastes
+time figuring this out. every session. time figuring this out. every session. time figuring this out. every session.
+The key property is item potence. You The key property is item potence. You The key property is item potence. You
+should be able to run the script should be able to run the script should be able to run the script
+multiple times safely. It checks what's multiple times safely. It checks what's multiple times safely. It checks what's
+already set up and only does what's already set up and only does what's already set up and only does what's
+needed. Here's the prompt for your tech needed. Here's the prompt for your tech needed. Here's the prompt for your tech
+stack. For NodeJS, create a nit.sh that stack. For NodeJS, create a nit.sh that stack. For NodeJS, create a nit.sh that
+installs npm dependencies if missing, installs npm dependencies if missing, installs npm dependencies if missing,
+kills any existing dev server on port kills any existing dev server on port kills any existing dev server on port
+3000, starts a fresh server in 3000, starts a fresh server in 3000, starts a fresh server in
+background, waits for it to be ready, background, waits for it to be ready, background, waits for it to be ready,
+and prints ready when done. Make it item and prints ready when done. Make it item and prints ready when done. Make it item
+potent for Python. Create a nit.sh that potent for Python. Create a nit.sh that potent for Python. Create a nit.sh that
+activates virtual environment. Installs activates virtual environment. Installs activates virtual environment. Installs
+requirements if changed. Runs database requirements if changed. Runs database requirements if changed. Runs database
+migrations. Hills existing Django migrations. Hills existing Django migrations. Hills existing Django
+server. Starts new server in background. server. Starts new server in background. server. Starts new server in background.
+Verifies it's responding. Prints ready. Verifies it's responding. Prints ready. Verifies it's responding. Prints ready.
+The LLM adapts the pattern to your The LLM adapts the pattern to your The LLM adapts the pattern to your
+stack. Now validate. Run init.sh five stack. Now validate. Run init.sh five stack. Now validate. Run init.sh five
+times in a row. Does it work every time times in a row. Does it work every time times in a row. Does it work every time
+without errors? Kill the server manually without errors? Kill the server manually without errors? Kill the server manually
+and run init.s. SH does it recover? and run init.s. SH does it recover? and run init.s. SH does it recover?
+Change a dependency and run it. Does it Change a dependency and run it. Does it Change a dependency and run it. Does it
+reinstall? If it passes, you have a reinstall? If it passes, you have a reinstall? If it passes, you have a
+reliable in it script. If it fails, reliable in it script. If it fails, reliable in it script. If it fails,
+maybe it doesn't kill old processes maybe it doesn't kill old processes maybe it doesn't kill old processes
+correctly. Refine the prompt. Add correctly. Refine the prompt. Add correctly. Refine the prompt. Add
+pkill-f pkill-f pkill-f
+pattern to ensure old processes are pattern to ensure old processes are pattern to ensure old processes are
+terminated. Regenerate and retest. terminated. Regenerate and retest. terminated. Regenerate and retest.
+Third pattern, the session loop. This Third pattern, the session loop. This Third pattern, the session loop. This
+orchestrates everything. starting orchestrates everything. starting orchestrates everything. starting
+sessions, loading context, checking if sessions, loading context, checking if sessions, loading context, checking if
+work is complete, repeating until done. work is complete, repeating until done. work is complete, repeating until done.
+The simplest version is literally a The simplest version is literally a The simplest version is literally a
+while loop. While not done, load while loop. While not done, load while loop. While not done, load
+context, run agent, save progress, context, run agent, save progress, context, run agent, save progress,
+repeat, but you can add production repeat, but you can add production repeat, but you can add production
+features, cost tracking, session limits, features, cost tracking, session limits, features, cost tracking, session limits,
+error handling. Here's the basic prompt. error handling. Here's the basic prompt. error handling. Here's the basic prompt.
+Create harness.py with a while loop that Create harness.py with a while loop that Create harness.py with a while loop that
+loads progress. MD runs an agent session loads progress. MD runs an agent session loads progress. MD runs an agent session
+with that context, saves the updated with that context, saves the updated with that context, saves the updated
+progress, and repeats until progress progress, and repeats until progress progress, and repeats until progress
+contains project complete. For contains project complete. For contains project complete. For
+production features, add cost tracking production features, add cost tracking production features, add cost tracking
+that stops if total exceeds $100. Add that stops if total exceeds $100. Add that stops if total exceeds $100. Add
+session limit of 50 max. Add error session limit of 50 max. Add error session limit of 50 max. Add error
+handling that retries once on failure, handling that retries once on failure, handling that retries once on failure,
+then halts and notifies. Log each then halts and notifies. Log each then halts and notifies. Log each
+session's duration and cost. The LLM session's duration and cost. The LLM session's duration and cost. The LLM
+builds what you specify. Validate the builds what you specify. Validate the builds what you specify. Validate the
+basic loop first. Does it run three basic loop first. Does it run three basic loop first. Does it run three
+sessions successfully? Does it load sessions successfully? Does it load sessions successfully? Does it load
+context each time? Does it stop when you context each time? Does it stop when you context each time? Does it stop when you
+signal completion? Then validate the signal completion? Then validate the signal completion? Then validate the
+guard rails. Hit the cost limit guard rails. Hit the cost limit guard rails. Hit the cost limit
+intentionally. Does it stop? Cause an intentionally. Does it stop? Cause an intentionally. Does it stop? Cause an
+error? Does it retry then fail error? Does it retry then fail error? Does it retry then fail
+gracefully? Build incrementally. Get the gracefully? Build incrementally. Get the gracefully? Build incrementally. Get the
+basic loop working. Then add one feature basic loop working. Then add one feature basic loop working. Then add one feature
+at a time. Validate after each addition. at a time. Validate after each addition. at a time. Validate after each addition.
+This prevents debugging a complex This prevents debugging a complex This prevents debugging a complex
+system. you always know what broke it. system. you always know what broke it. system. you always know what broke it.
+Fourth pattern, smart context loading. Fourth pattern, smart context loading. Fourth pattern, smart context loading.
+Don't dump your entire codebase into Don't dump your entire codebase into Don't dump your entire codebase into
+every prompt. That's wasteful and hits every prompt. That's wasteful and hits every prompt. That's wasteful and hits
+limits fast. Load progressively based on limits fast. Load progressively based on limits fast. Load progressively based on
+priority. Always load progress file and priority. Always load progress file and priority. Always load progress file and
+current task. Usually load recent git current task. Usually load recent git current task. Usually load recent git
+commits and project readme. Sometimes commits and project readme. Sometimes commits and project readme. Sometimes
+load files mentioned in progress. Rarely load files mentioned in progress. Rarely load files mentioned in progress. Rarely
+load entire codebase, only when load entire codebase, only when load entire codebase, only when
+explicitly needed. Here's the prompt. explicitly needed. Here's the prompt. explicitly needed. Here's the prompt.
+Implement progressive context loading. Implement progressive context loading. Implement progressive context loading.
+Always load progress.md and current Always load progress.md and current Always load progress.md and current
+task. Usually load last 20 git commits task. Usually load last 20 git commits task. Usually load last 20 git commits
+via gitlog.online-20 via gitlog.online-20 via gitlog.online-20
+and readme. Sometimes load files and readme. Sometimes load files and readme. Sometimes load files
+mentioned in progress.md by parsing for mentioned in progress.md by parsing for mentioned in progress.md by parsing for
+file paths. Rarely load full codebase. file paths. Rarely load full codebase. file paths. Rarely load full codebase.
+only if progress contains load full only if progress contains load full only if progress contains load full
+context. The LLM builds the loading context. The LLM builds the loading context. The LLM builds the loading
+logic with priority levels. Now validate logic with priority levels. Now validate logic with priority levels. Now validate
+SHP context size on session start should SHP context size on session start should SHP context size on session start should
+be 50 to 100 KB for typical sessions, be 50 to 100 KB for typical sessions, be 50 to 100 KB for typical sessions,
+not 5 MB. Have the agent request full not 5 MB. Have the agent request full not 5 MB. Have the agent request full
+context explicitly. Does it load? Run 10 context explicitly. Does it load? Run 10 context explicitly. Does it load? Run 10
+sessions and measure average context sessions and measure average context sessions and measure average context
+size. If context is too large, refine. size. If context is too large, refine. size. If context is too large, refine.
+be more selective in file loading or be more selective in file loading or be more selective in file loading or
+limit git log to 10 commits instead of limit git log to 10 commits instead of limit git log to 10 commits instead of
+20. If it's too sparse and the agent 20. If it's too sparse and the agent 20. If it's too sparse and the agent
+keeps asking for more context, refine keeps asking for more context, refine keeps asking for more context, refine
+load readme and package.json by default. load readme and package.json by default. load readme and package.json by default.
+The goal is efficiency without The goal is efficiency without The goal is efficiency without
+sacrificing capability. The LLM finds sacrificing capability. The LLM finds sacrificing capability. The LLM finds
+the balance based on your the balance based on your the balance based on your
+specifications. specifications. specifications.
+Fifth pattern guard rails. Your agent Fifth pattern guard rails. Your agent Fifth pattern guard rails. Your agent
+will make mistakes. It will try will make mistakes. It will try will make mistakes. It will try
+destructive operations. It will burn destructive operations. It will burn destructive operations. It will burn
+through your budget if you let it. Guard through your budget if you let it. Guard through your budget if you let it. Guard
+rails prevent disasters before they rails prevent disasters before they rails prevent disasters before they
+happen. Three types are essential. Cost happen. Three types are essential. Cost happen. Three types are essential. Cost
+limits, command restrictions, and human limits, command restrictions, and human limits, command restrictions, and human
+approval gates. For cost limits, approval gates. For cost limits, approval gates. For cost limits,
+implement cost tracking that stops implement cost tracking that stops implement cost tracking that stops
+execution if session exceeds $5 or execution if session exceeds $5 or execution if session exceeds $5 or
+project exceeds 100. Track token usage project exceeds 100. Track token usage project exceeds 100. Track token usage
+per API call. Calculate cost. Accumulate per API call. Calculate cost. Accumulate per API call. Calculate cost. Accumulate
+totals. Raise cost limit exceeded when totals. Raise cost limit exceeded when totals. Raise cost limit exceeded when
+threshold hit. For command restrictions. threshold hit. For command restrictions. threshold hit. For command restrictions.
+Create a command blocker that rejects Create a command blocker that rejects Create a command blocker that rejects
+bash commands matching these patterns. bash commands matching these patterns. bash commands matching these patterns.
+RM-rf/rop RM-rf/rop RM-rf/rop
+database get push force pseudochemod777. database get push force pseudochemod777. database get push force pseudochemod777.
+Also block rights to SLETC/SIS Also block rights to SLETC/SIS Also block rights to SLETC/SIS
+SSH. Return error to agent explaining SSH. Return error to agent explaining SSH. Return error to agent explaining
+why command was blocked. For approval why command was blocked. For approval why command was blocked. For approval
+gates before executing git push, npm gates before executing git push, npm gates before executing git push, npm
+publish or terraform apply. Pause publish or terraform apply. Pause publish or terraform apply. Pause
+execution. Show the human exactly what execution. Show the human exactly what execution. Show the human exactly what
+will happen and require explicit yes will happen and require explicit yes will happen and require explicit yes
+input. If denied, raise action denied input. If denied, raise action denied input. If denied, raise action denied
+exception. The LLM implements all three. exception. The LLM implements all three. exception. The LLM implements all three.
+Validate each. Intentionally trigger the Validate each. Intentionally trigger the Validate each. Intentionally trigger the
+cost limit. Does it stop? Try a cost limit. Does it stop? Try a cost limit. Does it stop? Try a
+forbidden command. Is it blocked? forbidden command. Is it blocked? forbidden command. Is it blocked?
+Request a production deployment. Does it Request a production deployment. Does it Request a production deployment. Does it
+pause for approval? These aren't pause for approval? These aren't pause for approval? These aren't
+optional. Without guard rails, you're optional. Without guard rails, you're optional. Without guard rails, you're
+one bug away from disaster. With them, one bug away from disaster. With them, one bug away from disaster. With them,
+failures are bounded and safe. failures are bounded and safe. failures are bounded and safe.
+Now, let's put all five patterns Now, let's put all five patterns Now, let's put all five patterns
+together. But here's the key. Don't together. But here's the key. Don't together. But here's the key. Don't
+build everything at once. Build build everything at once. Build build everything at once. Build
+incrementally. Validate at each step. incrementally. Validate at each step. incrementally. Validate at each step.
+Step one, start with the minimal three Step one, start with the minimal three Step one, start with the minimal three
+file harness. Give your LLM the basic file harness. Give your LLM the basic file harness. Give your LLM the basic
+prompt. Test it with a simple task. Make prompt. Test it with a simple task. Make prompt. Test it with a simple task. Make
+sure progress persists in it runs sure progress persists in it runs sure progress persists in it runs
+cleanly and the loop works. This is your cleanly and the loop works. This is your cleanly and the loop works. This is your
+foundation. Step two, add smart context foundation. Step two, add smart context foundation. Step two, add smart context
+loading. Prompt the LLM to implement loading. Prompt the LLM to implement loading. Prompt the LLM to implement
+progressive loading. Validate that progressive loading. Validate that progressive loading. Validate that
+context sizes stay reasonable. If it's context sizes stay reasonable. If it's context sizes stay reasonable. If it's
+loading too much, refine the prompt. If loading too much, refine the prompt. If loading too much, refine the prompt. If
+it's too sparse, add more to level two. it's too sparse, add more to level two. it's too sparse, add more to level two.
+Step three, add guard rails, all three Step three, add guard rails, all three Step three, add guard rails, all three
+at once since they're independent. Cost at once since they're independent. Cost at once since they're independent. Cost
+limits, command restrictions, approval limits, command restrictions, approval limits, command restrictions, approval
+gates. Test each one individually. Make gates. Test each one individually. Make gates. Test each one individually. Make
+sure they trigger correctly. Step four, sure they trigger correctly. Step four, sure they trigger correctly. Step four,
+add observability, logging, metrics, add observability, logging, metrics, add observability, logging, metrics,
+session traces. This makes debugging session traces. This makes debugging session traces. This makes debugging
+possible when something goes wrong in possible when something goes wrong in possible when something goes wrong in
+production. Step five, add the init production. Step five, add the init production. Step five, add the init
+script specific to your tech stack. Test script specific to your tech stack. Test script specific to your tech stack. Test
+it five times in a row. Make sure it's it five times in a row. Make sure it's it five times in a row. Make sure it's
+item potent. At each step, you're giving item potent. At each step, you're giving item potent. At each step, you're giving
+the LLM a refined prompt, testing the the LLM a refined prompt, testing the the LLM a refined prompt, testing the
+new behavior, and only moving forward new behavior, and only moving forward new behavior, and only moving forward
+when validation passes. You're not when validation passes. You're not when validation passes. You're not
+debugging code. You're refining debugging code. You're refining debugging code. You're refining
+specifications until the behavior specifications until the behavior specifications until the behavior
+matches your requirements. By step five, matches your requirements. By step five, matches your requirements. By step five,
+you have a production ready harness. you have a production ready harness. you have a production ready harness.
+Total time, maybe two to three hours of Total time, maybe two to three hours of Total time, maybe two to three hours of
+prompting and validation, not two to prompting and validation, not two to prompting and validation, not two to
+three weeks of coding and debugging. three weeks of coding and debugging. three weeks of coding and debugging.
+That's the 2026 advantage. That's the 2026 advantage. That's the 2026 advantage.
+Not every project needs every pattern. Not every project needs every pattern. Not every project needs every pattern.
+Here's how to match your harness to your Here's how to match your harness to your Here's how to match your harness to your
+project size. Small projects under 20 project size. Small projects under 20 project size. Small projects under 20
+hours of work. Just use the minimal hours of work. Just use the minimal hours of work. Just use the minimal
+three files. Prompt your LLM. Build three files. Prompt your LLM. Build three files. Prompt your LLM. Build
+minimal harness progress file and init minimal harness progress file and init minimal harness progress file and init
+script only. No guardrails. No complex script only. No guardrails. No complex script only. No guardrails. No complex
+orchestration. Keep it simple. That's orchestration. Keep it simple. That's orchestration. Keep it simple. That's
+sufficient. sufficient. sufficient.
+Medium projects 20 to 100 hours. Add the Medium projects 20 to 100 hours. Add the Medium projects 20 to 100 hours. Add the
+session loop with cost tracking and session loop with cost tracking and session loop with cost tracking and
+basic guardrails. Prompt. includes basic guardrails. Prompt. includes basic guardrails. Prompt. includes
+session loop with cost tracking, session session loop with cost tracking, session session loop with cost tracking, session
+limits, and command restrictions. No limits, and command restrictions. No limits, and command restrictions. No
+approval gates yet. No complex context approval gates yet. No complex context approval gates yet. No complex context
+loading. Large projects over 100 hours. loading. Large projects over 100 hours. loading. Large projects over 100 hours.
+Use all five patterns. Full prompt. Use all five patterns. Full prompt. Use all five patterns. Full prompt.
+Build complete harness with smart Build complete harness with smart Build complete harness with smart
+context loading. All three guard rails, context loading. All three guard rails, context loading. All three guard rails,
+full observability, and text specific full observability, and text specific full observability, and text specific
+init scripts. This will run for weeks init scripts. This will run for weeks init scripts. This will run for weeks
+autonomously. The decision tree is autonomously. The decision tree is autonomously. The decision tree is
+simple. Estimate your project size. Pick simple. Estimate your project size. Pick simple. Estimate your project size. Pick
+the corresponding complexity level. Give the corresponding complexity level. Give the corresponding complexity level. Give
+the LLM the appropriate prompt. The LLM the LLM the appropriate prompt. The LLM the LLM the appropriate prompt. The LLM
+scales the implementation to match. scales the implementation to match. scales the implementation to match.
+Don't overengineer small projects. Don't Don't overengineer small projects. Don't Don't overengineer small projects. Don't
+undergineer large projects. Let project undergineer large projects. Let project undergineer large projects. Let project
+size drive harness complexity. This size drive harness complexity. This size drive harness complexity. This
+saves time and matches infrastructure to saves time and matches infrastructure to saves time and matches infrastructure to
+actual needs. actual needs. actual needs.
+Let's wrap up with common mistakes. Let's wrap up with common mistakes. Let's wrap up with common mistakes.
+These apply whether you're writing code These apply whether you're writing code These apply whether you're writing code
+or directing an LLM. Mistake one, or directing an LLM. Mistake one, or directing an LLM. Mistake one,
+overengineering. You don't need overengineering. You don't need overengineering. You don't need
+features.json, features.json, features.json,
+two agents, and complex orchestration two agents, and complex orchestration two agents, and complex orchestration
+for a 10-hour project. When prompting for a 10-hour project. When prompting for a 10-hour project. When prompting
+your LLM, be explicit. Keep it minimal. your LLM, be explicit. Keep it minimal. your LLM, be explicit. Keep it minimal.
+Only progress file and init script. Only progress file and init script. Only progress file and init script.
+Don't add complexity. I didn't request. Don't add complexity. I didn't request. Don't add complexity. I didn't request.
+Mistake two, no validation. You prompt Mistake two, no validation. You prompt Mistake two, no validation. You prompt
+the LLM, it generates code, and you just the LLM, it generates code, and you just the LLM, it generates code, and you just
+run it without testing. Bad idea. Always run it without testing. Bad idea. Always run it without testing. Bad idea. Always
+validate. Run the tests we've covered. validate. Run the tests we've covered. validate. Run the tests we've covered.
+Make sure behaviors match specifications Make sure behaviors match specifications Make sure behaviors match specifications
+before moving to the next step. Mistake before moving to the next step. Mistake before moving to the next step. Mistake
+three, brittle init scripts. If your three, brittle init scripts. If your three, brittle init scripts. If your
+init.sh only works once, your harness is init.sh only works once, your harness is init.sh only works once, your harness is
+fragile. When prompting, make init.sh fragile. When prompting, make init.sh fragile. When prompting, make init.sh
+item potent, safe to run multiple times. item potent, safe to run multiple times. item potent, safe to run multiple times.
+Handle cases where server is already Handle cases where server is already Handle cases where server is already
+running or dependencies already running or dependencies already running or dependencies already
+installed. Mistake four, ignoring costs. installed. Mistake four, ignoring costs. installed. Mistake four, ignoring costs.
+Even with guard rails, you need to Even with guard rails, you need to Even with guard rails, you need to
+actively monitor spending. Prompt: Add actively monitor spending. Prompt: Add actively monitor spending. Prompt: Add
+cost logging that prints total spend cost logging that prints total spend cost logging that prints total spend
+after each session. Make it visible, not after each session. Make it visible, not after each session. Make it visible, not
+buried in logs. Mistake five, no buried in logs. Mistake five, no buried in logs. Mistake five, no
+observability. If you can't see what observability. If you can't see what observability. If you can't see what
+your agent is doing, you can't debug your agent is doing, you can't debug your agent is doing, you can't debug
+failures. Prompt: log every tool use, failures. Prompt: log every tool use, failures. Prompt: log every tool use,
+every decision, every API call. Make every decision, every API call. Make every decision, every API call. Make
+debugging possible. These mistakes are debugging possible. These mistakes are debugging possible. These mistakes are
+all avoidable. The LLM will build what all avoidable. The LLM will build what all avoidable. The LLM will build what
+you specify. Specify safety, you specify. Specify safety, you specify. Specify safety,
+observability, and simplicity from the observability, and simplicity from the observability, and simplicity from the
+start. Validate that you got what you start. Validate that you got what you start. Validate that you got what you
+asked for. That's how you avoid these asked for. That's how you avoid these asked for. That's how you avoid these
+pitfalls. pitfalls. pitfalls.
+If you found these universal patterns If you found these universal patterns If you found these universal patterns
+valuable, three things will help you valuable, three things will help you valuable, three things will help you
+stay ahead. First, subscribe to this stay ahead. First, subscribe to this stay ahead. First, subscribe to this
+channel. I'm publishing AI strategy channel. I'm publishing AI strategy channel. I'm publishing AI strategy
+content every week and hardest content every week and hardest content every week and hardest
+engineering is just one of the many engineering is just one of the many engineering is just one of the many
+strategies that we cover on our channel. strategies that we cover on our channel. strategies that we cover on our channel.
+Second, hit the like button. It tells Second, hit the like button. It tells Second, hit the like button. It tells
+YouTube to show this series to more YouTube to show this series to more YouTube to show this series to more
+engineers who need to understand harness engineers who need to understand harness engineers who need to understand harness
+patterns. Help spread the knowledge. patterns. Help spread the knowledge. patterns. Help spread the knowledge.
+Third, ring the notification bell so you Third, ring the notification bell so you Third, ring the notification bell so you
+don't miss when I drop new content. The don't miss when I drop new content. The don't miss when I drop new content. The
+AI infrastructure landscape is evolving AI infrastructure landscape is evolving AI infrastructure landscape is evolving
+fast. You want to catch these insights fast. You want to catch these insights fast. You want to catch these insights
+when they're fresh. This three-part when they're fresh. This three-part when they're fresh. This three-part
+series gave you everything. Why series gave you everything. Why series gave you everything. Why
+harnesses matter, what a proven harness harnesses matter, what a proven harness harnesses matter, what a proven harness
+looks like, and how to build your own. looks like, and how to build your own. looks like, and how to build your own.
+Now you have the patterns. Now you have the patterns. Now you have the patterns.
+That's it. Five universal patterns for That's it. Five universal patterns for That's it. Five universal patterns for
+building agent harnesses. Progress files building agent harnesses. Progress files building agent harnesses. Progress files
+for memory. Init scripts for reliable for memory. Init scripts for reliable for memory. Init scripts for reliable
+startup. Session loops for startup. Session loops for startup. Session loops for
+orchestration. Smart context loading for orchestration. Smart context loading for orchestration. Smart context loading for
+efficiency. Guard rails for safety. Why efficiency. Guard rails for safety. Why efficiency. Guard rails for safety. Why
+universal? Because every harness, universal? Because every harness, universal? Because every harness,
+regardless of model, language, or regardless of model, language, or regardless of model, language, or
+framework, faces the same five framework, faces the same five framework, faces the same five
+fundamental problems. These patterns fundamental problems. These patterns fundamental problems. These patterns
+solve them. The code looks different in solve them. The code looks different in solve them. The code looks different in
+Python versus TypeScript. The Python versus TypeScript. The Python versus TypeScript. The
+implementation varies for Claude versus implementation varies for Claude versus implementation varies for Claude versus
+GPT4, GPT4, GPT4,
+but the patterns remain the same. That's but the patterns remain the same. That's but the patterns remain the same. That's
+what makes them universal. You've seen what makes them universal. You've seen what makes them universal. You've seen
+Anthropic's Python implementation in Anthropic's Python implementation in Anthropic's Python implementation in
+part two. Now you have the patterns to part two. Now you have the patterns to part two. Now you have the patterns to
+build your own. Your way, your stack, build your own. Your way, your stack, build your own. Your way, your stack,
+your needs. Direct your LLM with these your needs. Direct your LLM with these your needs. Direct your LLM with these
+patterns. Validate the behavior. Build a patterns. Validate the behavior. Build a patterns. Validate the behavior. Build a
+production harness in two to three production harness in two to three production harness in two to three
+hours, not two to three weeks. This hours, not two to three weeks. This hours, not two to three weeks. This
+completes the agent harness revolution completes the agent harness revolution completes the agent harness revolution
+series. Part one showed you why series. Part one showed you why series. Part one showed you why
+harnesses matter. Part two showed you harnesses matter. Part two showed you harnesses matter. Part two showed you
+what a proven harness looks like. Part what a proven harness looks like. Part what a proven harness looks like. Part
+three gave you the universal patterns to three gave you the universal patterns to three gave you the universal patterns to
+build your own. If you implement even build your own. If you implement even build your own. If you implement even
+one of these patterns, your agents will one of these patterns, your agents will one of these patterns, your agents will
+be more reliable. If you implement all be more reliable. If you implement all be more reliable. If you implement all
+five, you'll have productionready five, you'll have productionready five, you'll have productionready
+infrastructure that works with any infrastructure that works with any infrastructure that works with any
+model, any stack, any future you choose. model, any stack, any future you choose. model, any stack, any future you choose.
+Thanks for watching. Subscribe for more Thanks for watching. Subscribe for more Thanks for watching. Subscribe for more
+AI strategy content. I'll see you in the AI strategy content. I'll see you in the AI strategy content. I'll see you in the
+next video. 

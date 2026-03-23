@@ -1,0 +1,964 @@
+you have to approach this from the you have to approach this from the
+perspective of an agent. Um, that's perspective of an agent. Um, that's perspective of an agent. Um, that's
+where the empath part comes from. Uh, where the empath part comes from. Uh, where the empath part comes from. Uh,
+the factory, that's what I've been the factory, that's what I've been the factory, that's what I've been
+hearing it called, uh, harness hearing it called, uh, harness hearing it called, uh, harness
+engineering, yada yada. I do think that engineering, yada yada. I do think that engineering, yada yada. I do think that
+the factory-l like model will be the the factory-l like model will be the the factory-l like model will be the
+process in the future. That's what I'm process in the future. That's what I'm process in the future. That's what I'm
+seeing already from my team and from seeing already from my team and from seeing already from my team and from
+other teams as well. And for the most other teams as well. And for the most other teams as well. And for the most
+part, everyone has, it's funny, like a part, everyone has, it's funny, like a part, everyone has, it's funny, like a
+lot of people have gone to the same spot lot of people have gone to the same spot lot of people have gone to the same spot
+that have never met each other or that that have never met each other or that that have never met each other or that
+have not spoken. Like even myself when have not spoken. Like even myself when have not spoken. Like even myself when
+I'm on X I talk to people oh we both I'm on X I talk to people oh we both I'm on X I talk to people oh we both
+arrive at the same conclusion and we arrive at the same conclusion and we arrive at the same conclusion and we
+like we didn't discuss it so I think like we didn't discuss it so I think like we didn't discuss it so I think
+this pattern will be repeating in the this pattern will be repeating in the this pattern will be repeating in the
+industry uh but industry uh but industry uh but
+that's more of a aside anyways okay so that's more of a aside anyways okay so that's more of a aside anyways okay so
+jumping in agentic factory coding from jumping in agentic factory coding from jumping in agentic factory coding from
+first principles as an empath first principles as an empath first principles as an empath
+and again AI kind of slopped me but bear and again AI kind of slopped me but bear and again AI kind of slopped me but bear
+with me uh so the the the core for workflow. uh so the the the core for workflow.
+There's a there's a lot of this and I There's a there's a lot of this and I There's a there's a lot of this and I
+spent again I spent like a year teaching spent again I spent like a year teaching spent again I spent like a year teaching
+a bunch of people this type of things a bunch of people this type of things a bunch of people this type of things
+and it took a while for it to click and it took a while for it to click and it took a while for it to click
+through. But once you do click it, once through. But once you do click it, once through. But once you do click it, once
+it does make sense to you, you'll be it does make sense to you, you'll be it does make sense to you, you'll be
+able to spin up a lot of stuff and you able to spin up a lot of stuff and you able to spin up a lot of stuff and you
+will be able to like easily operate. will be able to like easily operate. will be able to like easily operate.
+Like I have I usually always have at Like I have I usually always have at Like I have I usually always have at
+least three code agents going. I have least three code agents going. I have least three code agents going. I have
+one that's constantly doing research, one that's constantly doing research, one that's constantly doing research,
+one that is constantly, you know, one that is constantly, you know, one that is constantly, you know,
+cleaning stuff up, and then like my main cleaning stuff up, and then like my main cleaning stuff up, and then like my main
+workflow that's in the middle. Um, but workflow that's in the middle. Um, but workflow that's in the middle. Um, but
+at first it was a bit of a, you know, at first it was a bit of a, you know, at first it was a bit of a, you know,
+weird weird weird
+mental state to get into, um, because I mental state to get into, um, because I mental state to get into, um, because I
+usually would just have my editor open usually would just have my editor open usually would just have my editor open
+and just one terminal. Uh, but now I can and just one terminal. Uh, but now I can and just one terminal. Uh, but now I can
+easily just jump between tabs and it easily just jump between tabs and it easily just jump between tabs and it
+doesn't mess me up. But it does take a doesn't mess me up. But it does take a doesn't mess me up. But it does take a
+bit, but the core of it is this. It's bit, but the core of it is this. It's bit, but the core of it is this. It's
+the the the
+research, planning, and the actual research, planning, and the actual research, planning, and the actual
+execution. And we'll go over this in execution. And we'll go over this in execution. And we'll go over this in
+more detail, but this is the core of it. more detail, but this is the core of it. more detail, but this is the core of it.
+Um, here are my actual notes. Um, here are my actual notes. Um, here are my actual notes.
+So, So, So,
+if we do this bigger, okay, so uh the phase one this bigger, okay, so uh the phase one
+of this is the research. Uh, this is one of this is the research. Uh, this is one of this is the research. Uh, this is one
+of the most important parts of the of the most important parts of the of the most important parts of the
+process and the process that you should process and the process that you should process and the process that you should
+probably spending the most time on. probably spending the most time on. probably spending the most time on.
+research. This is usually going to mean research. This is usually going to mean research. This is usually going to mean
+deploying sub agents to map out stuff. deploying sub agents to map out stuff. deploying sub agents to map out stuff.
+And that's one of the biggest benefits, And that's one of the biggest benefits, And that's one of the biggest benefits,
+the ability to quickly iter it deploy an the ability to quickly iter it deploy an the ability to quickly iter it deploy an
+agent and say, "Hey, map out, you know, agent and say, "Hey, map out, you know, agent and say, "Hey, map out, you know,
+how does the off module work?" Right? how does the off module work?" Right? how does the off module work?" Right?
+Back in the day, like the first thing Back in the day, like the first thing Back in the day, like the first thing
+you would do when you would hit a you would do when you would hit a you would do when you would hit a
+project that was of a enterprise size, project that was of a enterprise size, project that was of a enterprise size,
+you would always reach for you would always reach for you would always reach for
+documentation. And if you were lucky, documentation. And if you were lucky, documentation. And if you were lucky,
+you had documentation. Um, but even if you had documentation. Um, but even if you had documentation. Um, but even if
+you had documentation, it was probably you had documentation, it was probably you had documentation, it was probably
+outdated. it was probably a mess, right? outdated. it was probably a mess, right? outdated. it was probably a mess, right?
+Nobody had taken the time to handle it. Nobody had taken the time to handle it. Nobody had taken the time to handle it.
+Um, so usually I was just exploring Um, so usually I was just exploring Um, so usually I was just exploring
+myself with GP with, you know, all these myself with GP with, you know, all these myself with GP with, you know, all these
+tools to map stuff out. Um, now that's tools to map stuff out. Um, now that's tools to map stuff out. Um, now that's
+been pretty much all replaced by the sub been pretty much all replaced by the sub been pretty much all replaced by the sub
+agents. The sub aents can very quickly agents. The sub aents can very quickly agents. The sub aents can very quickly
+and again the key here is like I can and again the key here is like I can and again the key here is like I can
+quickly do it and iteratively it can quickly do it and iteratively it can quickly do it and iteratively it can
+just go go and I might do it two three just go go and I might do it two three just go go and I might do it two three
+times until I really understand what is times until I really understand what is times until I really understand what is
+happening. Um, and the agent is mostly happening. Um, and the agent is mostly happening. Um, and the agent is mostly
+doing what you would do regularly, doing what you would do regularly, doing what you would do regularly,
+right? It's globbing, it's scrapping, right? It's globbing, it's scrapping, right? It's globbing, it's scrapping,
+it's reading. The difference is it can it's reading. The difference is it can it's reading. The difference is it can
+do it in minutes where it would take you do it in minutes where it would take you do it in minutes where it would take you
+much longer. much longer. much longer.
+Um, on top of that, the research also Um, on top of that, the research also Um, on top of that, the research also
+usually involves web searching. So, for usually involves web searching. So, for usually involves web searching. So, for
+example, if I'm using a new library, if example, if I'm using a new library, if example, if I'm using a new library, if
+I'm using a technology that I'm not as I'm using a technology that I'm not as I'm using a technology that I'm not as
+familiar with it, I will have it either familiar with it, I will have it either familiar with it, I will have it either
+Google or I'll just straight up give it Google or I'll just straight up give it Google or I'll just straight up give it
+the link to the documentation and say, the link to the documentation and say, the link to the documentation and say,
+"Hey, go read this." Uh, we were talking "Hey, go read this." Uh, we were talking "Hey, go read this." Uh, we were talking
+about MCPS. So, I'm not a fan of MCPS about MCPS. So, I'm not a fan of MCPS about MCPS. So, I'm not a fan of MCPS
+mostly. Um, but I do use two. I use the mostly. Um, but I do use two. I use the mostly. Um, but I do use two. I use the
+Exa web search and they also have an Exa Exa web search and they also have an Exa Exa web search and they also have an Exa
+code search which will try to find the code search which will try to find the code search which will try to find the
+most updated documentation on popular most updated documentation on popular most updated documentation on popular
+libraries. So, for example, you're libraries. So, for example, you're libraries. So, for example, you're
+probably using React, right? It will go probably using React, right? It will go probably using React, right? It will go
+and grab all the latest React and grab all the latest React and grab all the latest React
+documentation. And Context 7, documentation. And Context 7, documentation. And Context 7,
+they do they do they do
+a similar thing, but they both really a similar thing, but they both really a similar thing, but they both really
+build off the web research. That's build off the web research. That's build off the web research. That's
+pretty much what they're doing. Uh, pretty much what they're doing. Uh, pretty much what they're doing. Uh,
+these are just kind of dedicated tools these are just kind of dedicated tools these are just kind of dedicated tools
+that I've used quite a bit and they are that I've used quite a bit and they are that I've used quite a bit and they are
+the most effective ones that I've used. the most effective ones that I've used. the most effective ones that I've used.
+There's a bunch of these and you could There's a bunch of these and you could There's a bunch of these and you could
+probably just do it with just Exa probably just do it with just Exa probably just do it with just Exa
+itself, but these two tools have been itself, but these two tools have been itself, but these two tools have been
+effective for me. So, all of this to effective for me. So, all of this to effective for me. So, all of this to
+say, you still need to really manually say, you still need to really manually say, you still need to really manually
+review it. Um, it's probably the biggest review it. Um, it's probably the biggest review it. Um, it's probably the biggest
+issues that I've had uh both at work and issues that I've had uh both at work and issues that I've had uh both at work and
+just in general. A lot of people that just in general. A lot of people that just in general. A lot of people that
+once they finally do get this clicked once they finally do get this clicked once they finally do get this clicked
+and once they do lock in it's like okay and once they do lock in it's like okay and once they do lock in it's like okay
+they start to treat the agent as they start to treat the agent as they start to treat the agent as
+concrete and none of this will work if concrete and none of this will work if concrete and none of this will work if
+this is if this phase is [&nbsp;__&nbsp;] up like this is if this phase is [&nbsp;__&nbsp;] up like this is if this phase is [&nbsp;__&nbsp;] up like
+your entire next phase is going to be your entire next phase is going to be your entire next phase is going to be
+[&nbsp;__&nbsp;] up. Next one will be [&nbsp;__&nbsp;] up [&nbsp;__&nbsp;] up. Next one will be [&nbsp;__&nbsp;] up [&nbsp;__&nbsp;] up. Next one will be [&nbsp;__&nbsp;] up
+and then you don't want to let this and then you don't want to let this and then you don't want to let this
+slide through because it'll just keep slide through because it'll just keep slide through because it'll just keep
+building on top of each other. And it's building on top of each other. And it's building on top of each other. And it's
+very easy to sloppy a codebase. You can very easy to sloppy a codebase. You can very easy to sloppy a codebase. You can
+pretty much destroy a codebase within a pretty much destroy a codebase within a pretty much destroy a codebase within a
+week if you allow it to because the code week if you allow it to because the code week if you allow it to because the code
+agents let you move so fast. So all of agents let you move so fast. So all of agents let you move so fast. So all of
+this to say you have to have to have to this to say you have to have to have to this to say you have to have to have to
+review this manually or I will kill you review this manually or I will kill you review this manually or I will kill you
+because this this this is the foundation because this this this is the foundation because this this this is the foundation
+of your entire workflow. Um so research you get the idea. Yeah, Um so research you get the idea. Yeah,
+this is terrible. Um but yeah, I'll just this is terrible. Um but yeah, I'll just this is terrible. Um but yeah, I'll just
+I'll show an actual example. So you you
+I don't use cloud anymore but I will I don't use cloud anymore but I will I don't use cloud anymore but I will
+still use clot code and I'll show still use clot code and I'll show still use clot code and I'll show
+another one as well. another one as well. another one as well.
+Uh so I have a research workflow that I Uh so I have a research workflow that I Uh so I have a research workflow that I
+use now and it's uh let's see yeah so use now and it's uh let's see yeah so use now and it's uh let's see yeah so
+it's a command. Um these are becoming it's a command. Um these are becoming it's a command. Um these are becoming
+kind of the same thing. Um, back in the kind of the same thing. Um, back in the kind of the same thing. Um, back in the
+day, the code agents could not reliably day, the code agents could not reliably day, the code agents could not reliably
+go and say, "Hey, I want you to do X." go and say, "Hey, I want you to do X." go and say, "Hey, I want you to do X."
+So, uh, Claude Code made a feature where So, uh, Claude Code made a feature where So, uh, Claude Code made a feature where
+it was a slash command. You can say it was a slash command. You can say it was a slash command. You can say
+slash. It would inject a prompt and then slash. It would inject a prompt and then slash. It would inject a prompt and then
+you would feed it whatever you wanted to you would feed it whatever you wanted to you would feed it whatever you wanted to
+do. So, this is what I was doing do. So, this is what I was doing do. So, this is what I was doing
+originally. I'll show what I was doing originally. I'll show what I was doing originally. I'll show what I was doing
+now mostly on the other side. But I'll now mostly on the other side. But I'll now mostly on the other side. But I'll
+say something like u map out say something like u map out say something like u map out
+map out the let's say map out the let's say map out the let's say
+system prompt system prompt system prompt
+and the skill the action and the skill the action and the skill the action
+you could if you're using even like you could if you're using even like you could if you're using even like
+something like code codeex 5.2 high you something like code codeex 5.2 high you something like code codeex 5.2 high you
+probably just straight up ask it to do probably just straight up ask it to do probably just straight up ask it to do
+this. Um but this is the one that I'm this. Um but this is the one that I'm this. Um but this is the one that I'm
+most comfortable with. I'm able to say most comfortable with. I'm able to say most comfortable with. I'm able to say
+hey hey hey
+here's my here's my here's my
+question query whatever you want to call question query whatever you want to call question query whatever you want to call
+it. Uh, it's going to spin up three sub it. Uh, it's going to spin up three sub it. Uh, it's going to spin up three sub
+aents. So, locator, analyzer, and aents. So, locator, analyzer, and aents. So, locator, analyzer, and
+synthesis. And I'm just strictly synthesis. And I'm just strictly synthesis. And I'm just strictly
+interested in what it finds. I don't interested in what it finds. I don't interested in what it finds. I don't
+care about possible solutions. I don't care about possible solutions. I don't care about possible solutions. I don't
+care about this looks off like I just care about this looks off like I just care about this looks off like I just
+it's sole role of this phase is to do it's sole role of this phase is to do it's sole role of this phase is to do
+this research. And I also have a skill this research. And I also have a skill this research. And I also have a skill
+that I use a lot now. So let's say that I use a lot now. So let's say that I use a lot now. So let's say
+something like use something like use something like use
+the codebased the codebased the codebased
+research research research
+skill and map out skill and map out skill and map out
+the agent configs. the agent configs. the agent configs.
+Now this is GLM 5. Um it's pretty good Now this is GLM 5. Um it's pretty good Now this is GLM 5. Um it's pretty good
+from my testing but it might not always from my testing but it might not always from my testing but it might not always
+use it. Okay. Yeah. So you can see here use it. Okay. Yeah. So you can see here use it. Okay. Yeah. So you can see here
+on open code on most code agents cloud on open code on most code agents cloud on open code on most code agents cloud
+code as well it will tell you like hey code as well it will tell you like hey code as well it will tell you like hey
+we've loaded up this skill to let you we've loaded up this skill to let you we've loaded up this skill to let you
+know it's being used and the research know it's being used and the research know it's being used and the research
+skill it's pretty much the same thing skill it's pretty much the same thing skill it's pretty much the same thing
+just a little bit tweaked. So you can just a little bit tweaked. So you can just a little bit tweaked. So you can
+you can see here it's spinning up three you can see here it's spinning up three you can see here it's spinning up three
+sub agents. You can see that they're sub agents. You can see that they're sub agents. You can see that they're
+already like trying to glob and gp. So already like trying to glob and gp. So already like trying to glob and gp. So
+they're mapping stuff out just like you they're mapping stuff out just like you they're mapping stuff out just like you
+would as a normal human with like rip would as a normal human with like rip would as a normal human with like rip
+grip or whatever CLI tools you would grip or whatever CLI tools you would grip or whatever CLI tools you would
+use. It's doing that, but it's doing it use. It's doing that, but it's doing it use. It's doing that, but it's doing it
+all autonomous for you without any all autonomous for you without any all autonomous for you without any
+input. input. input.
+And this is the key right here, like And this is the key right here, like And this is the key right here, like
+just mapping stuff out. And once it just mapping stuff out. And once it just mapping stuff out. And once it
+finishes, it's going to show me a report finishes, it's going to show me a report finishes, it's going to show me a report
+and we'll go over it. And it's your job and we'll go over it. And it's your job and we'll go over it. And it's your job
+to make sure whatever it got generated to make sure whatever it got generated to make sure whatever it got generated
+is correct. If something looks off, is correct. If something looks off, is correct. If something looks off,
+something feels weird, don't ignore that something feels weird, don't ignore that something feels weird, don't ignore that
+feeling because it's most likely your feeling because it's most likely your feeling because it's most likely your
+experience coming through and saying, experience coming through and saying, experience coming through and saying,
+"Hey, this looks off." Or maybe you're "Hey, this looks off." Or maybe you're "Hey, this looks off." Or maybe you're
+wrong, right? Maybe you swear to God wrong, right? Maybe you swear to God wrong, right? Maybe you swear to God
+that you added that module, but for the that you added that module, but for the that you added that module, but for the
+reason it wasn't there. It's very reason it wasn't there. It's very reason it wasn't there. It's very
+important. I cannot stress how important important. I cannot stress how important important. I cannot stress how important
+this is. Uh so this is what generally all the Uh so this is what generally all the
+reports look like. So uh the font reports look like. So uh the font reports look like. So uh the font
+matter. So the these are enforced with matter. So the these are enforced with matter. So the these are enforced with
+this same template. So everyone follows this same template. So everyone follows this same template. So everyone follows
+the same template. uh that makes it the same template. uh that makes it the same template. uh that makes it
+easier to read for everyone else, but easier to read for everyone else, but easier to read for everyone else, but
+also this can end up becoming context also this can end up becoming context also this can end up becoming context
+for yourself, right? If you were saying for yourself, right? If you were saying for yourself, right? If you were saying
+like, hey, all of a sudden the off like, hey, all of a sudden the off like, hey, all of a sudden the off
+module has broken, you can go back and module has broken, you can go back and module has broken, you can go back and
+say, hey, what exactly did we do? You say, hey, what exactly did we do? You say, hey, what exactly did we do? You
+can start mapping some of these can start mapping some of these can start mapping some of these
+documents out. Um, but it's just basic documents out. Um, but it's just basic documents out. Um, but it's just basic
+formatter here. And the goal here is to formatter here. And the goal here is to formatter here. And the goal here is to
+map the system prompt architecture in map the system prompt architecture in map the system prompt architecture in
+Tunicode, where it lives, how it's Tunicode, where it lives, how it's Tunicode, where it lives, how it's
+constructed, what it includes, yada constructed, what it includes, yada constructed, what it includes, yada
+yada. yada. yada.
+And it can log the actions that it took. And it can log the actions that it took. And it can log the actions that it took.
+Right? So for example, it tried to gp in Right? So for example, it tried to gp in Right? So for example, it tried to gp in
+the in the claw directory and the source the in the claw directory and the source the in the claw directory and the source
+directory. It only found it in the agent directory. It only found it in the agent directory. It only found it in the agent
+config canonical and adapters. And then config canonical and adapters. And then config canonical and adapters. And then
+the overall system prompt. This is the overall system prompt. This is the overall system prompt. This is
+exactly where it lives. And I know for a exactly where it lives. And I know for a exactly where it lives. And I know for a
+fact this is correct because I've been fact this is correct because I've been fact this is correct because I've been
+obviously working on this codebase. But obviously working on this codebase. But obviously working on this codebase. But
+found the system prompt. It found how it found the system prompt. It found how it found the system prompt. It found how it
+constructs it. It found how it loads it, constructs it. It found how it loads it, constructs it. It found how it loads it,
+how it integrates with the tools. how it integrates with the tools. how it integrates with the tools.
+how it gets cached, the types, all this how it gets cached, the types, all this how it gets cached, the types, all this
+stuff was mapped out 100%. Right? So stuff was mapped out 100%. Right? So stuff was mapped out 100%. Right? So
+imagine, you know, it's your first day imagine, you know, it's your first day imagine, you know, it's your first day
+at Tuna Industries. I say, "Hey, I need at Tuna Industries. I say, "Hey, I need at Tuna Industries. I say, "Hey, I need
+you to map out how the system prompt you to map out how the system prompt you to map out how the system prompt
+architecture works." Back in the day, architecture works." Back in the day, architecture works." Back in the day,
+you were just doing control F or GP you were just doing control F or GP you were just doing control F or GP
+hopefully. And this would take you hopefully. And this would take you hopefully. And this would take you
+sometimes it would take you a day sometimes it would take you a day sometimes it would take you a day
+depending on the size of the codebase. depending on the size of the codebase. depending on the size of the codebase.
+Like imagine an enterprise codebase Like imagine an enterprise codebase Like imagine an enterprise codebase
+that's like 500,000 lines. that's like 500,000 lines. that's like 500,000 lines.
+This would have taken you a day, maybe This would have taken you a day, maybe This would have taken you a day, maybe
+even half a day. But now it's done in even half a day. But now it's done in even half a day. But now it's done in
+minutes. So for the most part, I can minutes. So for the most part, I can minutes. So for the most part, I can
+usually trust this, especially if you're usually trust this, especially if you're usually trust this, especially if you're
+using a using a using a
+good model. Uh, meaning Codex, Claude, good model. Uh, meaning Codex, Claude, good model. Uh, meaning Codex, Claude,
+Gemini, Kimmy Cake 2.5, and GLM 5 have Gemini, Kimmy Cake 2.5, and GLM 5 have Gemini, Kimmy Cake 2.5, and GLM 5 have
+been pretty good for my testing. So, as been pretty good for my testing. So, as been pretty good for my testing. So, as
+long as you're not using a really small long as you're not using a really small long as you're not using a really small
+model, if you are using a small model, model, if you are using a small model, model, if you are using a small model,
+you probably use one that's fine-tuned you probably use one that's fine-tuned you probably use one that's fine-tuned
+for coding. For the most part, this is for coding. For the most part, this is for coding. For the most part, this is
+usually accurate. Um, but I still review usually accurate. Um, but I still review usually accurate. Um, but I still review
+it, right? I don't want any it, right? I don't want any it, right? I don't want any
+misunderstandings. I want if anything misunderstandings. I want if anything misunderstandings. I want if anything
+looks weird, anything looks off, I'm looks weird, anything looks off, I'm looks weird, anything looks off, I'm
+immediately I'm just going to nuke this. immediately I'm just going to nuke this. immediately I'm just going to nuke this.
+I'm not even going to look at it I'm not even going to look at it I'm not even going to look at it
+anymore. I want to make sure that when I anymore. I want to make sure that when I anymore. I want to make sure that when I
+pass the research prompt, I say, "Hey, pass the research prompt, I say, "Hey, pass the research prompt, I say, "Hey,
+you know, don't worry about X. Don't you know, don't worry about X. Don't you know, don't worry about X. Don't
+even look at it. Let's do even look at it. Let's do even look at it. Let's do
+this thing instead." Um, any questions, this thing instead." Um, any questions, this thing instead." Um, any questions,
+comments, or concerns? Yeah, the memory bank. All it is is a um Yeah, the memory bank. All it is is a um
+I'll show you. So, it's just a directory with the the So, it's just a directory with the the
+plannings, right? ly all the plans that plannings, right? ly all the plans that plannings, right? ly all the plans that
+I have are here. I have are here. I have are here.
+Um, and this is mostly either for Um, and this is mostly either for Um, and this is mostly either for
+yourself or for your team. Um, this way yourself or for your team. Um, this way yourself or for your team. Um, this way
+you can kind of some people don't track you can kind of some people don't track you can kind of some people don't track
+this. Um, I think you know, anything can this. Um, I think you know, anything can this. Um, I think you know, anything can
+be context. It can definitely get a bit be context. It can definitely get a bit be context. It can definitely get a bit
+um, overwhelming, right? If you have a um, overwhelming, right? If you have a um, overwhelming, right? If you have a
+bunch of people sharing their memory bunch of people sharing their memory bunch of people sharing their memory
+banks and it's being tracked by Git. Um, banks and it's being tracked by Git. Um, banks and it's being tracked by Git. Um,
+but it's worth it to keep it at least but it's worth it to keep it at least but it's worth it to keep it at least
+even if you're just keeping it locally even if you're just keeping it locally even if you're just keeping it locally
+because you could easily look back. And because you could easily look back. And because you could easily look back. And
+for example, let's say you have a for example, let's say you have a for example, let's say you have a
+research phase. You do whatever for the research phase. You do whatever for the research phase. You do whatever for the
+off module. Then a week later, right, off module. Then a week later, right, off module. Then a week later, right,
+the off module starts acting up. Well, the off module starts acting up. Well, the off module starts acting up. Well,
+it's like, wait, what did we do? Okay, I it's like, wait, what did we do? Okay, I it's like, wait, what did we do? Okay, I
+see this research phase. I see this plan see this research phase. I see this plan see this research phase. I see this plan
+F. Okay, I see his execute. Here's what F. Okay, I see his execute. Here's what F. Okay, I see his execute. Here's what
+they did. Now, you can still do with they did. Now, you can still do with they did. Now, you can still do with
+Git, you can still do it with, you know, Git, you can still do it with, you know, Git, you can still do it with, you know,
+other tools, but it just gives you a other tools, but it just gives you a other tools, but it just gives you a
+little bit more context when you have a little bit more context when you have a little bit more context when you have a
+similar issue or when you have something similar issue or when you have something similar issue or when you have something
+that's like adjacent to it. You can that's like adjacent to it. You can that's like adjacent to it. You can
+easily go back and because it's easily go back and because it's easily go back and because it's
+formatted, you can easily go back and formatted, you can easily go back and formatted, you can easily go back and
+say, "Hey, like where is that? Okay, I say, "Hey, like where is that? Okay, I say, "Hey, like where is that? Okay, I
+see that ticket here. Boom. Um, but see that ticket here. Boom. Um, but see that ticket here. Boom. Um, but
+that's all it is. It's just like a that's all it is. It's just like a that's all it is. It's just like a
+little directory for your documents. So, GLM five uh did not make the So, GLM five uh did not make the
+document or no, it did. Um, [&nbsp;__&nbsp;] document or no, it did. Um, [&nbsp;__&nbsp;] document or no, it did. Um, [&nbsp;__&nbsp;]
+Never mind. Uh sometimes the agents this Never mind. Uh sometimes the agents this Never mind. Uh sometimes the agents this
+again if you're not using Claude or again if you're not using Claude or again if you're not using Claude or
+Codex they're not going to always follow Codex they're not going to always follow Codex they're not going to always follow
+your prompt. For the most part Claude your prompt. For the most part Claude your prompt. For the most part Claude
+and Codex tend to do a very good job and Codex tend to do a very good job and Codex tend to do a very good job
+with that. Um but that was it. Once you with that. Um but that was it. Once you with that. Um but that was it. Once you
+fire that off now you have an idea of fire that off now you have an idea of fire that off now you have an idea of
+what you're working with. If I go to one terminal to make this a If I go to one terminal to make this a
+little bit um little bit um little bit um
+focused. Okay. So, I have my research. Now, I'm Okay. So, I have my research. Now, I'm
+going to go into my planning and I'm going to say something like read and I'm going to say something like read
+uh system even without tagging it uh system even without tagging it uh system even without tagging it
+because it it loads up the uh because it loads up the prompt, it uh because it loads up the prompt, it
+should be able to find it. Even if if should be able to find it. Even if if should be able to find it. Even if if
+it's a older GLM model for the most part it's a older GLM model for the most part it's a older GLM model for the most part
+um this because the way the command is um this because the way the command is um this because the way the command is
+structured, it should be able to go and structured, it should be able to go and structured, it should be able to go and
+tell what I'm talking about. So, I'm not tell what I'm talking about. So, I'm not tell what I'm talking about. So, I'm not
+even going to point at it. It's going to even going to point at it. It's going to even going to point at it. It's going to
+it should, you know, look at the Let's it should, you know, look at the Let's it should, you know, look at the Let's
+see. Yes. So, I found it. Uh, I'm going see. Yes. So, I found it. Uh, I'm going see. Yes. So, I found it. Uh, I'm going
+to say something like, um, to say something like, um, to say something like, um,
+[clears throat] let's do [clears throat] let's do [clears throat] let's do
+let's add prompt versioning. Right? So, let's add prompt versioning. Right? So, let's add prompt versioning. Right? So,
+I've done my research, right? I took the I've done my research, right? I took the I've done my research, right? I took the
+time because I'm not stupid to make sure time because I'm not stupid to make sure time because I'm not stupid to make sure
+it's correct. If I if I'm unfamiliar it's correct. If I if I'm unfamiliar it's correct. If I if I'm unfamiliar
+with the library, if I'm unfamiliar with with the library, if I'm unfamiliar with with the library, if I'm unfamiliar with
+the technology, I'm going to throw in the technology, I'm going to throw in the technology, I'm going to throw in
+some web research. Uh, but again, this some web research. Uh, but again, this some web research. Uh, but again, this
+all hinges on your required all hinges on your required all hinges on your required
+sorry, on your manual review, right? If sorry, on your manual review, right? If sorry, on your manual review, right? If
+you have any questions, anything that you have any questions, anything that you have any questions, anything that
+you're unsure of, it's worth iterating you're unsure of, it's worth iterating you're unsure of, it's worth iterating
+this process at least a couple of times this process at least a couple of times this process at least a couple of times
+to make sure that your research is to make sure that your research is to make sure that your research is
+correct and that you really can't get correct and that you really can't get correct and that you really can't get
+around it other than manual review in my around it other than manual review in my around it other than manual review in my
+opinion. opinion. opinion.
+Uh once you finish this, so your your Uh once you finish this, so your your Uh once you finish this, so your your
+research document is done, right? You've research document is done, right? You've research document is done, right? You've
+done all that. done all that. done all that.
+The next phase is going to be planning. The next phase is going to be planning. The next phase is going to be planning.
+Um, so couple of things. You should Um, so couple of things. You should Um, so couple of things. You should
+probably want to iterate this. It still probably want to iterate this. It still probably want to iterate this. It still
+needs to be reviewed manually, needs to be reviewed manually, needs to be reviewed manually,
+especially at this point. Um, but a especially at this point. Um, but a especially at this point. Um, but a
+couple of things to note. You want to couple of things to note. You want to couple of things to note. You want to
+have all this stuff done ahead of time have all this stuff done ahead of time have all this stuff done ahead of time
+for the next phase. So, you want to make for the next phase. So, you want to make for the next phase. So, you want to make
+sure that you know you're in a clean, sure that you know you're in a clean, sure that you know you're in a clean,
+you have a clean git. It's very you have a clean git. It's very you have a clean git. It's very
+important that you outline the scope and important that you outline the scope and important that you outline the scope and
+that you outline the scope for what that you outline the scope for what that you outline the scope for what
+you're not doing. Code agents tend to be you're not doing. Code agents tend to be you're not doing. Code agents tend to be
+very trigger happy depending on the very trigger happy depending on the very trigger happy depending on the
+model. So, you have to clearly outline model. So, you have to clearly outline model. So, you have to clearly outline
+the scope. You have to clearly outline the scope. You have to clearly outline the scope. You have to clearly outline
+what not to touch. If you leave it to what not to touch. If you leave it to what not to touch. If you leave it to
+chance or you don't clearly say, "Hey, chance or you don't clearly say, "Hey, chance or you don't clearly say, "Hey,
+you know, don't touch the tool module." you know, don't touch the tool module." you know, don't touch the tool module."
+Right? We're just working with the Right? We're just working with the Right? We're just working with the
+prompt. Don't touch anything else. prompt. Don't touch anything else. prompt. Don't touch anything else.
+Depending on the model, it will try to Depending on the model, it will try to Depending on the model, it will try to
+quote unquote fix it or maybe it'll just quote unquote fix it or maybe it'll just quote unquote fix it or maybe it'll just
+move it just because whatever reason. move it just because whatever reason. move it just because whatever reason.
+Just outline it cleanly. Hey, we're not Just outline it cleanly. Hey, we're not Just outline it cleanly. Hey, we're not
+touching this. Uh you want to make sure touching this. Uh you want to make sure touching this. Uh you want to make sure
+like all your tests, all your linting, like all your tests, all your linting, like all your tests, all your linting,
+all that's done ahead of time. You don't all that's done ahead of time. You don't all that's done ahead of time. You don't
+want to start feeding the context window want to start feeding the context window want to start feeding the context window
+some stuff that like this could probably some stuff that like this could probably some stuff that like this could probably
+easy easily take up like 20k tokens. So easy easily take up like 20k tokens. So easy easily take up like 20k tokens. So
+you don't want to feed this before you you don't want to feed this before you you don't want to feed this before you
+want to have all this stuff ready to go want to have all this stuff ready to go want to have all this stuff ready to go
+done clearly outlined. done clearly outlined. done clearly outlined.
+Uh once you have the research document Uh once you have the research document Uh once you have the research document
+it's up to you now to set up the I would it's up to you now to set up the I would it's up to you now to set up the I would
+say it goes like the overall goal right say it goes like the overall goal right say it goes like the overall goal right
+so for this we're trying to add so for this we're trying to add so for this we're trying to add
+versioning to a prompt. That's the goal. versioning to a prompt. That's the goal. versioning to a prompt. That's the goal.
+It's going to generate the milestones It's going to generate the milestones It's going to generate the milestones
+and it's also going to generate task. and it's also going to generate task. and it's also going to generate task.
+Um, this is interchangeable obviously if Um, this is interchangeable obviously if Um, this is interchangeable obviously if
+you're using agile, if you're using you're using agile, if you're using you're using agile, if you're using
+whatever type of um task management at whatever type of um task management at whatever type of um task management at
+your your your
+environment or team. Uh, but the overall environment or team. Uh, but the overall environment or team. Uh, but the overall
+arching concept is the same goal, arching concept is the same goal, arching concept is the same goal,
+milestone, task. The the question you milestone, task. The the question you milestone, task. The the question you
+want to ask yourself when you have a want to ask yourself when you have a want to ask yourself when you have a
+research document is if I handed this to research document is if I handed this to research document is if I handed this to
+a junior, a junior, a junior,
+can they know for sure what to do? You can they know for sure what to do? You can they know for sure what to do? You
+don't want to leave vagueness. You don't don't want to leave vagueness. You don't don't want to leave vagueness. You don't
+want to leave room for interpretation. want to leave room for interpretation. want to leave room for interpretation.
+You need to clearly outline this for the You need to clearly outline this for the You need to clearly outline this for the
+code agent to say do X. code agent to say do X. code agent to say do X.
+Here's how we're going to do it. Here's Here's how we're going to do it. Here's Here's how we're going to do it. Here's
+the milestones. Here's task, etc. So, the milestones. Here's task, etc. So, the milestones. Here's task, etc. So,
+let's see if it finished. Um so uh so the goal here add explicit version uh so the goal here add explicit version
+tracking for the system prompt and tool tracking for the system prompt and tool tracking for the system prompt and tool
+prompt changes in tunic code. Um the prompt changes in tunic code. Um the prompt changes in tunic code. Um the
+rest of this is kind of fluff. So rest of this is kind of fluff. So rest of this is kind of fluff. So
+whenever you're going through it you whenever you're going through it you whenever you're going through it you
+know this will this will serve as know this will this will serve as know this will this will serve as
+context for your execution phase. So context for your execution phase. So context for your execution phase. So
+it's not worth um it's not worth um it's not worth um
+it's not worth keeping here. Right? You it's not worth keeping here. Right? You it's not worth keeping here. Right? You
+want to when I feed this to my context want to when I feed this to my context want to when I feed this to my context
+for execution, I don't need to fill all for execution, I don't need to fill all for execution, I don't need to fill all
+the extra fluff of this stuff. This is the extra fluff of this stuff. This is the extra fluff of this stuff. This is
+mostly just to make sure as a demo that mostly just to make sure as a demo that mostly just to make sure as a demo that
+everything is right. Uh so you can see everything is right. Uh so you can see everything is right. Uh so you can see
+here the scope, right? We're doing here the scope, right? We're doing here the scope, right? We're doing
+version tracking for the prompt of the version tracking for the prompt of the version tracking for the prompt of the
+system and the tools. Um out of scope, system and the tools. Um out of scope, system and the tools. Um out of scope,
+right? So don't touch the UI. Don't right? So don't touch the UI. Don't right? So don't touch the UI. Don't
+touch anything with the storage or touch anything with the storage or touch anything with the storage or
+syncing. Anything with the automate syncing. Anything with the automate syncing. Anything with the automate
+prompting, the multimodel prompt prompting, the multimodel prompt prompting, the multimodel prompt
+variance. We're not doing that variance. We're not doing that variance. We're not doing that
+whatsoever. I'm just going to straight whatsoever. I'm just going to straight whatsoever. I'm just going to straight
+up delete it. Uh so here here's the up delete it. Uh so here here's the up delete it. Uh so here here's the
+assumptions, right? Um version metadata assumptions, right? Um version metadata assumptions, right? Um version metadata
+stored locally. I don't know what that stored locally. I don't know what that stored locally. I don't know what that
+is. Yeah. So for the most part, like is. Yeah. So for the most part, like is. Yeah. So for the most part, like
+this is just saying like, hey, I'm this is just saying like, hey, I'm this is just saying like, hey, I'm
+assuming you're doing X. That's going to assuming you're doing X. That's going to assuming you're doing X. That's going to
+lean towards the median of coding in lean towards the median of coding in lean towards the median of coding in
+general. So if you have any assumptions general. So if you have any assumptions general. So if you have any assumptions
+that you are not sure of or not 100% that you are not sure of or not 100% that you are not sure of or not 100%
+positive, it's worth going back and positive, it's worth going back and positive, it's worth going back and
+iterating to make sure that this is iterating to make sure that this is iterating to make sure that this is
+correct correct correct
+uh deliverable. So just what we were uh deliverable. So just what we were uh deliverable. So just what we were
+talking about, right? What you're talking about, right? What you're talking about, right? What you're
+actually going to be giving me when actually going to be giving me when actually going to be giving me when
+you're done you're done you're done
+uh preconditions. So this is what I went uh preconditions. So this is what I went uh preconditions. So this is what I went
+over with the ready to execute. It's over with the ready to execute. It's over with the ready to execute. It's
+very important that you do this all this very important that you do this all this very important that you do this all this
+ahead of time. You don't want to feed ahead of time. You don't want to feed ahead of time. You don't want to feed
+your execution agent any of that your execution agent any of that your execution agent any of that
+context. That's not going to work for context. That's not going to work for context. That's not going to work for
+you. and it's just going to take up you. and it's just going to take up you. and it's just going to take up
+extra context. extra context. extra context.
+Uh so it's going to give me a data Uh so it's going to give me a data Uh so it's going to give me a data
+schema. So you see here the milestones, schema. So you see here the milestones, schema. So you see here the milestones,
+the core versioning data structure. We the core versioning data structure. We the core versioning data structure. We
+have one, two, three, F5 milestones. And have one, two, three, F5 milestones. And have one, two, three, F5 milestones. And
+then it breaks down the task into then it breaks down the task into then it breaks down the task into
+individual granular individual granular individual granular
+either diffs or new files and it it has either diffs or new files and it it has either diffs or new files and it it has
+relationships between the milestones. Uh relationships between the milestones. Uh relationships between the milestones. Uh
+the estimate cloud loves giving the estimate cloud loves giving the estimate cloud loves giving
+estimates. Uh, I should probably delete estimates. Uh, I should probably delete estimates. Uh, I should probably delete
+that. It's not going to hurt, but that's that. It's not going to hurt, but that's that. It's not going to hurt, but that's
+not worth mentioning. Uh, so risk not worth mentioning. Uh, so risk not worth mentioning. Uh, so risk
+mitigations. So, what you know, mitigations. So, what you know, mitigations. So, what you know,
+potentially what does this touch? potentially what does this touch? potentially what does this touch?
+If you're working on enterprise codebase If you're working on enterprise codebase If you're working on enterprise codebase
+and it has like million lines of code, and it has like million lines of code, and it has like million lines of code,
+half a million lines of code, obviously, half a million lines of code, obviously, half a million lines of code, obviously,
+it's very important that ideally, you it's very important that ideally, you it's very important that ideally, you
+know, your codebase is nice and clean, know, your codebase is nice and clean, know, your codebase is nice and clean,
+it's modular, it's professional, but it's modular, it's professional, but it's modular, it's professional, but
+obviously that's not always the case, obviously that's not always the case, obviously that's not always the case,
+right? You want to make sure that you're right? You want to make sure that you're right? You want to make sure that you're
+aware or that Claude's aware whatever aware or that Claude's aware whatever aware or that Claude's aware whatever
+model you're using that know we're model you're using that know we're model you're using that know we're
+touching this off module. The off module touching this off module. The off module touching this off module. The off module
+is very tightly coupled with is very tightly coupled with is very tightly coupled with
+I don't know the the database account I don't know the the database account I don't know the the database account
+module right stuff like that you just module right stuff like that you just module right stuff like that you just
+want to outline that ahead of time for want to outline that ahead of time for want to outline that ahead of time for
+cloud in case anything happens it can be cloud in case anything happens it can be cloud in case anything happens it can be
+guided it cannot freak out whenever guided it cannot freak out whenever guided it cannot freak out whenever
+something happens something happens something happens
+uh testing. So, this is more preference uh testing. So, this is more preference uh testing. So, this is more preference
+testing strategy. I make it outline what testing strategy. I make it outline what testing strategy. I make it outline what
+kind of tests we're going to be doing. I kind of tests we're going to be doing. I kind of tests we're going to be doing. I
+I really just don't like how most code I really just don't like how most code I really just don't like how most code
+agents do test agents or tests in agents do test agents or tests in agents do test agents or tests in
+general. Uh they tend to do a bunch of general. Uh they tend to do a bunch of general. Uh they tend to do a bunch of
+tests. They tend to do a bunch of tests tests. They tend to do a bunch of tests tests. They tend to do a bunch of tests
+that just kind of want to pass. Um but that just kind of want to pass. Um but that just kind of want to pass. Um but
+that's what people do, right? So, that's that's what people do, right? So, that's that's what people do, right? So, that's
+why it's doing it that way. I really why it's doing it that way. I really why it's doing it that way. I really
+just like to see one test per feature just like to see one test per feature just like to see one test per feature
+and I like to see negative boundary and I like to see negative boundary and I like to see negative boundary
+testing to make sure that it actually testing to make sure that it actually testing to make sure that it actually
+works. Um, a lot of times you'll run works. Um, a lot of times you'll run works. Um, a lot of times you'll run
+into an issue where the code agent said into an issue where the code agent said into an issue where the code agent said
+that made the test and the test passed. that made the test and the test passed. that made the test and the test passed.
+Um, but the test is terrible. It's ass. Um, but the test is terrible. It's ass. Um, but the test is terrible. It's ass.
+And like I like it doesn't matter if And like I like it doesn't matter if And like I like it doesn't matter if
+it's just testing nonsense. That doesn't it's just testing nonsense. That doesn't it's just testing nonsense. That doesn't
+help me. So I like to make it simple. I help me. So I like to make it simple. I help me. So I like to make it simple. I
+like to have negative boundaries. like to have negative boundaries. like to have negative boundaries.
+And then lastly, just the summary. And then lastly, just the summary. And then lastly, just the summary.
+Nothing too exciting there. Nothing too exciting there. Nothing too exciting there.
+Any questions, comments, or concerns? &gt;&gt; Thank you. &gt;&gt; Thank you.
+Anyway, Anyway, Anyway,
+so we have a so we have a so we have a
+Wait, what is bozo? There two bozos in Wait, what is bozo? There two bozos in Wait, what is bozo? There two bozos in
+here. That's crazy. Um, so once you have here. That's crazy. Um, so once you have here. That's crazy. Um, so once you have
+your Oh, wait. Once you have your plan, your Oh, wait. Once you have your plan, your Oh, wait. Once you have your plan,
+uh, now comes the phase of the uh, now comes the phase of the uh, now comes the phase of the
+execution. Um, now if you've done what execution. Um, now if you've done what execution. Um, now if you've done what
+you're supposed to do and you've taken you're supposed to do and you've taken you're supposed to do and you've taken
+your time, you have made sure that you your time, you have made sure that you your time, you have made sure that you
+know your research makes sense, you've know your research makes sense, you've know your research makes sense, you've
+made sure that your planning makes made sure that your planning makes made sure that your planning makes
+sense, for the most part, this is hands sense, for the most part, this is hands sense, for the most part, this is hands
+off for me because I've done all the off for me because I've done all the off for me because I've done all the
+work ahead of time. I've done all the work ahead of time. I've done all the work ahead of time. I've done all the
+I've done all the mapping. I've done all I've done all the mapping. I've done all I've done all the mapping. I've done all
+the preparation. All that is pretty much the preparation. All that is pretty much the preparation. All that is pretty much
+done and I am ready to go. So if you do done and I am ready to go. So if you do done and I am ready to go. So if you do
+what you're supposed to do, you follow what you're supposed to do, you follow what you're supposed to do, you follow
+best practices etc. for the most part best practices etc. for the most part best practices etc. for the most part
+execution is ready to go. So perfect execution is ready to go. So perfect execution is ready to go. So perfect
+example right I'm going to master here example right I'm going to master here example right I'm going to master here
+just as a demo but you get the idea. I'm just as a demo but you get the idea. I'm just as a demo but you get the idea. I'm
+going to just quickly Okay. So before I commit, you know, I'm Okay. So before I commit, you know, I'm
+running my my git. My git is clean. Um I'm gonna run my test just to make sure. I'm gonna run my test just to make sure.
+Right. Uh so because the code agents Right. Uh so because the code agents Right. Uh so because the code agents
+allow you to generate a tremendous allow you to generate a tremendous allow you to generate a tremendous
+amount of code very quickly. Um you can amount of code very quickly. Um you can amount of code very quickly. Um you can
+easily start to get a lot of slop. You easily start to get a lot of slop. You easily start to get a lot of slop. You
+can easily start to you know you one of can easily start to you know you one of can easily start to you know you one of
+the issues that we had when this first the issues that we had when this first the issues that we had when this first
+got introduced into the team is that a got introduced into the team is that a got introduced into the team is that a
+lot of people were going very fast. they lot of people were going very fast. they lot of people were going very fast. they
+were, you know, branching off master, were, you know, branching off master, were, you know, branching off master,
+maybe they would need to rebase later, maybe they would need to rebase later, maybe they would need to rebase later,
+yada yada. Um, pretty much now the yada yada. Um, pretty much now the yada yada. Um, pretty much now the
+procedure is like, hey, once you clone procedure is like, hey, once you clone procedure is like, hey, once you clone
+master or branch off master main, master or branch off master main, master or branch off master main,
+whatever, it's your responsibility to whatever, it's your responsibility to whatever, it's your responsibility to
+make sure that everything quality gates make sure that everything quality gates make sure that everything quality gates
+wise is passing. Now, it should the wise is passing. Now, it should the wise is passing. Now, it should the
+actions, the CI/CD should catch all actions, the CI/CD should catch all actions, the CI/CD should catch all
+that. Um, but again, especially if that. Um, but again, especially if that. Um, but again, especially if
+you're new to this, it will go a million you're new to this, it will go a million you're new to this, it will go a million
+miles an hour and it's very easy to let miles an hour and it's very easy to let miles an hour and it's very easy to let
+stuff slip through accidentally. So just stuff slip through accidentally. So just stuff slip through accidentally. So just
+hey, you know, you're good to go. hey, you know, you're good to go. hey, you know, you're good to go.
+There's no issues. Boom. Execution. And There's no issues. Boom. Execution. And There's no issues. Boom. Execution. And
+for the most part, that's usually 100% for the most part, that's usually 100% for the most part, that's usually 100%
+hands off. Okay. Okay.
+So this is your plan document. So this is your plan document. So this is your plan document.
+Um I sometimes I use this tool called Um I sometimes I use this tool called Um I sometimes I use this tool called
+tickets. It's a CLI tool that helps you tickets. It's a CLI tool that helps you tickets. It's a CLI tool that helps you
+uh basically it's like a to-do. Uh uh basically it's like a to-do. Uh uh basically it's like a to-do. Uh
+there's also a tax task master MCP there's also a tax task master MCP there's also a tax task master MCP
+that's really popular. that's really popular. that's really popular.
+I used to like to use this on the older I used to like to use this on the older I used to like to use this on the older
+cloud models because they tend to reward cloud models because they tend to reward cloud models because they tend to reward
+hack a lot. Um for the most part I don't hack a lot. Um for the most part I don't hack a lot. Um for the most part I don't
+use this anymore, but I know it's still use this anymore, but I know it's still use this anymore, but I know it's still
+used and it's still popular. used and it's still popular. used and it's still popular.
+And you can also just straight up say, And you can also just straight up say, And you can also just straight up say,
+hey, you know, release track if you get hey, you know, release track if you get hey, you know, release track if you get
+that's perfectly reasonable. There's a that's perfectly reasonable. There's a that's perfectly reasonable. There's a
+bunch of other tools that you can use. I bunch of other tools that you can use. I bunch of other tools that you can use. I
+know there's beads that is pretty know there's beads that is pretty know there's beads that is pretty
+popular. Um, and I imagine there's more, popular. Um, and I imagine there's more, popular. Um, and I imagine there's more,
+but basically you can add little but basically you can add little but basically you can add little
+granular task. For the most part, I tend granular task. For the most part, I tend granular task. For the most part, I tend
+to keep it either as a spec document or to keep it either as a spec document or to keep it either as a spec document or
+as a git issue, but this is just extra. as a git issue, but this is just extra. as a git issue, but this is just extra.
+The the important part here is your The the important part here is your The the important part here is your
+document. document. document.
+Uh, like I mentioned, com executions are Uh, like I mentioned, com executions are Uh, like I mentioned, com executions are
+pretty much hands off 100%. pretty much hands off 100%. pretty much hands off 100%.
+So, let's start this. Okay, so it has full permissions. I Okay, so it has full permissions. I
+bypass permissions. I'm not [&nbsp;__&nbsp;] bypass permissions. I'm not [&nbsp;__&nbsp;] bypass permissions. I'm not [&nbsp;__&nbsp;]
+You know, I use Git, so I don't have to You know, I use Git, so I don't have to You know, I use Git, so I don't have to
+worry about this blowing up my worry about this blowing up my worry about this blowing up my
+environment. Um, if you really want to environment. Um, if you really want to environment. Um, if you really want to
+be, you know, paranoid, you can have a be, you know, paranoid, you can have a be, you know, paranoid, you can have a
+Docker container, a, you know, sandbox Docker container, a, you know, sandbox Docker container, a, you know, sandbox
+environment. Uh, that's very popular environment. Uh, that's very popular environment. Uh, that's very popular
+now. I I really don't see the point for now. I I really don't see the point for now. I I really don't see the point for
+my use cases. mostly because we tend to my use cases. mostly because we tend to my use cases. mostly because we tend to
+work with our own infrastructure and I work with our own infrastructure and I work with our own infrastructure and I
+usually have backups upon backups. So, usually have backups upon backups. So, usually have backups upon backups. So,
+I'm not really concerned and I really I I'm not really concerned and I really I I'm not really concerned and I really I
+mean I'm sure there's been examples of I mean I'm sure there's been examples of I mean I'm sure there's been examples of I
+really haven't had a code agent go rogue really haven't had a code agent go rogue really haven't had a code agent go rogue
+on me. Maybe it'll happen one day and on me. Maybe it'll happen one day and on me. Maybe it'll happen one day and
+I'll learn my lesson. Uh but for the I'll learn my lesson. Uh but for the I'll learn my lesson. Uh but for the
+most part, I just give it most part, I just give it most part, I just give it
+all the permissions. Let it rip. I don't all the permissions. Let it rip. I don't all the permissions. Let it rip. I don't
+care. The whole point of this is to care. The whole point of this is to care. The whole point of this is to
+let it run autonomously. And if I have let it run autonomously. And if I have let it run autonomously. And if I have
+to babysit every single every single to babysit every single every single to babysit every single every single
+little edit, it kind of defeats the little edit, it kind of defeats the little edit, it kind of defeats the
+purpose in my opinion. Uh so it's going purpose in my opinion. Uh so it's going purpose in my opinion. Uh so it's going
+to make sure just really quickly that to make sure just really quickly that to make sure just really quickly that
+we're clean and then it's going to start we're clean and then it's going to start we're clean and then it's going to start
+executing. executing. executing.
+Again, this really Again, this really Again, this really
+you have to have to make sure that your you have to have to make sure that your you have to have to make sure that your
+phases one and two are granular. They're phases one and two are granular. They're phases one and two are granular. They're
+correct. There's no misunderstandings. correct. There's no misunderstandings. correct. There's no misunderstandings.
+You don't want to confuse a code agent. You don't want to confuse a code agent. You don't want to confuse a code agent.
+Again, the northstar is like if you Again, the northstar is like if you Again, the northstar is like if you
+handed your plan to uh junior, could handed your plan to uh junior, could handed your plan to uh junior, could
+they execute this 100% without having to they execute this 100% without having to they execute this 100% without having to
+read anything else? That's what you read anything else? That's what you read anything else? That's what you
+want. Um for myself, this is more of a want. Um for myself, this is more of a want. Um for myself, this is more of a
+flavor thing, but I have it commit flavor thing, but I have it commit flavor thing, but I have it commit
+between milestones. Between milestones, between milestones. Between milestones, between milestones. Between milestones,
+I have it uh run a script that is I have it uh run a script that is I have it uh run a script that is
+basically all the quality gates. So basically all the quality gates. So basically all the quality gates. So
+think like testing uh linting think like testing uh linting think like testing uh linting
+uh all the other hooks that I might have uh all the other hooks that I might have uh all the other hooks that I might have
+for example like uh dependency for example like uh dependency for example like uh dependency
+directions um architecture boundaries directions um architecture boundaries directions um architecture boundaries
+you know making sure stuff is not trying you know making sure stuff is not trying you know making sure stuff is not trying
+to leak together or if it all of a to leak together or if it all of a to leak together or if it all of a
+sudden it starts to you know make its sudden it starts to you know make its sudden it starts to you know make its
+own utility function completely own utility function completely own utility function completely
+bypassing my dependency directions catch bypassing my dependency directions catch bypassing my dependency directions catch
+that and I hide all the context from the that and I hide all the context from the that and I hide all the context from the
+agents I just say hey you know basically agents I just say hey you know basically agents I just say hey you know basically
+just run the gates and all I want to just run the gates and all I want to just run the gates and all I want to
+know is are all my standards in line? know is are all my standards in line? know is are all my standards in line?
+Yes. No. If not, it's going to just show Yes. No. If not, it's going to just show Yes. No. If not, it's going to just show
+that one thing and that way I don't that one thing and that way I don't that one thing and that way I don't
+overwhelm the model context window. I overwhelm the model context window. I overwhelm the model context window. I
+just say, "Hey, here's what's wrong. just say, "Hey, here's what's wrong. just say, "Hey, here's what's wrong.
+This was working before we started. Fix This was working before we started. Fix This was working before we started. Fix
+it." And also, just as an aside, I have it." And also, just as an aside, I have it." And also, just as an aside, I have
+it write down any notes or issues that I it write down any notes or issues that I it write down any notes or issues that I
+might run into or that I found might run into or that I found might run into or that I found
+interesting. Now, this is obviously very interesting. Now, this is obviously very interesting. Now, this is obviously very
+subjective, but for the most part, most subjective, but for the most part, most subjective, but for the most part, most
+models will tend to do a good job of models will tend to do a good job of models will tend to do a good job of
+taking notes. taking notes. taking notes.
+And you'll see that a lot once you start And you'll see that a lot once you start And you'll see that a lot once you start
+using this. Okay. So, um I'll let that finish. Um Okay. So, um I'll let that finish. Um
+probably don't have the time to do the probably don't have the time to do the probably don't have the time to do the
+code review. Um, but it's also all is code review. Um, but it's also all is code review. Um, but it's also all is
+important. But of course, the code important. But of course, the code important. But of course, the code
+review, that's like the final line of review, that's like the final line of review, that's like the final line of
+defense. Again, code agents let you move defense. Again, code agents let you move defense. Again, code agents let you move
+very fast. And if you give this to a very fast. And if you give this to a very fast. And if you give this to a
+junior, it's it's just like the monkey junior, it's it's just like the monkey junior, it's it's just like the monkey
+meme with the gun. Like there's a lot of meme with the gun. Like there's a lot of meme with the gun. Like there's a lot of
+damage that can be done. Wait a minute. damage that can be done. Wait a minute. damage that can be done. Wait a minute.
+Hold on. This is No. Okay. [&nbsp;__&nbsp;] up. Hold on. This is No. Okay. [&nbsp;__&nbsp;] up. Hold on. This is No. Okay. [&nbsp;__&nbsp;] up.
+One second. One second. One second.
+I meant to hand it the plan document. Okay, sorry about that. Um, so this is Okay, sorry about that. Um, so this is
+going to be hands off. Ask for going to be hands off. Ask for going to be hands off. Ask for
+permissions. Uh, the pull request and permissions. Uh, the pull request and permissions. Uh, the pull request and
+the code review. That's this is key. the code review. That's this is key. the code review. That's this is key.
+It's very easy to go very fast. It's very easy to go very fast. It's very easy to go very fast.
+If you let slop sip through even one If you let slop sip through even one If you let slop sip through even one
+time, time, time,
+you can destroy a codebase within a week you can destroy a codebase within a week you can destroy a codebase within a week
+if you just add a bunch of slop. It's if you just add a bunch of slop. It's if you just add a bunch of slop. It's
+not just about linting and testing, but not just about linting and testing, but not just about linting and testing, but
+also just architecturally, right? The also just architecturally, right? The also just architecturally, right? The
+code agents love to solve the problem in code agents love to solve the problem in code agents love to solve the problem in
+a very localized way. Whereas, if you a very localized way. Whereas, if you a very localized way. Whereas, if you
+know what you're doing, you shouldn't be know what you're doing, you shouldn't be know what you're doing, you shouldn't be
+solving that in the architecture way, solving that in the architecture way, solving that in the architecture way,
+right? you should be mapping out like right? you should be mapping out like right? you should be mapping out like
+hey here's our utilities here's our hey here's our utilities here's our hey here's our utilities here's our
+types hey you know here's how we handle types hey you know here's how we handle types hey you know here's how we handle
+x uh you don't want to let the code x uh you don't want to let the code x uh you don't want to let the code
+agent do that agent do that agent do that
+uh because before you know it you'll uh because before you know it you'll uh because before you know it you'll
+have a codebase that oh everyone has have a codebase that oh everyone has have a codebase that oh everyone has
+written their own utility function written their own utility function written their own utility function
+everyone has written their own everyone has written their own everyone has written their own
+authentication functions right you want authentication functions right you want authentication functions right you want
+to avoid that um so it's very important to avoid that um so it's very important to avoid that um so it's very important
+that you read the diffs um I'm a big fan that you read the diffs um I'm a big fan that you read the diffs um I'm a big fan
+of the delta you can spin it up and have of the delta you can spin it up and have of the delta you can spin it up and have
+it not spin up it's just a CLI tool that it not spin up it's just a CLI tool that it not spin up it's just a CLI tool that
+lets you very easily see the diffs um lets you very easily see the diffs um lets you very easily see the diffs um
+obviously like you would in GitHub I obviously like you would in GitHub I obviously like you would in GitHub I
+just prefer prefer delta as a just prefer prefer delta as a just prefer prefer delta as a
+preference, but the diffs have to be preference, but the diffs have to be preference, but the diffs have to be
+read. You have to make sure that there's read. You have to make sure that there's read. You have to make sure that there's
+no weird slop, no weird patterns. That's no weird slop, no weird patterns. That's no weird slop, no weird patterns. That's
+on you to enforce. Uh you can also use on you to enforce. Uh you can also use on you to enforce. Uh you can also use
+something like code rabbit or some sort something like code rabbit or some sort something like code rabbit or some sort
+of agent that reviews your pull request of agent that reviews your pull request of agent that reviews your pull request
+in general. Just a second set of eyes. in general. Just a second set of eyes. in general. Just a second set of eyes.
+Make sure all looks good. Make sure make Make sure all looks good. Make sure make Make sure all looks good. Make sure make
+sure nothing looks off. You want to sure nothing looks off. You want to sure nothing looks off. You want to
+confirm again the the speed that we're confirm again the the speed that we're confirm again the the speed that we're
+going to be able to go to is much going to be able to go to is much going to be able to go to is much
+faster. So it's very important. always faster. So it's very important. always faster. So it's very important. always
+was, but even more now your CI/CD stuff was, but even more now your CI/CD stuff was, but even more now your CI/CD stuff
+is going, your pre-commit hooks are is going, your pre-commit hooks are is going, your pre-commit hooks are
+firing, your tests are actually testing firing, your tests are actually testing firing, your tests are actually testing
+because one PR of slop easily turns into because one PR of slop easily turns into because one PR of slop easily turns into
+10, easily turns into 100, and your code 10, easily turns into 100, and your code 10, easily turns into 100, and your code
+base is destroyed. base is destroyed. base is destroyed.
+Um, an interesting thing that I've done Um, an interesting thing that I've done Um, an interesting thing that I've done
+recently is once we run into a situation recently is once we run into a situation recently is once we run into a situation
+where we have a code review and an issue where we have a code review and an issue where we have a code review and an issue
+has popped up more than once um meaning has popped up more than once um meaning has popped up more than once um meaning
+for example for example for example
+uh the team had different uh rough uh the team had different uh rough uh the team had different uh rough
+versions right so that happened twice I versions right so that happened twice I versions right so that happened twice I
+said okay we're going to add a skill the said okay we're going to add a skill the said okay we're going to add a skill the
+skill will be used locally in this skill will be used locally in this skill will be used locally in this
+project hey just make sure everyone's on project hey just make sure everyone's on project hey just make sure everyone's on
+a safe environment have a reference file a safe environment have a reference file a safe environment have a reference file
+have a script have a script have a script
+And all of a sudden that issue should And all of a sudden that issue should And all of a sudden that issue should
+not happen again, right? [snorts] So as not happen again, right? [snorts] So as not happen again, right? [snorts] So as
+you are doing your code reviews, pull you are doing your code reviews, pull you are doing your code reviews, pull
+requests that also serves as context and requests that also serves as context and requests that also serves as context and
+that also serves as this like continual that also serves as this like continual that also serves as this like continual
+learning. Whereas if you see a mistake, learning. Whereas if you see a mistake, learning. Whereas if you see a mistake,
+you can literally just ask any code, you can literally just ask any code, you can literally just ask any code,
+hey, you know, we had this issue with hey, you know, we had this issue with hey, you know, we had this issue with
+our test. This has happened multiple our test. This has happened multiple our test. This has happened multiple
+times now. This test is very flaky. What times now. This test is very flaky. What times now. This test is very flaky. What
+is wrong? What has gone wrong in the is wrong? What has gone wrong in the is wrong? What has gone wrong in the
+past? and how do we prevent it at the past? and how do we prevent it at the past? and how do we prevent it at the
+code level? Um, this is very important code level? Um, this is very important code level? Um, this is very important
+because all these standards need to be because all these standards need to be because all these standards need to be
+enforced not only with a skill, not only enforced not only with a skill, not only enforced not only with a skill, not only
+with you know yourself, documentation, with you know yourself, documentation, with you know yourself, documentation,
+etc. Um, but because you have the etc. Um, but because you have the etc. Um, but because you have the
+ability to go very quickly, you need to ability to go very quickly, you need to ability to go very quickly, you need to
+make sure that you are make sure that you are make sure that you are
+enforcing all of your standards at the enforcing all of your standards at the enforcing all of your standards at the
+code level because you're not to be code level because you're not to be code level because you're not to be
+trusted. Stuff just slips by. People are trusted. Stuff just slips by. People are trusted. Stuff just slips by. People are
+a human. They're going to forget. You a human. They're going to forget. You a human. They're going to forget. You
+have to have to make sure that that gets have to have to make sure that that gets have to have to make sure that that gets
+enforced at the code level. That could enforced at the code level. That could enforced at the code level. That could
+mean a test for something as simple as mean a test for something as simple as mean a test for something as simple as
+your dependency directions. That could your dependency directions. That could your dependency directions. That could
+be a test for I've even seen tests for be a test for I've even seen tests for be a test for I've even seen tests for
+documentation. So if you have a very documentation. So if you have a very documentation. So if you have a very
+important module and it uses four important module and it uses four important module and it uses four
+functions, you want to say, "Hey, we functions, you want to say, "Hey, we functions, you want to say, "Hey, we
+have a test. Nobody add a function. have a test. Nobody add a function. have a test. Nobody add a function.
+Nobody remove function." If that fails, Nobody remove function." If that fails, Nobody remove function." If that fails,
+it'll fail because the documentation it'll fail because the documentation it'll fail because the documentation
+that we have, it's linked to it. And that we have, it's linked to it. And that we have, it's linked to it. And
+someone added a new function. There's no someone added a new function. There's no someone added a new function. There's no
+new mention of that in the new mention of that in the new mention of that in the
+documentation. Fail. I want it to fail documentation. Fail. I want it to fail documentation. Fail. I want it to fail
+because that because that because that
+is a standard that we need to enforce is a standard that we need to enforce is a standard that we need to enforce
+that because of how fast the team can go that because of how fast the team can go that because of how fast the team can go
+now. Like I don't want to let anything now. Like I don't want to let anything now. Like I don't want to let anything
+slip by and it has to be enforced at the slip by and it has to be enforced at the slip by and it has to be enforced at the
+code level. There's a bunch of little code level. There's a bunch of little code level. There's a bunch of little
+unique things you can do like that. For unique things you can do like that. For unique things you can do like that. For
+the most part, you just want to make the most part, you just want to make the most part, you just want to make
+sure that as problems arrive, you sure that as problems arrive, you sure that as problems arrive, you
+enforce the solution at the code level. Uh so it's more of the same. So, you Uh so it's more of the same. So, you
+know, reading the diffs, using something know, reading the diffs, using something know, reading the diffs, using something
+like code rabbit, uh, again, enforcing like code rabbit, uh, again, enforcing like code rabbit, uh, again, enforcing
+all these standards, they have to be all these standards, they have to be all these standards, they have to be
+enforced at the code level, and you enforced at the code level, and you enforced at the code level, and you
+could probably just get away with it could probably just get away with it could probably just get away with it
+with an action or with pre-commit hooks. with an action or with pre-commit hooks. with an action or with pre-commit hooks.
+Um, it's just worth bringing up because Um, it's just worth bringing up because Um, it's just worth bringing up because
+that's a that's a problem that I've seen that's a that's a problem that I've seen that's a that's a problem that I've seen
+a lot. Um, so this is from one of the a lot. Um, so this is from one of the a lot. Um, so this is from one of the
+resources that I just shared on the resources that I just shared on the resources that I just shared on the
+chat. Um, codeex openai. chat. Um, codeex openai. chat. Um, codeex openai.
+Uh you'll hear this term a lot, harness Uh you'll hear this term a lot, harness Uh you'll hear this term a lot, harness
+engineering, but they were able to show engineering, but they were able to show engineering, but they were able to show
+how they're pretty much working 100% how they're pretty much working 100% how they're pretty much working 100%
+with just code agents. There's really with just code agents. There's really with just code agents. There's really
+not any more manual stuff they're doing. not any more manual stuff they're doing. not any more manual stuff they're doing.
+Um but some things they noted that I Um but some things they noted that I Um but some things they noted that I
+found interesting are the agents MD. A found interesting are the agents MD. A found interesting are the agents MD. A
+lot of people tend to stuff their agents lot of people tend to stuff their agents lot of people tend to stuff their agents
+MD or your cloud MD with a bunch of MD or your cloud MD with a bunch of MD or your cloud MD with a bunch of
+stuff. And stuff. And stuff. And
+for the most part, most models will just for the most part, most models will just for the most part, most models will just
+either ignore it if it's too big or I either ignore it if it's too big or I either ignore it if it's too big or I
+think the prompt that was leaked from think the prompt that was leaked from think the prompt that was leaked from
+cloud code is like only read this cloud code is like only read this cloud code is like only read this
+specific claude MD if it has to do with specific claude MD if it has to do with specific claude MD if it has to do with
+the question. The problem is that that's the question. The problem is that that's the question. The problem is that that's
+very subjective, right? So you want to very subjective, right? So you want to very subjective, right? So you want to
+treat this almost like as a map. Um they treat this almost like as a map. Um they treat this almost like as a map. Um they
+call it progressive disclosure, right? call it progressive disclosure, right? call it progressive disclosure, right?
+So like, hey, here's where all our tests So like, hey, here's where all our tests So like, hey, here's where all our tests
+are. Hey, we do this weird thing with are. Hey, we do this weird thing with are. Hey, we do this weird thing with
+this weird version of Typescript because this weird version of Typescript because this weird version of Typescript because
+we have to because of our environment, we have to because of our environment, we have to because of our environment,
+stuff like that. You don't want to stuff like that. You don't want to stuff like that. You don't want to
+overwhelm it. It's just more of a map to overwhelm it. It's just more of a map to overwhelm it. It's just more of a map to
+find stuff, find stuff, find stuff,
+etc. And it can dig deeper if you tell etc. And it can dig deeper if you tell etc. And it can dig deeper if you tell
+like, "Hey, all of our docs are here. If like, "Hey, all of our docs are here. If like, "Hey, all of our docs are here. If
+you need to find the specific one for you need to find the specific one for you need to find the specific one for
+the setup, go look here." the setup, go look here." the setup, go look here."
+Uh, number two, the honestly I kind of Uh, number two, the honestly I kind of Uh, number two, the honestly I kind of
+had a hard time understanding this, but had a hard time understanding this, but had a hard time understanding this, but
+from what I understand from their from what I understand from their from what I understand from their
+article is that, you know, git is a and article is that, you know, git is a and article is that, you know, git is a and
+this is common sense. I don't know why this is common sense. I don't know why this is common sense. I don't know why
+they included, but you know, git itself they included, but you know, git itself they included, but you know, git itself
+now has become documentation. Now, it now has become documentation. Now, it now has become documentation. Now, it
+always was, but it's worth mentioning always was, but it's worth mentioning always was, but it's worth mentioning
+something like lazygit, something like something like lazygit, something like something like lazygit, something like
+um I don't know any other tools um I don't know any other tools um I don't know any other tools
+honestly. Uh, the point is that git is honestly. Uh, the point is that git is honestly. Uh, the point is that git is
+very important now more than ever. You very important now more than ever. You very important now more than ever. You
+don't want to have huge commits. I've don't want to have huge commits. I've don't want to have huge commits. I've
+effectively banned huge commits at my effectively banned huge commits at my effectively banned huge commits at my
+organization because again you can go organization because again you can go organization because again you can go
+very fast. I don't care how fast you go very fast. I don't care how fast you go very fast. I don't care how fast you go
+if it's pure slop small commits always. if it's pure slop small commits always. if it's pure slop small commits always.
+And I able to easily quickly no relog And I able to easily quickly no relog And I able to easily quickly no relog
+get blame etc with lazy git because I get blame etc with lazy git because I get blame etc with lazy git because I
+can just say hey here's these 10 commits can just say hey here's these 10 commits can just say hey here's these 10 commits
+for these days. Okay, I see here where for these days. Okay, I see here where for these days. Okay, I see here where
+they did. Okay, boom, go there. Fix that they did. Okay, boom, go there. Fix that they did. Okay, boom, go there. Fix that
+issue. Versus if you let the team go, issue. Versus if you let the team go, issue. Versus if you let the team go,
+you have a huge amount of code and you you have a huge amount of code and you you have a huge amount of code and you
+have huge commits. It's a pain in the have huge commits. It's a pain in the have huge commits. It's a pain in the
+ass to debug. It's a pain in the ass to ass to debug. It's a pain in the ass to ass to debug. It's a pain in the ass to
+roll back. roll back. roll back.
+Um, so this is what they were calling a Um, so this is what they were calling a Um, so this is what they were calling a
+self-healing loop. And I think again a self-healing loop. And I think again a self-healing loop. And I think again a
+lot of these principles people are lot of these principles people are lot of these principles people are
+getting towards or coming towards getting towards or coming towards getting towards or coming towards
+without interacting. And I think it's without interacting. And I think it's without interacting. And I think it's
+interesting that everyone has for the interesting that everyone has for the interesting that everyone has for the
+most part arrived at the same most part arrived at the same most part arrived at the same
+conclusions. Uh but this is pretty much conclusions. Uh but this is pretty much conclusions. Uh but this is pretty much
+just saying like hey you know you have just saying like hey you know you have just saying like hey you know you have
+something like a quality gate that's something like a quality gate that's something like a quality gate that's
+being enforced at the code level after being enforced at the code level after being enforced at the code level after
+you commit run the llinters and this is you commit run the llinters and this is you commit run the llinters and this is
+kind of what plankton from fosio shout kind of what plankton from fosio shout kind of what plankton from fosio shout
+out to freaky Friday fazio the plankton out to freaky Friday fazio the plankton out to freaky Friday fazio the plankton
+project is pretty much saying like hey project is pretty much saying like hey project is pretty much saying like hey
+whenever cloud code does a diff run the whenever cloud code does a diff run the whenever cloud code does a diff run the
+llinters hide the output just tell me if llinters hide the output just tell me if llinters hide the output just tell me if
+it failed or not and if it failed tell it failed or not and if it failed tell it failed or not and if it failed tell
+me why it failed that's what plankton is me why it failed that's what plankton is me why it failed that's what plankton is
+doing uh they also do a lot of work with doing uh they also do a lot of work with doing uh they also do a lot of work with
+the work trees and this also becomes the work trees and this also becomes the work trees and this also becomes
+comes important because I I tend to spin comes important because I I tend to spin comes important because I I tend to spin
+up a lot of work trees for research. So up a lot of work trees for research. So up a lot of work trees for research. So
+I'll spin up, you know, five work trees, I'll spin up, you know, five work trees, I'll spin up, you know, five work trees,
+fire off five agents in the background. fire off five agents in the background. fire off five agents in the background.
+I don't even have to look at it. I don't I don't even have to look at it. I don't I don't even have to look at it. I don't
+have to think about it. Maybe it's have to think about it. Maybe it's have to think about it. Maybe it's
+complete as maybe it's useful, but for complete as maybe it's useful, but for complete as maybe it's useful, but for
+the most part, I just fire these off for the most part, I just fire these off for the most part, I just fire these off for
+research. And again, that's stuff that research. And again, that's stuff that research. And again, that's stuff that
+would have taken me hours before. Now I would have taken me hours before. Now I would have taken me hours before. Now I
+can do it within 30 minutes. can do it within 30 minutes. can do it within 30 minutes.
+Um, I won't go through the rest. I think Um, I won't go through the rest. I think Um, I won't go through the rest. I think
+it's kind of redundant, but you get you it's kind of redundant, but you get you it's kind of redundant, but you get you
+get the gist. get the gist. get the gist.
+Uh uh this is worth mentioning. So uh this is worth mentioning. So
+how do I say this? Um how do I say this? Um how do I say this? Um
+this always mattered but it matters now this always mattered but it matters now this always mattered but it matters now
+again 10 times more. Your code base has again 10 times more. Your code base has again 10 times more. Your code base has
+to be organized. Your repo has to be to be organized. Your repo has to be to be organized. Your repo has to be
+organized. Um, if you just have a bunch organized. Um, if you just have a bunch organized. Um, if you just have a bunch
+of random of random of random
+directories with no structure, uh, no directories with no structure, uh, no directories with no structure, uh, no
+modules, modules, modules,
+the code agents are going to look that the code agents are going to look that the code agents are going to look that
+look at that as a pattern and they're look at that as a pattern and they're look at that as a pattern and they're
+going to say, "Oh, like you know, Tuna going to say, "Oh, like you know, Tuna going to say, "Oh, like you know, Tuna
+didn't make any didn't make any didn't make any
+directory specifically for the database. directory specifically for the database. directory specifically for the database.
+We're just going to put it in the root, We're just going to put it in the root, We're just going to put it in the root,
+right?" And then that'll keep building right?" And then that'll keep building right?" And then that'll keep building
+on top of each other. So, it's very on top of each other. So, it's very on top of each other. So, it's very
+important that your hygiene of your important that your hygiene of your important that your hygiene of your
+repo. Again, it always was supposed to repo. Again, it always was supposed to repo. Again, it always was supposed to
+be this way, but it's even more be this way, but it's even more be this way, but it's even more
+important now because it'll look at it important now because it'll look at it important now because it'll look at it
+as a pattern. And you want to make the as a pattern. And you want to make the as a pattern. And you want to make the
+codebase as easy to read as possible. codebase as easy to read as possible. codebase as easy to read as possible.
+Not only for humans, of course, but for Not only for humans, of course, but for Not only for humans, of course, but for
+the agents because it becomes a prompt the agents because it becomes a prompt the agents because it becomes a prompt
+in itself. And if your documentation is in itself. And if your documentation is in itself. And if your documentation is
+outdated and five clawed code agents outdated and five clawed code agents outdated and five clawed code agents
+have read it and they are working on have read it and they are working on have read it and they are working on
+that that that
+unorganized unorganized unorganized
+or wrong information, right, you're or wrong information, right, you're or wrong information, right, you're
+you're going to have a really bad time. you're going to have a really bad time. you're going to have a really bad time.
+It's worth making sure you've ironed It's worth making sure you've ironed It's worth making sure you've ironed
+this stuff out ahead of time to make the this stuff out ahead of time to make the this stuff out ahead of time to make the
+code agents job a lot easier. code agents job a lot easier. code agents job a lot easier.
+Okay. And you can see here it finished, Okay. And you can see here it finished, Okay. And you can see here it finished,
+right? So, um, it did five new files. right? So, um, it did five new files. right? So, um, it did five new files.
+Uh, four files were modified. Uh, four files were modified. Uh, four files were modified.
+It input all my task. They have a roll It input all my task. They have a roll It input all my task. They have a roll
+back, right? So, if I say, "Hey, this is back, right? So, if I say, "Hey, this is back, right? So, if I say, "Hey, this is
+complete slop." I can just roll back to complete slop." I can just roll back to complete slop." I can just roll back to
+the baseline because it committed. nice the baseline because it committed. nice the baseline because it committed. nice
+and cleanly like I needed to, right? I and cleanly like I needed to, right? I and cleanly like I needed to, right? I
+don't I'm not just going to guess what don't I'm not just going to guess what don't I'm not just going to guess what
+is the action it took. I can just go is the action it took. I can just go is the action it took. I can just go
+back and lazy get and look at the back and lazy get and look at the back and lazy get and look at the
+commits easily. commits easily. commits easily.
+Um key features that I added and also Um key features that I added and also Um key features that I added and also
+just outline here what I had. So I'll just outline here what I had. So I'll just outline here what I had. So I'll
+say something like open a PR say something like open a PR say something like open a PR
+and then it'll be a PR that's open on and then it'll be a PR that's open on and then it'll be a PR that's open on
+the project and it will have a the project and it will have a the project and it will have a
+it'll have an automatically it'll have an automatically it'll have an automatically
+be review with uh code rabbit and you'll be review with uh code rabbit and you'll be review with uh code rabbit and you'll
+see here an example of what I mean. Uh so I'll wait for it to come through Uh so I'll wait for it to come through
+but you can see here but you can see here but you can see here
+uh let's see uh let's see uh let's see
+uh so the pull request was opened and uh so the pull request was opened and uh so the pull request was opened and
+then code rabbit went through and just then code rabbit went through and just then code rabbit went through and just
+gave you a walk through. In this case it gave you a walk through. In this case it gave you a walk through. In this case it
+was a pretty simple one so it didn't was a pretty simple one so it didn't was a pretty simple one so it didn't
+have anything too crazy to add. Just have anything too crazy to add. Just have anything too crazy to add. Just
+kind of gave me a walk through the kind of gave me a walk through the kind of gave me a walk through the
+changes. Let's see something bigger. Okay. Yeah. Yeah. So you can see here, Okay. Yeah. Yeah. So you can see here,
+right? It starts to outline the issues. right? It starts to outline the issues. right? It starts to outline the issues.
+It'll tell like, hey, this is probably a It'll tell like, hey, this is probably a It'll tell like, hey, this is probably a
+minor issue, but it's worth cleaning up minor issue, but it's worth cleaning up minor issue, but it's worth cleaning up
+stuff like this as a second set of eyes. stuff like this as a second set of eyes. stuff like this as a second set of eyes.
+Again, nothing's going to replace your Again, nothing's going to replace your Again, nothing's going to replace your
+own common sense, but through the volume own common sense, but through the volume own common sense, but through the volume
+of the code that can be generated now, of the code that can be generated now, of the code that can be generated now,
+this is much more important than ever. this is much more important than ever. this is much more important than ever.
+Um, I think that's pretty much it. Um, I think that's pretty much it. Um, I think that's pretty much it.
+Again, [clears throat] you can Again, [clears throat] you can Again, [clears throat] you can
+Sorry about that. Uh, you can go pretty Sorry about that. Uh, you can go pretty Sorry about that. Uh, you can go pretty
+deep in this. Um, but all this is built deep in this. Um, but all this is built deep in this. Um, but all this is built
+out this basic workflow. uh researching, out this basic workflow. uh researching, out this basic workflow. uh researching,
+planning, planning, planning,
+execution and code review. That is the execution and code review. That is the execution and code review. That is the
+foundation of AJ Techch engineering from foundation of AJ Techch engineering from foundation of AJ Techch engineering from
+first principles as an empath. Thank first principles as an empath. Thank first principles as an empath. Thank
+you. 

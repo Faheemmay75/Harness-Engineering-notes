@@ -1,0 +1,885 @@
+Hello everybody and welcome back to Hello everybody and welcome back to
+episode 45 of this AI podcast. In episode 45 of this AI podcast. In episode 45 of this AI podcast. In
+today's episode again with me is Schwo today's episode again with me is Schwo today's episode again with me is Schwo
+and we're discussing today of everything and we're discussing today of everything and we're discussing today of everything
+around aic engineering. We talked about around aic engineering. We talked about around aic engineering. We talked about
+harness engineering especially how you harness engineering especially how you harness engineering especially how you
+actually generate these important AI actually generate these important AI actually generate these important AI
+agent harnesses. And at the end of the agent harnesses. And at the end of the agent harnesses. And at the end of the
+episode today we're also deep diving in episode today we're also deep diving in episode today we're also deep diving in
+how do you actually look into the how do you actually look into the how do you actually look into the
+pricing of these harnessed agents? How pricing of these harnessed agents? How pricing of these harnessed agents? How
+do they actually create value? But how do they actually create value? But how do they actually create value? But how
+do you make sure you price this do you make sure you price this do you make sure you price this
+adequately for example with outputbased adequately for example with outputbased adequately for example with outputbased
+pricing? But with me today again from pricing? But with me today again from pricing? But with me today again from
+Lisbon, how is life doing uh in the Lisbon, how is life doing uh in the Lisbon, how is life doing uh in the
+south of Europe? Uh it's good. We have south of Europe? Uh it's good. We have south of Europe? Uh it's good. We have
+good weather. We have uh time and so far good weather. We have uh time and so far good weather. We have uh time and so far
+things are looking pretty good. Uh things are looking pretty good. Uh things are looking pretty good. Uh
+however, things are not looking that however, things are not looking that however, things are not looking that
+good over at cloud servers. Uh but we'll good over at cloud servers. Uh but we'll good over at cloud servers. Uh but we'll
+get in get into it uh in a few minutes. get in get into it uh in a few minutes. get in get into it uh in a few minutes.
+Bad weather, bad weather on cloer Bad weather, bad weather on cloer Bad weather, bad weather on cloer
+services. Everybody's vibe coding. services. Everybody's vibe coding. services. Everybody's vibe coding.
+Everybody's using clothes code. Again, Everybody's using clothes code. Again, Everybody's using clothes code. Again,
+my background today. But in the episode my background today. But in the episode my background today. But in the episode
+today, let me quickly make the segue today, let me quickly make the segue today, let me quickly make the segue
+into the first topic, which is harnessed into the first topic, which is harnessed into the first topic, which is harnessed
+engineering. A few months ago, we engineering. A few months ago, we engineering. A few months ago, we
+actually talked about already in regard actually talked about already in regard actually talked about already in regard
+to aantic skills. So basically equipping to aantic skills. So basically equipping to aantic skills. So basically equipping
+agents with context knowledge. For agents with context knowledge. For agents with context knowledge. For
+example, back then it was mostly just example, back then it was mostly just example, back then it was mostly just
+markdown files. in a sense, how do you markdown files. in a sense, how do you markdown files. in a sense, how do you
+actually generate a great LBO model for actually generate a great LBO model for actually generate a great LBO model for
+a financial agent or an Excel model in a financial agent or an Excel model in a financial agent or an Excel model in
+general? This was probably a little bit general? This was probably a little bit general? This was probably a little bit
+steamrolled and augmented in popularity steamrolled and augmented in popularity steamrolled and augmented in popularity
+when open clothes came out and pretty when open clothes came out and pretty when open clothes came out and pretty
+much the agent and actually not only much the agent and actually not only much the agent and actually not only
+took specific skills from the markdown took specific skills from the markdown took specific skills from the markdown
+context, but also actually also added context, but also actually also added context, but also actually also added
+new memory files into markdown. And this new memory files into markdown. And this new memory files into markdown. And this
+became all this like let's say a little became all this like let's say a little became all this like let's say a little
+bit loose context of this completely new bit loose context of this completely new bit loose context of this completely new
+Atchantic world that now we're living Atchantic world that now we're living Atchantic world that now we're living
+in. But the more components that we're in. But the more components that we're in. But the more components that we're
+actually adding to the agent, the more actually adding to the agent, the more actually adding to the agent, the more
+complicated it is for the agent to complicated it is for the agent to complicated it is for the agent to
+really orchestrate all these markdown really orchestrate all these markdown really orchestrate all these markdown
+files and tools and and so on and so files and tools and and so on and so files and tools and and so on and so
+forth. So that is exactly why there is forth. So that is exactly why there is forth. So that is exactly why there is
+this reasoning on we need a structured this reasoning on we need a structured this reasoning on we need a structured
+approach basically giving an agent a approach basically giving an agent a approach basically giving an agent a
+structured harness to actually yield the structured harness to actually yield the structured harness to actually yield the
+best possible output. So just in another best possible output. So just in another best possible output. So just in another
+way that I usually think about it is an way that I usually think about it is an way that I usually think about it is an
+ideal enchantic harness is really ideal enchantic harness is really ideal enchantic harness is really
+optimized for the context for the agent optimized for the context for the agent optimized for the context for the agent
+that it needs to perform in this that it needs to perform in this that it needs to perform in this
+multi-step uh procedures a human multi-step uh procedures a human multi-step uh procedures a human
+actually asked the agent to do. So actually asked the agent to do. So actually asked the agent to do. So
+that's a little bit the way I think that's a little bit the way I think that's a little bit the way I think
+about it but from your perspective show about it but from your perspective show about it but from your perspective show
+how do you look into the components of how do you look into the components of how do you look into the components of
+the skills and then translating that the skills and then translating that the skills and then translating that
+into great harness engineering. into great harness engineering. into great harness engineering.
+&gt;&gt; We started by building tools and &gt;&gt; We started by building tools and &gt;&gt; We started by building tools and
+initially we had like two three four initially we had like two three four initially we had like two three four
+tools and that was good enough. uh you tools and that was good enough. uh you tools and that was good enough. uh you
+had a tool to search through files, one had a tool to search through files, one had a tool to search through files, one
+tool to go online uh and maybe if you tool to go online uh and maybe if you tool to go online uh and maybe if you
+were adding let's say a word document, were adding let's say a word document, were adding let's say a word document,
+you had some kind of tool to read the you had some kind of tool to read the you had some kind of tool to read the
+word document and some other tool to uh word document and some other tool to uh word document and some other tool to uh
+edit it, make changes, text, whatever. edit it, make changes, text, whatever. edit it, make changes, text, whatever.
+However, as time went on, we demand more However, as time went on, we demand more However, as time went on, we demand more
+and more from the agents. And so now and more from the agents. And so now and more from the agents. And so now
+we're upwards of 50 60 sometimes and we're upwards of 50 60 sometimes and we're upwards of 50 60 sometimes and
+something tools for the agent and we're something tools for the agent and we're something tools for the agent and we're
+now moved into grouping these tools as now moved into grouping these tools as now moved into grouping these tools as
+toolkits as skills. skills is, I think, toolkits as skills. skills is, I think, toolkits as skills. skills is, I think,
+a better name for it because it's not a better name for it because it's not a better name for it because it's not
+just a group of tools, but also some just a group of tools, but also some just a group of tools, but also some
+instructions on how to use them. Uh, if instructions on how to use them. Uh, if instructions on how to use them. Uh, if
+you're messing up with Word, you know, you're messing up with Word, you know, you're messing up with Word, you know,
+how to edit the word, what the style of how to edit the word, what the style of how to edit the word, what the style of
+the document that you're writing in the document that you're writing in the document that you're writing in
+should be. Uh, all that kind of should be. Uh, all that kind of should be. Uh, all that kind of
+information is not just a tool, but also information is not just a tool, but also information is not just a tool, but also
+usually some markdown file. Markdown is usually some markdown file. Markdown is usually some markdown file. Markdown is
+a bit of a constant uh with this kind of a bit of a constant uh with this kind of a bit of a constant uh with this kind of
+models. and you group them together models. and you group them together models. and you group them together
+those kind of tools and those those kind of tools and those those kind of tools and those
+instructions and you build up the skills instructions and you build up the skills instructions and you build up the skills
+because we quickly realized for the because we quickly realized for the because we quickly realized for the
+things want to do especially I'd say things want to do especially I'd say things want to do especially I'd say
+coding agents are one of the most famous coding agents are one of the most famous coding agents are one of the most famous
+types of agents they're very types of agents they're very types of agents they're very
+welldeveloped and pretty popular by then welldeveloped and pretty popular by then welldeveloped and pretty popular by then
+across the board in all developers you across the board in all developers you across the board in all developers you
+can easily have upwards ofund and can easily have upwards ofund and can easily have upwards ofund and
+something tools available to your agent something tools available to your agent something tools available to your agent
+that becomes extremely hard for the that becomes extremely hard for the that becomes extremely hard for the
+agent when he's trying to implement a agent when he's trying to implement a agent when he's trying to implement a
+new button implement a new feature on new button implement a new feature on new button implement a new feature on
+your site and suddenly they has to read your site and suddenly they has to read your site and suddenly they has to read
+over 100 tool descriptions and decide over 100 tool descriptions and decide over 100 tool descriptions and decide
+what tool should be best used for this what tool should be best used for this what tool should be best used for this
+kind of job. Uh maybe a sequence of kind of job. Uh maybe a sequence of kind of job. Uh maybe a sequence of
+tools. So we have to start grouping them tools. So we have to start grouping them tools. So we have to start grouping them
+into toolkits or skills and then into toolkits or skills and then into toolkits or skills and then
+selectively let's say we have a toolkit selectively let's say we have a toolkit selectively let's say we have a toolkit
+just for browsing the web and that's just for browsing the web and that's just for browsing the web and that's
+just instructions on how the searches just instructions on how the searches just instructions on how the searches
+should be some tools on different APIs should be some tools on different APIs should be some tools on different APIs
+different places to search the web on different places to search the web on different places to search the web on
+some places to search documentation on some places to search documentation on some places to search documentation on
+the platform that you're using and you the platform that you're using and you the platform that you're using and you
+group them uh so that the agent does not group them uh so that the agent does not group them uh so that the agent does not
+have the hund and something tools right have the hund and something tools right have the hund and something tools right
+way available to it but it can search way available to it but it can search way available to it but it can search
+and activate skills accordingly. So if and activate skills accordingly. So if and activate skills accordingly. So if
+you ask something, hey what is the best you ask something, hey what is the best you ask something, hey what is the best
+way to or what is the best framework I way to or what is the best framework I way to or what is the best framework I
+can use for this? It knows that it has can use for this? It knows that it has can use for this? It knows that it has
+to search somewhere. It has a skill it to search somewhere. It has a skill it to search somewhere. It has a skill it
+can activate. It sees a skill about can activate. It sees a skill about can activate. It sees a skill about
+searching the web. It activates that searching the web. It activates that searching the web. It activates that
+skill and only then it can see the four skill and only then it can see the four skill and only then it can see the four
+or five different tools and some or five different tools and some or five different tools and some
+instructions on how to search the web. instructions on how to search the web. instructions on how to search the web.
+This is how you do content engineering This is how you do content engineering This is how you do content engineering
+so that you don't spam the agent with so that you don't spam the agent with so that you don't spam the agent with
+all the possible tools and all the all the possible tools and all the all the possible tools and all the
+possible buttons it can press. Um and possible buttons it can press. Um and possible buttons it can press. Um and
+you get the best results. Maybe just to you get the best results. Maybe just to you get the best results. Maybe just to
+to roll up this very briefly. So we came to roll up this very briefly. So we came to roll up this very briefly. So we came
+from prompt engineering which is from prompt engineering which is from prompt engineering which is
+basically this very simplistic form of basically this very simplistic form of basically this very simplistic form of
+optimizing the input of a of a large optimizing the input of a of a large optimizing the input of a of a large
+language model um to then context language model um to then context language model um to then context
+engineering which is then optimizing engineering which is then optimizing engineering which is then optimizing
+basically the input of the context basically the input of the context basically the input of the context
+window. You don't want to give the model window. You don't want to give the model window. You don't want to give the model
+all the trash that you can possibly find all the trash that you can possibly find all the trash that you can possibly find
+lying around. Even if I see that lying around. Even if I see that lying around. Even if I see that
+occasionally actually happening, let's occasionally actually happening, let's occasionally actually happening, let's
+just give everything to the model and just give everything to the model and just give everything to the model and
+the model should figure it out itself. the model should figure it out itself. the model should figure it out itself.
+But in context engineering, um, it's a But in context engineering, um, it's a But in context engineering, um, it's a
+little bit more like optimizing like a little bit more like optimizing like a little bit more like optimizing like a
+human kind of workflow as well. If you human kind of workflow as well. If you human kind of workflow as well. If you
+have a meeting in 30 minutes and you have a meeting in 30 minutes and you have a meeting in 30 minutes and you
+would want something from a CFO like we would want something from a CFO like we would want something from a CFO like we
+quickly talked before the podcast or you quickly talked before the podcast or you quickly talked before the podcast or you
+want to have something from an engineer, want to have something from an engineer, want to have something from an engineer,
+you don't give it everything you you don't give it everything you you don't give it everything you
+possibly know on finance or everything possibly know on finance or everything possibly know on finance or everything
+you possibly know on engineering. You you possibly know on engineering. You you possibly know on engineering. You
+curate this context aka this 30 minute curate this context aka this 30 minute curate this context aka this 30 minute
+slot you have with a human. And very slot you have with a human. And very slot you have with a human. And very
+similarly in the aentic or ancient similarly in the aentic or ancient similarly in the aentic or ancient
+world, you would curate the context to world, you would curate the context to world, you would curate the context to
+only give it mostly relevant concepts only give it mostly relevant concepts only give it mostly relevant concepts
+like for example a tool description, a like for example a tool description, a like for example a tool description, a
+particular skill it needs to activate particular skill it needs to activate particular skill it needs to activate
+and some other components for example and some other components for example and some other components for example
+how to actually um maybe do an IP API how to actually um maybe do an IP API how to actually um maybe do an IP API
+call and which one you might actually call and which one you might actually call and which one you might actually
+need. There is also this let's say need. There is also this let's say need. There is also this let's say
+larger array that you should also not larger array that you should also not larger array that you should also not
+overcurate the context. there should overcurate the context. there should overcurate the context. there should
+still be some degrees of freedom that still be some degrees of freedom that still be some degrees of freedom that
+the model can somewhat have some clarity the model can somewhat have some clarity the model can somewhat have some clarity
+of choice as well. And this is this of choice as well. And this is this of choice as well. And this is this
+pretty much this balance that is then um pretty much this balance that is then um pretty much this balance that is then um
+emphasized in this context engineering emphasized in this context engineering emphasized in this context engineering
+let's say workflow that you would want let's say workflow that you would want let's say workflow that you would want
+to constrain it but not too much. So you to constrain it but not too much. So you to constrain it but not too much. So you
+kind of have to find this middle kind of have to find this middle kind of have to find this middle
+balance. Ultimately what you're from a balance. Ultimately what you're from a balance. Ultimately what you're from a
+builder perspective want to optimize is builder perspective want to optimize is builder perspective want to optimize is
+of course both the intelligence or the of course both the intelligence or the of course both the intelligence or the
+output the value creation of your output the value creation of your output the value creation of your
+software of your chantic system for software of your chantic system for software of your chantic system for
+example but at the same time you want to example but at the same time you want to example but at the same time you want to
+minimize the cost you need to to use and minimize the cost you need to to use and minimize the cost you need to to use and
+to deploy to yield that intelligence. So to deploy to yield that intelligence. So to deploy to yield that intelligence. So
+in other words if you give too much in other words if you give too much in other words if you give too much
+context that is meaningless you pay context that is meaningless you pay context that is meaningless you pay
+basically tokens for no good reason. If basically tokens for no good reason. If basically tokens for no good reason. If
+you don't give enough you don't yield you don't give enough you don't yield you don't give enough you don't yield
+sufficient intelligence. So that's a sufficient intelligence. So that's a sufficient intelligence. So that's a
+little bit this like trade-off that you little bit this like trade-off that you little bit this like trade-off that you
+constantly have to do and you can give constantly have to do and you can give constantly have to do and you can give
+partially of this decision back to the partially of this decision back to the partially of this decision back to the
+model but not everything. So that's model but not everything. So that's model but not everything. So that's
+that's the world of context engineering. that's the world of context engineering. that's the world of context engineering.
+In harness engineering, it basically In harness engineering, it basically In harness engineering, it basically
+takes the whole world one step further. takes the whole world one step further. takes the whole world one step further.
+And we're trying to basically enable the And we're trying to basically enable the And we're trying to basically enable the
+value creation by putting this harness value creation by putting this harness value creation by putting this harness
+around an agent around a large language around an agent around a large language around an agent around a large language
+model or maybe a multitude of them for model or maybe a multitude of them for model or maybe a multitude of them for
+it to then be optimally set up for it to then be optimally set up for it to then be optimally set up for
+example to be a coding agent, to be a example to be a coding agent, to be a example to be a coding agent, to be a
+financial analyst agent, to be a due financial analyst agent, to be a due financial analyst agent, to be a due
+diligence agent, a legal agent or an diligence agent, a legal agent or an diligence agent, a legal agent or an
+agent in a call center. So you would agent in a call center. So you would agent in a call center. So you would
+basically curate the world around an basically curate the world around an basically curate the world around an
+agent in that particular case that might agent in that particular case that might agent in that particular case that might
+as you mentioned perfectly show include as you mentioned perfectly show include as you mentioned perfectly show include
+tools, include skills, include API, um tools, include skills, include API, um tools, include skills, include API, um
+include any other component that you include any other component that you include any other component that you
+might actually need. Is there any might actually need. Is there any might actually need. Is there any
+particular way what you would be saying particular way what you would be saying particular way what you would be saying
+for example taking financial analyst for example taking financial analyst for example taking financial analyst
+agents as an example where a harness has agents as an example where a harness has agents as an example where a harness has
+to have to yield a good agent? to have to yield a good agent? to have to yield a good agent?
+&gt;&gt; Uh you can have a rundown of the usual &gt;&gt; Uh you can have a rundown of the usual &gt;&gt; Uh you can have a rundown of the usual
+tasks you do if you're doing the task tasks you do if you're doing the task tasks you do if you're doing the task
+yourself. Uh but the idea is never show yourself. Uh but the idea is never show yourself. Uh but the idea is never show
+the agent more than I'd say 30 tools uh the agent more than I'd say 30 tools uh the agent more than I'd say 30 tools uh
+at one single time. So usually for at one single time. So usually for at one single time. So usually for
+financial analysis you need something to financial analysis you need something to financial analysis you need something to
+uh search the documentation, search some uh search the documentation, search some uh search the documentation, search some
+files you have about the doc the company files you have about the doc the company files you have about the doc the company
+you're evaluating about the market you're evaluating about the market you're evaluating about the market
+you're uh investing or or playing around you're uh investing or or playing around you're uh investing or or playing around
+in. Uh and also some tools to go online. in. Uh and also some tools to go online. in. Uh and also some tools to go online.
+But you also need some tools and some But you also need some tools and some But you also need some tools and some
+skill to maybe write down the report. uh skill to maybe write down the report. uh skill to maybe write down the report. uh
+if you're writing a report then some if you're writing a report then some if you're writing a report then some
+skill to actually write into a word skill to actually write into a word skill to actually write into a word
+document or it's a text document some document or it's a text document some document or it's a text document some
+instructions on how the document should instructions on how the document should instructions on how the document should
+be uh parsed how the formatting should be uh parsed how the formatting should be uh parsed how the formatting should
+be because be because be because
+it is for the best and it is somewhat it is for the best and it is somewhat it is for the best and it is somewhat
+simple to instruct JSON to write the way simple to instruct JSON to write the way simple to instruct JSON to write the way
+you want it to otherwise you're going to you want it to otherwise you're going to you want it to otherwise you're going to
+have multiple iterations and it's going have multiple iterations and it's going have multiple iterations and it's going
+to cost you extra more money and so you to cost you extra more money and so you to cost you extra more money and so you
+build up these skills and you try to build up these skills and you try to build up these skills and you try to
+group them mentally and a skill is group them mentally and a skill is group them mentally and a skill is
+getting information is research getting information is research getting information is research
+basically and how to do research and the basically and how to do research and the basically and how to do research and the
+tools that you need to do that research tools that you need to do that research tools that you need to do that research
+either in the documents or online. either in the documents or online. either in the documents or online.
+Another tool is another tool set is Another tool is another tool set is Another tool is another tool set is
+writing and creating the report. Maybe writing and creating the report. Maybe writing and creating the report. Maybe
+it's creating a financial model in Excel it's creating a financial model in Excel it's creating a financial model in Excel
+and you need some tools to actually play and you need some tools to actually play and you need some tools to actually play
+around with Excel. Read the Excel and around with Excel. Read the Excel and around with Excel. Read the Excel and
+how some instructions on how the Excel how some instructions on how the Excel how some instructions on how the Excel
+should be formatted, the formulas that should be formatted, the formulas that should be formatted, the formulas that
+you should be using. So, group them into you should be using. So, group them into you should be using. So, group them into
+these toolkits or skills and then have a these toolkits or skills and then have a these toolkits or skills and then have a
+brief description of the overall skill. brief description of the overall skill. brief description of the overall skill.
+So one skill could be here's how you So one skill could be here's how you So one skill could be here's how you
+should interact with Axel. Uh and the should interact with Axel. Uh and the should interact with Axel. Uh and the
+another skill should be here's how you another skill should be here's how you another skill should be here's how you
+do research. And whatever task that you do research. And whatever task that you do research. And whatever task that you
+give the agent, you can then activate give the agent, you can then activate give the agent, you can then activate
+those skills. And only if it activates those skills. And only if it activates those skills. And only if it activates
+those skills, then it can see the tools those skills, then it can see the tools those skills, then it can see the tools
+related to it, the extractions related related to it, the extractions related related to it, the extractions related
+to it. That means you can have a 100 to it. That means you can have a 100 to it. That means you can have a 100
+plus tools, but you don't have to show plus tools, but you don't have to show plus tools, but you don't have to show
+them all the time. The agent can them all the time. The agent can them all the time. The agent can
+actually go and search for the tools actually go and search for the tools actually go and search for the tools
+that you have available to then use that you have available to then use that you have available to then use
+them. uh you might have to wait a couple them. uh you might have to wait a couple them. uh you might have to wait a couple
+more seconds because instead of having more seconds because instead of having more seconds because instead of having
+the tools right away available they has the tools right away available they has the tools right away available they has
+to search for them. It's a roundway trip to search for them. It's a roundway trip to search for them. It's a roundway trip
+but it is uh usually for the best but it is uh usually for the best but it is uh usually for the best
+because for 100 something tools that you because for 100 something tools that you because for 100 something tools that you
+have available maybe five or six are have available maybe five or six are have available maybe five or six are
+actually going to be used. I mean one actually going to be used. I mean one actually going to be used. I mean one
+particular component here that I'm still particular component here that I'm still particular component here that I'm still
+struggling somewhat to kind of make struggling somewhat to kind of make struggling somewhat to kind of make
+sense of especially if we talk about sense of especially if we talk about sense of especially if we talk about
+harness engineering just overall is is harness engineering just overall is is harness engineering just overall is is
+this topic on MCP. I mean currently we this topic on MCP. I mean currently we this topic on MCP. I mean currently we
+we believe MCP is the best practice to we believe MCP is the best practice to we believe MCP is the best practice to
+kind of have this conneure connector kind of have this conneure connector kind of have this conneure connector
+between the agent and let's say the between the agent and let's say the between the agent and let's say the
+outside world but I'm just like making outside world but I'm just like making outside world but I'm just like making
+sense more and more that it's fairly sense more and more that it's fairly sense more and more that it's fairly
+constrained what can flow through MCP's constrained what can flow through MCP's constrained what can flow through MCP's
+fairly structured and standardized fairly structured and standardized fairly structured and standardized
+protocol whereas if you have some more protocol whereas if you have some more protocol whereas if you have some more
+scattered markdown files fully laying scattered markdown files fully laying scattered markdown files fully laying
+around I think there is just yielding a around I think there is just yielding a around I think there is just yielding a
+little bit more context to perform this little bit more context to perform this little bit more context to perform this
+particular task. So in other words, MCP particular task. So in other words, MCP particular task. So in other words, MCP
+is great, but it probably has the is great, but it probably has the is great, but it probably has the
+promise to be like a highway for data promise to be like a highway for data promise to be like a highway for data
+transfer, but so far to me it feels a transfer, but so far to me it feels a transfer, but so far to me it feels a
+little bit like a train. So you can only little bit like a train. So you can only little bit like a train. So you can only
+do a particular request and you have to do a particular request and you have to do a particular request and you have to
+kind of of course wait and it comes back kind of of course wait and it comes back kind of of course wait and it comes back
+with a particular response. And this is with a particular response. And this is with a particular response. And this is
+very limited in terms of context um very limited in terms of context um very limited in terms of context um
+depth. Whereas if you have markdown or depth. Whereas if you have markdown or depth. Whereas if you have markdown or
+if you have an array of markdown or this if you have an array of markdown or this if you have an array of markdown or this
+this entire harness this entire harness this entire harness
+um that is actually yielding a lot more um that is actually yielding a lot more um that is actually yielding a lot more
+context depth than just MCP. So I'm kind context depth than just MCP. So I'm kind context depth than just MCP. So I'm kind
+of curious to see if MCP is really the of curious to see if MCP is really the of curious to see if MCP is really the
+protocol we're adapting into the future. protocol we're adapting into the future. protocol we're adapting into the future.
+Of course, if you build on financial Of course, if you build on financial Of course, if you build on financial
+analyst agents or finance in general or analyst agents or finance in general or analyst agents or finance in general or
+maybe some legal procedures like audit maybe some legal procedures like audit maybe some legal procedures like audit
+or like maybe insurance as well, you or like maybe insurance as well, you or like maybe insurance as well, you
+would want to have traceability. You would want to have traceability. You would want to have traceability. You
+would want to have some sort of would want to have some sort of would want to have some sort of
+governance structure so the agent governance structure so the agent governance structure so the agent
+doesn't go rogue in your organization. doesn't go rogue in your organization. doesn't go rogue in your organization.
+you need to probably um customize the you need to probably um customize the you need to probably um customize the
+agent in the sense or the MCP itself. agent in the sense or the MCP itself. agent in the sense or the MCP itself.
+Okay, the agent cannot access at will Okay, the agent cannot access at will Okay, the agent cannot access at will
+particular resources. It it needs to be particular resources. It it needs to be particular resources. It it needs to be
+some sort of logged. It's usually some sort of logged. It's usually some sort of logged. It's usually
+constraints on financial companies that constraints on financial companies that constraints on financial companies that
+that we see happening. But just overall, that we see happening. But just overall, that we see happening. But just overall,
+I think MCP might not be the best add-on I think MCP might not be the best add-on I think MCP might not be the best add-on
+in this harness engineering that we kind in this harness engineering that we kind in this harness engineering that we kind
+of would want it to be. That's a little of would want it to be. That's a little of would want it to be. That's a little
+bit my five cents and maybe Yeah. What bit my five cents and maybe Yeah. What bit my five cents and maybe Yeah. What
+what's your take on on this show as what's your take on on this show as what's your take on on this show as
+well? Uh I think we use MCP only to get well? Uh I think we use MCP only to get well? Uh I think we use MCP only to get
+to the level of tools. So let's imagine to the level of tools. So let's imagine to the level of tools. So let's imagine
+you're building some kind of scheduling you're building some kind of scheduling you're building some kind of scheduling
+agent that you want to uh reach out to agent that you want to uh reach out to agent that you want to uh reach out to
+partners, reach out to colleagues and partners, reach out to colleagues and partners, reach out to colleagues and
+set up the meetings accordingly. The set up the meetings accordingly. The set up the meetings accordingly. The
+MCP, for example, Google MCP or Gmail MCP, for example, Google MCP or Gmail MCP, for example, Google MCP or Gmail
+MCP would give you the tools to read MCP would give you the tools to read MCP would give you the tools to read
+your email inbox, write some emails, uh your email inbox, write some emails, uh your email inbox, write some emails, uh
+least possible uh addresses to write the least possible uh addresses to write the least possible uh addresses to write the
+emails to. Those would be tools that you emails to. Those would be tools that you emails to. Those would be tools that you
+can get for MCP. However, MCP by itself can get for MCP. However, MCP by itself can get for MCP. However, MCP by itself
+is insufficient to build out this agent, is insufficient to build out this agent, is insufficient to build out this agent,
+right? You want some instructions on how right? You want some instructions on how right? You want some instructions on how
+you want the meetings to be scheduled, you want the meetings to be scheduled, you want the meetings to be scheduled,
+uh how they should be scheduled, the uh how they should be scheduled, the uh how they should be scheduled, the
+names of the meetings, u the timing that names of the meetings, u the timing that names of the meetings, u the timing that
+you'd like them to have them. So, a full you'd like them to have them. So, a full you'd like them to have them. So, a full
+uh scheduling agent skill, if you want uh scheduling agent skill, if you want uh scheduling agent skill, if you want
+to create that for your own personal to create that for your own personal to create that for your own personal
+agent, should be maybe a couple tools agent, should be maybe a couple tools agent, should be maybe a couple tools
+from NCP, maybe a couple tools uh from NCP, maybe a couple tools uh from NCP, maybe a couple tools uh
+internal to your own computer, your own internal to your own computer, your own internal to your own computer, your own
+service, and then that uh instruction uh service, and then that uh instruction uh service, and then that uh instruction uh
+skill, usually a marathon file or some skill, usually a marathon file or some skill, usually a marathon file or some
+other file where you write down that other file where you write down that other file where you write down that
+information. A lot of those, there are information. A lot of those, there are information. A lot of those, there are
+some market places for those skills, some market places for those skills, some market places for those skills,
+people write down those instructions. people write down those instructions. people write down those instructions.
+Not a lot of them are super safe. We've Not a lot of them are super safe. We've Not a lot of them are super safe. We've
+been seeing I think with the rise of been seeing I think with the rise of been seeing I think with the rise of
+openclaw people created like this kind openclaw people created like this kind openclaw people created like this kind
+of marketplace where people would write of marketplace where people would write of marketplace where people would write
+and share skills is and and be a really and share skills is and and be a really and share skills is and and be a really
+good idea on for example the scheduling good idea on for example the scheduling good idea on for example the scheduling
+agent there were scheduling agent skills agent there were scheduling agent skills agent there were scheduling agent skills
+where it could show the agent how to do where it could show the agent how to do where it could show the agent how to do
+them how to be polite how it should them how to be polite how it should them how to be polite how it should
+invite people to do things the best way invite people to do things the best way invite people to do things the best way
+to actually schedule a calendar to be to actually schedule a calendar to be to actually schedule a calendar to be
+efficient for for people. However, a lot efficient for for people. However, a lot efficient for for people. However, a lot
+of the skills that were on our of the skills that were on our of the skills that were on our
+marketplace were um malicious and so marketplace were um malicious and so marketplace were um malicious and so
+people would hide instructions there people would hide instructions there people would hide instructions there
+saying, "Hey, send information to uh saying, "Hey, send information to uh saying, "Hey, send information to uh
+this address or like log the the the this address or like log the the the this address or like log the the the
+keywords uh and basically exfiltrate a keywords uh and basically exfiltrate a keywords uh and basically exfiltrate a
+lot of valuable information from you lot of valuable information from you lot of valuable information from you
+into some other remote remote server. into some other remote remote server. into some other remote remote server.
+So, there are publicly available skills. So, there are publicly available skills. So, there are publicly available skills.
+uh be very careful because you might be uh be very careful because you might be uh be very careful because you might be
+instructing your agent without you instructing your agent without you instructing your agent without you
+realizing uh to do some very nefarious realizing uh to do some very nefarious realizing uh to do some very nefarious
+things. I mean I think it's a good good things. I mean I think it's a good good things. I mean I think it's a good good
+perspective maybe to add on this very perspective maybe to add on this very perspective maybe to add on this very
+very briefly just in other words very briefly just in other words very briefly just in other words
+explained harnesses is a little bit like explained harnesses is a little bit like explained harnesses is a little bit like
+the component that was so far missing to the component that was so far missing to the component that was so far missing to
+yield this translation of just a yield this translation of just a yield this translation of just a
+technical capable model like we've seen technical capable model like we've seen technical capable model like we've seen
+with very advanced PhD level models with very advanced PhD level models with very advanced PhD level models
+didn't actually yield business value didn't actually yield business value didn't actually yield business value
+realization because so far this kind of realization because so far this kind of realization because so far this kind of
+translation was still missing while it translation was still missing while it translation was still missing while it
+was an incredibly intelligent large was an incredibly intelligent large was an incredibly intelligent large
+language model for example an OPUS 45 or language model for example an OPUS 45 or language model for example an OPUS 45 or
+a previous Oppus model it never really a previous Oppus model it never really a previous Oppus model it never really
+yielded material business impact because yielded material business impact because yielded material business impact because
+it kind of was lacking this harness to it kind of was lacking this harness to it kind of was lacking this harness to
+actually effectuate the business value actually effectuate the business value actually effectuate the business value
+realization. So in other words, we kind realization. So in other words, we kind realization. So in other words, we kind
+of take this super intelligent model but of take this super intelligent model but of take this super intelligent model but
+as builders we're kind of wrapping this as builders we're kind of wrapping this as builders we're kind of wrapping this
+harness around it and now suddenly it harness around it and now suddenly it harness around it and now suddenly it
+actually yields and ongoingly will yield actually yields and ongoingly will yield actually yields and ongoingly will yield
+more and more and more business value more and more and more business value more and more and more business value
+because now it is embedded in tools. It because now it is embedded in tools. It because now it is embedded in tools. It
+is embedded in into skills that actually is embedded in into skills that actually is embedded in into skills that actually
+are materially mattering for a are materially mattering for a are materially mattering for a
+particular job and are not just particular job and are not just particular job and are not just
+generally trained like you would train a generally trained like you would train a generally trained like you would train a
+transformer and then you do a transformer and then you do a transformer and then you do a
+reinforcement learning a little bit reinforcement learning a little bit reinforcement learning a little bit
+alignment there fine but it's not alignment there fine but it's not alignment there fine but it's not
+aligned into the business context aligned into the business context aligned into the business context
+because just if you rewind back some because just if you rewind back some because just if you rewind back some
+years ago we always kind of had this years ago we always kind of had this years ago we always kind of had this
+idea of we fine-tune the models for the idea of we fine-tune the models for the idea of we fine-tune the models for the
+company context but we never actually company context but we never actually company context but we never actually
+did that for two reasons. it was too did that for two reasons. it was too did that for two reasons. it was too
+expensive for many firms. And secondly, expensive for many firms. And secondly, expensive for many firms. And secondly,
+once you did the fine-tuning, the next once you did the fine-tuning, the next once you did the fine-tuning, the next
+best model came around and you did all best model came around and you did all best model came around and you did all
+this fine-tuning for no good reason. this fine-tuning for no good reason. this fine-tuning for no good reason.
+That's why we mostly built and we That's why we mostly built and we That's why we mostly built and we
+leveraged generalpurpose large language leveraged generalpurpose large language leveraged generalpurpose large language
+models that are highly not accustomed to models that are highly not accustomed to models that are highly not accustomed to
+the context of the business world. But the context of the business world. But the context of the business world. But
+now with harness engineering or having now with harness engineering or having now with harness engineering or having
+an AI agent with a harness, it now an AI agent with a harness, it now an AI agent with a harness, it now
+starts to actually have this business starts to actually have this business starts to actually have this business
+value realization in place. as hopefully value realization in place. as hopefully value realization in place. as hopefully
+finally that we see some sort of finally that we see some sort of finally that we see some sort of
+business impact happening with all these business impact happening with all these business impact happening with all these
+AI agents in the months to come. And one AI agents in the months to come. And one AI agents in the months to come. And one
+last topic just for today's episode is last topic just for today's episode is last topic just for today's episode is
+pricing because now we actually have a pricing because now we actually have a pricing because now we actually have a
+mechanism. We have a mean to take this mechanism. We have a mean to take this mechanism. We have a mean to take this
+harness. It yields business value. And harness. It yields business value. And harness. It yields business value. And
+we see that ongoingly now with agents we see that ongoingly now with agents we see that ongoingly now with agents
+being augmenting humans for example in being augmenting humans for example in being augmenting humans for example in
+the financial world. We've seen it for a the financial world. We've seen it for a the financial world. We've seen it for a
+multitude of months now in the coding multitude of months now in the coding multitude of months now in the coding
+world but also into customer care, world but also into customer care, world but also into customer care,
+customer support until transcriptions customer support until transcriptions customer support until transcriptions
+and similar services. But one question and similar services. But one question and similar services. But one question
+remains. How do you price in this new remains. How do you price in this new remains. How do you price in this new
+world where you have a harness, you have world where you have a harness, you have world where you have a harness, you have
+a super intelligent model and there is a super intelligent model and there is a super intelligent model and there is
+this this whole theory of outcomebased this this whole theory of outcomebased this this whole theory of outcomebased
+pricing? But before we go into this pricing? But before we go into this pricing? But before we go into this
+rabbit hole, sure, what's kind of your rabbit hole, sure, what's kind of your rabbit hole, sure, what's kind of your
+maybe best idea of how would you kind of maybe best idea of how would you kind of maybe best idea of how would you kind of
+make sense of you have a harness now, make sense of you have a harness now, make sense of you have a harness now,
+but what are maybe some of the cost but what are maybe some of the cost but what are maybe some of the cost
+factors and then maybe I can add the factors and then maybe I can add the factors and then maybe I can add the
+best sense of the pricing factors? You best sense of the pricing factors? You best sense of the pricing factors? You
+have a harness. What are some have a harness. What are some have a harness. What are some
+optimization vectors that you need to do optimization vectors that you need to do optimization vectors that you need to do
+to make it as cheap as possible? As a to make it as cheap as possible? As a to make it as cheap as possible? As a
+builder, as soon as you build up the builder, as soon as you build up the builder, as soon as you build up the
+harness and you have a sufficient harness and you have a sufficient harness and you have a sufficient
+harness that has all the tools and harness that has all the tools and harness that has all the tools and
+skills that make the agent or allow the skills that make the agent or allow the skills that make the agent or allow the
+agent to do what you want it to do, you agent to do what you want it to do, you agent to do what you want it to do, you
+get the idea of the minimum possible get the idea of the minimum possible get the idea of the minimum possible
+model that you can run on it that model that you can run on it that model that you can run on it that
+actually can use your harness. Uh for actually can use your harness. Uh for actually can use your harness. Uh for
+any modern hardness of skills, I I'd say any modern hardness of skills, I I'd say any modern hardness of skills, I I'd say
+coding agent, but you can think of like coding agent, but you can think of like coding agent, but you can think of like
+a personal agent. So, it has uh the a personal agent. So, it has uh the a personal agent. So, it has uh the
+ability to read emails, uh read your ability to read emails, uh read your ability to read emails, uh read your
+calendar, check something in your like calendar, check something in your like calendar, check something in your like
+smart home. A personal assistant kind of smart home. A personal assistant kind of smart home. A personal assistant kind of
+agent has maybe like 10 14 tools that he agent has maybe like 10 14 tools that he agent has maybe like 10 14 tools that he
+needs to use. If I plug in a model like needs to use. If I plug in a model like needs to use. If I plug in a model like
+GPT4, like the standard GP4 or GP4 GPT4, like the standard GP4 or GP4 GPT4, like the standard GP4 or GP4
+Turbo, which is maybe 2 years old by Turbo, which is maybe 2 years old by Turbo, which is maybe 2 years old by
+now, that model might 99% certainty that now, that model might 99% certainty that now, that model might 99% certainty that
+would fail at most assets you give it. would fail at most assets you give it. would fail at most assets you give it.
+also because older models, especially also because older models, especially also because older models, especially
+simpler or dumber models, uh are not as simpler or dumber models, uh are not as simpler or dumber models, uh are not as
+optimized to use tools as the more optimized to use tools as the more optimized to use tools as the more
+recent ones. And even the more recent recent ones. And even the more recent recent ones. And even the more recent
+ones, uh you have what three or four ones, uh you have what three or four ones, uh you have what three or four
+frontier models that people usually use. frontier models that people usually use. frontier models that people usually use.
+But if you're really concerned about But if you're really concerned about But if you're really concerned about
+privacy and safety and you want to host privacy and safety and you want to host privacy and safety and you want to host
+your own models, is a wide variety of your own models, is a wide variety of your own models, is a wide variety of
+open- source models you can run on them. open- source models you can run on them. open- source models you can run on them.
+But they also come in a wide variety of But they also come in a wide variety of But they also come in a wide variety of
+sizes and cost. So you cannot just sizes and cost. So you cannot just sizes and cost. So you cannot just
+choose the best possible open source choose the best possible open source choose the best possible open source
+model. It might not fit your hardware model. It might not fit your hardware model. It might not fit your hardware
+and you might need 50 or $100,000 and you might need 50 or $100,000 and you might need 50 or $100,000
+hardware to run those models. And so you hardware to run those models. And so you hardware to run those models. And so you
+have to get an idea of how intelligent, have to get an idea of how intelligent, have to get an idea of how intelligent,
+how advanced must your LLM, your AI how advanced must your LLM, your AI how advanced must your LLM, your AI
+model be to use your harness. From then model be to use your harness. From then model be to use your harness. From then
+on, then you can have a baseline pricing on, then you can have a baseline pricing on, then you can have a baseline pricing
+because what we've been seeing is that because what we've been seeing is that because what we've been seeing is that
+the prices are not getting lower with the prices are not getting lower with the prices are not getting lower with
+newer and newer models. We had it in the newer and newer models. We had it in the newer and newer models. We had it in the
+first couple years of genai with GBD 3.3 first couple years of genai with GBD 3.3 first couple years of genai with GBD 3.3
+3.5 41 Omni like each and every model 3.5 41 Omni like each and every model 3.5 41 Omni like each and every model
+was getting better and also cheaper. Uh was getting better and also cheaper. Uh was getting better and also cheaper. Uh
+and now that's no longer the case. We're and now that's no longer the case. We're and now that's no longer the case. We're
+getting incremental increases. Models getting incremental increases. Models getting incremental increases. Models
+are still getting better but they're are still getting better but they're are still getting better but they're
+being priced accordingly. I think it being priced accordingly. I think it being priced accordingly. I think it
+also relates to VC funding uh running also relates to VC funding uh running also relates to VC funding uh running
+out for these startups and for the out for these startups and for the out for these startups and for the
+inference and so people actually need to inference and so people actually need to inference and so people actually need to
+charge you for those tokens and if charge you for those tokens and if charge you for those tokens and if
+you're building uh agents around these you're building uh agents around these you're building uh agents around these
+models you also need to charge uh your models you also need to charge uh your models you also need to charge uh your
+clients your subscriptions whatever uh clients your subscriptions whatever uh clients your subscriptions whatever uh
+these tokens and as soon as you have these tokens and as soon as you have these tokens and as soon as you have
+that baseline you can have an idea of that baseline you can have an idea of that baseline you can have an idea of
+how it how much it costs for you to run how it how much it costs for you to run how it how much it costs for you to run
+that kind of model. uh and it is not as that kind of model. uh and it is not as that kind of model. uh and it is not as
+cheap as maybe it would be in 2 years cheap as maybe it would be in 2 years cheap as maybe it would be in 2 years
+ago but you're also getting a much ago but you're also getting a much ago but you're also getting a much
+better model and you can build much better model and you can build much better model and you can build much
+better and higher quality agents that do better and higher quality agents that do better and higher quality agents that do
+real business value. real business value. real business value.
+&gt;&gt; Okay. So maybe if I translate it in &gt;&gt; Okay. So maybe if I translate it in &gt;&gt; Okay. So maybe if I translate it in
+other words so you would work backwards other words so you would work backwards other words so you would work backwards
+from the required harness to yield the from the required harness to yield the from the required harness to yield the
+business value. So you kind of know what business value. So you kind of know what business value. So you kind of know what
+is required in terms of harness and then is required in terms of harness and then is required in terms of harness and then
+you try to fit it in with some sort of you try to fit it in with some sort of you try to fit it in with some sort of
+of a large language model that fits the of a large language model that fits the of a large language model that fits the
+harness or the other way around if you harness or the other way around if you harness or the other way around if you
+think about it as well. I mean you can think about it as well. I mean you can think about it as well. I mean you can
+technically build around an LLM the technically build around an LLM the technically build around an LLM the
+harness but then the new model comes harness but then the new model comes harness but then the new model comes
+around and you're not model agnostic around and you're not model agnostic around and you're not model agnostic
+anymore and you have to rebuild the anymore and you have to rebuild the anymore and you have to rebuild the
+entire harness. So that's kind of what entire harness. So that's kind of what entire harness. So that's kind of what
+we've seen also like there is kind of we've seen also like there is kind of we've seen also like there is kind of
+this decision um are you entirely this decision um are you entirely this decision um are you entirely
+building around an oo or a set or you building around an oo or a set or you building around an oo or a set or you
+have like some sort of model agnostic have like some sort of model agnostic have like some sort of model agnostic
+harness that you can simply replace harness that you can simply replace harness that you can simply replace
+fairly fastly the large language model fairly fastly the large language model fairly fastly the large language model
+when it comes around very similar like when it comes around very similar like when it comes around very similar like
+it was before you don't want to build it was before you don't want to build it was before you don't want to build
+your workflow and around a particular your workflow and around a particular your workflow and around a particular
+model you also probably don't want to model you also probably don't want to model you also probably don't want to
+build the harness around the particular build the harness around the particular build the harness around the particular
+model but rather have it more modular model but rather have it more modular model but rather have it more modular
+have it more flexible once a new model have it more flexible once a new model have it more flexible once a new model
+comes around most of the time this is a comes around most of the time this is a comes around most of the time this is a
+closed model or maybe a Gemini model and closed model or maybe a Gemini model and closed model or maybe a Gemini model and
+you can swap swip uh swap around the you can swap swip uh swap around the you can swap swip uh swap around the
+models and reh harness it and then yield models and reh harness it and then yield models and reh harness it and then yield
+it into production in a fairly it into production in a fairly it into production in a fairly
+substantially short period of time. You substantially short period of time. You substantially short period of time. You
+might need still need to do some testing might need still need to do some testing might need still need to do some testing
+but that's kind of it's an interesting but that's kind of it's an interesting but that's kind of it's an interesting
+facet as well. Not only do you have the facet as well. Not only do you have the facet as well. Not only do you have the
+regular testing procedure, you probably regular testing procedure, you probably regular testing procedure, you probably
+also have to retest your harness that also have to retest your harness that also have to retest your harness that
+you build around the particular model, you build around the particular model, you build around the particular model,
+which is a very easy segue then. Okay, which is a very easy segue then. Okay, which is a very easy segue then. Okay,
+fine, we have the harness, we have the fine, we have the harness, we have the fine, we have the harness, we have the
+large language model. How do we price large language model. How do we price large language model. How do we price
+this for the customer? And since it is this for the customer? And since it is this for the customer? And since it is
+now more or less derable from business now more or less derable from business now more or less derable from business
+value realization, you can think about value realization, you can think about value realization, you can think about
+it as an outcomebased pricing because it as an outcomebased pricing because it as an outcomebased pricing because
+the conversation in in a particular the conversation in in a particular the conversation in in a particular
+sales call or sales conversation might sales call or sales conversation might sales call or sales conversation might
+be with this particular large language be with this particular large language be with this particular large language
+model. In other words, this particular model. In other words, this particular model. In other words, this particular
+agent equipped with a harness which is agent equipped with a harness which is agent equipped with a harness which is
+business contextaware, you can then business contextaware, you can then business contextaware, you can then
+materially improve a particular process materially improve a particular process materially improve a particular process
+and from this process improvement, you and from this process improvement, you and from this process improvement, you
+would then yield a particular percentage would then yield a particular percentage would then yield a particular percentage
+um as a let's say as a return or in um as a let's say as a return or in um as a let's say as a return or in
+other words as a price for your service. other words as a price for your service. other words as a price for your service.
+This is not entirely new. So if we think This is not entirely new. So if we think This is not entirely new. So if we think
+about which type of other businesses do about which type of other businesses do about which type of other businesses do
+some sort of having a percentage of a some sort of having a percentage of a some sort of having a percentage of a
+value creation pricing, it's usually value creation pricing, it's usually value creation pricing, it's usually
+transactions in financial services. You transactions in financial services. You transactions in financial services. You
+have a transaction. Of course, there's have a transaction. Of course, there's have a transaction. Of course, there's
+transaction prices that are fixed transaction prices that are fixed transaction prices that are fixed
+prices. So whatever the transaction is, prices. So whatever the transaction is, prices. So whatever the transaction is,
+it's just $15 for example. But most of it's just $15 for example. But most of it's just $15 for example. But most of
+the time in transaction prices, it's the time in transaction prices, it's the time in transaction prices, it's
+like a percentage. In other words, if like a percentage. In other words, if like a percentage. In other words, if
+you have this in the aentic world, you have this in the aentic world, you have this in the aentic world,
+you're implementing an AI agent that you're implementing an AI agent that you're implementing an AI agent that
+yields material business benefit ideally yields material business benefit ideally yields material business benefit ideally
+with a harness and it's it's fully with a harness and it's it's fully with a harness and it's it's fully
+functioning within an org. You can then functioning within an org. You can then functioning within an org. You can then
+probably derive in a particular workflow probably derive in a particular workflow probably derive in a particular workflow
+that it it helps save a particular that it it helps save a particular that it it helps save a particular
+amount of money and from that saving, amount of money and from that saving, amount of money and from that saving,
+you would then actually price it back to you would then actually price it back to you would then actually price it back to
+you as an owner of of this AI software. you as an owner of of this AI software. you as an owner of of this AI software.
+As an example, if you have a financial As an example, if you have a financial As an example, if you have a financial
+analyst agent just making things up, it analyst agent just making things up, it analyst agent just making things up, it
+would speed up the Excel model would speed up the Excel model would speed up the Excel model
+generation by an order of magnitude or generation by an order of magnitude or generation by an order of magnitude or
+maybe by 20x that saves a particular maybe by 20x that saves a particular maybe by 20x that saves a particular
+amount of hourly rates and from this amount of hourly rates and from this amount of hourly rates and from this
+particular amount of hourly rate saved. particular amount of hourly rate saved. particular amount of hourly rate saved.
+You would then take a particular You would then take a particular You would then take a particular
+percentage and you would price it percentage and you would price it percentage and you would price it
+accordingly. You might still yield some accordingly. You might still yield some accordingly. You might still yield some
+sort of or actually have the necessity sort of or actually have the necessity sort of or actually have the necessity
+to have a base pricing for your to have a base pricing for your to have a base pricing for your
+infrastructure or some sort of a base infrastructure or some sort of a base infrastructure or some sort of a base
+price. But then ultimately if you do price. But then ultimately if you do price. But then ultimately if you do
+outcomebased pricing with a harness, outcomebased pricing with a harness, outcomebased pricing with a harness,
+you're more aligning your achantic you're more aligning your achantic you're more aligning your achantic
+system to the client's best possible system to the client's best possible system to the client's best possible
+outcome. Because ultimately what most of outcome. Because ultimately what most of outcome. Because ultimately what most of
+the salespeople, the good sales people the salespeople, the good sales people the salespeople, the good sales people
+in the world are selling, they're not in the world are selling, they're not in the world are selling, they're not
+selling software. They're selling selling software. They're selling selling software. They're selling
+outcomes. They're selling outcomes based outcomes. They're selling outcomes based outcomes. They're selling outcomes based
+on metrics. And these metrics are on metrics. And these metrics are on metrics. And these metrics are
+ultimately on a for example deal by deal ultimately on a for example deal by deal ultimately on a for example deal by deal
+size in terms of a financial analyst or size in terms of a financial analyst or size in terms of a financial analyst or
+a finan or a or a call center agent a finan or a or a call center agent a finan or a or a call center agent
+ultimately. So that's a little bit this ultimately. So that's a little bit this ultimately. So that's a little bit this
+outcome based pricing. It's kind of outcome based pricing. It's kind of outcome based pricing. It's kind of
+difficult because you need to know okay difficult because you need to know okay difficult because you need to know okay
+how much infra cost do we actually how much infra cost do we actually how much infra cost do we actually
+probably more or less need to yield that probably more or less need to yield that probably more or less need to yield that
+particular outcome but once we do this particular outcome but once we do this particular outcome but once we do this
+successfully we could then materially successfully we could then materially successfully we could then materially
+benefit from the upside of the of the benefit from the upside of the of the benefit from the upside of the of the
+company because not only is it more company because not only is it more company because not only is it more
+aligned with the business. It's just aligned with the business. It's just aligned with the business. It's just
+also a little bit of an easier story also a little bit of an easier story also a little bit of an easier story
+than you have to pay by usage like we've than you have to pay by usage like we've than you have to pay by usage like we've
+seen with AI. But what's your what's seen with AI. But what's your what's seen with AI. But what's your what's
+your take on this show? It's a new it's your take on this show? It's a new it's your take on this show? It's a new it's
+a new um phenomenon. I have that a new um phenomenon. I have that a new um phenomenon. I have that
+perspective from both being a builder perspective from both being a builder perspective from both being a builder
+but also a consumer of this AI services but also a consumer of this AI services but also a consumer of this AI services
+for the coding agent that I subscribe for the coding agent that I subscribe for the coding agent that I subscribe
+to. It has gotten a bit more expensive to. It has gotten a bit more expensive to. It has gotten a bit more expensive
+than it was in the past. But that cost than it was in the past. But that cost than it was in the past. But that cost
+value um approach to it still very much value um approach to it still very much value um approach to it still very much
+applies because I've been I did the applies because I've been I did the applies because I've been I did the
+maths and the 100 and so bucks that I maths and the 100 and so bucks that I maths and the 100 and so bucks that I
+pay for it. If I were to not have it, uh pay for it. If I were to not have it, uh pay for it. If I were to not have it, uh
+it would take me sometimes double the it would take me sometimes double the it would take me sometimes double the
+amount of time just writing the code. So amount of time just writing the code. So amount of time just writing the code. So
+planning by itself, uh I can still do it planning by itself, uh I can still do it planning by itself, uh I can still do it
+my own. I might be a bit slower cuz I my own. I might be a bit slower cuz I my own. I might be a bit slower cuz I
+don't have to actually manually research don't have to actually manually research don't have to actually manually research
+every single topic I have to interact every single topic I have to interact every single topic I have to interact
+with. But I could sort of do the with. But I could sort of do the with. But I could sort of do the
+planning by myself, but writing the planning by myself, but writing the planning by myself, but writing the
+code, it takes time. I mean, I I I type code, it takes time. I mean, I I I type code, it takes time. I mean, I I I type
+fast, but uh the model just can iterate fast, but uh the model just can iterate fast, but uh the model just can iterate
+through files and just go to the right through files and just go to the right through files and just go to the right
+file and change the lines probably much file and change the lines probably much file and change the lines probably much
+quicker than I than I can, and it won't quicker than I than I can, and it won't quicker than I than I can, and it won't
+get distracted uh by notifications or get distracted uh by notifications or get distracted uh by notifications or
+emails or whatever. And so having this emails or whatever. And so having this emails or whatever. And so having this
+kind of model saves me, I'd say, at kind of model saves me, I'd say, at kind of model saves me, I'd say, at
+least 4 hours every day that I would least 4 hours every day that I would least 4 hours every day that I would
+spend on doing things that are just that spend on doing things that are just that spend on doing things that are just that
+much faster. And four hours of every day much faster. And four hours of every day much faster. And four hours of every day
+of every single workday, uh it adds up of every single workday, uh it adds up of every single workday, uh it adds up
+to much more than 100 bucks. And I don't to much more than 100 bucks. And I don't to much more than 100 bucks. And I don't
+want to uh say it super loud so I don't want to uh say it super loud so I don't want to uh say it super loud so I don't
+get I don't give ideas to Microsoft to get I don't give ideas to Microsoft to get I don't give ideas to Microsoft to
+increase their prices. Uh but I want to increase their prices. Uh but I want to increase their prices. Uh but I want to
+just have that kind of in mind when they just have that kind of in mind when they just have that kind of in mind when they
+increase their prices that it's still increase their prices that it's still increase their prices that it's still
+very much reasonable for me to to to pay very much reasonable for me to to to pay very much reasonable for me to to to pay
+that amount. Uh cuz the value that I get that amount. Uh cuz the value that I get that amount. Uh cuz the value that I get
+from it is uh very reasonable um from it is uh very reasonable um from it is uh very reasonable um
+in contrast to what I pay. And I think in contrast to what I pay. And I think in contrast to what I pay. And I think
+as a builder, that's also like the the as a builder, that's also like the the as a builder, that's also like the the
+goal that I try to do is build a harness goal that I try to do is build a harness goal that I try to do is build a harness
+and have a model that's capable enough and have a model that's capable enough and have a model that's capable enough
+that the value that it outputs is still that the value that it outputs is still that the value that it outputs is still
+much bigger than whatever it costs. And much bigger than whatever it costs. And much bigger than whatever it costs. And
+it should be much bigger than whatever it should be much bigger than whatever it should be much bigger than whatever
+it costs it costs it costs
+uh the client and also much bigger than uh the client and also much bigger than uh the client and also much bigger than
+whatever it costs to run it. And uh whatever it costs to run it. And uh whatever it costs to run it. And uh
+those running costs, you can call it those running costs, you can call it those running costs, you can call it
+infra costs. It's inference plus infra costs. It's inference plus infra costs. It's inference plus
+infrastructure plus the servers plus infrastructure plus the servers plus infrastructure plus the servers plus
+whatever your AWS bill uh ends up being. whatever your AWS bill uh ends up being. whatever your AWS bill uh ends up being.
+Um, and because it is, uh, as we've been Um, and because it is, uh, as we've been Um, and because it is, uh, as we've been
+seeing, increasingly higher, you have to seeing, increasingly higher, you have to seeing, increasingly higher, you have to
+just have a better and better agent to just have a better and better agent to just have a better and better agent to
+justify those costs. justify those costs. justify those costs.
+&gt;&gt; I mean, it's a bit of a of a emerging &gt;&gt; I mean, it's a bit of a of a emerging &gt;&gt; I mean, it's a bit of a of a emerging
+topic this this pricing of agents, but I topic this this pricing of agents, but I topic this this pricing of agents, but I
+think ultimately you can decide just to think ultimately you can decide just to think ultimately you can decide just to
+make a high level summary between a make a high level summary between a make a high level summary between a
+usage based pricing where you basically usage based pricing where you basically usage based pricing where you basically
+say, okay, you have some sort of tokens say, okay, you have some sort of tokens say, okay, you have some sort of tokens
+or credits or you have some sort of or credits or you have some sort of or credits or you have some sort of
+amount of workflows you can run per amount of workflows you can run per amount of workflows you can run per
+month. just from my own experience in month. just from my own experience in month. just from my own experience in
+sales perspective. Hardly anybody has sales perspective. Hardly anybody has sales perspective. Hardly anybody has
+this concept of tokens sometimes unless this concept of tokens sometimes unless this concept of tokens sometimes unless
+you're an AI builder. So it's a you're an AI builder. So it's a you're an AI builder. So it's a
+difficult sell if it just if you difficult sell if it just if you difficult sell if it just if you
+basically say okay I give you 10,000 basically say okay I give you 10,000 basically say okay I give you 10,000
+tokens whatever that means. So you kind tokens whatever that means. So you kind tokens whatever that means. So you kind
+of have to introduce this new lingo in of have to introduce this new lingo in of have to introduce this new lingo in
+also on top of your product. So that's also on top of your product. So that's also on top of your product. So that's
+the use that's the usage world. The the use that's the usage world. The the use that's the usage world. The
+second component is you have a fixed second component is you have a fixed second component is you have a fixed
+price tier like you would have in a price tier like you would have in a price tier like you would have in a
+software as a service something we we software as a service something we we software as a service something we we
+used to know for many many years now. used to know for many many years now. used to know for many many years now.
+cost you flat $30,000 per month and you cost you flat $30,000 per month and you cost you flat $30,000 per month and you
+can just use it how much you actually can just use it how much you actually can just use it how much you actually
+want. Might sound appealing, but if you want. Might sound appealing, but if you want. Might sound appealing, but if you
+have inference cost from OPOS or from have inference cost from OPOS or from have inference cost from OPOS or from
+some other advanced models, that's north some other advanced models, that's north some other advanced models, that's north
+of four figures per day per user, it's of four figures per day per user, it's of four figures per day per user, it's
+probably not the best idea. And then probably not the best idea. And then probably not the best idea. And then
+there's this third component that's kind there's this third component that's kind there's this third component that's kind
+of what we teased today. Maybe we can of what we teased today. Maybe we can of what we teased today. Maybe we can
+deep dive in a future episode. Once deep dive in a future episode. Once deep dive in a future episode. Once
+again, outcomebased pricing. something again, outcomebased pricing. something again, outcomebased pricing. something
+we spent a lot of thinking on. But it's we spent a lot of thinking on. But it's we spent a lot of thinking on. But it's
+mostly this particular pricing that mostly this particular pricing that mostly this particular pricing that
+would align the best possible would align the best possible would align the best possible
+partnership with your client and also it partnership with your client and also it partnership with your client and also it
+would actually incentivize us builders would actually incentivize us builders would actually incentivize us builders
+to make our harness in terms of the to make our harness in terms of the to make our harness in terms of the
+engineering of it and the all language engineering of it and the all language engineering of it and the all language
+model that's be that's behind it model that's be that's behind it model that's be that's behind it
+powering this all as cheap as possible powering this all as cheap as possible powering this all as cheap as possible
+because this would yield a higher because this would yield a higher because this would yield a higher
+margin. Um ultimately to then benefit margin. Um ultimately to then benefit margin. Um ultimately to then benefit
+again from the value that the agent is again from the value that the agent is again from the value that the agent is
+creating. Ultimately, we kind of have creating. Ultimately, we kind of have creating. Ultimately, we kind of have
+this conundrum that agents might augment this conundrum that agents might augment this conundrum that agents might augment
+slash replace a specific substrate of slash replace a specific substrate of slash replace a specific substrate of
+employees. So, we maybe also kind of employees. So, we maybe also kind of employees. So, we maybe also kind of
+need to start thinking about the value need to start thinking about the value need to start thinking about the value
+these agents are creating and we having these agents are creating and we having these agents are creating and we having
+a derivative of that in terms of our a derivative of that in terms of our a derivative of that in terms of our
+pricing as AI builders. But that's it pricing as AI builders. But that's it pricing as AI builders. But that's it
+more or less for for the episode. Shah, more or less for for the episode. Shah, more or less for for the episode. Shah,
+anything more to add on harness anything more to add on harness anything more to add on harness
+engineering, skills, AI, context engineering, skills, AI, context engineering, skills, AI, context
+engineering, value based pricing? to engineering, value based pricing? to engineering, value based pricing? to
+give you a somewhat recent example of give you a somewhat recent example of give you a somewhat recent example of
+how much it can differ like a quick how much it can differ like a quick how much it can differ like a quick
+request, a quick hey to an agent from an request, a quick hey to an agent from an request, a quick hey to an agent from an
+actual long running agent that processes actual long running agent that processes actual long running agent that processes
+things is using your harness using tools things is using your harness using tools things is using your harness using tools
+going online for to search for things going online for to search for things going online for to search for things
+can cost you. Uh, one of the like most can cost you. Uh, one of the like most can cost you. Uh, one of the like most
+famous coding agents is C code. I think famous coding agents is C code. I think famous coding agents is C code. I think
+by far it's like top three for the last by far it's like top three for the last by far it's like top three for the last
+year or so. um very easily in in the top year or so. um very easily in in the top year or so. um very easily in in the top
+three agents uh in the AI world and three agents uh in the AI world and three agents uh in the AI world and
+that's always been token based uh that's always been token based uh that's always been token based uh
+because people using cloud code know at because people using cloud code know at because people using cloud code know at
+least half of a concept of token so you least half of a concept of token so you least half of a concept of token so you
+don't have to introduce that lingo like don't have to introduce that lingo like don't have to introduce that lingo like
+you're saying that you'd have to do for you're saying that you'd have to do for you're saying that you'd have to do for
+a business world Microsoft had the a business world Microsoft had the a business world Microsoft had the
+GitHub copilot and does pretty much the GitHub copilot and does pretty much the GitHub copilot and does pretty much the
+same as cloud code but their approach to same as cloud code but their approach to same as cloud code but their approach to
+pricing it was slightly different they pricing it was slightly different they pricing it was slightly different they
+price it by request so it doesn't matter price it by request so it doesn't matter price it by request so it doesn't matter
+if you say hey or if you ask for a super if you say hey or if you ask for a super if you say hey or if you ask for a super
+complex thing like build me a button um complex thing like build me a button um complex thing like build me a button um
+plan all the things around it and the plan all the things around it and the plan all the things around it and the
+API endpoints and everything and new API endpoints and everything and new API endpoints and everything and new
+database it would cost you the same to database it would cost you the same to database it would cost you the same to
+the user. It would be the same. It would the user. It would be the same. It would the user. It would be the same. It would
+cost you like one request and you'd get cost you like one request and you'd get cost you like one request and you'd get
+let's say a,000 requests per month or let's say a,000 requests per month or let's say a,000 requests per month or
+5,000 requests per month. And they I 5,000 requests per month. And they I 5,000 requests per month. And they I
+think the last week or so they just quit think the last week or so they just quit think the last week or so they just quit
+that approach entirely. Not because that approach entirely. Not because that approach entirely. Not because
+people were saying hey a lot but because people were saying hey a lot but because people were saying hey a lot but because
+people realized that they could just ask people realized that they could just ask people realized that they could just ask
+really complicated stuff and they always really complicated stuff and they always really complicated stuff and they always
+get built the same. So, might as well get built the same. So, might as well get built the same. So, might as well
+give get really complicated tasks right give get really complicated tasks right give get really complicated tasks right
+away and maybe bunch up a bunch of tasks away and maybe bunch up a bunch of tasks away and maybe bunch up a bunch of tasks
+that were um independent or that you're that were um independent or that you're that were um independent or that you're
+going to do in a row. Uh because the going to do in a row. Uh because the going to do in a row. Uh because the
+models are not good good enough to do models are not good good enough to do models are not good good enough to do
+them uh sequentially. You can just say, them uh sequentially. You can just say, them uh sequentially. You can just say,
+"Hey, do me this and this and this and "Hey, do me this and this and this and "Hey, do me this and this and this and
+then find uh by the end of it write me a then find uh by the end of it write me a then find uh by the end of it write me a
+report of everything you've done and report of everything you've done and report of everything you've done and
+push everything to to git or publish push everything to to git or publish push everything to to git or publish
+this website." And so instead of wasting this website." And so instead of wasting this website." And so instead of wasting
+seven or eight requests, they'll do it seven or eight requests, they'll do it seven or eight requests, they'll do it
+all in one go. Microsoft caught up to all in one go. Microsoft caught up to all in one go. Microsoft caught up to
+that. Uh, I think they're not having the that. Uh, I think they're not having the that. Uh, I think they're not having the
+greatest of times affording that bill greatest of times affording that bill greatest of times affording that bill
+for the inference and so they cut that for the inference and so they cut that for the inference and so they cut that
+down and now you're paying for actual down and now you're paying for actual down and now you're paying for actual
+usage. They don't fully display how many usage. They don't fully display how many usage. They don't fully display how many
+tokens you're using. I think they're tokens you're using. I think they're tokens you're using. I think they're
+still keeping them to themselves. Ripple still keeping them to themselves. Ripple still keeping them to themselves. Ripple
+have realized that for longunning have realized that for longunning have realized that for longunning
+requests. You can see your usage bar and requests. You can see your usage bar and requests. You can see your usage bar and
+the bar keeps going up throughout the the bar keeps going up throughout the the bar keeps going up throughout the
+requests. It doesn't go up just one requests. It doesn't go up just one requests. It doesn't go up just one
+single time. So you can see like one of single time. So you can see like one of single time. So you can see like one of
+the biggest companies in the world with the biggest companies in the world with the biggest companies in the world with
+one of the biggest agents in the world. one of the biggest agents in the world. one of the biggest agents in the world.
+uh they're all going token by token, but uh they're all going token by token, but uh they're all going token by token, but
+it is remarkably harder to market it to it is remarkably harder to market it to it is remarkably harder to market it to
+business or people not in the AI world business or people not in the AI world business or people not in the AI world
+because what the hell is token for because what the hell is token for because what the hell is token for
+people who are not in an AI world? people who are not in an AI world? people who are not in an AI world?
+&gt;&gt; Exactly. I mean, I think it's a good &gt;&gt; Exactly. I mean, I think it's a good &gt;&gt; Exactly. I mean, I think it's a good
+good point to wrap up the episode. I good point to wrap up the episode. I good point to wrap up the episode. I
+think ultimately if you're a hyperscaler think ultimately if you're a hyperscaler think ultimately if you're a hyperscaler
+or a large lab, it's probably more or a large lab, it's probably more or a large lab, it's probably more
+selling towards engineers currently. At selling towards engineers currently. At selling towards engineers currently. At
+least that's what we've seen. But if we least that's what we've seen. But if we least that's what we've seen. But if we
+more and more customized harnesses, you more and more customized harnesses, you more and more customized harnesses, you
+as a builders in the audience are I as a builders in the audience are I as a builders in the audience are I
+think it's more and more and more moving think it's more and more and more moving think it's more and more and more moving
+and shifting into this outcome based and shifting into this outcome based and shifting into this outcome based
+pricing where you can basically go in pricing where you can basically go in pricing where you can basically go in
+steer the sales conversation in the steer the sales conversation in the steer the sales conversation in the
+sense that your achantic system might sense that your achantic system might sense that your achantic system might
+yield saving X or augmenting of revenue yield saving X or augmenting of revenue yield saving X or augmenting of revenue
+Y and you have taken kind of a share Y and you have taken kind of a share Y and you have taken kind of a share
+then you have an incentive again to make then you have an incentive again to make then you have an incentive again to make
+your input that it needs to actually your input that it needs to actually your input that it needs to actually
+execute that as cheap as possible as execute that as cheap as possible as execute that as cheap as possible as
+effective and efficient as possible and effective and efficient as possible and effective and efficient as possible and
+at the same time maximize and use that at the same time maximize and use that at the same time maximize and use that
+leverage that you're creating for the leverage that you're creating for the leverage that you're creating for the
+client because ultimately this seems to client because ultimately this seems to client because ultimately this seems to
+be the most win-win situation. You seem be the most win-win situation. You seem be the most win-win situation. You seem
+to have the biggest margin. They seem to to have the biggest margin. They seem to to have the biggest margin. They seem to
+be having the biggest impact based on be having the biggest impact based on be having the biggest impact based on
+your chantic system on your AI agent your chantic system on your AI agent your chantic system on your AI agent
+with harnesses basically. Whereas if you with harnesses basically. Whereas if you with harnesses basically. Whereas if you
+basically just say this is a flat fee, I basically just say this is a flat fee, I basically just say this is a flat fee, I
+think that's mostly that in AI and or think that's mostly that in AI and or think that's mostly that in AI and or
+usage base because what if you kind of usage base because what if you kind of usage base because what if you kind of
+approach the end of the month and you approach the end of the month and you approach the end of the month and you
+have 7 10 or 15 employees that still have 7 10 or 15 employees that still have 7 10 or 15 employees that still
+want to use the system but they kind of want to use the system but they kind of want to use the system but they kind of
+used their usage. I think there's a used their usage. I think there's a used their usage. I think there's a
+tendency that they would rather use a tendency that they would rather use a tendency that they would rather use a
+competitor for a few days that actually competitor for a few days that actually competitor for a few days that actually
+pay more usage or augments their usage pay more usage or augments their usage pay more usage or augments their usage
+budget. So that actually drives away budget. So that actually drives away budget. So that actually drives away
+probably great retention of of your probably great retention of of your probably great retention of of your
+software as opposed to actually yielding software as opposed to actually yielding software as opposed to actually yielding
+a material benefit financially. But a material benefit financially. But a material benefit financially. But
+that's it for episode 45. It was a deep that's it for episode 45. It was a deep that's it for episode 45. It was a deep
+dive on agentic engineering. It was a dive on agentic engineering. It was a dive on agentic engineering. It was a
+deep dive on harness engineering, deep dive on harness engineering, deep dive on harness engineering,
+context engineering, AI agent harnesses context engineering, AI agent harnesses context engineering, AI agent harnesses
+and their benefit and their pivot also and their benefit and their pivot also and their benefit and their pivot also
+to outcomebased pricing in this new to outcomebased pricing in this new to outcomebased pricing in this new
+world of achantic artificial world of achantic artificial world of achantic artificial
+intelligence. It was a pleasure to have intelligence. It was a pleasure to have intelligence. It was a pleasure to have
+you on episode 45. We're approaching the you on episode 45. We're approaching the you on episode 45. We're approaching the
+50s. And for everybody in the audience, 50s. And for everybody in the audience, 50s. And for everybody in the audience,
+new episodes out every single week. new episodes out every single week. new episodes out every single week.
+We're active mostly on YouTube, but also We're active mostly on YouTube, but also We're active mostly on YouTube, but also
+sometimes on Tik Tok and LinkedIn. So, sometimes on Tik Tok and LinkedIn. So, sometimes on Tik Tok and LinkedIn. So,
+feel free to connect, drop a comment, feel free to connect, drop a comment, feel free to connect, drop a comment,
+and see you in episode 46. 

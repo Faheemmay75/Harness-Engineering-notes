@@ -1,0 +1,134 @@
+Today I'll show you how harness AI Today I'll show you how harness AI
+supports developers across the entire supports developers across the entire supports developers across the entire
+development life cycle from writing code development life cycle from writing code development life cycle from writing code
+in the IDE all the way through to build in the IDE all the way through to build in the IDE all the way through to build
+deploy and incident triage ending with deploy and incident triage ending with deploy and incident triage ending with
+automated verification and safer automated verification and safer automated verification and safer
+rollouts. rollouts. rollouts.
+I'm starting here in my IDE which is I'm starting here in my IDE which is I'm starting here in my IDE which is
+connected to harness via the MCP server. connected to harness via the MCP server. connected to harness via the MCP server.
+Now, rather than scripting a pipeline by Now, rather than scripting a pipeline by Now, rather than scripting a pipeline by
+hand, I'm simply going to prompt the hand, I'm simply going to prompt the hand, I'm simply going to prompt the
+agent to create a pipeline for me and agent to create a pipeline for me and agent to create a pipeline for me and
+trigger it. trigger it. trigger it.
+The agent The agent The agent
+connected to the harness MCP server uses connected to the harness MCP server uses connected to the harness MCP server uses
+tools available to it to create that tools available to it to create that tools available to it to create that
+pipeline firstly in my repository, pipeline firstly in my repository, pipeline firstly in my repository,
+then in harness itself and triggers the then in harness itself and triggers the then in harness itself and triggers the
+pipeline. pipeline. pipeline.
+Now once it's done, it also then hands Now once it's done, it also then hands Now once it's done, it also then hands
+me back the execution URL. me back the execution URL. me back the execution URL.
+Let's go ahead and see our pipeline Let's go ahead and see our pipeline Let's go ahead and see our pipeline
+running. Now we can see our pipeline is running. Now we can see our pipeline is running.
+So now let's drill down into the So now let's drill down into the So now let's drill down into the
+execution and watch it live. execution and watch it live. execution and watch it live.
+So to recap, from a single prompt, we've So to recap, from a single prompt, we've So to recap, from a single prompt, we've
+gone from our codebase gone from our codebase gone from our codebase
+to a running CI/CD pipeline. to a running CI/CD pipeline. to a running CI/CD pipeline.
+Now there's a failure. Let's not panic. Now there's a failure. Let's not panic. Now there's a failure. Let's not panic.
+First thing I will do is simply head First thing I will do is simply head First thing I will do is simply head
+back to the IDE back to the IDE back to the IDE
+and ask the agent to help me diagnose and ask the agent to help me diagnose and ask the agent to help me diagnose
+what's gone wrong with my execution. Again, Again,
+it calls the MCP tools, fetches the it calls the MCP tools, fetches the it calls the MCP tools, fetches the
+logs, logs, logs,
+analyzes those logs, and surfaces the analyzes those logs, and surfaces the analyzes those logs, and surfaces the
+issue for me. issue for me. issue for me.
+It looks like it's found what the It looks like it's found what the It looks like it's found what the
+problem is. And that looks like a failed problem is. And that looks like a failed problem is. And that looks like a failed
+dependency. I'm going to ask the agent to help me I'm going to ask the agent to help me
+fix it. So now it goes to find the offending So now it goes to find the offending
+dependency and make changes to that dependency and make changes to that dependency and make changes to that
+file. file. file.
+Once the change has been made, Once the change has been made, Once the change has been made,
+I'm going to commit the change, I'm going to commit the change, I'm going to commit the change,
+push it upstream to my feature branch, and then raise a to my feature branch, and then raise a
+pull request to merge that into my main pull request to merge that into my main pull request to merge that into my main
+branch. Once I'm done, I'm going to ask the Once I'm done, I'm going to ask the
+agent to re-trigger my pipeline. So again, the MCP server is called upon. So again, the MCP server is called upon.
+The tools are used The tools are used The tools are used
+to trigger the pipeline again. And now to trigger the pipeline again. And now to trigger the pipeline again. And now
+it returns the execution URL. it returns the execution URL. it returns the execution URL.
+So again, let's jump in and see what So again, let's jump in and see what So again, let's jump in and see what
+that looks like. So now as the pipeline executes what we So now as the pipeline executes what we
+expect is that our failed step should expect is that our failed step should expect is that our failed step should
+succeed. It passes and now our build succeeds as It passes and now our build succeeds as
+well. well. well.
+Now with a successful build, we can now Now with a successful build, we can now Now with a successful build, we can now
+deploy the artifact. In this case, we're deploy the artifact. In this case, we're deploy the artifact. In this case, we're
+deploying it directly into our deploying it directly into our deploying it directly into our
+Kubernetes cluster. Kubernetes cluster. Kubernetes cluster.
+And so to recap, from a single prompt, we've built and from a single prompt, we've built and
+deployed our application just from a single prompt. Job done, just from a single prompt. Job done,
+right? It looks like HANA's AIS It looks like HANA's AIS
+is calling me. We've triggered an alert from our EKS We've triggered an alert from our EKS
+cluster. cluster. cluster.
+And now when we jump into the alert, And now when we jump into the alert, And now when we jump into the alert,
+we can see that an incident has been we can see that an incident has been we can see that an incident has been
+created automatically. created automatically. created automatically.
+The AS surre picks up on key events from The AS surre picks up on key events from The AS surre picks up on key events from
+Slack service now and our team's call. Slack service now and our team's call. Slack service now and our team's call.
+And now it looks like our team has And now it looks like our team has And now it looks like our team has
+already been on the call to discuss what already been on the call to discuss what already been on the call to discuss what
+the likely problems are. the likely problems are. the likely problems are.
+What it then does is it correlates What it then does is it correlates What it then does is it correlates
+all of these information sources and all of these information sources and all of these information sources and
+gives us the probable root causes of gives us the probable root causes of gives us the probable root causes of
+what could have gone wrong. From what we can see, From what we can see,
+its verdict is the last deployment and its verdict is the last deployment and its verdict is the last deployment and
+the last pull request we made are likely the last pull request we made are likely the last pull request we made are likely
+the corporates and drilling info the corporates and drilling info the corporates and drilling info
+confirms this. The most recent service confirms this. The most recent service confirms this. The most recent service
+change in our dev environment triggered change in our dev environment triggered change in our dev environment triggered
+this. this. this.
+So now how do we fix this? Well, we So now how do we fix this? Well, we So now how do we fix this? Well, we
+simply go back to the IDE simply go back to the IDE simply go back to the IDE
+and there are two fixes we need to make. Firstly, Firstly,
+we can roll back the service. So again, we can roll back the service. So again, we can roll back the service. So again,
+we simply ask the agent to roll back the we simply ask the agent to roll back the we simply ask the agent to roll back the
+service. service. service.
+It uses a combination in this case of It uses a combination in this case of It uses a combination in this case of
+Kubernetes MCP and harness MCP tools Kubernetes MCP and harness MCP tools Kubernetes MCP and harness MCP tools
+uh to find the right deployment and uh to find the right deployment and uh to find the right deployment and
+triggers the roll back. We can go into triggers the roll back. We can go into triggers the roll back. We can go into
+that execution again to see what's that execution again to see what's that execution again to see what's
+happened. And so what we can see now is And so what we can see now is
+from a simple incident that was from an from a simple incident that was from an from a simple incident that was from an
+incident that was created, we were incident that was created, we were incident that was created, we were
+simply able to roll that back by using a simply able to roll that back by using a simply able to roll that back by using a
+simple prompt. simple prompt. simple prompt.
+Now that's reverted us to a known Now that's reverted us to a known Now that's reverted us to a known
+version. How do we prevent this from version. How do we prevent this from version. How do we prevent this from
+happening again? Firstly, resilience happening again? Firstly, resilience happening again? Firstly, resilience
+testing. Harness surfaces AIdriven testing. Harness surfaces AIdriven testing. Harness surfaces AIdriven
+recommendations for fault experiments to recommendations for fault experiments to recommendations for fault experiments to
+run against our our pipeline. I select run against our our pipeline. I select run against our our pipeline. I select
+the pipeline and add a CPU stress test the pipeline and add a CPU stress test the pipeline and add a CPU stress test
+from those recommendations. from those recommendations. from those recommendations.
+Done. Typically, this would have taken Done. Typically, this would have taken Done. Typically, this would have taken
+days if not weeks to implement. Secondly, how else can we improve this? Secondly, how else can we improve this?
+We can do this by changing our We can do this by changing our We can do this by changing our
+deployment strategy. We've been doing a deployment strategy. We've been doing a deployment strategy. We've been doing a
+simple rolling deployment. So, now let's simple rolling deployment. So, now let's simple rolling deployment. So, now let's
+change it. In this case, I'll simply ask change it. In this case, I'll simply ask change it. In this case, I'll simply ask
+the DevOps agent inside harness to the DevOps agent inside harness to the DevOps agent inside harness to
+update the pipeline to use a canary update the pipeline to use a canary update the pipeline to use a canary
+deployment with continuous verification. deployment with continuous verification. deployment with continuous verification.
+Continuous verification uses machine Continuous verification uses machine Continuous verification uses machine
+learning and AI to analyze your APM and learning and AI to analyze your APM and learning and AI to analyze your APM and
+log data, automatically detecting log data, automatically detecting log data, automatically detecting
+anomalies and trigger a roll back before anomalies and trigger a roll back before anomalies and trigger a roll back before
+users are impacted, which would have users are impacted, which would have users are impacted, which would have
+which would have prevented what we just which would have prevented what we just which would have prevented what we just
+saw. Once the agent Once the agent
+gives me the changes, I can review those gives me the changes, I can review those gives me the changes, I can review those
+changes and then accept that change. And changes and then accept that change. And changes and then accept that change. And
+now the pipeline has been updated. So now the pipeline has been updated. So now the pipeline has been updated. So
+now we have a canary phase with an now we have a canary phase with an now we have a canary phase with an
+approval gate and then a full rolling approval gate and then a full rolling approval gate and then a full rolling
+deployment. deployment. deployment.
+So to close, from a single prompt in the So to close, from a single prompt in the So to close, from a single prompt in the
+IDE, we've built, deployed, triaged an incident, rolled back, and triaged an incident, rolled back, and
+hardened our pipeline against future hardened our pipeline against future hardened our pipeline against future
+failures. 

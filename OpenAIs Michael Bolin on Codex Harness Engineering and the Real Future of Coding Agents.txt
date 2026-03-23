@@ -1,0 +1,660 @@
+you know, the model is going to you know, the model is going to
+dominate. The harness lets the agent dominate. The harness lets the agent dominate. The harness lets the agent
+shine, but this is like a new inner loop shine, but this is like a new inner loop shine, but this is like a new inner loop
+that I think we're all kind of figuring that I think we're all kind of figuring that I think we're all kind of figuring
+out how to optimize. The agent should out how to optimize. The agent should out how to optimize. The agent should
+really be deciding what to do. [music] Hello everyone. I'm happy to have uh Hello everyone. I'm happy to have uh
+Michael Bolan today for the interview Michael Bolan today for the interview Michael Bolan today for the interview
+and he is the lead for open source and he is the lead for open source and he is the lead for open source
+codeex. Michael, thank you for joining codeex. Michael, thank you for joining codeex. Michael, thank you for joining
+me. me. me.
+&gt;&gt; Thank you. It's great to be here. So um &gt;&gt; Thank you. It's great to be here. So um &gt;&gt; Thank you. It's great to be here. So um
+you know currently people often think you know currently people often think you know currently people often think
+the story of AI coding is just the model the story of AI coding is just the model the story of AI coding is just the model
+writes code but a lot of teams building writes code but a lot of teams building writes code but a lot of teams building
+agents say that the real shift is to agents say that the real shift is to agents say that the real shift is to
+designing the environment around the designing the environment around the designing the environment around the
+models. What side are you on? models. What side are you on? models. What side are you on?
+&gt;&gt; Certainly you know the model is going to &gt;&gt; Certainly you know the model is going to &gt;&gt; Certainly you know the model is going to
+dominate uh the experience for sure. dominate uh the experience for sure. dominate uh the experience for sure.
+There's still a lot of room for There's still a lot of room for There's still a lot of room for
+innovation in the harness right it's not innovation in the harness right it's not innovation in the harness right it's not
+a pure uh research problem. I would say a pure uh research problem. I would say a pure uh research problem. I would say
+in particular for our team, it's been in particular for our team, it's been in particular for our team, it's been
+that relationship between, you know, the that relationship between, you know, the that relationship between, you know, the
+engineering side and the research side engineering side and the research side engineering side and the research side
+and co-developing the agent, right? and co-developing the agent, right? and co-developing the agent, right?
+Making sure that anyone can have ideas Making sure that anyone can have ideas Making sure that anyone can have ideas
+about how the agent should work, making about how the agent should work, making about how the agent should work, making
+sure that the harness lets the agent sure that the harness lets the agent sure that the harness lets the agent
+shine and do the best things that it can shine and do the best things that it can shine and do the best things that it can
+do and then giving the right tooling to do and then giving the right tooling to do and then giving the right tooling to
+the agent, making sure that it gets used the agent, making sure that it gets used the agent, making sure that it gets used
+in training so that things are in in training so that things are in in training so that things are in
+distribution, you know, when we ship it distribution, you know, when we ship it distribution, you know, when we ship it
+as a as a product to the world. as a as a product to the world. as a as a product to the world.
+&gt;&gt; Let's maybe define harness and why it &gt;&gt; Let's maybe define harness and why it &gt;&gt; Let's maybe define harness and why it
+becomes so important. becomes so important. becomes so important.
+&gt;&gt; Sure. So yeah, the the harness is uh you &gt;&gt; Sure. So yeah, the the harness is uh you &gt;&gt; Sure. So yeah, the the harness is uh you
+know we call the agent loop sometimes is know we call the agent loop sometimes is know we call the agent loop sometimes is
+the bit that you know calls out to the the bit that you know calls out to the the bit that you know calls out to the
+model, samples the model says and gives model, samples the model says and gives model, samples the model says and gives
+it the context of you know here's what it the context of you know here's what it the context of you know here's what
+I'm trying to do here are the tools that I'm trying to do here are the tools that I'm trying to do here are the tools that
+are available to me tell me what to do are available to me tell me what to do are available to me tell me what to do
+next and then it gets that response you next and then it gets that response you next and then it gets that response you
+know from from the model often that's a know from from the model often that's a know from from the model often that's a
+tool call and that says here's the you tool call and that says here's the you tool call and that says here's the you
+know the tool I want you to call with know the tool I want you to call with know the tool I want you to call with
+these arguments you know let me know these arguments you know let me know these arguments you know let me know
+what came back and you know sometimes what came back and you know sometimes what came back and you know sometimes
+these tools could be pretty these tools could be pretty these tools could be pretty
+straightforward like run this executable straightforward like run this executable straightforward like run this executable
+tell me what standard out was, what was tell me what standard out was, what was tell me what standard out was, what was
+the exit code, and that's the end of it. the exit code, and that's the end of it. the exit code, and that's the end of it.
+You know, we've done a lot more You know, we've done a lot more You know, we've done a lot more
+experiments there with more experiments there with more experiments there with more
+sophisticated tools for controlling the sophisticated tools for controlling the sophisticated tools for controlling the
+the machine, controlling the user's the machine, controlling the user's the machine, controlling the user's
+laptop. So, it's a more interactive laptop. So, it's a more interactive laptop. So, it's a more interactive
+terminal session and not just kind of terminal session and not just kind of terminal session and not just kind of
+simple shelling out of commands or I simple shelling out of commands or I simple shelling out of commands or I
+could say, you know, do this web search could say, you know, do this web search could say, you know, do this web search
+or these various things to harness a lot or these various things to harness a lot or these various things to harness a lot
+of what we do on codecs in particular. of what we do on codecs in particular. of what we do on codecs in particular.
+uh because it is, you know, primarily a uh because it is, you know, primarily a uh because it is, you know, primarily a
+coding agent and we care tremendously coding agent and we care tremendously coding agent and we care tremendously
+about security and sandboxing. And so about security and sandboxing. And so about security and sandboxing. And so
+what that means is that it's the harness what that means is that it's the harness what that means is that it's the harness
+that takes these shell commands or or that takes these shell commands or or that takes these shell commands or or
+you know computer use commands from the you know computer use commands from the you know computer use commands from the
+from the model and ensures that they run from the model and ensures that they run from the model and ensures that they run
+you in a sandbox or under whatever you in a sandbox or under whatever you in a sandbox or under whatever
+policy the user decided to give the the policy the user decided to give the the policy the user decided to give the the
+agent. There turns out to be a lot of agent. There turns out to be a lot of agent. There turns out to be a lot of
+complexity in that area. It's important complexity in that area. It's important complexity in that area. It's important
+that I mean critical I would say that we that I mean critical I would say that we that I mean critical I would say that we
+not only can you know expose all the not only can you know expose all the not only can you know expose all the
+intelligence of the model but do it intelligence of the model but do it intelligence of the model but do it
+safely on the user's machine. safely on the user's machine. safely on the user's machine.
+&gt;&gt; How do you do it uh when you open &gt;&gt; How do you do it uh when you open &gt;&gt; How do you do it uh when you open
+sourcing codecs? sourcing codecs? sourcing codecs?
+&gt;&gt; Oh the safety side of it you mean? &gt;&gt; Oh the safety side of it you mean? &gt;&gt; Oh the safety side of it you mean?
+&gt;&gt; Yeah. &gt;&gt; Yeah. &gt;&gt; Yeah.
+&gt;&gt; Yeah. The nice thing is you can actually &gt;&gt; Yeah. The nice thing is you can actually &gt;&gt; Yeah. The nice thing is you can actually
+see all of this because it's in in our see all of this because it's in in our see all of this because it's in in our
+repo. And so we do different things for repo. And so we do different things for repo. And so we do different things for
+each operating system something specific each operating system something specific each operating system something specific
+to each one. So on uh Mac OS there's a to each one. So on uh Mac OS there's a to each one. So on uh Mac OS there's a
+technology called seat belt. On Linux we technology called seat belt. On Linux we technology called seat belt. On Linux we
+use a a hand a collection of libraries use a a hand a collection of libraries use a a hand a collection of libraries
+something called there's a thing called something called there's a thing called something called there's a thing called
+bubble wrap and uh set comp and landlock bubble wrap and uh set comp and landlock bubble wrap and uh set comp and landlock
+and windows we've actually uh built our and windows we've actually uh built our and windows we've actually uh built our
+own sandbox some of these things like own sandbox some of these things like own sandbox some of these things like
+seat belt are part of Mac OS so that's seat belt are part of Mac OS so that's seat belt are part of Mac OS so that's
+you know not in the open source repo you know not in the open source repo you know not in the open source repo
+just how we call it but other things just how we call it but other things just how we call it but other things
+like our windows sandbox the code for like our windows sandbox the code for like our windows sandbox the code for
+that is in the open source repo and so that is in the open source repo and so that is in the open source repo and so
+we you know orchestrate all these calls we you know orchestrate all these calls we you know orchestrate all these calls
+that go through the sandbox in the that go through the sandbox in the that go through the sandbox in the
+appropriate way for the different tool appropriate way for the different tool appropriate way for the different tool
+calls calls calls
+&gt;&gt; so when people fork codeex it's all &gt;&gt; so when people fork codeex it's all &gt;&gt; so when people fork codeex it's all
+baked in all the safety rules. Right. baked in all the safety rules. Right. baked in all the safety rules. Right.
+&gt;&gt; Right. Yes. So yeah, I guess I should I &gt;&gt; Right. Yes. So yeah, I guess I should I &gt;&gt; Right. Yes. So yeah, I guess I should I
+should clarify, you know, a detail there should clarify, you know, a detail there should clarify, you know, a detail there
+is there's safety and security and is there's safety and security and is there's safety and security and
+people use these terms interchangeably people use these terms interchangeably people use these terms interchangeably
+in AI a lot and they are subtly in AI a lot and they are subtly in AI a lot and they are subtly
+different. So I guess the piece that I'm different. So I guess the piece that I'm different. So I guess the piece that I'm
+talking about is more strictly speaking talking about is more strictly speaking talking about is more strictly speaking
+I guess on the security side where where I guess on the security side where where I guess on the security side where where
+you're saying yes you can run this tool you're saying yes you can run this tool you're saying yes you can run this tool
+but you can only read these folders or but you can only read these folders or but you can only read these folders or
+write these folders and that sort of write these folders and that sort of write these folders and that sort of
+thing. I think most people in the thing. I think most people in the thing. I think most people in the
+industry would clarify the safety is industry would clarify the safety is industry would clarify the safety is
+actually happening more on the on the actually happening more on the on the actually happening more on the on the
+back end side. Making sure that the tool back end side. Making sure that the tool back end side. Making sure that the tool
+calls that the model suggests in the calls that the model suggests in the calls that the model suggests in the
+first place are safe to to run, right? first place are safe to to run, right? first place are safe to to run, right?
+And from the harness's perspective, it's And from the harness's perspective, it's And from the harness's perspective, it's
+following orders in a certain sense, following orders in a certain sense, following orders in a certain sense,
+right? It's it's it's a faithfully right? It's it's it's a faithfully right? It's it's it's a faithfully
+executing the tool calls, but those executing the tool calls, but those executing the tool calls, but those
+decisions about what tool calls are safe decisions about what tool calls are safe decisions about what tool calls are safe
+to run or appropriate to run are made on to run or appropriate to run are made on to run or appropriate to run are made on
+the model. So yes, if you forked Codeex the model. So yes, if you forked Codeex the model. So yes, if you forked Codeex
+and you're still talking to our models and you're still talking to our models and you're still talking to our models
+and you're, you know, relying on our the and you're, you know, relying on our the and you're, you know, relying on our the
+safety uh of our models then then yes, safety uh of our models then then yes, safety uh of our models then then yes,
+you get that. If you ran someone else's you get that. If you ran someone else's you get that. If you ran someone else's
+model, then you know it's a little bit model, then you know it's a little bit model, then you know it's a little bit
+uh I guess a little more up in the air. uh I guess a little more up in the air. uh I guess a little more up in the air.
+&gt;&gt; Got it. Since you launch Codex, how does &gt;&gt; Got it. Since you launch Codex, how does &gt;&gt; Got it. Since you launch Codex, how does
+it perform? What do you see? It's a it perform? What do you see? It's a it perform? What do you see? It's a
+little complicated. There is cle, there little complicated. There is cle, there little complicated. There is cle, there
+is app, there is this, there is that. is app, there is this, there is that. is app, there is this, there is that.
+But in general, how the audience like But in general, how the audience like But in general, how the audience like
+it? it? it?
+&gt;&gt; We've had a very very positive response. &gt;&gt; We've had a very very positive response. &gt;&gt; We've had a very very positive response.
+I think it's I don't know like 5x in I think it's I don't know like 5x in I think it's I don't know like 5x in
+usage in terms of the start of the year. usage in terms of the start of the year. usage in terms of the start of the year.
+You know, I mean, going back, we You know, I mean, going back, we You know, I mean, going back, we
+launched in April of last year, but it launched in April of last year, but it launched in April of last year, but it
+was really in August when GPT5 came out. was really in August when GPT5 came out. was really in August when GPT5 came out.
+We did a refresh of the CLI. That's when We did a refresh of the CLI. That's when We did a refresh of the CLI. That's when
+it really started really started moving. it really started really started moving. it really started really started moving.
+I mean, we you know, we had growth, but I mean, we you know, we had growth, but I mean, we you know, we had growth, but
+it really started uh jumping up. Then we it really started uh jumping up. Then we it really started uh jumping up. Then we
+did the VS code extension later that did the VS code extension later that did the VS code extension later that
+summer or fall and that you know then summer or fall and that you know then summer or fall and that you know then
+people really gravitated towards that or people really gravitated towards that or people really gravitated towards that or
+that yeah I think believe VS code that yeah I think believe VS code that yeah I think believe VS code
+overtook DLI usage and then we launched overtook DLI usage and then we launched overtook DLI usage and then we launched
+the app you know at the start of this the app you know at the start of this the app you know at the start of this
+year and that has really taken off you year and that has really taken off you year and that has really taken off you
+know I think it's really the first of know I think it's really the first of know I think it's really the first of
+its kind uh in a lot of ways and uh its kind uh in a lot of ways and uh its kind uh in a lot of ways and uh
+that's really resonating with with that's really resonating with with that's really resonating with with
+people people people
+&gt;&gt; what's so new about it &gt;&gt; what's so new about it &gt;&gt; what's so new about it
+&gt;&gt; developers had spent so much time in &gt;&gt; developers had spent so much time in &gt;&gt; developers had spent so much time in
+their IDE historically and doesn't make their IDE historically and doesn't make their IDE historically and doesn't make
+a lot of sense I think to you to meet a lot of sense I think to you to meet a lot of sense I think to you to meet
+users where they are. You know, some users where they are. You know, some users where they are. You know, some
+users are in the terminal, so that's why users are in the terminal, so that's why users are in the terminal, so that's why
+we have the CLI. A lot of users are in we have the CLI. A lot of users are in we have the CLI. A lot of users are in
+in IDE, so that's why we're in, you in IDE, so that's why we're in, you in IDE, so that's why we're in, you
+know, VS Code, actually now integrated know, VS Code, actually now integrated know, VS Code, actually now integrated
+into Jet Brains and and Xcode. You know, into Jet Brains and and Xcode. You know, into Jet Brains and and Xcode. You know,
+it's kind of a very obvious and a it's kind of a very obvious and a it's kind of a very obvious and a
+natural place to go to to meet natural place to go to to meet natural place to go to to meet
+developers. I think with the Codeex app, developers. I think with the Codeex app, developers. I think with the Codeex app,
+right, we've actually established a new right, we've actually established a new right, we've actually established a new
+surface. I like to think of it as as a surface. I like to think of it as as a surface. I like to think of it as as a
+mission control type of interface where, mission control type of interface where, mission control type of interface where,
+you know, now I'm managing many you know, now I'm managing many you know, now I'm managing many
+conversations in parallel. But I do conversations in parallel. But I do conversations in parallel. But I do
+have, you know, some key pieces of what have, you know, some key pieces of what have, you know, some key pieces of what
+you normally expect in a traditional ID. you normally expect in a traditional ID. you normally expect in a traditional ID.
+So you can browse the diff that the So you can browse the diff that the So you can browse the diff that the
+agent has made. You can actually hop agent has made. You can actually hop agent has made. You can actually hop
+open pop open the terminal with command open pop open the terminal with command open pop open the terminal with command
+J. So you don't have to, you know, J. So you don't have to, you know, J. So you don't have to, you know,
+switch away to a different window if you switch away to a different window if you switch away to a different window if you
+kind of want to do some sort of ad hoc kind of want to do some sort of ad hoc kind of want to do some sort of ad hoc
+things. You know, it's really breaking things. You know, it's really breaking things. You know, it's really breaking
+expectations that like, oh, I don't I expectations that like, oh, I don't I expectations that like, oh, I don't I
+don't actually have to have all my code. don't actually have to have all my code. don't actually have to have all my code.
+I mean it's nice but I can actually get I mean it's nice but I can actually get I mean it's nice but I can actually get
+a lot done and there's actually more a lot done and there's actually more a lot done and there's actually more
+value for a lot of people in being able value for a lot of people in being able value for a lot of people in being able
+to you know to organize and and work to you know to organize and and work to you know to organize and and work
+across multiple agents and like that's across multiple agents and like that's across multiple agents and like that's
+actually the thing that they're is like actually the thing that they're is like actually the thing that they're is like
+the top priority and that we you know the top priority and that we you know the top priority and that we you know
+really bring front and center to people. really bring front and center to people. really bring front and center to people.
+&gt;&gt; Well let's talk a little bit about how &gt;&gt; Well let's talk a little bit about how &gt;&gt; Well let's talk a little bit about how
+coding agents and systems like Codex coding agents and systems like Codex coding agents and systems like Codex
+change the way developers work. So when change the way developers work. So when change the way developers work. So when
+coding agents enter the workflow what coding agents enter the workflow what coding agents enter the workflow what
+changes first in the daily work of changes first in the daily work of changes first in the daily work of
+engineers like you? engineers like you? engineers like you?
+&gt;&gt; Sure. I mean one of the biggest I think &gt;&gt; Sure. I mean one of the biggest I think &gt;&gt; Sure. I mean one of the biggest I think
+is throughput. I mean just that people is throughput. I mean just that people is throughput. I mean just that people
+are really trying to uh they know that are really trying to uh they know that are really trying to uh they know that
+if you really put attention on it right if you really put attention on it right if you really put attention on it right
+you can actually get a lot of work done you can actually get a lot of work done you can actually get a lot of work done
+in parallel and kind of that incurs some in parallel and kind of that incurs some in parallel and kind of that incurs some
+amount of context switching that maybe amount of context switching that maybe amount of context switching that maybe
+not everyone but everyone loves but if not everyone but everyone loves but if not everyone but everyone loves but if
+you can master that right you can really you can master that right you can really you can master that right you can really
+push a lot of things forward. That's one push a lot of things forward. That's one push a lot of things forward. That's one
+is that, you know, I personally have, I is that, you know, I personally have, I is that, you know, I personally have, I
+think, five clones of the the codeex think, five clones of the the codeex think, five clones of the the codeex
+repo that I can kind of hop between and, repo that I can kind of hop between and, repo that I can kind of hop between and,
+you know, sometimes it's a small thing you know, sometimes it's a small thing you know, sometimes it's a small thing
+that I just saw somewhere while I was that I just saw somewhere while I was that I just saw somewhere while I was
+doing something else. like I'd really doing something else. like I'd really doing something else. like I'd really
+just like to get that fixed or sometimes just like to get that fixed or sometimes just like to get that fixed or sometimes
+there's you know kind of like full day there's you know kind of like full day there's you know kind of like full day
+conversations where I'm kind of maybe conversations where I'm kind of maybe conversations where I'm kind of maybe
+doing a very large change and like doing a very large change and like doing a very large change and like
+working with codeex throughout the working with codeex throughout the working with codeex throughout the
+course of the day or kind of you know course of the day or kind of you know course of the day or kind of you know
+between meetings and you you a lot of between meetings and you you a lot of between meetings and you you a lot of
+people I think who there's few minutes people I think who there's few minutes people I think who there's few minutes
+five minutes between meetings you might five minutes between meetings you might five minutes between meetings you might
+want to like you know send another want to like you know send another want to like you know send another
+message just to to push it off in message just to to push it off in message just to to push it off in
+another direction so that that it keeps another direction so that that it keeps another direction so that that it keeps
+moving forward uh you know on whichever moving forward uh you know on whichever moving forward uh you know on whichever
+task that you're doing. Yeah. One is task that you're doing. Yeah. One is task that you're doing. Yeah. One is
+working across multiple work streams at working across multiple work streams at working across multiple work streams at
+the same time. I think another that a the same time. I think another that a the same time. I think another that a
+lot of people are spending more time on lot of people are spending more time on lot of people are spending more time on
+right now is then even figuring out well right now is then even figuring out well right now is then even figuring out well
+how do I optimize this workflow? This is how do I optimize this workflow? This is how do I optimize this workflow? This is
+this is all very new right to everybody this is all very new right to everybody this is all very new right to everybody
+I mean relatively speaking. So investing I mean relatively speaking. So investing I mean relatively speaking. So investing
+in oh you know should I turn this into a in oh you know should I turn this into a in oh you know should I turn this into a
+this thing that I feel like I keep this thing that I feel like I keep this thing that I feel like I keep
+doing. Should I turn this into a skill doing. Should I turn this into a skill doing. Should I turn this into a skill
+or that sort of thing? Should I actually or that sort of thing? Should I actually or that sort of thing? Should I actually
+share this skill with my teammates share this skill with my teammates share this skill with my teammates
+because I think we should actually all because I think we should actually all because I think we should actually all
+be doing this sort of thing. You know, be doing this sort of thing. You know, be doing this sort of thing. You know,
+everyone I think all, you know, good everyone I think all, you know, good everyone I think all, you know, good
+developers are always trying to find developers are always trying to find developers are always trying to find
+good tools and to optimize their inner good tools and to optimize their inner good tools and to optimize their inner
+loop, but this is like a new inner loop loop, but this is like a new inner loop loop, but this is like a new inner loop
+that I think we're all kind of figuring that I think we're all kind of figuring that I think we're all kind of figuring
+out how to optimize. So now we're, you out how to optimize. So now we're, you out how to optimize. So now we're, you
+know, spending time on that that in a know, spending time on that that in a know, spending time on that that in a
+way that didn't exist before. And then way that didn't exist before. And then way that didn't exist before. And then
+the other one that I think is very the other one that I think is very the other one that I think is very
+natural is how much time we all spend on natural is how much time we all spend on natural is how much time we all spend on
+on code review or the volume of um code on code review or the volume of um code on code review or the volume of um code
+review. That's one, you know, obviously review. That's one, you know, obviously review. That's one, you know, obviously
+that gets a lot of attention right now. that gets a lot of attention right now. that gets a lot of attention right now.
+And, you know, for sure Codeex is also And, you know, for sure Codeex is also And, you know, for sure Codeex is also
+doing a lot of the code review, which is doing a lot of the code review, which is doing a lot of the code review, which is
+great. uh which saves us a lot of time great. uh which saves us a lot of time great. uh which saves us a lot of time
+you know and so figuring out how to how you know and so figuring out how to how you know and so figuring out how to how
+to make the most of that too is always to make the most of that too is always to make the most of that too is always
+feel like a bit of a moving target right feel like a bit of a moving target right feel like a bit of a moving target right
+now now now
+&gt;&gt; when you was working on codeex initially &gt;&gt; when you was working on codeex initially &gt;&gt; when you was working on codeex initially
+were there any like interesting stories were there any like interesting stories were there any like interesting stories
+or unexpected things that you encounter or unexpected things that you encounter or unexpected things that you encounter
+&gt;&gt; you know so much has changed so Codex is &gt;&gt; you know so much has changed so Codex is &gt;&gt; you know so much has changed so Codex is
+still not even quite a year old right still not even quite a year old right still not even quite a year old right
+which is pretty remarkable the amount of which is pretty remarkable the amount of which is pretty remarkable the amount of
+change in that in that time period change in that in that time period change in that in that time period
+&gt;&gt; mind-blowing yeah &gt;&gt; mind-blowing yeah &gt;&gt; mind-blowing yeah
+&gt;&gt; yeah I mean you know trying to think &gt;&gt; yeah I mean you know trying to think &gt;&gt; yeah I mean you know trying to think
+back the models is are a very big part back the models is are a very big part back the models is are a very big part
+of the acceleration that we've had. So of the acceleration that we've had. So of the acceleration that we've had. So
+when we launched in April of 2025, that when we launched in April of 2025, that when we launched in April of 2025, that
+was part of the 03 and 04 mini launch. was part of the 03 and 04 mini launch. was part of the 03 and 04 mini launch.
+So we were using reasonal reasoning So we were using reasonal reasoning So we were using reasonal reasoning
+models. the tool calling and instruction models. the tool calling and instruction models. the tool calling and instruction
+following like wasn't you know quite I following like wasn't you know quite I following like wasn't you know quite I
+think where we we wanted to be and you think where we we wanted to be and you think where we we wanted to be and you
+know seeing that change over time that know seeing that change over time that know seeing that change over time that
+has been a big one trying to think about has been a big one trying to think about has been a big one trying to think about
+but you asked specifically about like but you asked specifically about like but you asked specifically about like
+kind of early on um a lot of those kind of early on um a lot of those kind of early on um a lot of those
+things I mean I think getting codecs to things I mean I think getting codecs to things I mean I think getting codecs to
+write more of codecs you know it was write more of codecs you know it was write more of codecs you know it was
+just such a that seeing that just such a that seeing that just such a that seeing that
+bootstrapping happen you know things bootstrapping happen you know things bootstrapping happen you know things
+like agents MD uh becoming more standard like agents MD uh becoming more standard like agents MD uh becoming more standard
+and things like that that just getting and things like that that just getting and things like that that just getting
+that scaffolding in place so that you're that scaffolding in place so that you're that scaffolding in place so that you're
+building the tool that's optimizing your building the tool that's optimizing your building the tool that's optimizing your
+own workflow that gives you kind of that own workflow that gives you kind of that own workflow that gives you kind of that
+exponential liftoff was just exciting exponential liftoff was just exciting exponential liftoff was just exciting
+and and very fun to have certainly like and and very fun to have certainly like and and very fun to have certainly like
+colleagues like really starting to get colleagues like really starting to get colleagues like really starting to get
+it and you know shift more of their work it and you know shift more of their work it and you know shift more of their work
+to codeex and being excited about doing to codeex and being excited about doing to codeex and being excited about doing
+that. How does repository and all the that. How does repository and all the that. How does repository and all the
+documents how do they need to look like documents how do they need to look like documents how do they need to look like
+when an agent is navigating this instead when an agent is navigating this instead when an agent is navigating this instead
+of a human developer like you mentioned of a human developer like you mentioned of a human developer like you mentioned
+agents MD what is the biggest difference agents MD what is the biggest difference agents MD what is the biggest difference
+here here here
+&gt;&gt; it's funny I think an interesting thing &gt;&gt; it's funny I think an interesting thing &gt;&gt; it's funny I think an interesting thing
+about this whole agentic coding journey about this whole agentic coding journey about this whole agentic coding journey
+is that there are a number of practices is that there are a number of practices is that there are a number of practices
+that have been considered best practice that have been considered best practice that have been considered best practice
+you know in software for a long time and you know in software for a long time and you know in software for a long time and
+we just didn't do them so you know for we just didn't do them so you know for we just didn't do them so you know for
+example documentation is one test-driven example documentation is one test-driven example documentation is one test-driven
+development is one you know people I development is one you know people I development is one you know people I
+mean that's not that people never did mean that's not that people never did mean that's not that people never did
+these things, right? But they they're these things, right? But they they're these things, right? But they they're
+like, "Well, you know, is the trade-off like, "Well, you know, is the trade-off like, "Well, you know, is the trade-off
+there? Is it worth it?" Right? And now, there? Is it worth it?" Right? And now, there? Is it worth it?" Right? And now,
+you know, in in an agent first world, you know, in in an agent first world, you know, in in an agent first world,
+these things are clearly worth it, these things are clearly worth it, these things are clearly worth it,
+right? And now people are I feel like, right? And now people are I feel like, right? And now people are I feel like,
+you know, almost rediscovering these you know, almost rediscovering these you know, almost rediscovering these
+things that we've known about for a long things that we've known about for a long things that we've known about for a long
+time, but but really caring about them. time, but but really caring about them. time, but but really caring about them.
+When you think about agents MD, for When you think about agents MD, for When you think about agents MD, for
+example, you know, all the stuff that's example, you know, all the stuff that's example, you know, all the stuff that's
+in there, at least that we write in in there, at least that we write in in there, at least that we write in
+ours, I would say, is is suitable for a ours, I would say, is is suitable for a ours, I would say, is is suitable for a
+human, you know, you know, person human, you know, you know, person human, you know, you know, person
+joining the team and things that they joining the team and things that they joining the team and things that they
+need to know and it's all these best need to know and it's all these best need to know and it's all these best
+practices. You know, it's nice. It's practices. You know, it's nice. It's practices. You know, it's nice. It's
+actually kind of freeing that to make actually kind of freeing that to make actually kind of freeing that to make
+sure we actually write these things down sure we actually write these things down sure we actually write these things down
+in a way, you know, for the agent and in a way, you know, for the agent and in a way, you know, for the agent and
+for our teammates. But at least on for our teammates. But at least on for our teammates. But at least on
+codeex, you know, you can see it, right? codeex, you know, you can see it, right? codeex, you know, you can see it, right?
+It's kind of nice that you can just look It's kind of nice that you can just look It's kind of nice that you can just look
+in the repo and see what we do. You in the repo and see what we do. You in the repo and see what we do. You
+know, our agents MD file is pretty know, our agents MD file is pretty know, our agents MD file is pretty
+modest. I would say on codeex, you know, modest. I would say on codeex, you know, modest. I would say on codeex, you know,
+we consider ourselves AGI build, meaning we consider ourselves AGI build, meaning we consider ourselves AGI build, meaning
+that we should, the agent should really that we should, the agent should really that we should, the agent should really
+be deciding what to do rather than us be deciding what to do rather than us be deciding what to do rather than us
+feeding it, you know, more instruction feeding it, you know, more instruction feeding it, you know, more instruction
+than it needs. And so rather than, you than it needs. And so rather than, you than it needs. And so rather than, you
+know, trying to write up a document know, trying to write up a document know, trying to write up a document
+that's in parallel to the source code, that's in parallel to the source code, that's in parallel to the source code,
+you know, that's potentially duplicative you know, that's potentially duplicative you know, that's potentially duplicative
+and and and also potentially incorrect, and and and also potentially incorrect, and and and also potentially incorrect,
+right? Inconsistent. The agent most of right? Inconsistent. The agent most of right? Inconsistent. The agent most of
+the time is spends a lot of time rip the time is spends a lot of time rip the time is spends a lot of time rip
+gripping like reading code, right? Kind gripping like reading code, right? Kind gripping like reading code, right? Kind
+of forming its own opinion. So I think of forming its own opinion. So I think of forming its own opinion. So I think
+we try to put things in an agent's MD we try to put things in an agent's MD we try to put things in an agent's MD
+that maybe it wouldn't have gotten, you that maybe it wouldn't have gotten, you that maybe it wouldn't have gotten, you
+know, very obviously or very quickly know, very obviously or very quickly know, very obviously or very quickly
+from the code, you know, like, hey, this from the code, you know, like, hey, this from the code, you know, like, hey, this
+is the way you should run the tests or is the way you should run the tests or is the way you should run the tests or
+these tests are more important than these tests are more important than these tests are more important than
+those tests, things like that. But I those tests, things like that. But I those tests, things like that. But I
+think we actually try not to overdo it. think we actually try not to overdo it. think we actually try not to overdo it.
+let the agent you know decide the best let the agent you know decide the best let the agent you know decide the best
+way forward. way forward. way forward.
+&gt;&gt; So you think in the nearest future &gt;&gt; So you think in the nearest future &gt;&gt; So you think in the nearest future
+agents indeed will be written by an agents indeed will be written by an agents indeed will be written by an
+agent. agent. agent.
+&gt;&gt; I mean a lot of people's are right now &gt;&gt; I mean a lot of people's are right now &gt;&gt; I mean a lot of people's are right now
+you know or I know a lot of folks who we you know or I know a lot of folks who we you know or I know a lot of folks who we
+don't happen to do it on our our team as don't happen to do it on our our team as don't happen to do it on our our team as
+a general practice. I would say you a general practice. I would say you a general practice. I would say you
+actually I mean look through the the actually I mean look through the the actually I mean look through the the
+history and double check me on that one. history and double check me on that one. history and double check me on that one.
+Many people I have anecdotally like that Many people I have anecdotally like that Many people I have anecdotally like that
+they in their personal instructions say they in their personal instructions say they in their personal instructions say
+oh and when you're done like please oh and when you're done like please oh and when you're done like please
+update anything of interest to the update anything of interest to the update anything of interest to the
+agents MD file that you you know it was agents MD file that you you know it was agents MD file that you you know it was
+not obvious or however you whatever you not obvious or however you whatever you not obvious or however you whatever you
+and your your agent your codeex want to and your your agent your codeex want to and your your agent your codeex want to
+do. I feel like there in the industry I do. I feel like there in the industry I do. I feel like there in the industry I
+mean I just see different papers coming mean I just see different papers coming mean I just see different papers coming
+out on people are experimenting with I out on people are experimenting with I out on people are experimenting with I
+guess even how much to tell the agent guess even how much to tell the agent guess even how much to tell the agent
+and I'm sure it depends on the agent as and I'm sure it depends on the agent as and I'm sure it depends on the agent as
+well. So but like I said I think we take well. So but like I said I think we take well. So but like I said I think we take
+like a modest approach. It's not like like a modest approach. It's not like like a modest approach. It's not like
+tens of pages of instructions or tens of pages of instructions or tens of pages of instructions or
+anything like that. I think it's more anything like that. I think it's more anything like that. I think it's more
+like a handful off the top of my head. like a handful off the top of my head. like a handful off the top of my head.
+&gt;&gt; What about context engineering being an &gt;&gt; What about context engineering being an &gt;&gt; What about context engineering being an
+important part of this process? Is there important part of this process? Is there important part of this process? Is there
+is such a thing as too much context for is such a thing as too much context for is such a thing as too much context for
+an agent? So I'm not a re researcher an agent? So I'm not a re researcher an agent? So I'm not a re researcher
+would give you a more precise answer but would give you a more precise answer but would give you a more precise answer but
+I would I give you from my from my I would I give you from my from my I would I give you from my from my
+empirical experience is that you know a empirical experience is that you know a empirical experience is that you know a
+lot of times you know like let's say lot of times you know like let's say lot of times you know like let's say
+when I'm prompting codeex like for like when I'm prompting codeex like for like when I'm prompting codeex like for like
+a more meteor task you know I probably a more meteor task you know I probably a more meteor task you know I probably
+write about a paragraph or so and I ask write about a paragraph or so and I ask write about a paragraph or so and I ask
+it to go often ask it to familiarize it to go often ask it to familiarize it to go often ask it to familiarize
+itself with that part of the code you itself with that part of the code you itself with that part of the code you
+know maybe I give it explicit pointers know maybe I give it explicit pointers know maybe I give it explicit pointers
+to files if I think it's going to help to files if I think it's going to help to files if I think it's going to help
+but but a lot of times I I don't you but but a lot of times I I don't you but but a lot of times I I don't you
+know does a good job of searching the know does a good job of searching the know does a good job of searching the
+code base I mean I think you You know, code base I mean I think you You know, code base I mean I think you You know,
+you ask about things you do. I mean, I you ask about things you do. I mean, I you ask about things you do. I mean, I
+guess subtly trying to make sure files guess subtly trying to make sure files guess subtly trying to make sure files
+and folders are well named and things and folders are well named and things and folders are well named and things
+like that. I think I mean, again, one of like that. I think I mean, again, one of like that. I think I mean, again, one of
+those things that's just a good practice those things that's just a good practice those things that's just a good practice
+anyway, but it's probably even more anyway, but it's probably even more anyway, but it's probably even more
+important than we realize, you know, important than we realize, you know, important than we realize, you know,
+when the agent's searching the code. when the agent's searching the code. when the agent's searching the code.
+Most of the contents is context, sorry, Most of the contents is context, sorry, Most of the contents is context, sorry,
+you know, is going to be agents MD my, you know, is going to be agents MD my, you know, is going to be agents MD my,
+you know, the thing that I prompted. It you know, the thing that I prompted. It you know, the thing that I prompted. It
+may be some file references that I gave may be some file references that I gave may be some file references that I gave
+it. I mean, I do also give it access to it. I mean, I do also give it access to it. I mean, I do also give it access to
+reading GitHub. So things like hey a reading GitHub. So things like hey a reading GitHub. So things like hey a
+similar thing happened in this poll similar thing happened in this poll similar thing happened in this poll
+request or I think this request request or I think this request request or I think this request
+progressed in this pull request and so progressed in this pull request and so progressed in this pull request and so
+it could also see not just the code but it could also see not just the code but it could also see not just the code but
+any if the conversation that happened on any if the conversation that happened on any if the conversation that happened on
+that pull request but again it's more that pull request but again it's more that pull request but again it's more
+about I think like letting codeex knows about I think like letting codeex knows about I think like letting codeex knows
+it has these options here are the tools it has these options here are the tools it has these options here are the tools
+in your toolbox but not being in your toolbox but not being in your toolbox but not being
+prescriptive about the best way for it prescriptive about the best way for it prescriptive about the best way for it
+to solve a problem and trying to let it to solve a problem and trying to let it to solve a problem and trying to let it
+do its job and it's and it's a good do its job and it's and it's a good do its job and it's and it's a good
+model so it you know it does a good job model so it you know it does a good job model so it you know it does a good job
+there. It sounds almost like it pushes there. It sounds almost like it pushes there. It sounds almost like it pushes
+you kind of toward stricter you kind of toward stricter you kind of toward stricter
+architecture. architecture. architecture.
+&gt;&gt; Certainly, you know, Codeex is going to &gt;&gt; Certainly, you know, Codeex is going to &gt;&gt; Certainly, you know, Codeex is going to
+follow patterns that it that it sees in follow patterns that it that it sees in follow patterns that it that it sees in
+the in the codebase, you know. So, if the in the codebase, you know. So, if the in the codebase, you know. So, if
+you have a good architecture in the you have a good architecture in the you have a good architecture in the
+first place and it's going to follow it first place and it's going to follow it first place and it's going to follow it
+and maintain it and force the invariance and maintain it and force the invariance and maintain it and force the invariance
+that you set up, you're going to be in a that you set up, you're going to be in a that you set up, you're going to be in a
+good position over time. But again, good position over time. But again, good position over time. But again,
+right, that's also true of human right, that's also true of human right, that's also true of human
+developers as well. It's just I guess developers as well. It's just I guess developers as well. It's just I guess
+it's just that, you know, the rate of it's just that, you know, the rate of it's just that, you know, the rate of
+change is now just so much higher. So change is now just so much higher. So change is now just so much higher. So
+that if you yes have these you know that if you yes have these you know that if you yes have these you know
+standards you know you're going to get standards you know you're going to get standards you know you're going to get
+the benefits of them. the benefits of them. the benefits of them.
+&gt;&gt; Do you still see a lot of slope coming &gt;&gt; Do you still see a lot of slope coming &gt;&gt; Do you still see a lot of slope coming
+out from the model from the coding out from the model from the coding out from the model from the coding
+agents and like how do you fight it? agents and like how do you fight it? agents and like how do you fight it?
+&gt;&gt; I mean with codecs not trying to think &gt;&gt; I mean with codecs not trying to think &gt;&gt; I mean with codecs not trying to think
+of anything comes to mind. I don't think of anything comes to mind. I don't think of anything comes to mind. I don't think
+I've seen things that I would call slop. I've seen things that I would call slop. I've seen things that I would call slop.
+Sometimes it's just I think all these Sometimes it's just I think all these Sometimes it's just I think all these
+models like to write code and so models like to write code and so models like to write code and so
+sometimes the answer is deleting code sometimes the answer is deleting code sometimes the answer is deleting code
+and sometimes you you know maybe need to and sometimes you you know maybe need to and sometimes you you know maybe need to
+be a little more prescriptive in that be a little more prescriptive in that be a little more prescriptive in that
+way but you know that's not exactly slop way but you know that's not exactly slop way but you know that's not exactly slop
+or maybe it's like h you know you added or maybe it's like h you know you added or maybe it's like h you know you added
+500 lines to this file maybe you should 500 lines to this file maybe you should 500 lines to this file maybe you should
+have made a new file like that's those have made a new file like that's those have made a new file like that's those
+are easier fixes but in you know in many are easier fixes but in you know in many are easier fixes but in you know in many
+cases what's far more common is that it cases what's far more common is that it cases what's far more common is that it
+maybe knows an idiom or a language maybe knows an idiom or a language maybe knows an idiom or a language
+feature you know that I just happen to feature you know that I just happen to feature you know that I just happen to
+not have encountered yet and it adds it not have encountered yet and it adds it not have encountered yet and it adds it
+and I you know like learn something new. and I you know like learn something new. and I you know like learn something new.
+That is more often the way that I'm That is more often the way that I'm That is more often the way that I'm
+surprised by CEX rather than than surprised by CEX rather than than surprised by CEX rather than than
+&gt;&gt; what what you're describing is that uh &gt;&gt; what what you're describing is that uh &gt;&gt; what what you're describing is that uh
+since the Codex was started the model since the Codex was started the model since the Codex was started the model
+was not there yet. Now it's much was not there yet. Now it's much was not there yet. Now it's much
+stronger model now it's the application stronger model now it's the application stronger model now it's the application
+itself that brings more audience. I'm itself that brings more audience. I'm itself that brings more audience. I'm
+trying to understand this little like trying to understand this little like trying to understand this little like
+big model or big harness what is more big model or big harness what is more big model or big harness what is more
+important and is there a way when the important and is there a way when the important and is there a way when the
+harness stop being a rapper and just harness stop being a rapper and just harness stop being a rapper and just
+starts becoming an environment that starts becoming an environment that starts becoming an environment that
+matters more or it's still the model matters more or it's still the model matters more or it's still the model
+rules it all rules it all rules it all
+&gt;&gt; you know it's possible I mean in a lot &gt;&gt; you know it's possible I mean in a lot &gt;&gt; you know it's possible I mean in a lot
+of ways we try to make the harness as of ways we try to make the harness as of ways we try to make the harness as
+small and as tight as possible so one small and as tight as possible so one small and as tight as possible so one
+thing you you see in in codeex compared thing you you see in in codeex compared thing you you see in in codeex compared
+to I think some of the others is that we to I think some of the others is that we to I think some of the others is that we
+try to give it very few tools so for try to give it very few tools so for try to give it very few tools so for
+example codeex doesn't have an explicit example codeex doesn't have an explicit example codeex doesn't have an explicit
+tool for like reading files, right? tool for like reading files, right? tool for like reading files, right?
+Instead, we give it troll of a computer Instead, we give it troll of a computer Instead, we give it troll of a computer
+terminal and if it uses cat or said or terminal and if it uses cat or said or terminal and if it uses cat or said or
+whatever command line tool that's whatever command line tool that's whatever command line tool that's
+present on the system to read a file, we present on the system to read a file, we present on the system to read a file, we
+encourage it to do that. I made a encourage it to do that. I made a encourage it to do that. I made a
+comment earlier about about being agi comment earlier about about being agi comment earlier about about being agi
+pill and we meaning that we give it a pill and we meaning that we give it a pill and we meaning that we give it a
+large space to play in and it should large space to play in and it should large space to play in and it should
+find the best point in that space to find the best point in that space to find the best point in that space to
+move forward. In a certain sense, the move forward. In a certain sense, the move forward. In a certain sense, the
+harness gets smaller in a number of way harness gets smaller in a number of way harness gets smaller in a number of way
+or we we try to keep it small and just or we we try to keep it small and just or we we try to keep it small and just
+give it like a handful of very very give it like a handful of very very give it like a handful of very very
+powerful tools. The only way perhaps we powerful tools. The only way perhaps we powerful tools. The only way perhaps we
+compromise on that at all is again is compromise on that at all is again is compromise on that at all is again is
+the is the security aspect of things is the is the security aspect of things is the is the security aspect of things is
+that you know security and the that you know security and the that you know security and the
+sandboxing like specifically how we sandboxing like specifically how we sandboxing like specifically how we
+approach it is a very important backs approach it is a very important backs approach it is a very important backs
+stop I would say to just letting codeex stop I would say to just letting codeex stop I would say to just letting codeex
+run wild so to speak. Yeah. You know, run wild so to speak. Yeah. You know, run wild so to speak. Yeah. You know,
+sometimes people play tricks trying to sometimes people play tricks trying to sometimes people play tricks trying to
+do special tools to try to maybe manage do special tools to try to maybe manage do special tools to try to maybe manage
+the context window better. Like you feel the context window better. Like you feel the context window better. Like you feel
+like as the harness author, it's like, like as the harness author, it's like, like as the harness author, it's like,
+well, I know better than codeex, like well, I know better than codeex, like well, I know better than codeex, like
+I'm going to give it I'm going to try to I'm going to give it I'm going to try to I'm going to give it I'm going to try to
+bias it to do these certain things, say bias it to do these certain things, say bias it to do these certain things, say
+to manage context window better. But I I to manage context window better. But I I to manage context window better. But I I
+would say we try to shy away from that. would say we try to shy away from that. would say we try to shy away from that.
+If say it's going to run a tool that's If say it's going to run a tool that's If say it's going to run a tool that's
+going to spit out a gigabyte of data, going to spit out a gigabyte of data, going to spit out a gigabyte of data,
+then we don't want to put that gigabyte then we don't want to put that gigabyte then we don't want to put that gigabyte
+of data into the context window because of data into the context window because of data into the context window because
+it's not probably relevant. I think our it's not probably relevant. I think our it's not probably relevant. I think our
+view would be okay let's let's bias view would be okay let's let's bias view would be okay let's let's bias
+codeex so that it writes that to a file codeex so that it writes that to a file codeex so that it writes that to a file
+and then maybe it grips the file or it and then maybe it grips the file or it and then maybe it grips the file or it
+does something else right and like but does something else right and like but does something else right and like but
+it's again free to kind of choose its it's again free to kind of choose its it's again free to kind of choose its
+way to solve that problem. Do you think way to solve that problem. Do you think way to solve that problem. Do you think
+it's possible to encode all these rules it's possible to encode all these rules it's possible to encode all these rules
+in safety and build it in sandboxing or in safety and build it in sandboxing or in safety and build it in sandboxing or
+there's always should be human in the there's always should be human in the there's always should be human in the
+loop like human judgment loop like human judgment loop like human judgment
+&gt;&gt; for coding for at least at least the the &gt;&gt; for coding for at least at least the the &gt;&gt; for coding for at least at least the the
+tasks that you know I you know focus on tasks that you know I you know focus on tasks that you know I you know focus on
+sandboxing is really the main thing like sandboxing is really the main thing like sandboxing is really the main thing like
+is is the replacement for human in the is is the replacement for human in the is is the replacement for human in the
+loop for a lot of the stuff at least for loop for a lot of the stuff at least for loop for a lot of the stuff at least for
+you know for the sorts of tasks that we you know for the sorts of tasks that we you know for the sorts of tasks that we
+work on you know you have a prompt you work on you know you have a prompt you work on you know you have a prompt you
+have a you have a problem you have a have a you have a problem you have a have a you have a problem you have a
+coding problem that you give to codeex coding problem that you give to codeex coding problem that you give to codeex
+you have this environment that it can you have this environment that it can you have this environment that it can
+operate in that's you know constrained operate in that's you know constrained operate in that's you know constrained
+in certain ways by a sandbox letting it in certain ways by a sandbox letting it in certain ways by a sandbox letting it
+explore that space is I think going to explore that space is I think going to explore that space is I think going to
+get you you know the best solution get you you know the best solution get you you know the best solution
+certainly at scale right if you like I certainly at scale right if you like I certainly at scale right if you like I
+mentioned you know I have like five mentioned you know I have like five mentioned you know I have like five
+clones of of codecs going if I were clones of of codecs going if I were clones of of codecs going if I were
+having to interject every few minutes on having to interject every few minutes on having to interject every few minutes on
+all five of those things and you like all five of those things and you like all five of those things and you like
+then that really limits fundamentally then that really limits fundamentally then that really limits fundamentally
+like the throughput that you can get out like the throughput that you can get out like the throughput that you can get out
+of them in training the model I mean as of them in training the model I mean as of them in training the model I mean as
+as opposed to having a human in the loop as opposed to having a human in the loop as opposed to having a human in the loop
+right we we want the models to get right we we want the models to get right we we want the models to get
+smarter and to do those types of things smarter and to do those types of things smarter and to do those types of things
+have those corrections happening at have those corrections happening at have those corrections happening at
+training time that that you know then training time that that you know then training time that that you know then
+play out at inference time. play out at inference time. play out at inference time.
+&gt;&gt; So it will be more in the model not in &gt;&gt; So it will be more in the model not in &gt;&gt; So it will be more in the model not in
+the harness. So yes, there's other parts the harness. So yes, there's other parts the harness. So yes, there's other parts
+that are important also, right? Things that are important also, right? Things that are important also, right? Things
+like the reliability of the harness is, like the reliability of the harness is, like the reliability of the harness is,
+you know, a pretty big one, right? The you know, a pretty big one, right? The you know, a pretty big one, right? The
+harness falls over, then your session's harness falls over, then your session's harness falls over, then your session's
+over and then, you know, what can the over and then, you know, what can the over and then, you know, what can the
+model do and that sort of thing. And so model do and that sort of thing. And so model do and that sort of thing. And so
+to that end, you know, performance and to that end, you know, performance and to that end, you know, performance and
+reliability are very important reliability are very important reliability are very important
+principles that we have when principles that we have when principles that we have when
+implementing the harness. For example, I implementing the harness. For example, I implementing the harness. For example, I
+don't know if we want to stand up a farm don't know if we want to stand up a farm don't know if we want to stand up a farm
+of Raspberry Pies, I don't know, right? of Raspberry Pies, I don't know, right? of Raspberry Pies, I don't know, right?
+where each one's running running the where each one's running running the where each one's running running the
+agent loop ensuring that again we're agent loop ensuring that again we're agent loop ensuring that again we're
+like judicious with the resources on the like judicious with the resources on the like judicious with the resources on the
+machine right so that most of the energy machine right so that most of the energy machine right so that most of the energy
+is spent what the model needs to do and is spent what the model needs to do and is spent what the model needs to do and
+like the harness is ideally doing kind like the harness is ideally doing kind like the harness is ideally doing kind
+of like the the bare minimum there we I of like the the bare minimum there we I of like the the bare minimum there we I
+think inevitably move out towards multi- think inevitably move out towards multi- think inevitably move out towards multi-
+aent and sub aent and more agents aent and sub aent and more agents aent and sub aent and more agents
+talking across machines and things like talking across machines and things like talking across machines and things like
+that having the harness then is not just that having the harness then is not just that having the harness then is not just
+you know a single machine you know you know a single machine you know you know a single machine you know
+process right now we're like about a process right now we're like about a process right now we're like about a
+network of agents and things like that. network of agents and things like that. network of agents and things like that.
+I expect there'll be you know more I expect there'll be you know more I expect there'll be you know more
+interesting work to do there still. I interesting work to do there still. I interesting work to do there still. I
+won't be out of a job quite yet. That won't be out of a job quite yet. That won't be out of a job quite yet. That
+will change and you know and you know I will change and you know and you know I will change and you know and you know I
+personally have spent most of my career personally have spent most of my career personally have spent most of my career
+writing tools for developers right now writing tools for developers right now writing tools for developers right now
+probably writing more tools for agents. probably writing more tools for agents. probably writing more tools for agents.
+The agent obviously can write its own The agent obviously can write its own The agent obviously can write its own
+tools um as well, but we'd rather have a tools um as well, but we'd rather have a tools um as well, but we'd rather have a
+small number of tools that are very small number of tools that are very small number of tools that are very
+powerful that it can use to explore the powerful that it can use to explore the powerful that it can use to explore the
+space. Well, but I think that we'll also space. Well, but I think that we'll also space. Well, but I think that we'll also
+still continue to be experimenting like still continue to be experimenting like still continue to be experimenting like
+what is that right, you know, set of what is that right, you know, set of what is that right, you know, set of
+primitives that we want to focus on. primitives that we want to focus on. primitives that we want to focus on.
+&gt;&gt; Do you know this set already? Have you &gt;&gt; Do you know this set already? Have you &gt;&gt; Do you know this set already? Have you
+thought about it? thought about it? thought about it?
+&gt;&gt; I mean, I think we see a lot of the &gt;&gt; I mean, I think we see a lot of the &gt;&gt; I mean, I think we see a lot of the
+pieces there right now. So, I mentioned pieces there right now. So, I mentioned pieces there right now. So, I mentioned
+uh I use the term shell tool earlier. I uh I use the term shell tool earlier. I uh I use the term shell tool earlier. I
+use it more generally as a terminal use it more generally as a terminal use it more generally as a terminal
+tool. So the models interface, you know, tool. So the models interface, you know, tool. So the models interface, you know,
+into like a using a computer terminal into like a using a computer terminal into like a using a computer terminal
+more like a human would, not just more like a human would, not just more like a human would, not just
+straight up just executing individual straight up just executing individual straight up just executing individual
+commands. So like dealing with things commands. So like dealing with things commands. So like dealing with things
+with streaming output and and using that with streaming output and and using that with streaming output and and using that
+efficiently. The use of memory I think efficiently. The use of memory I think efficiently. The use of memory I think
+is I guess another you know big area is I guess another you know big area is I guess another you know big area
+that we see uh a lot of interesting work that we see uh a lot of interesting work that we see uh a lot of interesting work
+happening in. So historically again happening in. So historically again happening in. So historically again
+every time you would you you would start every time you would you you would start every time you would you you would start
+a conversation right it's kind of from a conversation right it's kind of from a conversation right it's kind of from
+nothing and that's why you have agents nothing and that's why you have agents nothing and that's why you have agents
+MD and some of this context stuffing to MD and some of this context stuffing to MD and some of this context stuffing to
+try to get that you know information try to get that you know information try to get that you know information
+into the model very quickly. So if you into the model very quickly. So if you into the model very quickly. So if you
+looked, you know, in the repo, you can looked, you know, in the repo, you can looked, you know, in the repo, you can
+see there's a lot of um experiments see there's a lot of um experiments see there's a lot of um experiments
+around memory. There's a lot going on around memory. There's a lot going on around memory. There's a lot going on
+with with different types of context with with different types of context with with different types of context
+connectors, right? It's like, okay, connectors, right? It's like, okay, connectors, right? It's like, okay,
+well, I originally was kind of focusing well, I originally was kind of focusing well, I originally was kind of focusing
+on computer tasks on your machine, but on computer tasks on your machine, but on computer tasks on your machine, but
+now it's also about getting work done, now it's also about getting work done, now it's also about getting work done,
+which maybe is, you know, sending email which maybe is, you know, sending email which maybe is, you know, sending email
+on behalf of your or creating documents on behalf of your or creating documents on behalf of your or creating documents
+and things like that. That set of tools and things like that. That set of tools and things like that. That set of tools
+or or taking action, you know, in a web or or taking action, you know, in a web or or taking action, you know, in a web
+browser. There's a lot there as well. browser. There's a lot there as well. browser. There's a lot there as well.
+And then things like just kind of I And then things like just kind of I And then things like just kind of I
+think standard LLM stuff where generally think standard LLM stuff where generally think standard LLM stuff where generally
+speaking more context window is good. speaking more context window is good. speaking more context window is good.
+How we compact that you know when you How we compact that you know when you How we compact that you know when you
+hit the limits of the context window you hit the limits of the context window you hit the limits of the context window you
+know all that stuff is still actively know all that stuff is still actively know all that stuff is still actively
+being pursued and uh contributes to the being pursued and uh contributes to the being pursued and uh contributes to the
+overall model you know agent experience. overall model you know agent experience. overall model you know agent experience.
+[music] 

@@ -1,0 +1,91 @@
+Hi, I'm Cassie Kosov and this is AI Hi, I'm Cassie Kosov and this is AI
+Advice from Anywhere where I walk and Advice from Anywhere where I walk and Advice from Anywhere where I walk and
+talk about AI and you see how many talk about AI and you see how many talk about AI and you see how many
+seconds it takes for you to figure out seconds it takes for you to figure out seconds it takes for you to figure out
+what city I'm in. Ready? Let's start the what city I'm in. Ready? Let's start the what city I'm in. Ready? Let's start the
+timer. There's a new engineering timer. There's a new engineering timer. There's a new engineering
+discipline in town. Open AI proved it's discipline in town. Open AI proved it's discipline in town. Open AI proved it's
+possible to ship a product with a possible to ship a product with a possible to ship a product with a
+million lines of code, of which zero million lines of code, of which zero million lines of code, of which zero
+were human typed. And it took them a were human typed. And it took them a were human typed. And it took them a
+tenth of the time that it would have tenth of the time that it would have tenth of the time that it would have
+taken to write by hand. Let that sink taken to write by hand. Let that sink taken to write by hand. Let that sink
+in. A tenth. It didn't fall apart. It in. A tenth. It didn't fall apart. It in. A tenth. It didn't fall apart. It
+didn't turn into a giant pile of slots. didn't turn into a giant pile of slots. didn't turn into a giant pile of slots.
+How is that even possible? What makes How is that even possible? What makes How is that even possible? What makes
+this possible is control. and the this possible is control. and the this possible is control. and the
+discipline that makes this possible. discipline that makes this possible. discipline that makes this possible.
+They're calling it harness engineering. They're calling it harness engineering. They're calling it harness engineering.
+In this video, I'll go over there are 12 In this video, I'll go over there are 12 In this video, I'll go over there are 12
+rules of harness engineering with you. rules of harness engineering with you. rules of harness engineering with you.
+Rule number one, humans steer, agents Rule number one, humans steer, agents Rule number one, humans steer, agents
+execute. The engineer's job is no longer execute. The engineer's job is no longer execute. The engineer's job is no longer
+to type the code. It's to design the to type the code. It's to design the to type the code. It's to design the
+environment, specify the intent, and environment, specify the intent, and environment, specify the intent, and
+build the feedback loops. Rule number build the feedback loops. Rule number build the feedback loops. Rule number
+two, give your agent a map, not a two, give your agent a map, not a two, give your agent a map, not a
+manual. Open AAI tried using one giant manual. Open AAI tried using one giant manual. Open AAI tried using one giant
+instruction file. It failed. And that's instruction file. It failed. And that's instruction file. It failed. And that's
+cuz when everything is important, cuz when everything is important, cuz when everything is important,
+nothing is. When it comes to context, nothing is. When it comes to context, nothing is. When it comes to context,
+what you show the system is as important what you show the system is as important what you show the system is as important
+as what you leave out. And so, a as what you leave out. And so, a as what you leave out. And so, a
+thousandpage manual crowds out the thousandpage manual crowds out the thousandpage manual crowds out the
+actual task. The better way is to write actual task. The better way is to write actual task. The better way is to write
+a smaller table of contents that points a smaller table of contents that points a smaller table of contents that points
+to deeper sources of truth. Rule three, to deeper sources of truth. Rule three, to deeper sources of truth. Rule three,
+if the agent can't access it in context if the agent can't access it in context if the agent can't access it in context
+while running, it doesn't exist. That while running, it doesn't exist. That while running, it doesn't exist. That
+Slack thread where you aligned on the Slack thread where you aligned on the Slack thread where you aligned on the
+architecture, invisible. A Google doc architecture, invisible. A Google doc architecture, invisible. A Google doc
+with the product spec, poof, gone. The with the product spec, poof, gone. The with the product spec, poof, gone. The
+stuff in your head might as well be on stuff in your head might as well be on stuff in your head might as well be on
+the moon. Rule number four, optimize for the moon. Rule number four, optimize for the moon. Rule number four, optimize for
+agent legibility, not human aesthetics. agent legibility, not human aesthetics. agent legibility, not human aesthetics.
+The code doesn't need to look pretty to The code doesn't need to look pretty to The code doesn't need to look pretty to
+you. It needs to be correct, you. It needs to be correct, you. It needs to be correct,
+maintainable, and legible to the next maintainable, and legible to the next maintainable, and legible to the next
+agent run. Rule number five, enforce agent run. Rule number five, enforce agent run. Rule number five, enforce
+boundaries centrally. Allow autonomy boundaries centrally. Allow autonomy boundaries centrally. Allow autonomy
+locally. Rule six, make the application locally. Rule six, make the application locally. Rule six, make the application
+itself legible to agents. Rule seven, itself legible to agents. Rule seven, itself legible to agents. Rule seven,
+treat plans as first class artifacts. treat plans as first class artifacts. treat plans as first class artifacts.
+Rule eight, what's irresponsible in a Rule eight, what's irresponsible in a Rule eight, what's irresponsible in a
+low throughput environment might be just low throughput environment might be just low throughput environment might be just
+the ticket when you're dealing with high the ticket when you're dealing with high the ticket when you're dealing with high
+throughput. And here, corrections are throughput. And here, corrections are throughput. And here, corrections are
+cheap. Waiting is expensive. Rule nine, cheap. Waiting is expensive. Rule nine, cheap. Waiting is expensive. Rule nine,
+continuous garbage collection over continuous garbage collection over continuous garbage collection over
+periodic cleanup. Their team used to periodic cleanup. Their team used to periodic cleanup. Their team used to
+spend every Friday. Every Friday. Every spend every Friday. Every Friday. Every spend every Friday. Every Friday. Every
+Friday. Cleaning up AI slop. That's a Friday. Cleaning up AI slop. That's a Friday. Cleaning up AI slop. That's a
+lot of time. That's 20% of the entire lot of time. That's 20% of the entire lot of time. That's 20% of the entire
+week cleaning up AI slop. It doesn't week cleaning up AI slop. It doesn't week cleaning up AI slop. It doesn't
+scale. Or rather, it does scale in the scale. Or rather, it does scale in the scale. Or rather, it does scale in the
+bad way. Rule 10. Your taste is bad way. Rule 10. Your taste is bad way. Rule 10. Your taste is
+worthless if it only lives in your head. worthless if it only lives in your head. worthless if it only lives in your head.
+Encode it or lose it. Rule 11. Favor Encode it or lose it. Rule 11. Favor Encode it or lose it. Rule 11. Favor
+boring composable technologies. boring composable technologies. boring composable technologies.
+technologies that are stable, well technologies that are stable, well technologies that are stable, well
+doumented, and well represented in doumented, and well represented in doumented, and well represented in
+training data are easier for agents to training data are easier for agents to training data are easier for agents to
+model. Rule 12, escalate only when model. Rule 12, escalate only when model. Rule 12, escalate only when
+judgment is required. Humans enter only judgment is required. Humans enter only judgment is required. Humans enter only
+at the layer where prioritization, user at the layer where prioritization, user at the layer where prioritization, user
+feedback, and outcome validation demand feedback, and outcome validation demand feedback, and outcome validation demand
+actual judgment. Everything else, let actual judgment. Everything else, let actual judgment. Everything else, let
+the agent cook. So there you go. 12 the agent cook. So there you go. 12 the agent cook. So there you go. 12
+rules. Every single one is about making rules. Every single one is about making rules. Every single one is about making
+the environment that the agent works in the environment that the agent works in the environment that the agent works in
+clearer, stricter, and more legible. The clearer, stricter, and more legible. The clearer, stricter, and more legible. The
+rigor doesn't disappear. It moves from rigor doesn't disappear. It moves from rigor doesn't disappear. It moves from
+typing the code to designing the typing the code to designing the typing the code to designing the
+scaffolding. I'm Cassie Kazerov and this scaffolding. I'm Cassie Kazerov and this scaffolding. I'm Cassie Kazerov and this
+is AI advice from anywhere. And today's is AI advice from anywhere. And today's is AI advice from anywhere. And today's
+anywhere is clearly somewhere with a lot anywhere is clearly somewhere with a lot anywhere is clearly somewhere with a lot
+of cacti and that is Scottsdale, of cacti and that is Scottsdale, of cacti and that is Scottsdale,
+Arizona. If you enjoyed this video, Arizona. If you enjoyed this video, Arizona. If you enjoyed this video,
+please do share it with someone, leave a please do share it with someone, leave a please do share it with someone, leave a
+comment, subscribe to my newsletter at comment, subscribe to my newsletter at comment, subscribe to my newsletter at
+decision.substack.com substack.com and decision.substack.com substack.com and decision.substack.com substack.com and
+I'll catch you here next 

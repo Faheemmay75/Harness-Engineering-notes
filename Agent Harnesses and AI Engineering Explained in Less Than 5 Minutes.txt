@@ -1,0 +1,132 @@
+All right. Okay, my people. Today I want All right. Okay, my people. Today I want
+to talk to you about agent harnesses and to talk to you about agent harnesses and to talk to you about agent harnesses and
+agent engineering. Hugo bound Anderson agent engineering. Hugo bound Anderson agent engineering. Hugo bound Anderson
+here from Vanishing Gradients and the here from Vanishing Gradients and the here from Vanishing Gradients and the
+High Signal podcast. I recently did a High Signal podcast. I recently did a High Signal podcast. I recently did a
+podcast on agent harnesses, the bitter podcast on agent harnesses, the bitter podcast on agent harnesses, the bitter
+lesson, and more with Lance Martin from lesson, and more with Lance Martin from lesson, and more with Lance Martin from
+Langchain and Duncan Gilchrist from Langchain and Duncan Gilchrist from Langchain and Duncan Gilchrist from
+Delphina. The link to the podcast and Delphina. The link to the podcast and Delphina. The link to the podcast and
+the blog post is in the description, but the blog post is in the description, but the blog post is in the description, but
+I recorded this short presentation for I recorded this short presentation for I recorded this short presentation for
+those who don't have 60 minutes to those who don't have 60 minutes to those who don't have 60 minutes to
+listen to the whole thing. Firstly, listen to the whole thing. Firstly, listen to the whole thing. Firstly,
+we're entering a new era in AI we're entering a new era in AI we're entering a new era in AI
+engineering. There's been architectural engineering. There's been architectural engineering. There's been architectural
+consolidation from CNN's and RNN's to consolidation from CNN's and RNN's to consolidation from CNN's and RNN's to
+the transformer architecture which has the transformer architecture which has the transformer architecture which has
+become totally dominant. Instead of become totally dominant. Instead of become totally dominant. Instead of
+training models, now we're using model training models, now we're using model training models, now we're using model
+APIs which has been a democratizing APIs which has been a democratizing APIs which has been a democratizing
+force for building and orchestrating force for building and orchestrating force for building and orchestrating
+these types of systems. And now we have these types of systems. And now we have these types of systems. And now we have
+a shift to an engineering focus. It's a a shift to an engineering focus. It's a a shift to an engineering focus. It's a
+higher level of abstraction for higher level of abstraction for higher level of abstraction for
+builders. This new reality has given builders. This new reality has given builders. This new reality has given
+rise to a new set of engineering rise to a new set of engineering rise to a new set of engineering
+disciplines focused on orchestration, disciplines focused on orchestration, disciplines focused on orchestration,
+prompt engineering, context engineering, prompt engineering, context engineering, prompt engineering, context engineering,
+building agents on top of these powerful building agents on top of these powerful building agents on top of these powerful
+new primitives. That does not mean we new primitives. That does not mean we new primitives. That does not mean we
+should forget about classic ML should forget about classic ML should forget about classic ML
+principles. Simplicity remains principles. Simplicity remains principles. Simplicity remains
+essential. Start out with thoughtful essential. Start out with thoughtful essential. Start out with thoughtful
+prompt engineering and structured prompt engineering and structured prompt engineering and structured
+workflows. Observability and evaluation workflows. Observability and evaluation workflows. Observability and evaluation
+aren't only still important, they're aren't only still important, they're aren't only still important, they're
+even more important now. And always keep even more important now. And always keep even more important now. And always keep
+verifiers law in mind. Establishing verifiers law in mind. Establishing verifiers law in mind. Establishing
+clear verification criteria is a clear verification criteria is a clear verification criteria is a
+foundational prerequisite for achieving foundational prerequisite for achieving foundational prerequisite for achieving
+high quality and a necessary step before high quality and a necessary step before high quality and a necessary step before
+attempting more advanced techniques. The attempting more advanced techniques. The attempting more advanced techniques. The
+agent harness is of supreme importance. agent harness is of supreme importance. agent harness is of supreme importance.
+This is the scaffolding around the LLM This is the scaffolding around the LLM This is the scaffolding around the LLM
+that manages tool execution, message that manages tool execution, message that manages tool execution, message
+history, and context. However, as models history, and context. However, as models history, and context. However, as models
+improve, this harness must be improve, this harness must be improve, this harness must be
+continually simplified, stripping away continually simplified, stripping away continually simplified, stripping away
+crutches that are no longer needed. In crutches that are no longer needed. In crutches that are no longer needed. In
+the podcast, Lance reminded us that the podcast, Lance reminded us that the podcast, Lance reminded us that
+Manis has rearchitected its agent Manis has rearchitected its agent Manis has rearchitected its agent
+harness five times since March last year harness five times since March last year harness five times since March last year
+and Lang Chain's Open Deep Research was and Lang Chain's Open Deep Research was and Lang Chain's Open Deep Research was
+built multiple times. On top of that, built multiple times. On top of that, built multiple times. On top of that,
+even Anthropic rips out Claude codes even Anthropic rips out Claude codes even Anthropic rips out Claude codes
+agent harness as models improve. Now, agent harness as models improve. Now, agent harness as models improve. Now,
+when building these types of systems, when building these types of systems, when building these types of systems,
+you need to remember that context rot is you need to remember that context rot is you need to remember that context rot is
+a real issue. Instruction following a real issue. Instruction following a real issue. Instruction following
+ability diminishes as the context grows. ability diminishes as the context grows. ability diminishes as the context grows.
+So, we need to engineer the context. The So, we need to engineer the context. The So, we need to engineer the context. The
+first principle Lance tells us about is first principle Lance tells us about is first principle Lance tells us about is
+reduction. Actively shrink the context reduction. Actively shrink the context reduction. Actively shrink the context
+passed to the model. You can do this by passed to the model. You can do this by passed to the model. You can do this by
+compacting older tool calls or using compacting older tool calls or using compacting older tool calls or using
+trajectory summarization to compress the trajectory summarization to compress the trajectory summarization to compress the
+entire history once it reaches a certain entire history once it reaches a certain entire history once it reaches a certain
+size. The next principle is offload. size. The next principle is offload. size. The next principle is offload.
+Move information and complexity out of Move information and complexity out of Move information and complexity out of
+the prompt. This includes saving full the prompt. This includes saving full the prompt. This includes saving full
+tool call results to an external file tool call results to an external file tool call results to an external file
+system for later reference. More system for later reference. More system for later reference. More
+profoundly, it means offloading the profoundly, it means offloading the profoundly, it means offloading the
+action space. So instead of giving an action space. So instead of giving an action space. So instead of giving an
+agent a 100 different tools which bloat agent a 100 different tools which bloat agent a 100 different tools which bloat
+the prompt, give it a few atomic tools the prompt, give it a few atomic tools the prompt, give it a few atomic tools
+like a bash terminal. This allows the like a bash terminal. This allows the like a bash terminal. This allows the
+agent to execute a vast range of agent to execute a vast range of agent to execute a vast range of
+commands without cluttering the context. commands without cluttering the context. commands without cluttering the context.
+The third principle is isolate, isolate, The third principle is isolate, isolate, The third principle is isolate, isolate,
+isolate. You can leverage multi- aent isolate. You can leverage multi- aent isolate. You can leverage multi- aent
+architectures to delegate tokenheavy architectures to delegate tokenheavy architectures to delegate tokenheavy
+subtasks. For example, a main agent can subtasks. For example, a main agent can subtasks. For example, a main agent can
+offload a complex job to a specialized offload a complex job to a specialized offload a complex job to a specialized
+sub agent uh which performs the work in sub agent uh which performs the work in sub agent uh which performs the work in
+its own isolated context and returns its own isolated context and returns its own isolated context and returns
+only a concise result. Also we have to only a concise result. Also we have to only a concise result. Also we have to
+remember that evaluation practices are remember that evaluation practices are remember that evaluation practices are
+also evolving rapidly. Static benchmarks also evolving rapidly. Static benchmarks also evolving rapidly. Static benchmarks
+have become saturated so quickly. So have become saturated so quickly. So have become saturated so quickly. So
+please always think about dog fooding please always think about dog fooding please always think about dog fooding
+and user feedback component level and user feedback component level and user feedback component level
+evaluations. So for example, evaluate evaluations. So for example, evaluate evaluations. So for example, evaluate
+your retrieval step in a rag pipeline, your retrieval step in a rag pipeline, your retrieval step in a rag pipeline,
+not only the generative response and not only the generative response and not only the generative response and
+then think about future proofing. Take then think about future proofing. Take then think about future proofing. Take
+it very seriously. Test your system it very seriously. Test your system it very seriously. Test your system
+against models of varying capabilities. against models of varying capabilities. against models of varying capabilities.
+Now, I wouldn't be doing my job if I Now, I wouldn't be doing my job if I Now, I wouldn't be doing my job if I
+didn't remind you of the difference didn't remind you of the difference didn't remind you of the difference
+between workflows and agents. Workflows between workflows and agents. Workflows between workflows and agents. Workflows
+are systems with predefined predictable are systems with predefined predictable are systems with predefined predictable
+steps. And an LLM call can be one step steps. And an LLM call can be one step steps. And an LLM call can be one step
+in a fixed sequence. So, this is ideal in a fixed sequence. So, this is ideal in a fixed sequence. So, this is ideal
+for tasks with a known structure. And for tasks with a known structure. And for tasks with a known structure. And
+most tasks are like this. Agents are most tasks are like this. Agents are most tasks are like this. Agents are
+systems where the LLM dynamically systems where the LLM dynamically systems where the LLM dynamically
+chooses its own tool calls and processes chooses its own tool calls and processes chooses its own tool calls and processes
+to solve a problem. And this is to solve a problem. And this is to solve a problem. And this is
+important in areas such as deep important in areas such as deep important in areas such as deep
+research. But most business problems can research. But most business problems can research. But most business problems can
+be solved using workflows. Let me be be solved using workflows. Let me be be solved using workflows. Let me be
+very clear. Just remember this isn't a very clear. Just remember this isn't a very clear. Just remember this isn't a
+binary choice but a spectrum. You binary choice but a spectrum. You binary choice but a spectrum. You
+introduce agency as you build out your introduce agency as you build out your introduce agency as you build out your
+systems. Now what are the key takeaways systems. Now what are the key takeaways systems. Now what are the key takeaways
+for leaders? Start simple. Exhaust for leaders? Start simple. Exhaust for leaders? Start simple. Exhaust
+prompt engineering and simple workflows prompt engineering and simple workflows prompt engineering and simple workflows
+before moving on to agents. Also build before moving on to agents. Also build before moving on to agents. Also build
+for change. Accept that the bitter for change. Accept that the bitter for change. Accept that the bitter
+lesson is real. What you build today lesson is real. What you build today lesson is real. What you build today
+will need to be rearchitected as models will need to be rearchitected as models will need to be rearchitected as models
+improve. Also, do not fear rebuilding. improve. Also, do not fear rebuilding. improve. Also, do not fear rebuilding.
+The cost and time required to rebuild The cost and time required to rebuild The cost and time required to rebuild
+systems are dramatically lower now uh systems are dramatically lower now uh systems are dramatically lower now uh
+thanks to powerful code generation thanks to powerful code generation thanks to powerful code generation
+models. If you want to check out the models. If you want to check out the models. If you want to check out the
+podcast or the blog post, links are in podcast or the blog post, links are in podcast or the blog post, links are in
+the show notes. If you enjoyed this, the the show notes. If you enjoyed this, the the show notes. If you enjoyed this, the
+best way you can support is hit like and best way you can support is hit like and best way you can support is hit like and
+subscribe and share it with a friend. subscribe and share it with a friend. subscribe and share it with a friend.
+Have a good one. 

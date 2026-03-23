@@ -1,0 +1,500 @@
+Everyone built agents in 2025. Everyone built agents in 2025.
+GitHub Copilot, Cursor, Devon, Claude GitHub Copilot, Cursor, Devon, Claude GitHub Copilot, Cursor, Devon, Claude
+Code. The demos were incredible. Agents Code. The demos were incredible. Agents Code. The demos were incredible. Agents
+that could write entire code bases. that could write entire code bases. that could write entire code bases.
+Research papers proclaiming AGI was Research papers proclaiming AGI was Research papers proclaiming AGI was
+near. But here's what nobody told you. near. But here's what nobody told you. near. But here's what nobody told you.
+Most of those agents couldn't work for Most of those agents couldn't work for Most of those agents couldn't work for
+more than an hour without losing track more than an hour without losing track more than an hour without losing track
+of what they were doing. They'd hit the of what they were doing. They'd hit the of what they were doing. They'd hit the
+context limit, forget their progress, context limit, forget their progress, context limit, forget their progress,
+and start over. or worse, hallucinate and start over. or worse, hallucinate and start over. or worse, hallucinate
+that they'd finished when they hadn't. that they'd finished when they hadn't. that they'd finished when they hadn't.
+2025 proved agents can work. 2026 is 2025 proved agents can work. 2026 is 2025 proved agents can work. 2026 is
+about making them work reliably. And the about making them work reliably. And the about making them work reliably. And the
+answer isn't better models, it's better answer isn't better models, it's better answer isn't better models, it's better
+harnesses. This is the agent harness harnesses. This is the agent harness harnesses. This is the agent harness
+revolution. And if you're building revolution. And if you're building revolution. And if you're building
+agentic AI in 2026, understanding agentic AI in 2026, understanding agentic AI in 2026, understanding
+harnesses isn't optional. harnesses isn't optional. harnesses isn't optional.
+The shift from 2025 to 2026 represents a The shift from 2025 to 2026 represents a The shift from 2025 to 2026 represents a
+fundamental change in how we think about fundamental change in how we think about fundamental change in how we think about
+agentic AI. In 2025, the question was, agentic AI. In 2025, the question was, agentic AI. In 2025, the question was,
+can agents work? The answer yes for can agents work? The answer yes for can agents work? The answer yes for
+demos. We saw incredible 30inute demos. We saw incredible 30inute demos. We saw incredible 30inute
+demonstrations where agents built demonstrations where agents built demonstrations where agents built
+applications, wrote code, completed applications, wrote code, completed applications, wrote code, completed
+complex workflows. In 2026, the question complex workflows. In 2026, the question complex workflows. In 2026, the question
+changed to can agents work reliably? Can changed to can agents work reliably? Can changed to can agents work reliably? Can
+they work for eight hour shifts? Can they work for eight hour shifts? Can they work for eight hour shifts? Can
+they complete projects that take days or they complete projects that take days or they complete projects that take days or
+weeks? And without proper harnesses, the weeks? And without proper harnesses, the weeks? And without proper harnesses, the
+answer was no. Agents that dazzled in answer was no. Agents that dazzled in answer was no. Agents that dazzled in
+demos crashed in production, hitting demos crashed in production, hitting demos crashed in production, hitting
+context limits, losing progress, context limits, losing progress, context limits, losing progress,
+restarting endlessly. This wasn't a restarting endlessly. This wasn't a restarting endlessly. This wasn't a
+model problem. GPT4, Claude, Opus, model problem. GPT4, Claude, Opus, model problem. GPT4, Claude, Opus,
+Gemini were incredibly capable. The Gemini were incredibly capable. The Gemini were incredibly capable. The
+issue was infrastructure. Agents needed issue was infrastructure. Agents needed issue was infrastructure. Agents needed
+persistent memory, session persistent memory, session persistent memory, session
+orchestration, error recovery, orchestration, error recovery, orchestration, error recovery,
+guardrails, and observability. By mid guardrails, and observability. By mid guardrails, and observability. By mid
+2026, every serious AI team had shifted 2026, every serious AI team had shifted 2026, every serious AI team had shifted
+focus from building better agents to focus from building better agents to focus from building better agents to
+building better harnesses. building better harnesses. building better harnesses.
+Anthropic published their architecture. Anthropic published their architecture. Anthropic published their architecture.
+Open AI demonstrated millions of lines Open AI demonstrated millions of lines Open AI demonstrated millions of lines
+of agent generated code. Martin Fowler of agent generated code. Martin Fowler of agent generated code. Martin Fowler
+wrote about harness engineering as a wrote about harness engineering as a wrote about harness engineering as a
+distinct discipline. The shift was distinct discipline. The shift was distinct discipline. The shift was
+complete. 2025 proved agents could work. complete. 2025 proved agents could work. complete. 2025 proved agents could work.
+2026 made them work reliably at scale. 2026 made them work reliably at scale. 2026 made them work reliably at scale.
+If you're building agentic AI systems If you're building agentic AI systems If you're building agentic AI systems
+now, you can't skip the harness. The now, you can't skip the harness. The now, you can't skip the harness. The
+harness is the system. harness is the system. harness is the system.
+So, what exactly is an agent harness? So, what exactly is an agent harness? So, what exactly is an agent harness?
+Here's the key. The harness is not the Here's the key. The harness is not the Here's the key. The harness is not the
+agent. When people say AI agent, they agent. When people say AI agent, they agent. When people say AI agent, they
+usually mean the LLM, Claude, GPT4, usually mean the LLM, Claude, GPT4, usually mean the LLM, Claude, GPT4,
+Gemini. But that's just the brain. The Gemini. But that's just the brain. The Gemini. But that's just the brain. The
+harness is the infrastructure that wraps harness is the infrastructure that wraps harness is the infrastructure that wraps
+around the agent to make it production around the agent to make it production around the agent to make it production
+ready. Think of it as the operating ready. Think of it as the operating ready. Think of it as the operating
+system for your agent. Your computer's system for your agent. Your computer's system for your agent. Your computer's
+CPU is powerful, but without an OS CPU is powerful, but without an OS CPU is powerful, but without an OS
+managing processes, memory, and IO, it's managing processes, memory, and IO, it's managing processes, memory, and IO, it's
+useless. Same with agents. The harness useless. Same with agents. The harness useless. Same with agents. The harness
+manages five critical responsibilities. manages five critical responsibilities. manages five critical responsibilities.
+First, context management, preserving First, context management, preserving First, context management, preserving
+state across sessions. Second, session state across sessions. Second, session state across sessions. Second, session
+orchestration, deciding when to start orchestration, deciding when to start orchestration, deciding when to start
+stop sessions. Third, tool integration, stop sessions. Third, tool integration, stop sessions. Third, tool integration,
+managing which tools the agent can managing which tools the agent can managing which tools the agent can
+access and enforcing permissions. access and enforcing permissions. access and enforcing permissions.
+Fourth, observability, logging every Fourth, observability, logging every Fourth, observability, logging every
+action for debugging. Fifth, guard action for debugging. Fifth, guard action for debugging. Fifth, guard
+rails, enforcing spending limits and rails, enforcing spending limits and rails, enforcing spending limits and
+preventing destructive commands. preventing destructive commands. preventing destructive commands.
+These five responsibilities make the These five responsibilities make the These five responsibilities make the
+difference between a demo and a difference between a demo and a difference between a demo and a
+production system. Without a harness, production system. Without a harness, production system. Without a harness,
+your agent is just an API call that your agent is just an API call that your agent is just an API call that
+forgets everything. With a harness, your forgets everything. With a harness, your forgets everything. With a harness, your
+agent becomes a reliable system that can agent becomes a reliable system that can agent becomes a reliable system that can
+work autonomously for hours or days. work autonomously for hours or days. work autonomously for hours or days.
+The harness is not the agent, but the The harness is not the agent, but the The harness is not the agent, but the
+harness is what makes the agent harness is what makes the agent harness is what makes the agent
+reliable. That's the foundational reliable. That's the foundational reliable. That's the foundational
+concept. concept. concept.
+Let me show you the fundamental problem Let me show you the fundamental problem Let me show you the fundamental problem
+harnesses solve. Context amnesia. Agents harnesses solve. Context amnesia. Agents harnesses solve. Context amnesia. Agents
+operate in discrete sessions. Each operate in discrete sessions. Each operate in discrete sessions. Each
+session has a context window, maybe session has a context window, maybe session has a context window, maybe
+200,000 tokens. The agent can work 200,000 tokens. The agent can work 200,000 tokens. The agent can work
+within that window, but when the session within that window, but when the session within that window, but when the session
+ends, that context is cleared ends, that context is cleared ends, that context is cleared
+completely. The next session starts with completely. The next session starts with completely. The next session starts with
+an empty context window. The agent has an empty context window. The agent has an empty context window. The agent has
+zero memory of what happened before. zero memory of what happened before. zero memory of what happened before.
+It's like waking up with amnesia. It's like waking up with amnesia. It's like waking up with amnesia.
+Without a harness, this causes Without a harness, this causes Without a harness, this causes
+catastrophic failures. Agents restart catastrophic failures. Agents restart catastrophic failures. Agents restart
+tasks over and over, never making tasks over and over, never making tasks over and over, never making
+forward progress. Imagine an agent forward progress. Imagine an agent forward progress. Imagine an agent
+building a dashboard with five charts. building a dashboard with five charts. building a dashboard with five charts.
+Session one builds charts one to three, Session one builds charts one to three, Session one builds charts one to three,
+then hits the context limit. Session two then hits the context limit. Session two then hits the context limit. Session two
+starts with no memory, so it rebuilds starts with no memory, so it rebuilds starts with no memory, so it rebuilds
+chart one from scratch. Session three chart one from scratch. Session three chart one from scratch. Session three
+does the same. The agent loops does the same. The agent loops does the same. The agent loops
+endlessly, wasting time and money. Now endlessly, wasting time and money. Now endlessly, wasting time and money. Now
+watch how a harness solves this. Session watch how a harness solves this. Session watch how a harness solves this. Session
+one builds charts one to three. Then the one builds charts one to three. Then the one builds charts one to three. Then the
+harness saves progress to disk. Three of harness saves progress to disk. Three of harness saves progress to disk. Three of
+five charts complete. Next, chart four. five charts complete. Next, chart four. five charts complete. Next, chart four.
+Session two loads this from disk and Session two loads this from disk and Session two loads this from disk and
+continues exactly where session one left continues exactly where session one left continues exactly where session one left
+off. No duplication, no lost work, off. No duplication, no lost work, off. No duplication, no lost work,
+seamless handoff. This coordination seamless handoff. This coordination seamless handoff. This coordination
+through persistent artifacts is the core through persistent artifacts is the core through persistent artifacts is the core
+pattern. The harness manages progress pattern. The harness manages progress pattern. The harness manages progress
+files, git history, and session logs. files, git history, and session logs. files, git history, and session logs.
+Every new session loads these artifacts Every new session loads these artifacts Every new session loads these artifacts
+before starting work. The sessions are before starting work. The sessions are before starting work. The sessions are
+discreet, but the artifacts create discreet, but the artifacts create discreet, but the artifacts create
+continuity. They're the bridge that continuity. They're the bridge that continuity. They're the bridge that
+prevents amnesia. prevents amnesia. prevents amnesia.
+So why is 2026 the year of harnesses? So why is 2026 the year of harnesses? So why is 2026 the year of harnesses?
+Three converging forces made this Three converging forces made this Three converging forces made this
+happen. First, models plateaued. GPT4 to happen. First, models plateaued. GPT4 to happen. First, models plateaued. GPT4 to
+GPT4.5 GPT4.5 GPT4.5
+gave 15% capability improvement. Harness gave 15% capability improvement. Harness gave 15% capability improvement. Harness
+V1 to V2 gave 200% reliability V1 to V2 gave 200% reliability V1 to V2 gave 200% reliability
+improvement. The bottleneck shifted from improvement. The bottleneck shifted from improvement. The bottleneck shifted from
+model to infrastructure. model to infrastructure. model to infrastructure.
+Second, production requirements became Second, production requirements became Second, production requirements became
+unavoidable. In 2025, everyone built unavoidable. In 2025, everyone built unavoidable. In 2025, everyone built
+30inute demos. In 2026, companies needed 30inute demos. In 2026, companies needed 30inute demos. In 2026, companies needed
+agents that work 8our shifts without agents that work 8our shifts without agents that work 8our shifts without
+supervision. 80% of 2025 demos failed in supervision. 80% of 2025 demos failed in supervision. 80% of 2025 demos failed in
+production. The gap between demo and production. The gap between demo and production. The gap between demo and
+production was massive. Third, research production was massive. Third, research production was massive. Third, research
+and best practices caught up. Anthropic and best practices caught up. Anthropic and best practices caught up. Anthropic
+published their harness architecture. published their harness architecture. published their harness architecture.
+Martin Fowler wrote about harness Martin Fowler wrote about harness Martin Fowler wrote about harness
+engineering as a distinct discipline. engineering as a distinct discipline. engineering as a distinct discipline.
+Open AI released case studies showing 1 Open AI released case studies showing 1 Open AI released case studies showing 1
+million lines of code via harnesses. million lines of code via harnesses. million lines of code via harnesses.
+These three forces created the perfect These three forces created the perfect These three forces created the perfect
+storm. Infrastructure became more storm. Infrastructure became more storm. Infrastructure became more
+important than models. Use cases important than models. Use cases important than models. Use cases
+demanded reliability over raw demanded reliability over raw demanded reliability over raw
+capabilities and the frameworks became capabilities and the frameworks became capabilities and the frameworks became
+available on GitHub. That's why available on GitHub. That's why available on GitHub. That's why
+harnesses went from advanced technique harnesses went from advanced technique harnesses went from advanced technique
+to foundational requirement in six to foundational requirement in six to foundational requirement in six
+months. Here's the proof. Open AAI's months. Here's the proof. Open AAI's months. Here's the proof. Open AAI's
+five-month experiment shipped a beta five-month experiment shipped a beta five-month experiment shipped a beta
+product with 1 million lines of code, product with 1 million lines of code, product with 1 million lines of code,
+all agent generated using harness all agent generated using harness all agent generated using harness
+orchestration, not because they had a orchestration, not because they had a orchestration, not because they had a
+secret model, because they built the secret model, because they built the secret model, because they built the
+harness, right? harness, right? harness, right?
+Let me give you a concrete example. Open Let me give you a concrete example. Open Let me give you a concrete example. Open
+AI ran a fivemonth experiment. Build a AI ran a fivemonth experiment. Build a AI ran a fivemonth experiment. Build a
+production app using agents with minimal production app using agents with minimal production app using agents with minimal
+human coding. Three engineers provided human coding. Three engineers provided human coding. Three engineers provided
+guidance and reviewed PRs. Agents did guidance and reviewed PRs. Agents did guidance and reviewed PRs. Agents did
+all the actual coding. The results all the actual coding. The results all the actual coding. The results
+1,165,859 lines of production code across Python, lines of production code across Python,
+TypeScript, JavaScript, CSS, and HTML. TypeScript, JavaScript, CSS, and HTML. TypeScript, JavaScript, CSS, and HTML.
+4,247 4,247 4,247
+git commits, 892 pull requests, all git commits, 892 pull requests, all git commits, 892 pull requests, all
+autonomous. This wasn't prototype code. autonomous. This wasn't prototype code. autonomous. This wasn't prototype code.
+It shipped to a beta product. Here's It shipped to a beta product. Here's It shipped to a beta product. Here's
+what makes this significant. They didn't what makes this significant. They didn't what makes this significant. They didn't
+use a secret super model. They used use a secret super model. They used use a secret super model. They used
+Claude Opus and GPT4 available to Claude Opus and GPT4 available to Claude Opus and GPT4 available to
+everyone. The difference was the everyone. The difference was the everyone. The difference was the
+harness. It coordinated three agents, harness. It coordinated three agents, harness. It coordinated three agents,
+managed context across 200 plus managed context across 200 plus managed context across 200 plus
+sessions, integrated with Git and CI/CD, sessions, integrated with Git and CI/CD, sessions, integrated with Git and CI/CD,
+and enforced human approval gates. The and enforced human approval gates. The and enforced human approval gates. The
+harness maintained context persistence. harness maintained context persistence. harness maintained context persistence.
+When an agent session ended, progress When an agent session ended, progress When an agent session ended, progress
+was saved. The next session loaded that was saved. The next session loaded that was saved. The next session loaded that
+context and continued seamlessly. Over context and continued seamlessly. Over context and continued seamlessly. Over
+200 handoffs, the workflowed 200 handoffs, the workflowed 200 handoffs, the workflowed
+continuously. This is production, not a continuously. This is production, not a continuously. This is production, not a
+demo. A beta product shipped to users, demo. A beta product shipped to users, demo. A beta product shipped to users,
+built by agents in five months. That's built by agents in five months. That's built by agents in five months. That's
+the power of proper infrastructure. Open the power of proper infrastructure. Open the power of proper infrastructure. Open
+AI proved that longrunning autonomous AI proved that longrunning autonomous AI proved that longrunning autonomous
+agent work is engineering, not science agent work is engineering, not science agent work is engineering, not science
+fiction. fiction. fiction.
+Here's the truth. Your model isn't the Here's the truth. Your model isn't the Here's the truth. Your model isn't the
+bottleneck. Your harness is. I know bottleneck. Your harness is. I know bottleneck. Your harness is. I know
+that's counterintuitive, but let me that's counterintuitive, but let me that's counterintuitive, but let me
+prove it. Take Claude Opus 4.6, Six. One prove it. Take Claude Opus 4.6, Six. One prove it. Take Claude Opus 4.6, Six. One
+of the most capable models available. of the most capable models available. of the most capable models available.
+Run it two ways. First way, no harness, Run it two ways. First way, no harness, Run it two ways. First way, no harness,
+just raw API calls. Give it a complex just raw API calls. Give it a complex just raw API calls. Give it a complex
+task for 2 hours. It's amazing. Writes task for 2 hours. It's amazing. Writes task for 2 hours. It's amazing. Writes
+code, makes progress, then it hits the code, makes progress, then it hits the code, makes progress, then it hits the
+context limit. Session ends, context context limit. Session ends, context context limit. Session ends, context
+cleared. Next session has no memory, so cleared. Next session has no memory, so cleared. Next session has no memory, so
+it starts over. Success rate on it starts over. Success rate on it starts over. Success rate on
+multi-day tasks 23%. multi-day tasks 23%. multi-day tasks 23%.
+Second way, same model with a proper Second way, same model with a proper Second way, same model with a proper
+harness. First session works for two harness. First session works for two harness. First session works for two
+hours. Then the harness saves progress. hours. Then the harness saves progress. hours. Then the harness saves progress.
+Session two loads that progress and Session two loads that progress and Session two loads that progress and
+continues where session one left off. continues where session one left off. continues where session one left off.
+Sessions three, four, five, seamless Sessions three, four, five, seamless Sessions three, four, five, seamless
+handoffs. Success rate 78%. handoffs. Success rate 78%. handoffs. Success rate 78%.
+More than three times better with the More than three times better with the More than three times better with the
+same model. The model gives you same model. The model gives you same model. The model gives you
+intelligence. The harness gives you intelligence. The harness gives you intelligence. The harness gives you
+reliability reliability reliability
+in production. Reliability beats in production. Reliability beats in production. Reliability beats
+intelligence every time. Reliability intelligence every time. Reliability intelligence every time. Reliability
+compounds. A reliable agent working 24 compounds. A reliable agent working 24 compounds. A reliable agent working 24
+hours completes far more than a hours completes far more than a hours completes far more than a
+brilliant agent that keeps restarting. brilliant agent that keeps restarting. brilliant agent that keeps restarting.
+This is why companies are hiring harness This is why companies are hiring harness This is why companies are hiring harness
+engineers in 2026. engineers in 2026. engineers in 2026.
+People who understand distributed People who understand distributed People who understand distributed
+systems, state management, session systems, state management, session systems, state management, session
+orchestration, and observability. orchestration, and observability. orchestration, and observability.
+It's systems engineering applied to AI It's systems engineering applied to AI It's systems engineering applied to AI
+and it's the most in- demand skill in and it's the most in- demand skill in and it's the most in- demand skill in
+the market. the market. the market.
+What goes into a production harness? What goes into a production harness? What goes into a production harness?
+Five core components emerge from Five core components emerge from Five core components emerge from
+studying anthropics, open AIS, and studying anthropics, open AIS, and studying anthropics, open AIS, and
+open-source implementations. Miss one open-source implementations. Miss one open-source implementations. Miss one
+and you're back to unreliable demos. Get and you're back to unreliable demos. Get and you're back to unreliable demos. Get
+all five right and you have production all five right and you have production all five right and you have production
+infrastructure. Component one, context infrastructure. Component one, context infrastructure. Component one, context
+management. The hardest preserved state management. The hardest preserved state management. The hardest preserved state
+across sessions using progress files, across sessions using progress files, across sessions using progress files,
+git history, and feature lists. These git history, and feature lists. These git history, and feature lists. These
+artifacts are written to disk at session artifacts are written to disk at session artifacts are written to disk at session
+end, and loaded at session start. That's end, and loaded at session start. That's end, and loaded at session start. That's
+how continuity happens. Component two, how continuity happens. Component two, how continuity happens. Component two,
+session orchestration. The hardest session orchestration. The hardest session orchestration. The hardest
+decides when to start new sessions, how decides when to start new sessions, how decides when to start new sessions, how
+to initialize them with loaded context, to initialize them with loaded context, to initialize them with loaded context,
+and when to terminate. This prevents and when to terminate. This prevents and when to terminate. This prevents
+context overflow while maintaining context overflow while maintaining context overflow while maintaining
+continuity. Component three, tool continuity. Component three, tool continuity. Component three, tool
+integration. The harness manages which integration. The harness manages which integration. The harness manages which
+tools the agent can access and enforces tools the agent can access and enforces tools the agent can access and enforces
+permissions, rate limits, and error permissions, rate limits, and error permissions, rate limits, and error
+handling. It's the interface between the handling. It's the interface between the handling. It's the interface between the
+agents intentions and the real world. agents intentions and the real world. agents intentions and the real world.
+Component four, observability. The Component four, observability. The Component four, observability. The
+harness instruments everything. Every harness instruments everything. Every harness instruments everything. Every
+tool use, every decision, every API call tool use, every decision, every API call tool use, every decision, every API call
+gets logged with metrics. You can debug gets logged with metrics. You can debug gets logged with metrics. You can debug
+production agents because you have full production agents because you have full production agents because you have full
+visibility. Component five, guard rails visibility. Component five, guard rails visibility. Component five, guard rails
+and recovery. The harness enforces and recovery. The harness enforces and recovery. The harness enforces
+spending limits, prevents destructive spending limits, prevents destructive spending limits, prevents destructive
+commands, and handles failures. These commands, and handles failures. These commands, and handles failures. These
+make agents safe to run autonomously. make agents safe to run autonomously. make agents safe to run autonomously.
+These five components are the skeleton These five components are the skeleton These five components are the skeleton
+of every working harness. Build them of every working harness. Build them of every working harness. Build them
+right and your agents become reliable. right and your agents become reliable. right and your agents become reliable.
+Skip one and you'll spend months Skip one and you'll spend months Skip one and you'll spend months
+debugging preventable failures. debugging preventable failures. debugging preventable failures.
+This is what harness initialization This is what harness initialization This is what harness initialization
+looks like in real Python code. The looks like in real Python code. The looks like in real Python code. The
+production harness class is the production harness class is the production harness class is the
+orchestration layer that wraps around orchestration layer that wraps around orchestration layer that wraps around
+your agent. It manages the entire life your agent. It manages the entire life your agent. It manages the entire life
+cycle of longunning agent sessions. The cycle of longunning agent sessions. The cycle of longunning agent sessions. The
+initialization takes two parameters. The initialization takes two parameters. The initialization takes two parameters. The
+project directory where your code lives project directory where your code lives project directory where your code lives
+and the task specification describing and the task specification describing and the task specification describing
+what to build. From these, it sets up what to build. From these, it sets up what to build. From these, it sets up
+paths to three critical artifacts that paths to three critical artifacts that paths to three critical artifacts that
+enable context persistence. First enable context persistence. First enable context persistence. First
+artifact, claude progress.txt, artifact, claude progress.txt, artifact, claude progress.txt,
+the human readable progress log where the human readable progress log where the human readable progress log where
+each session writes its summary. Second each session writes its summary. Second each session writes its summary. Second
+artifact, features.json, artifact, features.json, artifact, features.json,
+the structure task list tracking what's the structure task list tracking what's the structure task list tracking what's
+complete and what's pending. Third complete and what's pending. Third complete and what's pending. Third
+artifact, init.sh, the environment setup artifact, init.sh, the environment setup artifact, init.sh, the environment setup
+script that runs at the start of every script that runs at the start of every script that runs at the start of every
+session. These three files are the session. These three files are the session. These three files are the
+foundation of context management. foundation of context management. foundation of context management.
+They're written to disk at session end They're written to disk at session end They're written to disk at session end
+and loaded at session start. Without and loaded at session start. Without and loaded at session start. Without
+them, you have context. Amnesia. With them, you have context. Amnesia. With them, you have context. Amnesia. With
+them, you have perfect continuity across them, you have perfect continuity across them, you have perfect continuity across
+unlimited sessions. The harness manages unlimited sessions. The harness manages unlimited sessions. The harness manages
+these artifact paths automatically. these artifact paths automatically. these artifact paths automatically.
+The agent never needs to know where The agent never needs to know where The agent never needs to know where
+these files live or how they're these files live or how they're these files live or how they're
+structured. That's infrastructure's job. structured. That's infrastructure's job. structured. That's infrastructure's job.
+abstract away the complexity so the abstract away the complexity so the abstract away the complexity so the
+agent can focus on the actual work. agent can focus on the actual work. agent can focus on the actual work.
+The initialize session method is where The initialize session method is where The initialize session method is where
+the harness configures the agent with the harness configures the agent with the harness configures the agent with
+tools, permissions, and guard rails. tools, permissions, and guard rails. tools, permissions, and guard rails.
+This happens before the agent writes a This happens before the agent writes a This happens before the agent writes a
+single line of code. First, it loads single line of code. First, it loads single line of code. First, it loads
+context from the previous session using context from the previous session using context from the previous session using
+load context. We'll see that in a load context. We'll see that in a load context. We'll see that in a
+moment. Then, it creates an agent config moment. Then, it creates an agent config moment. Then, it creates an agent config
+object that specifies the model claopus object that specifies the model claopus object that specifies the model claopus
+4.6. six, the project directory, and 4.6. six, the project directory, and 4.6. six, the project directory, and
+critically the allowed tools. This agent critically the allowed tools. This agent critically the allowed tools. This agent
+can read files, write files, execute can read files, write files, execute can read files, write files, execute
+bash commands, and use the Puppeteer bash commands, and use the Puppeteer bash commands, and use the Puppeteer
+browser automation tool. But tools alone browser automation tool. But tools alone browser automation tool. But tools alone
+aren't enough. You need guardrails. The aren't enough. You need guardrails. The aren't enough. You need guardrails. The
+config enforces a $5 cost limit per config enforces a $5 cost limit per config enforces a $5 cost limit per
+session to prevent runaway API spending. session to prevent runaway API spending. session to prevent runaway API spending.
+It whitelists allowed commands. NPM, It whitelists allowed commands. NPM, It whitelists allowed commands. NPM,
+Git, Piest are safe. Anything else Git, Piest are safe. Anything else Git, Piest are safe. Anything else
+requires approval. It also defines requires approval. It also defines requires approval. It also defines
+forbidden paths, directories the agent forbidden paths, directories the agent forbidden paths, directories the agent
+must never touch. CT contains system must never touch. CT contains system must never touch. CT contains system
+configuration. SCIS contains kernel configuration. SCIS contains kernel configuration. SCIS contains kernel
+interfaces, your SSH keys. The agent interfaces, your SSH keys. The agent interfaces, your SSH keys. The agent
+cannot write to these paths under any cannot write to these paths under any cannot write to these paths under any
+circumstances, even if it wants to. This circumstances, even if it wants to. This circumstances, even if it wants to. This
+configuration layer is what makes agents configuration layer is what makes agents configuration layer is what makes agents
+safe to run autonomously. Tools provide safe to run autonomously. Tools provide safe to run autonomously. Tools provide
+capabilities. Guard rails prevent capabilities. Guard rails prevent capabilities. Guard rails prevent
+disasters. Together they enable reliable disasters. Together they enable reliable disasters. Together they enable reliable
+agent work without constant human agent work without constant human agent work without constant human
+supervision. supervision. supervision.
+The load context method reads artifacts The load context method reads artifacts The load context method reads artifacts
+from disk to restore the agents memory. from disk to restore the agents memory. from disk to restore the agents memory.
+Remember the agent session starts with Remember the agent session starts with Remember the agent session starts with
+an empty context window. This method an empty context window. This method an empty context window. This method
+populates it with everything the agent populates it with everything the agent populates it with everything the agent
+needs to continue work. The context needs to continue work. The context needs to continue work. The context
+object has four fields. Task spec, the object has four fields. Task spec, the object has four fields. Task spec, the
+original project requirements. Session original project requirements. Session original project requirements. Session
+history. what happened in previous history. what happened in previous history. what happened in previous
+sessions, completed features, what's sessions, completed features, what's sessions, completed features, what's
+done, and next steps, what to work on done, and next steps, what to work on done, and next steps, what to work on
+next. These give the agent both next. These give the agent both next. These give the agent both
+highlevel direction and specific highlevel direction and specific highlevel direction and specific
+tactical guidance. If the progress file tactical guidance. If the progress file tactical guidance. If the progress file
+exists, the harness reads it and loads exists, the harness reads it and loads exists, the harness reads it and loads
+the full session history. This narrative the full session history. This narrative the full session history. This narrative
+log tells the agent what previous log tells the agent what previous log tells the agent what previous
+sessions accomplished, what challenges sessions accomplished, what challenges sessions accomplished, what challenges
+they faced, what patterns they they faced, what patterns they they faced, what patterns they
+established. It's qualitative context established. It's qualitative context established. It's qualitative context
+that structured data can't capture. If that structured data can't capture. If that structured data can't capture. If
+the features file exists, the harness the features file exists, the harness the features file exists, the harness
+parses the JSON to extract completed and parses the JSON to extract completed and parses the JSON to extract completed and
+incomplete features. Features where pass incomplete features. Features where pass incomplete features. Features where pass
+is true go into completed features. is true go into completed features. is true go into completed features.
+Features where passes false go into next Features where passes false go into next Features where passes false go into next
+steps. Specifically, the next three steps. Specifically, the next three steps. Specifically, the next three
+incomplete features become the agents incomplete features become the agents incomplete features become the agents
+immediate priorities. This context gets immediate priorities. This context gets immediate priorities. This context gets
+injected into the agents initial prompt. injected into the agents initial prompt. injected into the agents initial prompt.
+Before the agent starts working, it Before the agent starts working, it Before the agent starts working, it
+reads, "Here's the original task. Here's reads, "Here's the original task. Here's reads, "Here's the original task. Here's
+what previous sessions did. Here's what previous sessions did. Here's what previous sessions did. Here's
+what's complete. Here's what you should what's complete. Here's what you should what's complete. Here's what you should
+work on next." Perfect context handoff. work on next." Perfect context handoff. work on next." Perfect context handoff.
+Zero amnesia. Zero amnesia. Zero amnesia.
+The usage example at the bottom shows The usage example at the bottom shows The usage example at the bottom shows
+how this all comes together in how this all comes together in how this all comes together in
+production. You create a production production. You create a production production. You create a production
+harness instance pointing it at your harness instance pointing it at your harness instance pointing it at your
+project directory and giving it the project directory and giving it the project directory and giving it the
+high-level task specification. high-level task specification. high-level task specification.
+Then you call initialize session with Then you call initialize session with Then you call initialize session with
+session number one to start the first session number one to start the first session number one to start the first
+session. This is the initializer agent. session. This is the initializer agent. session. This is the initializer agent.
+It reads the spec, generates the It reads the spec, generates the It reads the spec, generates the
+features.json file, creates init.sh, and features.json file, creates init.sh, and features.json file, creates init.sh, and
+sets up the project scaffolding. Session sets up the project scaffolding. Session sets up the project scaffolding. Session
+one runs once and never again. Sessions one runs once and never again. Sessions one runs once and never again. Sessions
+two through n happen automatically. Each two through n happen automatically. Each two through n happen automatically. Each
+time a session ends, the harness saves time a session ends, the harness saves time a session ends, the harness saves
+progress. Each time a new session progress. Each time a new session progress. Each time a new session
+starts, the harness loads that progress starts, the harness loads that progress starts, the harness loads that progress
+and continues. The agent works for two and continues. The agent works for two and continues. The agent works for two
+hours, saves context, hands off. The hours, saves context, hands off. The hours, saves context, hands off. The
+next agent loads context and continues next agent loads context and continues next agent loads context and continues
+seamlessly. This pattern scales to seamlessly. This pattern scales to seamlessly. This pattern scales to
+dozens or hundreds of sessions. dozens or hundreds of sessions. dozens or hundreds of sessions.
+Anthropic ran 54 sessions to complete Anthropic ran 54 sessions to complete Anthropic ran 54 sessions to complete
+their clone project. Open AAI ran over their clone project. Open AAI ran over their clone project. Open AAI ran over
+200 sessions to generate 1 million lines 200 sessions to generate 1 million lines 200 sessions to generate 1 million lines
+of code. The harness orchestrates all of of code. The harness orchestrates all of of code. The harness orchestrates all of
+it automatically. And here's what makes it automatically. And here's what makes it automatically. And here's what makes
+this production ready. Observability this production ready. Observability this production ready. Observability
+hooks. The ontool use callback logs hooks. The ontool use callback logs hooks. The ontool use callback logs
+every action. The on session end every action. The on session end every action. The on session end
+callback saves progress automatically. callback saves progress automatically. callback saves progress automatically.
+You can see what agents are doing, debug You can see what agents are doing, debug You can see what agents are doing, debug
+when things fail, and maintain full when things fail, and maintain full when things fail, and maintain full
+audit trails of autonomous work. audit trails of autonomous work. audit trails of autonomous work.
+Let's talk real numbers from production Let's talk real numbers from production Let's talk real numbers from production
+systems. Anthropic tested the same systems. Anthropic tested the same systems. Anthropic tested the same
+agents with and without harnesses on agents with and without harnesses on agents with and without harnesses on
+multi-day coding projects. Without multi-day coding projects. Without multi-day coding projects. Without
+harnesses, 23% completion rate. With harnesses, 23% completion rate. With harnesses, 23% completion rate. With
+harnesses, 78% completion rate. That's harnesses, 78% completion rate. That's harnesses, 78% completion rate. That's
+3.4x 4x improvement from infrastructure 3.4x 4x improvement from infrastructure 3.4x 4x improvement from infrastructure
+alone. A startup building AI coding alone. A startup building AI coding alone. A startup building AI coding
+tools was burning $50,000 a month on API tools was burning $50,000 a month on API tools was burning $50,000 a month on API
+costs because agents kept restarting and costs because agents kept restarting and costs because agents kept restarting and
+duplicating work. After implementing a duplicating work. After implementing a duplicating work. After implementing a
+harness with context management, costs harness with context management, costs harness with context management, costs
+dropped to $8,000 a month. 84% cost dropped to $8,000 a month. 84% cost dropped to $8,000 a month. 84% cost
+reduction, $42,000 saved. Same reduction, $42,000 saved. Same reduction, $42,000 saved. Same
+capabilities, better architecture. capabilities, better architecture. capabilities, better architecture.
+Developer satisfaction jumped from 3.210 Developer satisfaction jumped from 3.210 Developer satisfaction jumped from 3.210
+210 to 8.710 after harnesses. Why? 210 to 8.710 after harnesses. Why? 210 to 8.710 after harnesses. Why?
+Because agents became reliable Because agents became reliable Because agents became reliable
+teammates. You could assign a task in teammates. You could assign a task in teammates. You could assign a task in
+the morning and find it completed in the the morning and find it completed in the the morning and find it completed in the
+afternoon. No constant handholding or afternoon. No constant handholding or afternoon. No constant handholding or
+reexplaining context. Martin Fowler reexplaining context. Martin Fowler reexplaining context. Martin Fowler
+wrote that harness engineering is wrote that harness engineering is wrote that harness engineering is
+emerging as a distinct discipline. It's emerging as a distinct discipline. It's emerging as a distinct discipline. It's
+systems design, state management, and systems design, state management, and systems design, state management, and
+production operations combined. This is production operations combined. This is production operations combined. This is
+hard engineering, not just API calls. hard engineering, not just API calls. hard engineering, not just API calls.
+Every metric that matters, completion Every metric that matters, completion Every metric that matters, completion
+rates, cost efficiency, developer rates, cost efficiency, developer rates, cost efficiency, developer
+satisfaction improves by orders of satisfaction improves by orders of satisfaction improves by orders of
+magnitude with proper harness magnitude with proper harness magnitude with proper harness
+infrastructure. infrastructure. infrastructure.
+This is the difference between agents This is the difference between agents This is the difference between agents
+being expensive toys and production being expensive toys and production being expensive toys and production
+ready tools that deliver business value. ready tools that deliver business value. ready tools that deliver business value.
+What should you actually do? Three What should you actually do? Three What should you actually do? Three
+takeaways. First, budget for the harness takeaways. First, budget for the harness takeaways. First, budget for the harness
+from day one. Allocate four to six weeks from day one. Allocate four to six weeks from day one. Allocate four to six weeks
+specifically for harness development in specifically for harness development in specifically for harness development in
+a three-month project. Design the a three-month project. Design the a three-month project. Design the
+harness architecture before writing harness architecture before writing harness architecture before writing
+agent prompts. This isn't a bolt-on agent prompts. This isn't a bolt-on agent prompts. This isn't a bolt-on
+feature. It's foundational. feature. It's foundational. feature. It's foundational.
+Second, don't overinvest in model Second, don't overinvest in model Second, don't overinvest in model
+selection. Yes, models matter, but selection. Yes, models matter, but selection. Yes, models matter, but
+spending weeks evaluating models and spending weeks evaluating models and spending weeks evaluating models and
+days building your harness is backwards. days building your harness is backwards. days building your harness is backwards.
+Pick a good model, Claude Opus or GPT4, Pick a good model, Claude Opus or GPT4, Pick a good model, Claude Opus or GPT4,
+and move on. A better model gets 10 to and move on. A better model gets 10 to and move on. A better model gets 10 to
+15% improvement. A better harness gives 15% improvement. A better harness gives 15% improvement. A better harness gives
+200 to 300% reliability improvement. 200 to 300% reliability improvement. 200 to 300% reliability improvement.
+Third, this connects directly to the Third, this connects directly to the Third, this connects directly to the
+nine essential skills framework. Hardest nine essential skills framework. Hardest nine essential skills framework. Hardest
+engineering is skill number one, engineering is skill number one, engineering is skill number one,
+orchestration and state management. It orchestration and state management. It orchestration and state management. It
+also touches skill number three, also touches skill number three, also touches skill number three,
+observability, skill number four, observability, skill number four, observability, skill number four,
+memory, and skill number five, context memory, and skill number five, context memory, and skill number five, context
+economics. Master this and you're economics. Master this and you're economics. Master this and you're
+building competency across multiple building competency across multiple building competency across multiple
+essential skills. essential skills. essential skills.
+If you're hiring or upskilling, If you're hiring or upskilling, If you're hiring or upskilling,
+prioritize harness engineering. Agent prioritize harness engineering. Agent prioritize harness engineering. Agent
+infrastructure engineer and harness infrastructure engineer and harness infrastructure engineer and harness
+engineer roles are proliferating with engineer roles are proliferating with engineer roles are proliferating with
+senior level salaries. This skill senior level salaries. This skill senior level salaries. This skill
+separates demos from production. Master separates demos from production. Master separates demos from production. Master
+harness engineering and you're not just harness engineering and you're not just harness engineering and you're not just
+building better agents, you're building building better agents, you're building building better agents, you're building
+the infrastructure that makes AI work at the infrastructure that makes AI work at the infrastructure that makes AI work at
+scale. That's what matters in 2026 and scale. That's what matters in 2026 and scale. That's what matters in 2026 and
+beyond. beyond. beyond.
+In the next video, we're dissecting In the next video, we're dissecting In the next video, we're dissecting
+Anthropic specific implementation. The Anthropic specific implementation. The Anthropic specific implementation. The
+two agent architecture, initializer and two agent architecture, initializer and two agent architecture, initializer and
+coding agent, the four core artifacts, coding agent, the four core artifacts, coding agent, the four core artifacts,
+features.json, features.json, features.json,
+init.sh, claude progress.txt, init.sh, claude progress.txt, init.sh, claude progress.txt,
+and git history. The session handoff and git history. The session handoff and git history. The session handoff
+pattern, exactly what gets written and pattern, exactly what gets written and pattern, exactly what gets written and
+loaded. Part three covers universal loaded. Part three covers universal loaded. Part three covers universal
+patterns you can use to build your own patterns you can use to build your own patterns you can use to build your own
+harness regardless of model or language. harness regardless of model or language. harness regardless of model or language.
+The minimal viable harness, when to add The minimal viable harness, when to add The minimal viable harness, when to add
+complexity, and common mistakes to complexity, and common mistakes to complexity, and common mistakes to
+avoid. This three-part series gives you avoid. This three-part series gives you avoid. This three-part series gives you
+the complete picture, why harnesses the complete picture, why harnesses the complete picture, why harnesses
+matter, part one, what a proven harness matter, part one, what a proven harness matter, part one, what a proven harness
+looks like, part two, and how to build looks like, part two, and how to build looks like, part two, and how to build
+one, part three. If you found this one, part three. If you found this one, part three. If you found this
+valuable, subscribe. Harness engineering valuable, subscribe. Harness engineering valuable, subscribe. Harness engineering
+is a fundamental shift in how we build is a fundamental shift in how we build is a fundamental shift in how we build
+agentic systems. The teams that agentic systems. The teams that agentic systems. The teams that
+understand this now have a multi-year understand this now have a multi-year understand this now have a multi-year
+lead. Watch part two 

@@ -1,0 +1,434 @@
+This is part two of our three-part This is part two of our three-part
+series on creating longrunning agent series on creating longrunning agent series on creating longrunning agent
+harnesses for any tasks that runs over harnesses for any tasks that runs over harnesses for any tasks that runs over
+hours or even days. Before we dive into hours or even days. Before we dive into hours or even days. Before we dive into
+how it works, let's establish what how it works, let's establish what how it works, let's establish what
+Anthropics harness actually achieved. Anthropics harness actually achieved. Anthropics harness actually achieved.
+This isn't a theoretical framework. It's This isn't a theoretical framework. It's This isn't a theoretical framework. It's
+a proven system with real results. a proven system with real results. a proven system with real results.
+Numbers that fundamentally changed how Numbers that fundamentally changed how Numbers that fundamentally changed how
+the industry thinks about longrunning the industry thinks about longrunning the industry thinks about longrunning
+agents. The core achievement, 24 plus agents. The core achievement, 24 plus agents. The core achievement, 24 plus
+hours of continuous autonomous coding hours of continuous autonomous coding hours of continuous autonomous coding
+across 54 distinct sessions. No human across 54 distinct sessions. No human across 54 distinct sessions. No human
+intervention between sessions. The agent intervention between sessions. The agent intervention between sessions. The agent
+completed features, committed code, completed features, committed code, completed features, committed code,
+updated progress, and handed off to the updated progress, and handed off to the updated progress, and handed off to the
+next session seamlessly. next session seamlessly. next session seamlessly.
+Over 200 features were implemented end Over 200 features were implemented end Over 200 features were implemented end
+to end. These weren't trivial features. to end. These weren't trivial features. to end. These weren't trivial features.
+They ranged from user authentication to They ranged from user authentication to They ranged from user authentication to
+real-time collaboration to markdown real-time collaboration to markdown real-time collaboration to markdown
+rendering. Each feature had three to rendering. Each feature had three to rendering. Each feature had three to
+five test cases that had to pass before five test cases that had to pass before five test cases that had to pass before
+the agent could mark it complete. The the agent could mark it complete. The the agent could mark it complete. The
+system generated approximately 50,000 system generated approximately 50,000 system generated approximately 50,000
+lines of productionready code. This lines of productionready code. This lines of productionready code. This
+built a full stack clawed AI clone with built a full stack clawed AI clone with built a full stack clawed AI clone with
+front end, backend, and database front end, backend, and database front end, backend, and database
+integration. The code quality was high integration. The code quality was high integration. The code quality was high
+enough to ship to a beta product. enough to ship to a beta product. enough to ship to a beta product.
+Success rate was 87%. Success rate was 87%. Success rate was 87%.
+Meaning 87% of features were completed Meaning 87% of features were completed Meaning 87% of features were completed
+correctly on the first attempt. Compare correctly on the first attempt. Compare correctly on the first attempt. Compare
+this to 23% without a harness. That's this to 23% without a harness. That's this to 23% without a harness. That's
+not a marginal improvement. That's the not a marginal improvement. That's the not a marginal improvement. That's the
+difference between a demo and difference between a demo and difference between a demo and
+production. Anthropic open- source this production. Anthropic open- source this production. Anthropic open- source this
+architecture. You can study it, architecture. You can study it, architecture. You can study it,
+replicate it, and adapt it today. That's replicate it, and adapt it today. That's replicate it, and adapt it today. That's
+why this is the reference implementation why this is the reference implementation why this is the reference implementation
+that every serious AI team is examining that every serious AI team is examining that every serious AI team is examining
+right now. right now. right now.
+Anthropics harness uses a two agent Anthropics harness uses a two agent Anthropics harness uses a two agent
+architecture. Not because two is a magic architecture. Not because two is a magic architecture. Not because two is a magic
+number, but because initialization and number, but because initialization and number, but because initialization and
+coding are fundamentally different coding are fundamentally different coding are fundamentally different
+tasks, different cognitive requirements, tasks, different cognitive requirements, tasks, different cognitive requirements,
+different responsibilities. different responsibilities. different responsibilities.
+The first agent is the initializer. It The first agent is the initializer. It The first agent is the initializer. It
+runs exactly once in session one only. runs exactly once in session one only. runs exactly once in session one only.
+Its entire job is to set up the Its entire job is to set up the Its entire job is to set up the
+foundation that every future session foundation that every future session foundation that every future session
+depends on. The initializer reads the depends on. The initializer reads the depends on. The initializer reads the
+full product specification, then full product specification, then full product specification, then
+generates a comprehensive features JSON generates a comprehensive features JSON generates a comprehensive features JSON
+file with 200 plus features and test file with 200 plus features and test file with 200 plus features and test
+cases. It creates the init.sh script for cases. It creates the init.sh script for cases. It creates the init.sh script for
+starting the development server. It starting the development server. It starting the development server. It
+initializes the git repository and initializes the git repository and initializes the git repository and
+builds the project scaffolding, but it builds the project scaffolding, but it builds the project scaffolding, but it
+doesn't implement any actual features. doesn't implement any actual features. doesn't implement any actual features.
+That's not its job. Then comes the That's not its job. Then comes the That's not its job. Then comes the
+coding agent. This agent runs in every coding agent. This agent runs in every coding agent. This agent runs in every
+subsequent session. session two, three, subsequent session. session two, three, subsequent session. session two, three,
+four, all the way through session 54 in four, all the way through session 54 in four, all the way through session 54 in
+anthropics example. Each coding session anthropics example. Each coding session anthropics example. Each coding session
+has one focused task. Complete one has one focused task. Complete one has one focused task. Complete one
+feature, test it, commit it, update feature, test it, commit it, update feature, test it, commit it, update
+progress, and hand off. progress, and hand off. progress, and hand off.
+This separation is brilliant This separation is brilliant This separation is brilliant
+engineering. The initializer only needs engineering. The initializer only needs engineering. The initializer only needs
+to understand the full specification to understand the full specification to understand the full specification
+once and create the road map. The coding once and create the road map. The coding once and create the road map. The coding
+agent only needs to focus on one feature agent only needs to focus on one feature agent only needs to focus on one feature
+at a time. Bounded scope, manageable at a time. Bounded scope, manageable at a time. Bounded scope, manageable
+cognitive load. The result, cognitive cognitive load. The result, cognitive cognitive load. The result, cognitive
+load is minimized, success rate is load is minimized, success rate is load is minimized, success rate is
+maximized, and handoffs are clean. Two maximized, and handoffs are clean. Two maximized, and handoffs are clean. Two
+agents with distinct responsibilities agents with distinct responsibilities agents with distinct responsibilities
+working in sequence, coordinated through working in sequence, coordinated through working in sequence, coordinated through
+artifacts. The magic of Anthropics artifacts. The magic of Anthropics artifacts. The magic of Anthropics
+harness comes down to four files. These harness comes down to four files. These harness comes down to four files. These
+artifacts are the persistent memory that artifacts are the persistent memory that artifacts are the persistent memory that
+enable context handoff. across sessions. enable context handoff. across sessions. enable context handoff. across sessions.
+Without them, you're back to context Without them, you're back to context Without them, you're back to context
+amnesia. First artifact features.json. amnesia. First artifact features.json. amnesia. First artifact features.json.
+This is the master feature list This is the master feature list This is the master feature list
+generated by the initializer in session generated by the initializer in session generated by the initializer in session
+one. Each feature has a description, one. Each feature has a description, one. Each feature has a description,
+file path, test cases, and a passes file path, test cases, and a passes file path, test cases, and a passes
+boolean. The coding agent reads this, boolean. The coding agent reads this, boolean. The coding agent reads this,
+finds the next incomplete feature, finds the next incomplete feature, finds the next incomplete feature,
+passes false, implements it, tests it, passes false, implements it, tests it, passes false, implements it, tests it,
+and marks it complete, passes true. and marks it complete, passes true. and marks it complete, passes true.
+Second artifact, init.sh, Second artifact, init.sh, Second artifact, init.sh,
+the initialization script that every the initialization script that every the initialization script that every
+coding agent runs at the start of its coding agent runs at the start of its coding agent runs at the start of its
+session. It installs dependencies, session. It installs dependencies, session. It installs dependencies,
+starts the development server, runs starts the development server, runs starts the development server, runs
+migrations, everything needed to get a migrations, everything needed to get a migrations, everything needed to get a
+working environment. This ensures every working environment. This ensures every working environment. This ensures every
+session starts from a known good state. session starts from a known good state. session starts from a known good state.
+Third artifact, claude progress.ext. Third artifact, claude progress.ext. Third artifact, claude progress.ext.
+The human readable progress log where The human readable progress log where The human readable progress log where
+each session writes its summary. What each session writes its summary. What each session writes its summary. What
+feature was completed? What tests feature was completed? What tests feature was completed? What tests
+passed? What challenges came up? What passed? What challenges came up? What passed? What challenges came up? What
+the next agent should know? This is the the next agent should know? This is the the next agent should know? This is the
+narrative thread across 50 plus narrative thread across 50 plus narrative thread across 50 plus
+sessions. Fourth artifact, Git history sessions. Fourth artifact, Git history sessions. Fourth artifact, Git history
+itself. Every session commits its work itself. Every session commits its work itself. Every session commits its work
+with clear messages. Future sessions with clear messages. Future sessions with clear messages. Future sessions
+read the git log to understand what's read the git log to understand what's read the git log to understand what's
+been implemented, what patterns have been implemented, what patterns have been implemented, what patterns have
+been established, and how the code base been established, and how the code base been established, and how the code base
+is structured. These four files are the is structured. These four files are the is structured. These four files are the
+foundation of context persistence. foundation of context persistence. foundation of context persistence.
+They're written to disk at session end They're written to disk at session end They're written to disk at session end
+and loaded at session start. The and loaded at session start. The and loaded at session start. The
+sessions are discrete, but the artifacts sessions are discrete, but the artifacts sessions are discrete, but the artifacts
+create continuity. They're the bridge create continuity. They're the bridge create continuity. They're the bridge
+that prevents amnesia. Let me show you that prevents amnesia. Let me show you that prevents amnesia. Let me show you
+the actual initializer prompt. This is the actual initializer prompt. This is the actual initializer prompt. This is
+what Anthropic uses in session one. what Anthropic uses in session one. what Anthropic uses in session one.
+Notice how specific and detailed it is. Notice how specific and detailed it is. Notice how specific and detailed it is.
+Every instruction is explicit. The Every instruction is explicit. The Every instruction is explicit. The
+prompt starts by defining the role. You prompt starts by defining the role. You prompt starts by defining the role. You
+are an initializer agent for a are an initializer agent for a are an initializer agent for a
+longunning coding project. Then it lists longunning coding project. Then it lists longunning coding project. Then it lists
+exactly what artifacts to create and exactly what artifacts to create and exactly what artifacts to create and
+what format they should follow. No what format they should follow. No what format they should follow. No
+ambiguity, no room for interpretation. ambiguity, no room for interpretation. ambiguity, no room for interpretation.
+The initializer is told to read the The initializer is told to read the The initializer is told to read the
+product specification. Generate product specification. Generate product specification. Generate
+features.json with specific structure. features.json with specific structure. features.json with specific structure.
+Create init.sh with specific commands. Create init.sh with specific commands. Create init.sh with specific commands.
+Initialize git with an initial commit. Initialize git with an initial commit. Initialize git with an initial commit.
+And write cla.ext And write cla.ext And write cla.ext
+with session one summary. Each step is with session one summary. Each step is with session one summary. Each step is
+enumerated clearly. Critical enumerated clearly. Critical enumerated clearly. Critical
+instruction. You will not implement any instruction. You will not implement any instruction. You will not implement any
+features yourself. The initializer is features yourself. The initializer is features yourself. The initializer is
+explicitly told not to code features, explicitly told not to code features, explicitly told not to code features,
+only to set up infrastructure. This only to set up infrastructure. This only to set up infrastructure. This
+prevents scope creep and keeps the prevents scope creep and keeps the prevents scope creep and keeps the
+initializer focused on foundation initializer focused on foundation initializer focused on foundation
+building. The prompt also specifies building. The prompt also specifies building. The prompt also specifies
+exact formats for each artifact. exact formats for each artifact. exact formats for each artifact.
+Features JSON must have ID, description, Features JSON must have ID, description, Features JSON must have ID, description,
+file path, test cases, and passes file path, test cases, and passes file path, test cases, and passes
+boolean. Init.sh must install boolean. Init.sh must install boolean. Init.sh must install
+dependencies and start the dev server. dependencies and start the dev server. dependencies and start the dev server.
+Claude progress.ext must include session Claude progress.ext must include session Claude progress.ext must include session
+number and next steps. This level of number and next steps. This level of number and next steps. This level of
+prompt engineering is what makes the prompt engineering is what makes the prompt engineering is what makes the
+system reliable. The initializer is system reliable. The initializer is system reliable. The initializer is
+setting up infrastructure that 50 plus setting up infrastructure that 50 plus setting up infrastructure that 50 plus
+future sessions will depend on. future sessions will depend on. future sessions will depend on.
+Ambiguity here cascades into failures Ambiguity here cascades into failures Ambiguity here cascades into failures
+downstream. So every detail is specified downstream. So every detail is specified downstream. So every detail is specified
+up front. Now the coding agent prompt. up front. Now the coding agent prompt. up front. Now the coding agent prompt.
+This runs in every session from session This runs in every session from session This runs in every session from session
+2 through session n. It's structured as 2 through session n. It's structured as 2 through session n. It's structured as
+an eight-step loop that repeats 50 plus an eight-step loop that repeats 50 plus an eight-step loop that repeats 50 plus
+times. Step one, load context. Read times. Step one, load context. Read times. Step one, load context. Read
+cloud progress txt to see what previous cloud progress txt to see what previous cloud progress txt to see what previous
+sessions did. Read features.json to find sessions did. Read features.json to find sessions did. Read features.json to find
+the next incomplete feature. Read git the next incomplete feature. Read git the next incomplete feature. Read git
+log to understand established patterns. log to understand established patterns. log to understand established patterns.
+All context loading happens first. Step All context loading happens first. Step All context loading happens first. Step
+two, initialize environment by running two, initialize environment by running two, initialize environment by running
+bashinit.sh. bashinit.sh. bashinit.sh.
+Wait for the ready message. This ensures Wait for the ready message. This ensures Wait for the ready message. This ensures
+the development server is running before the development server is running before the development server is running before
+any coding starts. Steps three to four. any coding starts. Steps three to four. any coding starts. Steps three to four.
+Choose the next feature from Choose the next feature from Choose the next feature from
+features.json, features.json, features.json,
+first one with passes false, and first one with passes false, and first one with passes false, and
+implement it. Follow patterns from git implement it. Follow patterns from git implement it. Follow patterns from git
+history. Test thoroughly in the browser history. Test thoroughly in the browser history. Test thoroughly in the browser
+or CLI. Step five, verify all test cases or CLI. Step five, verify all test cases or CLI. Step five, verify all test cases
+pass. If any fail, debug and fix. Only pass. If any fail, debug and fix. Only pass. If any fail, debug and fix. Only
+proceed when all tests are green. This proceed when all tests are green. This proceed when all tests are green. This
+prevents hallucinated progress. Step prevents hallucinated progress. Step prevents hallucinated progress. Step
+six, seven. Commit the work with a clear six, seven. Commit the work with a clear six, seven. Commit the work with a clear
+message. Then update both artifacts. In message. Then update both artifacts. In message. Then update both artifacts. In
+features.json, flip passes true for the features.json, flip passes true for the features.json, flip passes true for the
+completed feature. In cloud completed feature. In cloud completed feature. In cloud
+progress.ext, append a session summary progress.ext, append a session summary progress.ext, append a session summary
+with what was completed and what's next. with what was completed and what's next. with what was completed and what's next.
+Step eight, handoff, print completion Step eight, handoff, print completion Step eight, handoff, print completion
+message, and exit. The harness then message, and exit. The harness then message, and exit. The harness then
+starts a new session with fresh context, starts a new session with fresh context, starts a new session with fresh context,
+and the loop repeats. This eight-step and the loop repeats. This eight-step and the loop repeats. This eight-step
+pattern executed 50 plus times pattern executed 50 plus times pattern executed 50 plus times
+autonomously. the key. Each step is autonomously. the key. Each step is autonomously. the key. Each step is
+explicit, verifiable, and bounded. No explicit, verifiable, and bounded. No explicit, verifiable, and bounded. No
+ambiguity, no shortcuts. Session N plus1 ambiguity, no shortcuts. Session N plus1 ambiguity, no shortcuts. Session N plus1
+starts with zero memory, but the harness starts with zero memory, but the harness starts with zero memory, but the harness
+loads artifacts before the agent begins. loads artifacts before the agent begins. loads artifacts before the agent begins.
+The agent reads clawed progress.txt for The agent reads clawed progress.txt for The agent reads clawed progress.txt for
+explicit handoff instructions, explicit handoff instructions, explicit handoff instructions,
+features.json for the next task and test features.json for the next task and test features.json for the next task and test
+cases, and git log for established cases, and git log for established cases, and git log for established
+patterns. It has full context from files patterns. It has full context from files patterns. It has full context from files
+alone. Coordination through persistent alone. Coordination through persistent alone. Coordination through persistent
+state, not memory. This loop runs state, not memory. This loop runs state, not memory. This loop runs
+sessions 2 through 54. Each iteration sessions 2 through 54. Each iteration sessions 2 through 54. Each iteration
+creates a cloud session with four creates a cloud session with four creates a cloud session with four
+parameters. Agent type coding the prompt parameters. Agent type coding the prompt parameters. Agent type coding the prompt
+formatted with session number. Context formatted with session number. Context formatted with session number. Context
+files clog progress.txt and files clog progress.txt and files clog progress.txt and
+features.json and tools read, write, features.json and tools read, write, features.json and tools read, write,
+bash. The agent works, updates progress, bash. The agent works, updates progress, bash. The agent works, updates progress,
+commits, and exits. The next session commits, and exits. The next session commits, and exits. The next session
+loads fresh context, and continues. loads fresh context, and continues. loads fresh context, and continues.
+Deceptively simple, incredibly powerful. Deceptively simple, incredibly powerful. Deceptively simple, incredibly powerful.
+Let's zoom in on features.json, Let's zoom in on features.json, Let's zoom in on features.json,
+the backbone of the entire system. This the backbone of the entire system. This the backbone of the entire system. This
+file is where all the work is tracked file is where all the work is tracked file is where all the work is tracked
+and coordinated. The initializer and coordinated. The initializer and coordinated. The initializer
+generates this in session one with 200 generates this in session one with 200 generates this in session one with 200
+plus features. Each feature is a JSON plus features. Each feature is a JSON plus features. Each feature is a JSON
+object with specific fields ID, object with specific fields ID, object with specific fields ID,
+description, file path, dependencies, description, file path, dependencies, description, file path, dependencies,
+test cases, and the critical passes test cases, and the critical passes test cases, and the critical passes
+boolean. The passes field is the boolean. The passes field is the boolean. The passes field is the
+coordination mechanism. False means not coordination mechanism. False means not coordination mechanism. False means not
+done yet. True means completed and done yet. True means completed and done yet. True means completed and
+tested. It's binary, unambiguous, and tested. It's binary, unambiguous, and tested. It's binary, unambiguous, and
+scales beautifully to hundreds of scales beautifully to hundreds of scales beautifully to hundreds of
+features. Every coding agent follows the features. Every coding agent follows the features. Every coding agent follows the
+same algorithm. Scan features.json. same algorithm. Scan features.json. same algorithm. Scan features.json.
+JSON. Find the first feature with passes JSON. Find the first feature with passes JSON. Find the first feature with passes
+false. Implement it. Test it thoroughly false. Implement it. Test it thoroughly false. Implement it. Test it thoroughly
+and flip the boolean to true. Then the and flip the boolean to true. Then the and flip the boolean to true. Then the
+next session repeats the pattern. The next session repeats the pattern. The next session repeats the pattern. The
+test cases are crucial. Each feature has test cases are crucial. Each feature has test cases are crucial. Each feature has
+three to five specific verifiable test three to five specific verifiable test three to five specific verifiable test
+cases. User can log in with valid cases. User can log in with valid cases. User can log in with valid
+credentials. Invalid password shows credentials. Invalid password shows credentials. Invalid password shows
+error. Session persists for seven days. error. Session persists for seven days. error. Session persists for seven days.
+The agent cannot mark passes true unless The agent cannot mark passes true unless The agent cannot mark passes true unless
+all test cases are verified. This simple all test cases are verified. This simple all test cases are verified. This simple
+structure, a JSON array with boolean structure, a JSON array with boolean structure, a JSON array with boolean
+coordination, enabled Anthropics agents coordination, enabled Anthropics agents coordination, enabled Anthropics agents
+to complete 200 plus features to complete 200 plus features to complete 200 plus features
+autonomously. autonomously. autonomously.
+No complex state machines, no No complex state machines, no No complex state machines, no
+distributed coordination, just a file, a distributed coordination, just a file, a distributed coordination, just a file, a
+boolean, and clear test cases. While boolean, and clear test cases. While boolean, and clear test cases. While
+features.json is structured data, claude features.json is structured data, claude features.json is structured data, claude
+progress.ext is human readable progress.ext is human readable progress.ext is human readable
+narrative. It serves two purposes. narrative. It serves two purposes. narrative. It serves two purposes.
+Machine handoff and human audit trail. Machine handoff and human audit trail. Machine handoff and human audit trail.
+Each session appends its story to this Each session appends its story to this Each session appends its story to this
+file. Session number, timestamp, what file. Session number, timestamp, what file. Session number, timestamp, what
+feature was implemented, what tests feature was implemented, what tests feature was implemented, what tests
+passed, what challenges came up, what passed, what challenges came up, what passed, what challenges came up, what
+the next agent should know. It's a the next agent should know. It's a the next agent should know. It's a
+chronological log of the entire 24hour chronological log of the entire 24hour chronological log of the entire 24hour
+journey. This file gives future agents journey. This file gives future agents journey. This file gives future agents
+qualitative context that features.json qualitative context that features.json qualitative context that features.json
+doesn't capture. doesn't capture. doesn't capture.
+had to install b-rypt for password had to install b-rypt for password had to install b-rypt for password
+hashing added to init.sh for future hashing added to init.sh for future hashing added to init.sh for future
+sessions. Established pattern sessions. Established pattern sessions. Established pattern
+components/componentname.tsx. Future agents should follow this Future agents should follow this
+structure. The narrative format means structure. The narrative format means structure. The narrative format means
+agents can share architectural decisions agents can share architectural decisions agents can share architectural decisions
+and patterns. When session 15 and patterns. When session 15 and patterns. When session 15
+establishes that all components go in establishes that all components go in establishes that all components go in
+component slash with Pascal case naming, component slash with Pascal case naming, component slash with Pascal case naming,
+session 20 reads that and follows the session 20 reads that and follows the session 20 reads that and follows the
+pattern. Consistency emerges through pattern. Consistency emerges through pattern. Consistency emerges through
+shared documentation for humans. This shared documentation for humans. This shared documentation for humans. This
+file is a readable audit trail. You can file is a readable audit trail. You can file is a readable audit trail. You can
+follow the entire coding journey by follow the entire coding journey by follow the entire coding journey by
+reading claudrogress.txt reading claudrogress.txt reading claudrogress.txt
+top to bottom. Which sessions struggled? top to bottom. Which sessions struggled? top to bottom. Which sessions struggled?
+Which flew smoothly? What patterns Which flew smoothly? What patterns Which flew smoothly? What patterns
+emerged? where challenges appeared. The emerged? where challenges appeared. The emerged? where challenges appeared. The
+combination is powerful. features.json combination is powerful. features.json combination is powerful. features.json
+for structured coordination. Claude for structured coordination. Claude for structured coordination. Claude
+progress.txt progress.txt progress.txt
+for narrative context. Machines and for narrative context. Machines and for narrative context. Machines and
+humans both benefit. The system is humans both benefit. The system is humans both benefit. The system is
+transparent and debugable. So why does transparent and debugable. So why does transparent and debugable. So why does
+anthropics architecture work so anthropics architecture work so anthropics architecture work so
+reliably? Three core principles that reliably? Three core principles that reliably? Three core principles that
+combine to create success at scale. combine to create success at scale. combine to create success at scale.
+First principle, explicit coordination. First principle, explicit coordination. First principle, explicit coordination.
+There's no ambiguity about what the next There's no ambiguity about what the next There's no ambiguity about what the next
+agent should do. Features.json has a agent should do. Features.json has a agent should do. Features.json has a
+clear false boolean that says this is clear false boolean that says this is clear false boolean that says this is
+next. Claude progress.ext has explicit next. Claude progress.ext has explicit next. Claude progress.ext has explicit
+next agent should instructions. Gitlog next agent should instructions. Gitlog next agent should instructions. Gitlog
+shows established patterns. No guessing shows established patterns. No guessing shows established patterns. No guessing
+required. Second principle incremental required. Second principle incremental required. Second principle incremental
+progress. One feature per session means progress. One feature per session means progress. One feature per session means
+bounded cognitive load. The agent isn't bounded cognitive load. The agent isn't bounded cognitive load. The agent isn't
+trying to hold 247 features in its trying to hold 247 features in its trying to hold 247 features in its
+context window. Just one feature with context window. Just one feature with context window. Just one feature with
+three to five test cases. Implement, three to five test cases. Implement, three to five test cases. Implement,
+test, commit, done. This makes each test, commit, done. This makes each test, commit, done. This makes each
+session manageable and verifiable. session manageable and verifiable. session manageable and verifiable.
+Third principle, verifiable completion. Third principle, verifiable completion. Third principle, verifiable completion.
+Every feature has concrete test cases. Every feature has concrete test cases. Every feature has concrete test cases.
+The agent can't claim something is done The agent can't claim something is done The agent can't claim something is done
+without proof. All tests must pass without proof. All tests must pass without proof. All tests must pass
+before passes true. This prevents before passes true. This prevents before passes true. This prevents
+hallucinated progress, a huge problem in hallucinated progress, a huge problem in hallucinated progress, a huge problem in
+longunning agent systems. These three longunning agent systems. These three longunning agent systems. These three
+principles create a reliability principles create a reliability principles create a reliability
+multiplier. Explicit coordination multiplier. Explicit coordination multiplier. Explicit coordination
+prevents confusion. Incremental progress prevents confusion. Incremental progress prevents confusion. Incremental progress
+keeps scope bounded. Verifiable keeps scope bounded. Verifiable keeps scope bounded. Verifiable
+completion ensures quality. The completion ensures quality. The completion ensures quality. The
+combination 87% success rate over 200 combination 87% success rate over 200 combination 87% success rate over 200
+plus features. That's why this plus features. That's why this plus features. That's why this
+architecture worked for 24 plus hours architecture worked for 24 plus hours architecture worked for 24 plus hours
+and 54 sessions autonomously. Not magic, and 54 sessions autonomously. Not magic, and 54 sessions autonomously. Not magic,
+not a secret model, just sound not a secret model, just sound not a secret model, just sound
+engineering. principles applied to engineering. principles applied to engineering. principles applied to
+agentic systems. So how do you actually agentic systems. So how do you actually agentic systems. So how do you actually
+use this architecture? The good news use this architecture? The good news use this architecture? The good news
+anthropic open-source their approach. anthropic open-source their approach. anthropic open-source their approach.
+You don't have to reverse engineer it. You don't have to reverse engineer it. You don't have to reverse engineer it.
+You can study and adapt it directly. You can study and adapt it directly. You can study and adapt it directly.
+First step, assess your project scope. First step, assess your project scope. First step, assess your project scope.
+This architecture works best for This architecture works best for This architecture works best for
+projects with 50 plus discrete testable projects with 50 plus discrete testable projects with 50 plus discrete testable
+features. If you have five features, features. If you have five features, features. If you have five features,
+this is overkill. If you have 200, it's this is overkill. If you have 200, it's this is overkill. If you have 200, it's
+perfect. The overhead of harness setup perfect. The overhead of harness setup perfect. The overhead of harness setup
+pays off at scale. Second step, write a pays off at scale. Second step, write a pays off at scale. Second step, write a
+detailed specification. The initializer detailed specification. The initializer detailed specification. The initializer
+needs a clear product spec to generate needs a clear product spec to generate needs a clear product spec to generate
+features.json effectively. Vague specs features.json effectively. Vague specs features.json effectively. Vague specs
+produce vague feature lists. The better produce vague feature lists. The better produce vague feature lists. The better
+your spec, the better the feature your spec, the better the feature your spec, the better the feature
+breakdown, the better the results. Third breakdown, the better the results. Third breakdown, the better the results. Third
+step, adapt the prompts to your text step, adapt the prompts to your text step, adapt the prompts to your text
+stack. Anthropics examples use NodeJS stack. Anthropics examples use NodeJS stack. Anthropics examples use NodeJS
+and TypeScript. If you're using Python, and TypeScript. If you're using Python, and TypeScript. If you're using Python,
+Django, or Go, you'll need to customize Django, or Go, you'll need to customize Django, or Go, you'll need to customize
+the init.sh script and the testing the init.sh script and the testing the init.sh script and the testing
+approach. The prompts are templates, not approach. The prompts are templates, not approach. The prompts are templates, not
+final code. Fourth step, start small and final code. Fourth step, start small and final code. Fourth step, start small and
+validate. Test with 10 features before validate. Test with 10 features before validate. Test with 10 features before
+committing to 200. Make sure the committing to 200. Make sure the committing to 200. Make sure the
+initializer generates good features. initializer generates good features. initializer generates good features.
+Make sure init.sh works reliably. Make Make sure init.sh works reliably. Make Make sure init.sh works reliably. Make
+sure the first handoff from session two sure the first handoff from session two sure the first handoff from session two
+to session three works cleanly. Debug to session three works cleanly. Debug to session three works cleanly. Debug
+the harness with 10 features, then scale the harness with 10 features, then scale the harness with 10 features, then scale
+to hundreds. This isn't plugandplay. to hundreds. This isn't plugandplay. to hundreds. This isn't plugandplay.
+You'll need to adapt it to your You'll need to adapt it to your You'll need to adapt it to your
+environment. But it's proven environment. But it's proven environment. But it's proven
+architecture. 200 plus features, 24 plus architecture. 200 plus features, 24 plus architecture. 200 plus features, 24 plus
+hours, 87% success rate. If you're hours, 87% success rate. If you're hours, 87% success rate. If you're
+building agents that need to work for building agents that need to work for building agents that need to work for
+hours or days, this is the reference hours or days, this is the reference hours or days, this is the reference
+implementation to study. Before we wrap, implementation to study. Before we wrap, implementation to study. Before we wrap,
+let's cover the common pitfalls. Even let's cover the common pitfalls. Even let's cover the common pitfalls. Even
+with proven architecture, there are ways with proven architecture, there are ways with proven architecture, there are ways
+to fail. Learn from others mistakes. to fail. Learn from others mistakes. to fail. Learn from others mistakes.
+Pitfall one, vague features. If Pitfall one, vague features. If Pitfall one, vague features. If
+features.json says build the dashboard features.json says build the dashboard features.json says build the dashboard
+with test case dashboard works, that's with test case dashboard works, that's with test case dashboard works, that's
+too vague. The agent won't know what too vague. The agent won't know what too vague. The agent won't know what
+works means. features meet specific works means. features meet specific works means. features meet specific
+verifiable test cases like dashboard verifiable test cases like dashboard verifiable test cases like dashboard
+renders five metric widgets and data renders five metric widgets and data renders five metric widgets and data
+updates every 5 seconds. Pitfall two, updates every 5 seconds. Pitfall two, updates every 5 seconds. Pitfall two,
+skipping test verification. If agents skipping test verification. If agents skipping test verification. If agents
+can mark features complete without can mark features complete without can mark features complete without
+actually running tests, you'll get actually running tests, you'll get actually running tests, you'll get
+hallucinated progress. Features marked hallucinated progress. Features marked hallucinated progress. Features marked
+done that don't work. Always require done that don't work. Always require done that don't work. Always require
+test verification. All test cases must test verification. All test cases must test verification. All test cases must
+pass before passes true. Pitfall three. pass before passes true. Pitfall three. pass before passes true. Pitfall three.
+unreliable init script. If init fails unreliable init script. If init fails unreliable init script. If init fails
+20% of the time, every fifth session 20% of the time, every fifth session 20% of the time, every fifth session
+will start broken. Make your init script will start broken. Make your init script will start broken. Make your init script
+item potent. Running it twice should be item potent. Running it twice should be item potent. Running it twice should be
+safe. Add verification checks that the safe. Add verification checks that the safe. Add verification checks that the
+environment actually started correctly. environment actually started correctly. environment actually started correctly.
+Pitfall four, context overload. If you Pitfall four, context overload. If you Pitfall four, context overload. If you
+try to load the entire 50,000line try to load the entire 50,000line try to load the entire 50,000line
+codebase into context every session, codebase into context every session, codebase into context every session,
+you'll hit context limits immediately. you'll hit context limits immediately. you'll hit context limits immediately.
+Only load what's needed. Progress file, Only load what's needed. Progress file, Only load what's needed. Progress file,
+features JSON, current feature file, and features JSON, current feature file, and features JSON, current feature file, and
+recent git log. Minimal context for the recent git log. Minimal context for the recent git log. Minimal context for the
+current task. Pitfall five, no current task. Pitfall five, no current task. Pitfall five, no
+observability. If you can't see what observability. If you can't see what observability. If you can't see what
+agents are doing, you can't debug when agents are doing, you can't debug when agents are doing, you can't debug when
+things fail. Instrument everything. Log things fail. Instrument everything. Log things fail. Instrument everything. Log
+every tool use. Track token usage. every tool use. Track token usage. every tool use. Track token usage.
+Record session duration. Save error Record session duration. Save error Record session duration. Save error
+messages. Make the system transparent. messages. Make the system transparent. messages. Make the system transparent.
+Avoid these five pitfalls and you'll Avoid these five pitfalls and you'll Avoid these five pitfalls and you'll
+save yourself weeks of debugging. These save yourself weeks of debugging. These save yourself weeks of debugging. These
+are the lessons learned from teams are the lessons learned from teams are the lessons learned from teams
+who've run this architecture in who've run this architecture in who've run this architecture in
+production. That's Anthropic's production. That's Anthropic's production. That's Anthropic's
+longunning agent system. Two agents with longunning agent system. Two agents with longunning agent system. Two agents with
+distinct roles. Four artifacts that distinct roles. Four artifacts that distinct roles. Four artifacts that
+persist context across sessions. persist context across sessions. persist context across sessions.
+Explicit coordination through files, not Explicit coordination through files, not Explicit coordination through files, not
+memory. Incremental progress, one memory. Incremental progress, one memory. Incremental progress, one
+feature per session, and verifiable feature per session, and verifiable feature per session, and verifiable
+completion through test cases. This completion through test cases. This completion through test cases. This
+architecture proved that agents can code architecture proved that agents can code architecture proved that agents can code
+for 24 plus hours autonomously, for 24 plus hours autonomously, for 24 plus hours autonomously,
+200 features across 54 sessions, 87% 200 features across 54 sessions, 87% 200 features across 54 sessions, 87%
+success rate, and the best part, it's success rate, and the best part, it's success rate, and the best part, it's
+opensource. opensource. opensource.
+You can study this architecture and You can study this architecture and You can study this architecture and
+adapt it to your own systems. Today, in adapt it to your own systems. Today, in adapt it to your own systems. Today, in
+the next video, part three of this the next video, part three of this the next video, part three of this
+series, we're shifting from analysis to series, we're shifting from analysis to series, we're shifting from analysis to
+action. I'm giving you the universal action. I'm giving you the universal action. I'm giving you the universal
+patterns you can use to build your own patterns you can use to build your own patterns you can use to build your own
+harness regardless of which model you're harness regardless of which model you're harness regardless of which model you're
+using, regardless of your tech stack. using, regardless of your tech stack. using, regardless of your tech stack.
+The minimal viable harness, when to add The minimal viable harness, when to add The minimal viable harness, when to add
+complexity, common mistakes to avoid, complexity, common mistakes to avoid, complexity, common mistakes to avoid,
+everything you need to go from everything you need to go from everything you need to go from
+understanding harnesses to building understanding harnesses to building understanding harnesses to building
+them. If you found this deep dive them. If you found this deep dive them. If you found this deep dive
+valuable, hit subscribe. Part three valuable, hit subscribe. Part three valuable, hit subscribe. Part three
+drops tomorrow. Thanks for watching. 

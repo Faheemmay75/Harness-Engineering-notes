@@ -1,0 +1,1099 @@
+Hi. Um, my name is Cigret. Um, I'm Hi. Um, my name is Cigret. Um, I'm
+really want to get into like really want to get into like really want to get into like
+[clears throat] [clears throat] [clears throat]
+the for city, but I regret that there's the for city, but I regret that there's the for city, but I regret that there's
+no live stream will be happen because of no live stream will be happen because of no live stream will be happen because of
+uh the lack of the Wi-Fi connectivity. uh the lack of the Wi-Fi connectivity. uh the lack of the Wi-Fi connectivity.
+Yeah. And um I w I visited uh Forest Yeah. And um I w I visited uh Forest Yeah. And um I w I visited uh Forest
+City uh network school thanks to the City uh network school thanks to the City uh network school thanks to the
+invitation of Daniel Kang um last week. invitation of Daniel Kang um last week. invitation of Daniel Kang um last week.
+I stayed one night and it was really I stayed one night and it was really I stayed one night and it was really
+amazing. I wasn't um like the uh the the amazing. I wasn't um like the uh the the amazing. I wasn't um like the uh the the
+orientation day of the of of the March orientation day of the of of the March orientation day of the of of the March
+cohort and um yeah, I really love the cohort and um yeah, I really love the cohort and um yeah, I really love the
+vibe. So um I'm considering to stay vibe. So um I'm considering to stay vibe. So um I'm considering to stay
+every weekend on April um every weekend on April um every weekend on April um
+[clears throat] because like I think [clears throat] because like I think [clears throat] because like I think
+like there's massive the massive like there's massive the massive like there's massive the massive
+possibilities are there in network possibilities are there in network possibilities are there in network
+school. Yeah, I'm really um follower um school. Yeah, I'm really um follower um school. Yeah, I'm really um follower um
+like I was into crypto some years ago like I was into crypto some years ago like I was into crypto some years ago
+and I ran a Ethereum pedator at the time and I ran a Ethereum pedator at the time and I ran a Ethereum pedator at the time
+and um I really like the vibe there. So and um I really like the vibe there. So and um I really like the vibe there. So
+um still I believe there's lots of um still I believe there's lots of um still I believe there's lots of
+things into crypto and there will be things into crypto and there will be things into crypto and there will be
+such a huge things if we converge crypto such a huge things if we converge crypto such a huge things if we converge crypto
+AI. So um yeah I think like yeah I just AI. So um yeah I think like yeah I just AI. So um yeah I think like yeah I just
+want to stay for the on every weekend of want to stay for the on every weekend of want to stay for the on every weekend of
+April. So like please say hi if you are April. So like please say hi if you are April. So like please say hi if you are
+there. Yeah. So okay. So let me just there. Yeah. So okay. So let me just there. Yeah. So okay. So let me just
+intro myself. My name is secret and I'm intro myself. My name is secret and I'm intro myself. My name is secret and I'm
+here in the University of British here in the University of British here in the University of British
+Columbia. Uh and um Columbia. Uh and um Columbia. Uh and um
+yeah I have worked as I as a ultra think yeah I have worked as I as a ultra think yeah I have worked as I as a ultra think
+engineer. So traffic engineer like uh engineer. So traffic engineer like uh engineer. So traffic engineer like uh
+it's all mean like trying to use all of it's all mean like trying to use all of it's all mean like trying to use all of
+the harness possibilities uh from the the harness possibilities uh from the the harness possibilities uh from the
+your models like what I just trying to your models like what I just trying to your models like what I just trying to
+say is like model has already reached say is like model has already reached say is like model has already reached
+Asia intelligence I believe and the most Asia intelligence I believe and the most Asia intelligence I believe and the most
+important thing is how to extract those important thing is how to extract those important thing is how to extract those
+um intelligence yeah from the model um intelligence yeah from the model um intelligence yeah from the model
+that's what I believe so the most that's what I believe so the most that's what I believe so the most
+important thing what I trying to do is important thing what I trying to do is important thing what I trying to do is
+to make sure that we uh make best to make sure that we uh make best to make sure that we uh make best
+workflow as hardless from each model and workflow as hardless from each model and workflow as hardless from each model and
+to make sure that we can um leverage to make sure that we can um leverage to make sure that we can um leverage
+those ones. And what humans should do is those ones. And what humans should do is those ones. And what humans should do is
+try to try to look at every the context try to try to look at every the context try to try to look at every the context
+that AI can miss because like we talk we that AI can miss because like we talk we that AI can miss because like we talk we
+do have conversation with other human do have conversation with other human do have conversation with other human
+beings in a very high context manner and beings in a very high context manner and beings in a very high context manner and
+uh when it comes for AI they are really uh when it comes for AI they are really uh when it comes for AI they are really
+easy to miss those context. So the most easy to miss those context. So the most easy to miss those context. So the most
+important thing for human is to inject important thing for human is to inject important thing for human is to inject
+correctly inject appropriate information correctly inject appropriate information correctly inject appropriate information
+at the run time. So I think the most at the run time. So I think the most at the run time. So I think the most
+important thing for it is to how do we important thing for it is to how do we important thing for it is to how do we
+engineer itself. So it is like directly engineer itself. So it is like directly engineer itself. So it is like directly
+um connected to um connected to um connected to
+the thing here like how do we need to the thing here like how do we need to the thing here like how do we need to
+refine engineer role here. So what does refine engineer role here. So what does refine engineer role here. So what does
+the engineer actually do in this field? the engineer actually do in this field? the engineer actually do in this field?
+Like human interact with the system Like human interact with the system Like human interact with the system
+almost entirely through prompt and almost entirely through prompt and almost entirely through prompt and
+engineer describes a task like runs the engineer describes a task like runs the engineer describes a task like runs the
+agent and allows it to open a pull agent and allows it to open a pull agent and allows it to open a pull
+request, right? So to to drive AP to request, right? So to to drive AP to request, right? So to to drive AP to
+completion like engineer instruct agent completion like engineer instruct agent completion like engineer instruct agent
+to review its own changes locally. So uh to review its own changes locally. So uh to review its own changes locally. So uh
+request additional agent reviews both request additional agent reviews both request additional agent reviews both
+locally and in the cloud like respond to locally and in the cloud like respond to locally and in the cloud like respond to
+feedback it loop until all agent feedback it loop until all agent feedback it loop until all agent
+reviewers are satisfied. Okay. reviewers are satisfied. Okay. reviewers are satisfied. Okay.
+So like human may like review pull So like human may like review pull So like human may like review pull
+request. Okay. But they are not required request. Okay. But they are not required request. Okay. But they are not required
+to do what human should do is to give to do what human should do is to give to do what human should do is to give
+the proper information to the agent. So the proper information to the agent. So the proper information to the agent. So
+that at the end of the day like over that at the end of the day like over that at the end of the day like over
+time almost all review effort has to be time almost all review effort has to be time almost all review effort has to be
+pushed toward being handled agent to pushed toward being handled agent to pushed toward being handled agent to
+agent. Okay. So the human well they agent. Okay. So the human well they agent. Okay. So the human well they
+always on in the loop the most important always on in the loop the most important always on in the loop the most important
+things that have like human work at the things that have like human work at the things that have like human work at the
+very fundamental lay different layer of very fundamental lay different layer of very fundamental lay different layer of
+the layout abstractions like what to the layout abstractions like what to the layout abstractions like what to
+project work uh what to delegate and the project work uh what to delegate and the project work uh what to delegate and the
+rest of the writing of the code is rest of the writing of the code is rest of the writing of the code is
+should be delegate to the uh the agent should be delegate to the uh the agent should be delegate to the uh the agent
+so what I want to say in the right so what I want to say in the right so what I want to say in the right
+command is that don't write any pieces command is that don't write any pieces command is that don't write any pieces
+of of code like even you don't need to of of code like even you don't need to of of code like even you don't need to
+read the code so what the human needs to read the code so what the human needs to read the code so what the human needs to
+do is to try to look at Every single do is to try to look at Every single do is to try to look at Every single
+like test write a test about it and make like test write a test about it and make like test write a test about it and make
+sure each test is based on the story. sure each test is based on the story. sure each test is based on the story.
+The write a test based on its own The write a test based on its own The write a test based on its own
+scenarios that is directly connected to scenarios that is directly connected to scenarios that is directly connected to
+our daily wall scenarios. So write a our daily wall scenarios. So write a our daily wall scenarios. So write a
+scenario test that is directly verified scenario test that is directly verified scenario test that is directly verified
+by the humans and the rest of the layers by the humans and the rest of the layers by the humans and the rest of the layers
+are being abstracted by agents. Okay. are being abstracted by agents. Okay. are being abstracted by agents. Okay.
+So like So like So like
+uh let's just about let's talk about uh let's just about let's talk about uh let's just about let's talk about
+like agent momentum model. like agent momentum model. like agent momentum model.
+Uh what I want to say here is that how Uh what I want to say here is that how Uh what I want to say here is that how
+do we need to think about uh do we need to think about uh do we need to think about uh
+agent tick coding these days. So agent tick coding these days. So agent tick coding these days. So
+basically like uh this equation like basically like uh this equation like basically like uh this equation like
+this mental model uh has been derived uh this mental model uh has been derived uh this mental model uh has been derived uh
+by the gar from open AI codeex. So like by the gar from open AI codeex. So like by the gar from open AI codeex. So like
+since this is a closed code video, I since this is a closed code video, I since this is a closed code video, I
+just want to uh explain it in a close just want to uh explain it in a close just want to uh explain it in a close
+code context. Okay. code context. Okay. code context. Okay.
+So let's let's say this model plus her So let's let's say this model plus her So let's let's say this model plus her
+from the glo services that is how we from the glo services that is how we from the glo services that is how we
+define agent. Okay. define agent. Okay. define agent. Okay.
+Agent is composed of model, harness and Agent is composed of model, harness and Agent is composed of model, harness and
+surface. So um what is model? So um what is model?
+Uh so basically what the model is like Uh so basically what the model is like Uh so basically what the model is like
+model it's like opus 4.6 six. Yeah, model it's like opus 4.6 six. Yeah, model it's like opus 4.6 six. Yeah,
+that's a model. Okay, so um that's the that's a model. Okay, so um that's the that's a model. Okay, so um that's the
+thing like model so like our assumption thing like model so like our assumption thing like model so like our assumption
+should be model is already already at should be model is already already at should be model is already already at
+its work. Okay. its work. Okay. its work. Okay.
+Um so basically model provides Um so basically model provides Um so basically model provides
+intelligence. Okay. intelligence. Okay. intelligence. Okay.
+So um but like at the core of the cloud So um but like at the core of the cloud So um but like at the core of the cloud
+code like or other coding CM agent like code like or other coding CM agent like code like or other coding CM agent like
+those moders are optimized specifically those moders are optimized specifically those moders are optimized specifically
+for a software engineering. So at a for a software engineering. So at a for a software engineering. So at a
+basic level like add them press the next basic level like add them press the next basic level like add them press the next
+right and the code is a text basically right and the code is a text basically right and the code is a text basically
+but the reasoning variant like go beyond but the reasoning variant like go beyond but the reasoning variant like go beyond
+like autocomplete right so before like autocomplete right so before like autocomplete right so before
+producing an answer the model can producing an answer the model can producing an answer the model can
+perform structured internal reasoning perform structured internal reasoning perform structured internal reasoning
+like for example like deco composing the like for example like deco composing the like for example like deco composing the
+task evaluating options and planning task evaluating options and planning task evaluating options and planning
+multic edits right multic edits right multic edits right
+so those actions are being executed by so those actions are being executed by so those actions are being executed by
+the intelligence. the intelligence. the intelligence.
+[sighs and gasps] [sighs and gasps] [sighs and gasps]
+Uh but as I said those actions who runs Uh but as I said those actions who runs Uh but as I said those actions who runs
+the action who decides to run action the action who decides to run action the action who decides to run action
+that's the model right model decides that's the model right model decides that's the model right model decides
+what to do like intelligence decides what to do like intelligence decides what to do like intelligence decides
+what is the next step of the action. what is the next step of the action. what is the next step of the action.
+However the most important thing is However the most important thing is However the most important thing is
+hardness. hardness. hardness.
+Why do we need hardness? Well, uh, real Why do we need hardness? Well, uh, real Why do we need hardness? Well, uh, real
+software engineering is not just of like software engineering is not just of like software engineering is not just of like
+generating lines of code like it generating lines of code like it generating lines of code like it
+involves like very spar of things like involves like very spar of things like involves like very spar of things like
+let's talk about like it's like editing let's talk about like it's like editing let's talk about like it's like editing
+across many files, responding to across many files, responding to across many files, responding to
+failures, right? Or um running tools failures, right? Or um running tools failures, right? Or um running tools
+decide what skills to execute, right? Or decide what skills to execute, right? Or decide what skills to execute, right? Or
+iterating until something actually iterating until something actually iterating until something actually
+works. So basically like intelligence works. So basically like intelligence works. So basically like intelligence
+itself itself itself
+uh it knows what to do but the basically uh it knows what to do but the basically uh it knows what to do but the basically
+uh executing model is just a mere uh executing model is just a mere uh executing model is just a mere
+inference like inference like inference like
+we request model with a simple prompt we request model with a simple prompt we request model with a simple prompt
+and the model out gives output. Okay. and the model out gives output. Okay. and the model out gives output. Okay.
+So basically like model is a playground So basically like model is a playground So basically like model is a playground
+like think about like model is just like think about like model is just like think about like model is just
+intelligence. It's your brain but the intelligence. It's your brain but the intelligence. It's your brain but the
+brain does not have its body. It doesn't brain does not have its body. It doesn't brain does not have its body. It doesn't
+have a leg. It does not have um like have a leg. It does not have um like have a leg. It does not have um like
+hands right. So basically model needs a hands right. So basically model needs a hands right. So basically model needs a
+playground where the intelligence can playground where the intelligence can playground where the intelligence can
+execute each action. Okay. execute each action. Okay. execute each action. Okay.
+So um that's the reason why we need a So um that's the reason why we need a So um that's the reason why we need a
+harness. harness. harness.
+Harness is the most important thing Harness is the most important thing Harness is the most important thing
+because it turns a model into an agent. because it turns a model into an agent. because it turns a model into an agent.
+Okay, as I said like model can generate Okay, as I said like model can generate Okay, as I said like model can generate
+the code. It can suggest assets and the code. It can suggest assets and the code. It can suggest assets and
+reason about a div. But what it cannot reason about a div. But what it cannot reason about a div. But what it cannot
+do is like but it cannot do in its own do is like but it cannot do in its own do is like but it cannot do in its own
+is like it it does not operate in its is like it it does not operate in its is like it it does not operate in its
+real repository. Like someone needs to real repository. Like someone needs to real repository. Like someone needs to
+give a appropriate prompt like for give a appropriate prompt like for give a appropriate prompt like for
+example when you like interact with example when you like interact with example when you like interact with
+model in a chat interface like we did in model in a chat interface like we did in model in a chat interface like we did in
+the very um free cloud code era the very um free cloud code era the very um free cloud code era
+human cop can paste it relevant code. human cop can paste it relevant code. human cop can paste it relevant code.
+However like if you use clo code you However like if you use clo code you However like if you use clo code you
+never cop can paste a raw code right. never cop can paste a raw code right. never cop can paste a raw code right.
+Why? Because like harness help model to Why? Because like harness help model to Why? Because like harness help model to
+retrieve the relevant code. For example, retrieve the relevant code. For example, retrieve the relevant code. For example,
+like if you have some trouble in like if you have some trouble in like if you have some trouble in
+specific React component like model specific React component like model specific React component like model
+request to certain component name and request to certain component name and request to certain component name and
+the harness like try to find it or at the harness like try to find it or at the harness like try to find it or at
+least like if the model try to find least like if the model try to find least like if the model try to find
+something um very um very um ambiguous something um very um very um ambiguous something um very um very um ambiguous
+code then harness try to retrieve based code then harness try to retrieve based code then harness try to retrieve based
+on like relevant context and try to on like relevant context and try to on like relevant context and try to
+inject it right or if it is really in inject it right or if it is really in inject it right or if it is really in
+not not explicit at not not explicit at not not explicit at
+Then harness can um help model to run in Then harness can um help model to run in Then harness can um help model to run in
+a very like some for example three a very like some for example three a very like some for example three
+parallel environments at once so that it parallel environments at once so that it parallel environments at once so that it
+can like [snorts] try to experiment till can like [snorts] try to experiment till can like [snorts] try to experiment till
+some conclusion has been made. Okay. some conclusion has been made. Okay. some conclusion has been made. Okay.
+So what I want to say is that harness uh So what I want to say is that harness uh So what I want to say is that harness uh
+gives a playground. harness gives some gives a playground. harness gives some gives a playground. harness gives some
+kind of some some some some actions to kind of some some some some actions to kind of some some some some actions to
+model to do something actually works. model to do something actually works. model to do something actually works.
+So uh let's say harness is the system So uh let's say harness is the system So uh let's say harness is the system
+that connects the model to a working that connects the model to a working that connects the model to a working
+software in bulk. Okay, it provides an software in bulk. Okay, it provides an software in bulk. Okay, it provides an
+access to files. It provides some access access to files. It provides some access access to files. It provides some access
+to repositories to repositories to repositories
+and it gives the ability to run comments and it gives the ability to run comments and it gives the ability to run comments
+like shell comments safely like like shell comments safely like like shell comments safely like
+sometimes it requests like some like sometimes it requests like some like sometimes it requests like some like
+sudo permission right or sometimes like sudo permission right or sometimes like sudo permission right or sometimes like
+it can you can just run like just adding it can you can just run like just adding it can you can just run like just adding
+a dangerously permissions right a dangerously permissions right a dangerously permissions right
+and there is some structured way to pass and there is some structured way to pass and there is some structured way to pass
+information into an and out of the model information into an and out of the model information into an and out of the model
+so we can take on large tasks without so we can take on large tasks without so we can take on large tasks without
+collapsing under context. Okay. So, um collapsing under context. Okay. So, um collapsing under context. Okay. So, um
+what I want to say is that harness what I want to say is that harness what I want to say is that harness
+engineering is the most significantly engineering is the most significantly engineering is the most significantly
+important these days and I would believe important these days and I would believe important these days and I would believe
+that um harness would be very deferred that um harness would be very deferred that um harness would be very deferred
+against each different scenarios. So against each different scenarios. So against each different scenarios. So
+like if you only work in front end then like if you only work in front end then like if you only work in front end then
+you can just like craft your own harvest you can just like craft your own harvest you can just like craft your own harvest
+on on your specific front end task. But on on your specific front end task. But on on your specific front end task. But
+like let's say you if you are working as like let's say you if you are working as like let's say you if you are working as
+a fullstack engineer which is very a fullstack engineer which is very a fullstack engineer which is very
+common these days then you need to set common these days then you need to set common these days then you need to set
+up like how you uh give a proper way to up like how you uh give a proper way to up like how you uh give a proper way to
+in inject the context for the model. For in inject the context for the model. For in inject the context for the model. For
+example, if you set a like a monoro example, if you set a like a monoro example, if you set a like a monoro
+then uh your harness should be crafted then uh your harness should be crafted then uh your harness should be crafted
+as your monorreo is being uh well as your monorreo is being uh well as your monorreo is being uh well
+adjusted to your structure. Right? So adjusted to your structure. Right? So adjusted to your structure. Right? So
+let's say it's not a um something for um let's say it's not a um something for um let's say it's not a um something for um
+folks stack but like it's all about folks stack but like it's all about folks stack but like it's all about
+let's let's say for example if you are let's let's say for example if you are let's let's say for example if you are
+trying to um craft um like some um let's trying to um craft um like some um let's trying to um craft um like some um let's
+say some core engineering of the say some core engineering of the say some core engineering of the
+blockchain then you need to set up very blockchain then you need to set up very blockchain then you need to set up very
+strict harness for the loss engineering strict harness for the loss engineering strict harness for the loss engineering
+right so those hardness are very right so those hardness are very right so those hardness are very
+different to each test that you are different to each test that you are different to each test that you are
+going to want to work with So I think going to want to work with So I think going to want to work with So I think
+like um uh this is the the the new um like um uh this is the the the new um like um uh this is the the the new um
+responsibility for engineers to give a responsibility for engineers to give a responsibility for engineers to give a
+proper playground for the model so that proper playground for the model so that proper playground for the model so that
+we can just um extract the best we can just um extract the best we can just um extract the best
+intelligence from the model itself. intelligence from the model itself. intelligence from the model itself.
+So um let's just summarize like harness So um let's just summarize like harness So um let's just summarize like harness
+itself is a system that connects a model itself is a system that connects a model itself is a system that connects a model
+to a working software environment. So to a working software environment. So to a working software environment. So
+like it provides a controlled access to like it provides a controlled access to like it provides a controlled access to
+files right. So it's just last model to files right. So it's just last model to files right. So it's just last model to
+put an extra context and use the tools put an extra context and use the tools put an extra context and use the tools
+to get work done right. So let's say to get work done right. So let's say to get work done right. So let's say
+like MTP servers skills and how do we uh like MTP servers skills and how do we uh like MTP servers skills and how do we uh
+help models to call um those um like um help models to call um those um like um help models to call um those um like um
+how can I say those like like how can I say those like like how can I say those like like
+supplementary materials or right time supplementary materials or right time supplementary materials or right time
+right about in a time right you know run right about in a time right you know run right about in a time right you know run
+time that's the most important thing and time that's the most important thing and time that's the most important thing and
+that is one of the most important like that is one of the most important like that is one of the most important like
+responsibility for harness to do it so responsibility for harness to do it so responsibility for harness to do it so
+so like just give a supplementary action so like just give a supplementary action so like just give a supplementary action
+to model. Okay. to model. Okay. to model. Okay.
+So, uh without the harness you have some So, uh without the harness you have some So, uh without the harness you have some
+some suggestions but we if you have some some suggestions but we if you have some some suggestions but we if you have some
+harnesses then you have the executions. harnesses then you have the executions. harnesses then you have the executions.
+Okay. Okay. Okay.
+Um so uh basically you you can just Um so uh basically you you can just Um so uh basically you you can just
+think um model and harness they are think um model and harness they are think um model and harness they are
+interconnected. interconnected. interconnected.
+Why? Why? Because basically um basically um
+uh uh cloud code model like cloud models uh uh cloud code model like cloud models uh uh cloud code model like cloud models
+itself are trained in the presence of itself are trained in the presence of itself are trained in the presence of
+the harness. the harness. the harness.
+What I want to say is that well you can What I want to say is that well you can What I want to say is that well you can
+uh look at every single um model's u uh look at every single um model's u uh look at every single um model's u
+evolution evolution evolution
+they are trained by uh the environment they are trained by uh the environment they are trained by uh the environment
+provided by harness. So what I want to provided by harness. So what I want to provided by harness. So what I want to
+say is that harness itself gives say is that harness itself gives say is that harness itself gives
+appropriate environment for the model to appropriate environment for the model to appropriate environment for the model to
+train on the potential cases of writing train on the potential cases of writing train on the potential cases of writing
+a code. Right? So tool use like a code. Right? So tool use like a code. Right? So tool use like
+execution loops or compaction or execution loops or compaction or execution loops or compaction or
+iterative verification they are not iterative verification they are not iterative verification they are not
+bolted on behaviors like they are part bolted on behaviors like they are part bolted on behaviors like they are part
+of how the model learns to operate. So of how the model learns to operate. So of how the model learns to operate. So
+the harness like in turn is shaped the harness like in turn is shaped the harness like in turn is shaped
+around the model's plans and in both around the model's plans and in both around the model's plans and in both
+plans and recovers from failure. Okay. plans and recovers from failure. Okay. plans and recovers from failure. Okay.
+So like a professional chains with a So like a professional chains with a So like a professional chains with a
+specific equipment for years. So mod is specific equipment for years. So mod is specific equipment for years. So mod is
+a professional athlete and the harness a professional athlete and the harness a professional athlete and the harness
+like their record like there's some like like their record like there's some like like their record like there's some like
+some equipment right. So you would not some equipment right. So you would not some equipment right. So you would not
+uh swap it out of the day before the uh swap it out of the day before the uh swap it out of the day before the
+compression right and expect the same compression right and expect the same compression right and expect the same
+like expectable like expectable like expectable
+performance. performance. performance.
+So like each like cloth cloth behavior So like each like cloth cloth behavior So like each like cloth cloth behavior
+emerges from the pairing like change one emerges from the pairing like change one emerges from the pairing like change one
+you need to change the agent. Okay. you need to change the agent. Okay. you need to change the agent. Okay.
+So the basically um you can just think So the basically um you can just think So the basically um you can just think
+that model itself uses hardless and that model itself uses hardless and that model itself uses hardless and
+basically like uh how uh the as a result basically like uh how uh the as a result basically like uh how uh the as a result
+of the inference step the model itself of the inference step the model itself of the inference step the model itself
+produces a final response to the users produces a final response to the users produces a final response to the users
+and output request of tool code that the and output request of tool code that the and output request of tool code that the
+agent is expected to perform and the agent is expected to perform and the agent is expected to perform and the
+agent executes the tool code and appends agent executes the tool code and appends agent executes the tool code and appends
+it uh uh output to the original prompt it uh uh output to the original prompt it uh uh output to the original prompt
+and like the output is used to generate and like the output is used to generate and like the output is used to generate
+new input that is used to recreate the new input that is used to recreate the new input that is used to recreate the
+model. So the agent can take uh they model. So the agent can take uh they model. So the agent can take uh they
+take on this new information into take on this new information into take on this new information into
+account and try again. Right? So this account and try again. Right? So this account and try again. Right? So this
+process repeats until model stops process repeats until model stops process repeats until model stops
+emitting two calls and instead produce a emitting two calls and instead produce a emitting two calls and instead produce a
+message for the user message in in the message for the user message in in the message for the user message in in the
+models. Right? So models. Right? So models. Right? So
+uh this means that as your conversation uh this means that as your conversation uh this means that as your conversation
+grows so does the length of the prompt grows so does the length of the prompt grows so does the length of the prompt
+used to sample the model. So the length used to sample the model. So the length used to sample the model. So the length
+matters because like every model has a matters because like every model has a matters because like every model has a
+context window, right? Which is the context window, right? Which is the context window, right? Which is the
+maximum number of the tokens that you maximum number of the tokens that you maximum number of the tokens that you
+can use for the one inference calls, can use for the one inference calls, can use for the one inference calls,
+right? So um as you might imagine like right? So um as you might imagine like right? So um as you might imagine like
+the agent could decide to make hundreds the agent could decide to make hundreds the agent could decide to make hundreds
+of the to calls in a single turn and the of the to calls in a single turn and the of the to calls in a single turn and the
+potentially exhausting the context potentially exhausting the context potentially exhausting the context
+windows. So the context window windows. So the context window windows. So the context window
+management is the one of the most management is the one of the most management is the one of the most
+important like harness uh the important like harness uh the important like harness uh the
+responsibilities and even like model responsibilities and even like model responsibilities and even like model
+uses hardness to like evaluate that what uses hardness to like evaluate that what uses hardness to like evaluate that what
+like how much how many the tokens are like how much how many the tokens are like how much how many the tokens are
+being remained and then try to look and being remained and then try to look and being remained and then try to look and
+then and just try to truncate then and just try to truncate then and just try to truncate
+automatically and the harness gives it automatically and the harness gives it automatically and the harness gives it
+trigger to the model to um contact the trigger to the model to um contact the trigger to the model to um contact the
+compact context and the harness saves compact context and the harness saves compact context and the harness saves
+the relevance of the part of the context the relevance of the part of the context the relevance of the part of the context
+so that it the harness can uh inject in so that it the harness can uh inject in so that it the harness can uh inject in
+a rub based manner to the models of the a rub based manner to the models of the a rub based manner to the models of the
+prompt prompt prompt
+to make sure it can continue to make sure it can continue to make sure it can continue
+um until certain part of the uh work is um until certain part of the uh work is um until certain part of the uh work is
+being done. Okay. So as you might have being done. Okay. So as you might have being done. Okay. So as you might have
+heard about Ralph. So basically Ralph is heard about Ralph. So basically Ralph is heard about Ralph. So basically Ralph is
+like trying to run specific execution like trying to run specific execution like trying to run specific execution
+until your task is being done. So it's until your task is being done. So it's until your task is being done. So it's
+basically like it's effectively like a basically like it's effectively like a basically like it's effectively like a
+while loop. So like harness helps the while loop. So like harness helps the while loop. So like harness helps the
+model to run in a rough mode because model to run in a rough mode because model to run in a rough mode because
+like um harness itself like um harness itself like um harness itself
+uh is uh basically um uh deterministic uh is uh basically um uh deterministic uh is uh basically um uh deterministic
+so that the deterministic logic helps so that the deterministic logic helps so that the deterministic logic helps
+the model to run in deterministic stuff. the model to run in deterministic stuff. the model to run in deterministic stuff.
+So what I want to say is that harness So what I want to say is that harness So what I want to say is that harness
+have a while loop like just simply say have a while loop like just simply say have a while loop like just simply say
+harness is a while loop like harness is a while loop like harness is a while loop like
+run a model with a 10 times and this is run a model with a 10 times and this is run a model with a 10 times and this is
+also like harness responsibility to also like harness responsibility to also like harness responsibility to
+inject the right amount of instructions inject the right amount of instructions inject the right amount of instructions
+right um context into a model as the right um context into a model as the right um context into a model as the
+rough count goes up but at least let's rough count goes up but at least let's rough count goes up but at least let's
+say okay we can run a model to for say okay we can run a model to for say okay we can run a model to for
+example only just like 10 times or um example only just like 10 times or um example only just like 10 times or um
+like till the um certain criteria has like till the um certain criteria has like till the um certain criteria has
+been passed like passing all the tests been passed like passing all the tests been passed like passing all the tests
+so that basically like harness gives a so that basically like harness gives a so that basically like harness gives a
+rough mode to the model so that you just rough mode to the model so that you just rough mode to the model so that you just
+try to use the model. Okay. try to use the model. Okay. try to use the model. Okay.
+Yeah. So that's the relationship between Yeah. So that's the relationship between Yeah. So that's the relationship between
+model and harnesses. model and harnesses. model and harnesses.
+Um so that is the last thing that's just Um so that is the last thing that's just Um so that is the last thing that's just
+surface. Okay. surface is a lot of surface. Okay. surface is a lot of surface. Okay. surface is a lot of
+things. things. things.
+So once you have um modern harness So once you have um modern harness So once you have um modern harness
+you have an agent basically okay h the you have an agent basically okay h the you have an agent basically okay h the
+remaining question is like remaining question is like remaining question is like
+how you want to use it so this is the how you want to use it so this is the how you want to use it so this is the
+product surface product surface product surface
+so if you have tried to use open claw or so if you have tried to use open claw or so if you have tried to use open claw or
+pi model pi model pi model
+um that is uh how you shape those agent um that is uh how you shape those agent um that is uh how you shape those agent
+which is product plus harness which is product plus harness which is product plus harness
+So surface like why open claw get So surface like why open claw get So surface like why open claw get
+traction in the first place traction in the first place traction in the first place
+open claw gives open claw gives open claw gives
+um for like first of all like open claw um for like first of all like open claw um for like first of all like open claw
+uh gives uh sudo permission of your uh gives uh sudo permission of your uh gives uh sudo permission of your
+computer your local computer to the computer your local computer to the computer your local computer to the
+harness and um model can excel harness and um model can excel harness and um model can excel
+at like managing your computer because at like managing your computer because at like managing your computer because
+like basically harness gives computer like basically harness gives computer like basically harness gives computer
+harness uh lets the model to use each harness uh lets the model to use each harness uh lets the model to use each
+computer computer computer
+because like harness has a pseudo because like harness has a pseudo because like harness has a pseudo
+permission permission permission
+right so that's a open claw harness it's right so that's a open claw harness it's right so that's a open claw harness it's
+very simple just like you can just very simple just like you can just very simple just like you can just
+rebuild your open claw from the scratch rebuild your open claw from the scratch rebuild your open claw from the scratch
+and there's a tons of the um repository and there's a tons of the um repository and there's a tons of the um repository
+that I I will talk about later and um that I I will talk about later and um that I I will talk about later and um
+basically um there's on other things basically um there's on other things basically um there's on other things
+like surface as as I mentioned like open like surface as as I mentioned like open like surface as as I mentioned like open
+cloud lets you to connect to discord and cloud lets you to connect to discord and cloud lets you to connect to discord and
+Slack or whatever Slack or whatever Slack or whatever
+that and then it gives a very simple way that and then it gives a very simple way that and then it gives a very simple way
+to house check uh between the messaging to house check uh between the messaging to house check uh between the messaging
+platform and open claw so that you can platform and open claw so that you can platform and open claw so that you can
+take all of the advantages take all of the advantages take all of the advantages
+to the user message platform. Yeah, to the user message platform. Yeah, to the user message platform. Yeah,
+there's some experiment there's some experiment there's some experiment
+uh with the slack with the discord uh with the slack with the discord uh with the slack with the discord
+previously but like open claw makes it previously but like open claw makes it previously but like open claw makes it
+like abstraction layer to have like abstraction layer to have like abstraction layer to have
+connections to the um the mastering connections to the um the mastering connections to the um the mastering
+platform. So like it went to very fire platform. So like it went to very fire platform. So like it went to very fire
+right but at this like this is a very right but at this like this is a very right but at this like this is a very
+simple like give us the permission to simple like give us the permission to simple like give us the permission to
+harness and then make sure that harness harness and then make sure that harness harness and then make sure that harness
+give a right amount of uh prompt and give a right amount of uh prompt and give a right amount of uh prompt and
+right uh information right uh information right uh information
+uh of the context to the specific prompt uh of the context to the specific prompt uh of the context to the specific prompt
+when you are doing something on the when you are doing something on the when you are doing something on the
+action bind the model and you give some action bind the model and you give some action bind the model and you give some
+to the um those agent. So that's a to the um those agent. So that's a to the um those agent. So that's a
+basically oper and then you can build basically oper and then you can build basically oper and then you can build
+rebuild from the scratch as well. Okay. rebuild from the scratch as well. Okay. rebuild from the scratch as well. Okay.
+So anyway like you can use cloud code in So anyway like you can use cloud code in So anyway like you can use cloud code in
+different ways like for example there is different ways like for example there is different ways like for example there is
+um uh voice mode there's a remote um uh voice mode there's a remote um uh voice mode there's a remote
+control mode in this case and it depends control mode in this case and it depends control mode in this case and it depends
+on your task. You can run those agent on your task. You can run those agent on your task. You can run those agent
+and you can give a specific comment um and you can give a specific comment um and you can give a specific comment um
+in a different way. And um if you have a in a different way. And um if you have a in a different way. And um if you have a
+chances to use ask your question skills chances to use ask your question skills chances to use ask your question skills
+given uh which means that um your uh given uh which means that um your uh given uh which means that um your uh
+takes some interview takes some interview takes some interview
+um with the agent before conducting c um with the agent before conducting c um with the agent before conducting c
+certain actions like which is very very certain actions like which is very very certain actions like which is very very
+helpful and then it is kind of helpful and then it is kind of helpful and then it is kind of
+combination to surface and harness combination to surface and harness combination to surface and harness
+right. Harness gives us like right. Harness gives us like right. Harness gives us like
+deterministic skills to run a run, ask deterministic skills to run a run, ask deterministic skills to run a run, ask
+your question skills like doing a user your question skills like doing a user your question skills like doing a user
+inter skills before conducting specific inter skills before conducting specific inter skills before conducting specific
+actions and recur like it gives a proper actions and recur like it gives a proper actions and recur like it gives a proper
+way to communicate with the user. So the way to communicate with the user. So the way to communicate with the user. So the
+ask your question skill by the cloud is ask your question skill by the cloud is ask your question skill by the cloud is
+the one of the best example to combine the one of the best example to combine the one of the best example to combine
+hardless and circus. hardless and circus. hardless and circus.
+Okay. Um so like sometimes you want to Okay. Um so like sometimes you want to Okay. Um so like sometimes you want to
+supervise multiple long running stress supervise multiple long running stress supervise multiple long running stress
+in parallel, right? So like you might in parallel, right? So like you might in parallel, right? So like you might
+have heard lots of ways trying to use have heard lots of ways trying to use have heard lots of ways trying to use
+multiple cloud sessions at once using multiple cloud sessions at once using multiple cloud sessions at once using
+like splitting the panels on the claw uh like splitting the panels on the claw uh like splitting the panels on the claw uh
+on the on the cloud code that's what I on the on the cloud code that's what I on the on the cloud code that's what I
+will try to demo in a later round way will try to demo in a later round way will try to demo in a later round way
+but um how do you manage those on but um how do you manage those on but um how do you manage those on
+multiple sessions at once like our multiple sessions at once like our multiple sessions at once like our
+cognitive limit even for uh gives limit cognitive limit even for uh gives limit cognitive limit even for uh gives limit
+the the problematic because like well the the problematic because like well the the problematic because like well
+there's a multiple session that we can there's a multiple session that we can there's a multiple session that we can
+spawn but our cognitive uh like limit spawn but our cognitive uh like limit spawn but our cognitive uh like limit
+does not like follows on on on those does not like follows on on on those does not like follows on on on those
+number of tasks that we need to want to number of tasks that we need to want to number of tasks that we need to want to
+manage at the first place. So um manage at the first place. So um manage at the first place. So um
+uh like like how do we manage the that uh like like how do we manage the that uh like like how do we manage the that
+is a problem that's the surface issue. is a problem that's the surface issue. is a problem that's the surface issue.
+Okay. Okay. And sometimes you want Okay. Okay. And sometimes you want Okay. Okay. And sometimes you want
+terminal native um composibility that's terminal native um composibility that's terminal native um composibility that's
+a surface issue and sometimes you want a surface issue and sometimes you want a surface issue and sometimes you want
+to have a lightweight entry point for to have a lightweight entry point for to have a lightweight entry point for
+remote as work as I mentioned like voice remote as work as I mentioned like voice remote as work as I mentioned like voice
+mode or remote control mode. Yeah. So mode or remote control mode. Yeah. So mode or remote control mode. Yeah. So
+the cloud could exceed across multiple the cloud could exceed across multiple the cloud could exceed across multiple
+surfaces. Yeah. because the different surfaces. Yeah. because the different surfaces. Yeah. because the different
+stage of the software development life stage of the software development life stage of the software development life
+cycle demand different interaction cycle demand different interaction cycle demand different interaction
+patterns. Okay. patterns. Okay. patterns. Okay.
+Yeah. So um basically under the hood um Yeah. So um basically under the hood um Yeah. So um basically under the hood um
+clothe code works like in agent SDK and clothe code works like in agent SDK and clothe code works like in agent SDK and
+that makes it very difficult to like that makes it very difficult to like that makes it very difficult to like
+look the very like exact how the harness look the very like exact how the harness look the very like exact how the harness
+has because the clothes code is not open has because the clothes code is not open has because the clothes code is not open
+source but at least like you can just source but at least like you can just source but at least like you can just
+assume it and you can just build your assume it and you can just build your assume it and you can just build your
+own plugins. Okay. So um let's get back to it. Um I just So um let's get back to it. Um I just
+want to talk about uh how the full want to talk about uh how the full want to talk about uh how the full
+autonomy uh uh [snorts] works in for the autonomy uh uh [snorts] works in for the autonomy uh uh [snorts] works in for the
+agent. So basically um the reason why I have So basically um the reason why I have
+spent my time to explain the mental spent my time to explain the mental spent my time to explain the mental
+model for 25 uh minutes and to explain model for 25 uh minutes and to explain model for 25 uh minutes and to explain
+those full autonomy is that those mental those full autonomy is that those mental those full autonomy is that those mental
+model is very worthwhile model is very worthwhile model is very worthwhile
+like uh there's a tons of uh folks like uh there's a tons of uh folks like uh there's a tons of uh folks
+talking about open claw nclaw cloud talking about open claw nclaw cloud talking about open claw nclaw cloud
+codeex codeex codeex
+or open claw or my open code blah blah or open claw or my open code blah blah or open claw or my open code blah blah
+blah but they are really the same. it blah but they are really the same. it blah but they are really the same. it
+just try to automate the work. Okay. So just try to automate the work. Okay. So just try to automate the work. Okay. So
+like it runs those like same stages at like it runs those like same stages at like it runs those like same stages at
+the end of the day validate the codebase the end of the day validate the codebase the end of the day validate the codebase
+state tries to reproduce something based state tries to reproduce something based state tries to reproduce something based
+on the user's prompt for example there's on the user's prompt for example there's on the user's prompt for example there's
+a bug and try to like record the failure a bug and try to like record the failure a bug and try to like record the failure
+issues like for example if you have some issues like for example if you have some issues like for example if you have some
+connections to the MSPs to play right connections to the MSPs to play right connections to the MSPs to play right
+server then you can record the failure server then you can record the failure server then you can record the failure
+video of the front end then you can just video of the front end then you can just video of the front end then you can just
+give directly those like photos or give directly those like photos or give directly those like photos or
+screenshots or whatever to the model screenshots or whatever to the model screenshots or whatever to the model
+right and implement try to want to uh right and implement try to want to uh right and implement try to want to uh
+come out with the plans implement the come out with the plans implement the come out with the plans implement the
+and validate the runtime and record the and validate the runtime and record the and validate the runtime and record the
+res resolution or capture a screenshot res resolution or capture a screenshot res resolution or capture a screenshot
+and um open the pull request and um try and um open the pull request and um try and um open the pull request and um try
+to trigger other models to give a to trigger other models to give a to trigger other models to give a
+feedback and remade it by build failures feedback and remade it by build failures feedback and remade it by build failures
+and till it goes the full autonomy. and till it goes the full autonomy. and till it goes the full autonomy.
+Okay. And it's a whole like full cycle. Okay. And it's a whole like full cycle. Okay. And it's a whole like full cycle.
+So basically um when you encounter any So basically um when you encounter any So basically um when you encounter any
+agent systems um just give it three agent systems um just give it three agent systems um just give it three
+questions. First of all, what model is questions. First of all, what model is questions. First of all, what model is
+it trying to use and how the model it trying to use and how the model it trying to use and how the model
+enters being channelled? The second one enters being channelled? The second one enters being channelled? The second one
+is like what does the harness look like? is like what does the harness look like? is like what does the harness look like?
+What tools, what session management, What tools, what session management, What tools, what session management,
+what context engineering, what enforce what context engineering, what enforce what context engineering, what enforce
+mechanisms like for example the hoops. I mechanisms like for example the hoops. I mechanisms like for example the hoops. I
+think like hook is the most important think like hook is the most important think like hook is the most important
+one in the harness because like um one in the harness because like um one in the harness because like um
+the uh the as there is some more the uh the as there is some more the uh the as there is some more
+deterministic way that we use in add deterministic way that we use in add deterministic way that we use in add
+um rule based one is very important to um rule based one is very important to um rule based one is very important to
+look at. Okay. So let me give an look at. Okay. So let me give an look at. Okay. So let me give an
+example. example. example.
+Okay. So here I just want to introduce um patch I just want to introduce um patch
+replace and hashline. What is this? replace and hashline. What is this? replace and hashline. What is this?
+What what the heck is this? So basically What what the heck is this? So basically What what the heck is this? So basically
+um those are the hooks those are the um those are the hooks those are the um those are the hooks those are the
+tools that has been used by hardness. tools that has been used by hardness. tools that has been used by hardness.
+Like if let's say your model um Like if let's say your model um Like if let's say your model um
+determines to um edit the certain part determines to um edit the certain part determines to um edit the certain part
+of the line for example of the line for example of the line for example
+then what what it's going to do is try then what what it's going to do is try then what what it's going to do is try
+to find the specific lines that has been to find the specific lines that has been to find the specific lines that has been
+suggested by the model and the harness suggested by the model and the harness suggested by the model and the harness
+is try to add it like for example the is try to add it like for example the is try to add it like for example the
+model tries to edit the 50 line and 60 model tries to edit the 50 line and 60 model tries to edit the 50 line and 60
+line and 80 line of the code Right? Then line and 80 line of the code Right? Then line and 80 line of the code Right? Then
+it just try to add it by the harness. it just try to add it by the harness. it just try to add it by the harness.
+Okay? Okay? Okay?
+Like cloud code tries to inference uh Like cloud code tries to inference uh Like cloud code tries to inference uh
+which line to add it then the um the CLI which line to add it then the um the CLI which line to add it then the um the CLI
+tool add code addit tool then it tool add code addit tool then it tool add code addit tool then it
+actually modifies it. So well that's a actually modifies it. So well that's a actually modifies it. So well that's a
+that's a patch and what is replace? that's a patch and what is replace? that's a patch and what is replace?
+Replace means like Replace means like Replace means like
+if your um model decides to replace with if your um model decides to replace with if your um model decides to replace with
+a keyword called um um like uh for a keyword called um um like uh for a keyword called um um like uh for
+example uh uh like like like function example uh uh like like like function example uh uh like like like function
+the keyword function. the keyword function. the keyword function.
+Then the harness runs the replace Then the harness runs the replace Then the harness runs the replace
+to find all of the uh lines that to find all of the uh lines that to find all of the uh lines that
+includes function. and then it tries to includes function. and then it tries to includes function. and then it tries to
+uh addit its name to something else, uh addit its name to something else, uh addit its name to something else,
+right? right? right?
+But let's say those models and those But let's say those models and those But let's say those models and those
+harnesses are trained concurrently. harnesses are trained concurrently. harnesses are trained concurrently.
+So the model has their own tools, own So the model has their own tools, own So the model has their own tools, own
+playground, own hardness that has been playground, own hardness that has been playground, own hardness that has been
+trained to work in that way. Okay. trained to work in that way. Okay. trained to work in that way. Okay.
+[snorts] But the things to note [snorts] But the things to note [snorts] But the things to note
+is that if we change the model and the is that if we change the model and the is that if we change the model and the
+harness combination, it won't work. So harness combination, it won't work. So harness combination, it won't work. So
+let's say the patch let's say the patch let's say the patch
+this is the uh the uh the hook this is this is the uh the uh the hook this is this is the uh the uh the hook this is
+the um the code to code editing stuff the um the code to code editing stuff the um the code to code editing stuff
+that has been provided by the open AI that has been provided by the open AI that has been provided by the open AI
+codeex and replace that is from the codeex and replace that is from the codeex and replace that is from the
+cloud code. Okay. cloud code. Okay. cloud code. Okay.
+So let's say the Gemini 3 which is a So let's say the Gemini 3 which is a So let's say the Gemini 3 which is a
+Google model to use patch skills. use Google model to use patch skills. use Google model to use patch skills. use
+replace uh replace hook replace uh replace hook replace uh replace hook
+but it does not work in that way right but it does not work in that way right but it does not work in that way right
+yeah so it's a patch hook replace hook yeah so it's a patch hook replace hook yeah so it's a patch hook replace hook
+right so um how can we use multimodel so right so um how can we use multimodel so right so um how can we use multimodel so
+for example if you want to extract uh for example if you want to extract uh for example if you want to extract uh
+the every different models the best the every different models the best the every different models the best
+intelligence so that you can run a like intelligence so that you can run a like intelligence so that you can run a like
+such a kind of council for each models such a kind of council for each models such a kind of council for each models
+so that um let's say your harness is so that um let's say your harness is so that um let's say your harness is
+been designed to uh uh get a code review been designed to uh uh get a code review been designed to uh uh get a code review
+from the all of the best knowledge best from the all of the best knowledge best from the all of the best knowledge best
+state of uh uh state-of-the-art models state of uh uh state-of-the-art models state of uh uh state-of-the-art models
+like Gemini 3 um cloud open 4.6 and GPT like Gemini 3 um cloud open 4.6 and GPT like Gemini 3 um cloud open 4.6 and GPT
+5.4 for Codex 5.4 for Codex 5.4 for Codex
+then you should use like um very basic then you should use like um very basic then you should use like um very basic
+hoops but works pretty well for all of hoops but works pretty well for all of hoops but works pretty well for all of
+the models right the models right the models right
+um then how can you make a use of it so um then how can you make a use of it so um then how can you make a use of it so
+that is the com that is the um one of that is the com that is the um one of that is the com that is the um one of
+the uh the consideration as a harness the uh the consideration as a harness the uh the consideration as a harness
+engineer should do and um uh when it engineer should do and um uh when it engineer should do and um uh when it
+comes for like code editing the this I comes for like code editing the this I comes for like code editing the this I
+uh this guy suggest a new way to add it. uh this guy suggest a new way to add it. uh this guy suggest a new way to add it.
+It's like hashline. What is hash line? It's like hashline. What is hash line? It's like hashline. What is hash line?
+It's very simple idea. Just before It's very simple idea. Just before It's very simple idea. Just before
+executing executing executing
+um certain uh lines action, um certain uh lines action, um certain uh lines action,
+you need to verify whether those lines you need to verify whether those lines you need to verify whether those lines
+are being changed or not. There is an are being changed or not. There is an are being changed or not. There is an
+hash line. There's a hashed identifier hash line. There's a hashed identifier hash line. There's a hashed identifier
+for each line. and before models to for each line. and before models to for each line. and before models to
+conduct each inference you can uh leave conduct each inference you can uh leave conduct each inference you can uh leave
+your own hash identifier uh uh each your own hash identifier uh uh each your own hash identifier uh uh each
+line. So that's a basic uh procedure line. So that's a basic uh procedure line. So that's a basic uh procedure
+that's a rulebased procedure like before that's a rulebased procedure like before that's a rulebased procedure like before
+running on additive model. running on additive model. running on additive model.
+Um you can just like Um you can just like Um you can just like
+uh get each like hashed identifier from uh get each like hashed identifier from uh get each like hashed identifier from
+each line and after the inference of the each line and after the inference of the each line and after the inference of the
+model before just ask simply executing model before just ask simply executing model before just ask simply executing
+those actions you can just compare those actions you can just compare those actions you can just compare
+whether those lines are being changed by whether those lines are being changed by whether those lines are being changed by
+other sessions by llinters or whatever other sessions by llinters or whatever other sessions by llinters or whatever
+by humans uh humans then you can just by humans uh humans then you can just by humans uh humans then you can just
+simply verify it and um if those hash simply verify it and um if those hash simply verify it and um if those hash
+hashed identifier of specific lines are hashed identifier of specific lines are hashed identifier of specific lines are
+being um changed or not um matched at being um changed or not um matched at being um changed or not um matched at
+the first place then you can re run the the first place then you can re run the the first place then you can re run the
+model to conduct a certain action right model to conduct a certain action right model to conduct a certain action right
+no like trying to suggest a new ways of no like trying to suggest a new ways of no like trying to suggest a new ways of
+doing that doing that doing that
+so as you can see on the format so as you can see on the format so as you can see on the format
+benchmark benchmark benchmark
+um hashon is very neutral um hashon is very neutral um hashon is very neutral
+hook to edit the code and um it pretty hook to edit the code and um it pretty hook to edit the code and um it pretty
+runs every single model very well like runs every single model very well like runs every single model very well like
+let's look at just like uh JM 4.7 which let's look at just like uh JM 4.7 which let's look at just like uh JM 4.7 which
+is Chinese open source model then you is Chinese open source model then you is Chinese open source model then you
+can look at the um it improves by 23% can look at the um it improves by 23% can look at the um it improves by 23%
+point for the success point for the success point for the success
+uh ratio of editing the right uh part of uh ratio of editing the right uh part of uh ratio of editing the right uh part of
+the code right and then you can look at the code right and then you can look at the code right and then you can look at
+the every single model has the similar the every single model has the similar the every single model has the similar
+uh tendencies uh tendencies uh tendencies
+to do it. to do it. to do it.
+Okay. So that is the one of the uh raw example So that is the one of the uh raw example
+to uh give a like light why we need to to uh give a like light why we need to to uh give a like light why we need to
+look at the combination of model and look at the combination of model and look at the combination of model and
+hardness. Okay. hardness. Okay. hardness. Okay.
+So the perspective of like um learning So the perspective of like um learning So the perspective of like um learning
+how those model and harness has it like how those model and harness has it like how those model and harness has it like
+uh the best fit on the combination I uh the best fit on the combination I uh the best fit on the combination I
+just recommend you to look at some open just recommend you to look at some open just recommend you to look at some open
+source as I told earlier. So I'm just source as I told earlier. So I'm just source as I told earlier. So I'm just
+trying to look at every single like best trying to look at every single like best trying to look at every single like best
+of the open source these days because of the open source these days because of the open source these days because
+they have tried to experiment on the they have tried to experiment on the they have tried to experiment on the
+multiple models and the multiple harness multiple models and the multiple harness multiple models and the multiple harness
+at the same time. So I want to examine at the same time. So I want to examine at the same time. So I want to examine
+uh examine briefly is like time. Okay. uh examine briefly is like time. Okay. uh examine briefly is like time. Okay.
+So when it goes for pi model uh I chose So when it goes for pi model uh I chose So when it goes for pi model uh I chose
+to start here because like it is a clear to start here because like it is a clear to start here because like it is a clear
+example of the model plus pro harness example of the model plus pro harness example of the model plus pro harness
+pro surface architecture implemented as pro surface architecture implemented as pro surface architecture implemented as
+a working working one. It's a working a working working one. It's a working a working working one. It's a working
+model repo. model repo. model repo.
+So it's not a kind of SDK but it's like So it's not a kind of SDK but it's like So it's not a kind of SDK but it's like
+harnessry model. Okay. So it accepts harnessry model. Okay. So it accepts harnessry model. Okay. So it accepts
+multiple external enms normalize them multiple external enms normalize them multiple external enms normalize them
+into a common agent montise and projects into a common agent montise and projects into a common agent montise and projects
+to runtime across terminal web slack to runtime across terminal web slack to runtime across terminal web slack
+infrastructure services. infrastructure services. infrastructure services.
+So those uh philosophy is applied to So those uh philosophy is applied to So those uh philosophy is applied to
+every single other coding as uh AI agent every single other coding as uh AI agent every single other coding as uh AI agent
+like cloud codeex like cloud codeex like cloud codeex
+and whatever it takes and um I think and whatever it takes and um I think and whatever it takes and um I think
+it's very important to understand the it's very important to understand the it's very important to understand the
+hardness engineering these days because hardness engineering these days because hardness engineering these days because
+you can adjust your own hardness or you you can adjust your own hardness or you you can adjust your own hardness or you
+can just add up the new hardness on top can just add up the new hardness on top can just add up the new hardness on top
+of the cloud code for example um unless of the cloud code for example um unless of the cloud code for example um unless
+uh uh uh
+unless you need to want to have those unless you need to want to have those unless you need to want to have those
+like writing uh a police that agent from like writing uh a police that agent from like writing uh a police that agent from
+scratch but is most like important thing scratch but is most like important thing scratch but is most like important thing
+it I think it's very important to it I think it's very important to it I think it's very important to
+understand how it works so that you can understand how it works so that you can understand how it works so that you can
+just adjust its hardness to your needs. just adjust its hardness to your needs. just adjust its hardness to your needs.
+Okay. Okay. Okay.
+Okay. So um high level structure of this Okay. So um high level structure of this Okay. So um high level structure of this
+pyome is looks very uh simple. Let's go pyome is looks very uh simple. Let's go pyome is looks very uh simple. Let's go
+to packages. There's some AI, there's to packages. There's some AI, there's to packages. There's some AI, there's
+agent, there's a coding agent and when agent, there's a coding agent and when agent, there's a coding agent and when
+you look at a coding agent, uh there's you look at a coding agent, uh there's you look at a coding agent, uh there's
+some uh some CLI core models and TIS. some uh some CLI core models and TIS. some uh some CLI core models and TIS.
+Okay. So I think the most important Okay. So I think the most important Okay. So I think the most important
+thing is like one of one of the most thing is like one of one of the most thing is like one of one of the most
+important thing is like AI. important thing is like AI. important thing is like AI.
+So let's just start the button. AI is So let's just start the button. AI is So let's just start the button. AI is
+where the the pi minum is the external where the the pi minum is the external where the the pi minum is the external
+model word. So the design center of this model word. So the design center of this model word. So the design center of this
+package is not a provide name things but package is not a provide name things but package is not a provide name things but
+it's like API contract. Okay. So what it's like API contract. Okay. So what it's like API contract. Okay. So what
+the mer is not like is this like the mer is not like is this like the mer is not like is this like
+antrophic antrophic antrophic
+uh haiku entropic outputs or openi uh haiku entropic outputs or openi uh haiku entropic outputs or openi
+codeex but what API surface does this codeex but what API surface does this codeex but what API surface does this
+model follow and how do I normalize it model follow and how do I normalize it model follow and how do I normalize it
+output into a format the rest of the output into a format the rest of the output into a format the rest of the
+system can consume. Okay. system can consume. Okay. system can consume. Okay.
+Um Um Um
+so the core of this normalization is so the core of this normalization is so the core of this normalization is
+captured in a remarkably concise captured in a remarkably concise captured in a remarkably concise
+function in stream uh stream.typescript. function in stream uh stream.typescript. function in stream uh stream.typescript.
+So this looks very simple uh but it So this looks very simple uh but it So this looks very simple uh but it
+includes entire philosophy. I believe includes entire philosophy. I believe includes entire philosophy. I believe
+the model object carries a model that the model object carries a model that the model object carries a model that
+API field a registry map the API API field a registry map the API API field a registry map the API
+identifier to a correct provider adapter identifier to a correct provider adapter identifier to a correct provider adapter
+and return type itself is not a string and return type itself is not a string and return type itself is not a string
+completion object but it's like message completion object but it's like message completion object but it's like message
+event string right event string right event string right
+so um so that's a model type so that's a so um so that's a model type so that's a so um so that's a model type so that's a
+model layer as I told you earlier and model layer as I told you earlier and model layer as I told you earlier and
+there is some um there's um agent one there is some um there's um agent one there is some um there's um agent one
+which is the execution route Okay, so which is the execution route Okay, so which is the execution route Okay, so
+moving up the stack. Okay, moving up the stack. Okay, moving up the stack. Okay,
+this packaging is where the normalized this packaging is where the normalized this packaging is where the normalized
+model output because actual execution. model output because actual execution. model output because actual execution.
+So this is generate agent loop like core So this is generate agent loop like core So this is generate agent loop like core
+feedback cycle that turns the model feedback cycle that turns the model feedback cycle that turns the model
+suggestion into a real world action. suggestion into a real world action. suggestion into a real world action.
+Okay. So um Okay. So um Okay. So um
+when you look the file header of this uh when you look the file header of this uh when you look the file header of this uh
+it states a very like design philosophy it states a very like design philosophy it states a very like design philosophy
+except so this is a crucial architecture except so this is a crucial architecture except so this is a crucial architecture
+decision I believe. So the internal decision I believe. So the internal decision I believe. So the internal
+representation is agent model like representation is agent model like representation is agent model like
+that's a native type that is optimized that's a native type that is optimized that's a native type that is optimized
+for session storage UI rendering for session storage UI rendering for session storage UI rendering
+steering retries and the followup logic. steering retries and the followup logic. steering retries and the followup logic.
+Okay. So the conversion of those Okay. So the conversion of those Okay. So the conversion of those
+provider specific muscles format happens provider specific muscles format happens provider specific muscles format happens
+only at the very last moment. So right only at the very last moment. So right only at the very last moment. So right
+before the actual API call. So this before the actual API call. So this before the actual API call. So this
+means the entire runtime operates in its means the entire runtime operates in its means the entire runtime operates in its
+own languages. So insulated from the own languages. So insulated from the own languages. So insulated from the
+various of the different provider APIs. various of the different provider APIs. various of the different provider APIs.
+Okay. Okay. Okay.
+So um So um So um
+so the basically like agent um receives so the basically like agent um receives so the basically like agent um receives
+a response uh response from the model a response uh response from the model a response uh response from the model
+and it inspect the response uh for two and it inspect the response uh for two and it inspect the response uh for two
+calls and if the two call exist it calls and if the two call exist it calls and if the two call exist it
+executes them collect results and feed executes them collect results and feed executes them collect results and feed
+those results back into the context for those results back into the context for those results back into the context for
+the next iteration. So those continues the next iteration. So those continues the next iteration. So those continues
+until the model produces a response for until the model produces a response for until the model produces a response for
+with a no further tool cause or some with a no further tool cause or some with a no further tool cause or some
+until some termination termination until some termination termination until some termination termination
+condition is met. For example, we do run condition is met. For example, we do run condition is met. For example, we do run
+rough mode for 10 only 20 times. Okay. rough mode for 10 only 20 times. Okay. rough mode for 10 only 20 times. Okay.
+So like this this loop does not just So like this this loop does not just So like this this loop does not just
+like blindly ask you to call it just try like blindly ask you to call it just try like blindly ask you to call it just try
+to validate the arug perform repair when to validate the arug perform repair when to validate the arug perform repair when
+there is a malfform. Okay. Um and also there is a malfform. Okay. Um and also there is a malfform. Okay. Um and also
+like it handles the continuation problem like it handles the continuation problem like it handles the continuation problem
+like when a model hits its output and like when a model hits its output and like when a model hits its output and
+token limit mid response like the agent token limit mid response like the agent token limit mid response like the agent
+loop detects to this and issues a loop detects to this and issues a loop detects to this and issues a
+continue prompt to resume the continue prompt to resume the continue prompt to resume the
+generation. So this is like one of the generation. So this is like one of the generation. So this is like one of the
+uh small details but it's essential for uh small details but it's essential for uh small details but it's essential for
+long running task and where a single a long running task and where a single a long running task and where a single a
+term might involve extensive reasoning term might involve extensive reasoning term might involve extensive reasoning
+and multiple tool calls. So you can see and multiple tool calls. So you can see and multiple tool calls. So you can see
+like those are harness and those harness like those are harness and those harness like those are harness and those harness
+are deterministic logic. Okay. So this are deterministic logic. Okay. So this are deterministic logic. Okay. So this
+is not a simple response wrapper like is not a simple response wrapper like is not a simple response wrapper like
+it's like resilience execution control it's like resilience execution control it's like resilience execution control
+that manages the full life cycle of a that manages the full life cycle of a that manages the full life cycle of a
+agent turn like fail modes that only agent turn like fail modes that only agent turn like fail modes that only
+emerges in the productions. Okay. emerges in the productions. Okay. emerges in the productions. Okay.
+So um let's go to coding agent. So um let's go to coding agent. So um let's go to coding agent.
+What is coding agent? What is coding agent? What is coding agent?
+This is a composition route. Okay. This is a composition route. Okay. This is a composition route. Okay.
+So um this is where everything comes So um this is where everything comes So um this is where everything comes
+together. So uh AI is a model layer together. So uh AI is a model layer together. So uh AI is a model layer
+agent is execution loop then it then the agent is execution loop then it then the agent is execution loop then it then the
+coding agent itself like full product coding agent itself like full product coding agent itself like full product
+harnesses. So the composition loop that harnesses. So the composition loop that harnesses. So the composition loop that
+assembles an actual usable systems. assembles an actual usable systems. assembles an actual usable systems.
+Okay. So uh basically you can just look Okay. So uh basically you can just look Okay. So uh basically you can just look
+at the um src main typescript um that re at the um src main typescript um that re at the um src main typescript um that re
+builds the two-stage CLI parsing like builds the two-stage CLI parsing like builds the two-stage CLI parsing like
+what I say two stage is uh yeah here it's like yeah here it's like
+the system like first process arguments the system like first process arguments the system like first process arguments
+to discover which extension should be to discover which extension should be to discover which extension should be
+loaded and it then loads those like loaded and it then loads those like loaded and it then loads those like
+extensions like which can register new extensions like which can register new extensions like which can register new
+providers, new CLI flags, new comments providers, new CLI flags, new comments providers, new CLI flags, new comments
+or new tools. Okay, then it purches the or new tools. Okay, then it purches the or new tools. Okay, then it purches the
+arguments again and this time understand arguments again and this time understand arguments again and this time understand
+the flags that extend uh extension the flags that extend uh extension the flags that extend uh extension
+added. Okay, so like CL like just a added. Okay, so like CL like just a added. Okay, so like CL like just a
+fixed set of the switch like it's a fixed set of the switch like it's a fixed set of the switch like it's a
+runtime configurable interface as I as I runtime configurable interface as I as I runtime configurable interface as I as I
+per say. So the capabilities of like per say. So the capabilities of like per say. So the capabilities of like
+agent system like change depending on agent system like change depending on agent system like change depending on
+the what extension are installed and um the what extension are installed and um the what extension are installed and um
+like this is like a pi model feels more like this is like a pi model feels more like this is like a pi model feels more
+like a platform than a tool like like a platform than a tool like like a platform than a tool like
+extension does not just like add new extension does not just like add new extension does not just like add new
+prompts they add capabilities to the prompts they add capabilities to the prompts they add capabilities to the
+runtime itself. runtime itself. runtime itself.
+Okay Okay Okay
+so that is the extension harness at so that is the extension harness at so that is the extension harness at
+work. So and it's the reason this work. So and it's the reason this work. So and it's the reason this
+two-stage port exist and the system two-stage port exist and the system two-stage port exist and the system
+literally cannot know its own literally cannot know its own literally cannot know its own
+capabilities until after extension have capabilities until after extension have capabilities until after extension have
+loaded. Okay. And um there is some agent loaded. Okay. And um there is some agent loaded. Okay. And um there is some agent
+sessions. So let's go to the core agent sessions. So let's go to the core agent sessions. So let's go to the core agent
+sessions. Um it is arguably the most sessions. Um it is arguably the most sessions. Um it is arguably the most
+important single class in the entire important single class in the entire important single class in the entire
+moon ripple. So like it handles like moon ripple. So like it handles like moon ripple. So like it handles like
+agent state access event subscriptions agent state access event subscriptions agent state access event subscriptions
+and compaction the B bash execution and and compaction the B bash execution and and compaction the B bash execution and
+the who call in for example. So like the who call in for example. So like the who call in for example. So like
+when a user types a prompt it does not when a user types a prompt it does not when a user types a prompt it does not
+go straight to the model right it passes go straight to the model right it passes go straight to the model right it passes
+through the agent session which through the agent session which through the agent session which
+evaluates like first of all this is evaluates like first of all this is evaluates like first of all this is
+slash command it is a skill block does slash command it is a skill block does slash command it is a skill block does
+it need to template extension is this it need to template extension is this it need to template extension is this
+the current model ready or has the the current model ready or has the the current model ready or has the
+context uh grown too large does auto context uh grown too large does auto context uh grown too large does auto
+compaction need to trigger should that compaction need to trigger should that compaction need to trigger should that
+extension hook intercede so it's not extension hook intercede so it's not extension hook intercede so it's not
+just a prompt for like it's a session just a prompt for like it's a session just a prompt for like it's a session
+level execution hub so that the the level execution hub so that the the level execution hub so that the the
+thing that maintains the state enforce thing that maintains the state enforce thing that maintains the state enforce
+policies and coordates the flow of the policies and coordates the flow of the policies and coordates the flow of the
+information between the user, the model information between the user, the model information between the user, the model
+and the tool set. Okay. and the tool set. Okay. and the tool set. Okay.
+So um you can just look at those ones So um you can just look at those ones So um you can just look at those ones
+like pi mono so that you have some like pi mono so that you have some like pi mono so that you have some
+understanding how those harness being understanding how those harness being understanding how those harness being
+worked with the model. So like you can worked with the model. So like you can worked with the model. So like you can
+just add it uh your some specific codes just add it uh your some specific codes just add it uh your some specific codes
+to m match to your own harness. So I to m match to your own harness. So I to m match to your own harness. So I
+think it's very okay and um last but not think it's very okay and um last but not think it's very okay and um last but not
+least there is a web UI here. So uh least there is a web UI here. So uh least there is a web UI here. So uh
+basically it gives a surfaces like Qi basically it gives a surfaces like Qi basically it gives a surfaces like Qi
+web lang pause okay so like it web lang pause okay so like it web lang pause okay so like it
+implements like retained model UI implements like retained model UI implements like retained model UI
+runtime like if you look at the clothes runtime like if you look at the clothes runtime like if you look at the clothes
+code like it's basically written a ti so code like it's basically written a ti so code like it's basically written a ti so
+like it gives the surface how you been like it gives the surface how you been like it gives the surface how you been
+conducted so let's say if you want to conducted so let's say if you want to conducted so let's say if you want to
+add new boys mode for your clothes code add new boys mode for your clothes code add new boys mode for your clothes code
+example then you can just work with the example then you can just work with the example then you can just work with the
+uh surface layer which is a pi web UI in uh surface layer which is a pi web UI in uh surface layer which is a pi web UI in
+this case Okay. Okay. So, um let's do some demo in Okay. Okay. So, um let's do some demo in
+this in this test. this in this test. this in this test.
+&gt;&gt; Go first. &gt;&gt; Go first. &gt;&gt; Go first.
+&gt;&gt; Okay. So, the first demo is my cloud &gt;&gt; Okay. So, the first demo is my cloud &gt;&gt; Okay. So, the first demo is my cloud
+code. So, my friend built uh this. So, code. So, my friend built uh this. So, code. So, my friend built uh this. So,
+like it's a kind of system architecture like it's a kind of system architecture like it's a kind of system architecture
+that extends a cloud code into a multi- that extends a cloud code into a multi- that extends a cloud code into a multi-
+aent execution platform. Right. So the aent execution platform. Right. So the aent execution platform. Right. So the
+OMC's chance is to want to make sure OMC's chance is to want to make sure OMC's chance is to want to make sure
+that cloud code to run its own T-Mox that cloud code to run its own T-Mox that cloud code to run its own T-Mox
+panel is run its own multi mult multiple panel is run its own multi mult multiple panel is run its own multi mult multiple
+terminal panels so that it can use it terminal panels so that it can use it terminal panels so that it can use it
+can uh run a different team mode or can uh run a different team mode or can uh run a different team mode or
+different models at the same time. Okay. different models at the same time. Okay. different models at the same time. Okay.
+So basically um let's just jump into the So basically um let's just jump into the So basically um let's just jump into the
+um my cloud code. Okay. um my cloud code. Okay. um my cloud code. Okay.
+Oops. So here it is. Um let's go for um So here it is. Um let's go for um
+okay I have already installed on my clo okay I have already installed on my clo okay I have already installed on my clo
+code. code. code.
+&gt;&gt; Yeah. &gt;&gt; Yeah. &gt;&gt; Yeah.
+&gt;&gt; Yeah code. So I try to use it. Okay. So &gt;&gt; Yeah code. So I try to use it. Okay. So &gt;&gt; Yeah code. So I try to use it. Okay. So
+there's some comments run by OMC. So there's some comments run by OMC. So there's some comments run by OMC. So
+let's spawn three teams. um find any let's spawn three teams. um find any let's spawn three teams. um find any
+security. Then what it's just going to do is to um Then what it's just going to do is to um
+is to make sure that it runs on multiple is to make sure that it runs on multiple is to make sure that it runs on multiple
+personas personas personas
+um multiple uh models at once like um multiple uh models at once like um multiple uh models at once like
+Gemini, Codex, clothes. Yeah. So that Gemini, Codex, clothes. Yeah. So that Gemini, Codex, clothes. Yeah. So that
+basically it runs the um multiple panels basically it runs the um multiple panels basically it runs the um multiple panels
+behind of it. So basically like you can just look at So basically like you can just look at
+it creates a team of three agent to it creates a team of three agent to it creates a team of three agent to
+audit the code base for security issues audit the code base for security issues audit the code base for security issues
+right. So um it runs terminal behind it. right. So um it runs terminal behind it. right. So um it runs terminal behind it.
+It tries to respond multiple code um It tries to respond multiple code um It tries to respond multiple code um
+multiple code what close sessions so multiple code what close sessions so multiple code what close sessions so
+that um like there is orchestrator and that um like there is orchestrator and that um like there is orchestrator and
+the orchestrator manages the multiple um the orchestrator manages the multiple um the orchestrator manages the multiple um
+sessions multiple timox uh uh t-mox sessions multiple timox uh uh t-mox sessions multiple timox uh uh t-mox
+panels so that it orchestrator gives a panels so that it orchestrator gives a panels so that it orchestrator gives a
+clear comment to the agent clear comment to the agent clear comment to the agent
+so you can look at the multiple uh so you can look at the multiple uh so you can look at the multiple uh
+panels being assigned point and those panels being assigned point and those panels being assigned point and those
+orchestrator and those agents are being orchestrator and those agents are being orchestrator and those agents are being
+communicated in the impulse pattern. I communicated in the impulse pattern. I communicated in the impulse pattern. I
+think the impulse pattern is also being think the impulse pattern is also being think the impulse pattern is also being
+used by clical swarm mode which has been used by clical swarm mode which has been used by clical swarm mode which has been
+released um two weeks ago. released um two weeks ago. released um two weeks ago.
+So basically it's like this um So basically it's like this um So basically it's like this um
+orchestrator [clears throat] orchestrator [clears throat] orchestrator [clears throat]
+gives a clear commands to the agent gives a clear commands to the agent gives a clear commands to the agent
+um and then those agent those agents are um and then those agent those agents are um and then those agent those agents are
+being communicated with the markdown being communicated with the markdown being communicated with the markdown
+file and now there's instructions in the file and now there's instructions in the file and now there's instructions in the
+markdown file and the each 5 seconds markdown file and the each 5 seconds markdown file and the each 5 seconds
+every 5 seconds like agent reads these every 5 seconds like agent reads these every 5 seconds like agent reads these
+instruction box inbox there's an inbox instruction box inbox there's an inbox instruction box inbox there's an inbox
+there's a folder there's a directory uh there's a folder there's a directory uh there's a folder there's a directory uh
+each agent reads the um instruction each agent reads the um instruction each agent reads the um instruction
+messages and if there's a new messages messages and if there's a new messages messages and if there's a new messages
+then it tries to run it or if there's a then it tries to run it or if there's a then it tries to run it or if there's a
+multiple messages that that there is a multiple messages that that there is a multiple messages that that there is a
+queue trying to uh getting it been queue trying to uh getting it been queue trying to uh getting it been
+managed. Okay. So um what OMC does is to managed. Okay. So um what OMC does is to managed. Okay. So um what OMC does is to
+want to to build on top of like swarm want to to build on top of like swarm want to to build on top of like swarm
+mode. So like you just try to like spawn mode. So like you just try to like spawn mode. So like you just try to like spawn
+multiple teos panels and then make sure multiple teos panels and then make sure multiple teos panels and then make sure
+that uh it uh do each agent maintains it that uh it uh do each agent maintains it that uh it uh do each agent maintains it
+clear context so that it can um reduce clear context so that it can um reduce clear context so that it can um reduce
+the inference time because improve the the inference time because improve the the inference time because improve the
+accuracy at the first place. Okay. So accuracy at the first place. Okay. So accuracy at the first place. Okay. So
+[snorts] there's security audit task [snorts] there's security audit task [snorts] there's security audit task
+audit request security audit task as audit request security audit task as audit request security audit task as
+well and um each agent are being well and um each agent are being well and um each agent are being
+assigned with a different task and um assigned with a different task and um assigned with a different task and um
+each agent has uh can have each each agent has uh can have each each agent has uh can have each
+different order. So for example there's different order. So for example there's different order. So for example there's
+agent A there's agent B there's agent C agent A there's agent B there's agent C agent A there's agent B there's agent C
+then agent A has a dependencies to agent then agent A has a dependencies to agent then agent A has a dependencies to agent
+B and agent B can have a dependence to B and agent B can have a dependence to B and agent B can have a dependence to
+agent C and how those be managed is like agent C and how those be managed is like agent C and how those be managed is like
+being determined by the orchestrator and being determined by the orchestrator and being determined by the orchestrator and
+you can have a set of the workflows of you can have a set of the workflows of you can have a set of the workflows of
+it and um uh orchestrator can call it and um uh orchestrator can call it and um uh orchestrator can call
+relevant predetermined workflow uh relevant predetermined workflow uh relevant predetermined workflow uh
+seamlessly. seamlessly. seamlessly.
+So that's how all my code works behind So that's how all my code works behind So that's how all my code works behind
+it. Um yeah, I'm just running out of it. Um yeah, I'm just running out of it. Um yeah, I'm just running out of
+time. So this is one of the demo that I time. So this is one of the demo that I time. So this is one of the demo that I
+just try to look at it and um yeah just try to look at it and um yeah just try to look at it and um yeah
+basically like this is this plugins is basically like this is this plugins is basically like this is this plugins is
+uh run on top of the your cloud code uh run on top of the your cloud code uh run on top of the your cloud code
+plans. So uh I just recommend you to uh plans. So uh I just recommend you to uh plans. So uh I just recommend you to uh
+give a test give a demo for yourself. give a test give a demo for yourself. give a test give a demo for yourself.
+Okay. Yeah, this is how it works. Okay. So Yeah, this is how it works. Okay. So
+yeah, that's the how it works in the yeah, that's the how it works in the yeah, that's the how it works in the
+first place. first place. first place.
+Um this is uh the another example that I Um this is uh the another example that I Um this is uh the another example that I
+want to show briefly about the zoom demo want to show briefly about the zoom demo want to show briefly about the zoom demo
+is our aura brows. So the conceptually is our aura brows. So the conceptually is our aura brows. So the conceptually
+the most ambitious of the five uh the the most ambitious of the five uh the the most ambitious of the five uh the
+systems I analyze is like um this or is systems I analyze is like um this or is systems I analyze is like um this or is
+a specification first agent a specification first agent a specification first agent
+orchestration platform like uh it orchestration platform like uh it orchestration platform like uh it
+refuses to to let agents to start refuses to to let agents to start refuses to to let agents to start
+working until the problem is properly working until the problem is properly working until the problem is properly
+defined. Okay, it does try to constrain defined. Okay, it does try to constrain defined. Okay, it does try to constrain
+all executions against the definition all executions against the definition all executions against the definition
+and continuously evaluates whether the and continuously evaluates whether the and continuously evaluates whether the
+agent is being drifting from the agent is being drifting from the agent is being drifting from the
+specification. So like uh it introduce specification. So like uh it introduce specification. So like uh it introduce
+the users to structured and ambiguous the users to structured and ambiguous the users to structured and ambiguous
+requirements and locks them into an requirements and locks them into an requirements and locks them into an
+immutable specification and or the agent immutable specification and or the agent immutable specification and or the agent
+execution on against that specification execution on against that specification execution on against that specification
+and evaluates results through a and evaluates results through a and evaluates results through a
+multi-ter pipeline and evolves multi-ter pipeline and evolves multi-ter pipeline and evolves
+specification through generation specification through generation specification through generation
+refinement. refinement. refinement.
+So like um let's do some quick demo. So like um let's do some quick demo. So like um let's do some quick demo.
+Okay. So the most important thing here Okay. So the most important thing here Okay. So the most important thing here
+is like the harness itself. It gives the is like the harness itself. It gives the is like the harness itself. It gives the
+progress of the harness is try to add progress of the harness is try to add progress of the harness is try to add
+the um the the abstraction layer that I the um the the abstraction layer that I the um the the abstraction layer that I
+ask the users do to conduct the ask the users do to conduct the ask the users do to conduct the
+interview till every single uh points interview till every single uh points interview till every single uh points
+are not are not ambiguous and then exe are not are not ambiguous and then exe are not are not ambiguous and then exe
+executes those plan. Okay. So it's like executes those plan. Okay. So it's like executes those plan. Okay. So it's like
+a advanced plan mode I would say and a advanced plan mode I would say and a advanced plan mode I would say and
+then you can create your own plan mode. then you can create your own plan mode. then you can create your own plan mode.
+You can create your own ask your You can create your own ask your You can create your own ask your
+questions or custom to your prompt. questions or custom to your prompt. questions or custom to your prompt.
+Okay. So um let's go to uh that part. So Okay. So um let's go to uh that part. So Okay. So um let's go to uh that part. So
+I just like add like O. So there's a I just like add like O. So there's a I just like add like O. So there's a
+soic interview. Okay. So when the user soic interview. Okay. So when the user soic interview. Okay. So when the user
+starts our brows like they don't get a starts our brows like they don't get a starts our brows like they don't get a
+prompt, they get an interview. The prompt, they get an interview. The prompt, they get an interview. The
+system um asks the questions to surface system um asks the questions to surface system um asks the questions to surface
+hidden assumptions. It quantifies hidden assumptions. It quantifies hidden assumptions. It quantifies
+ambiguity latering how unclear ambiguity latering how unclear ambiguity latering how unclear
+requirements are. like this requirements are. like this requirements are. like this
+deterministic law and it does not deterministic law and it does not deterministic law and it does not
+proceed to execution until the ambiguity proceed to execution until the ambiguity proceed to execution until the ambiguity
+score drops below it threshold. So um So um
+uh let's say web browser uh let's say web browser uh let's say web browser
+um so I just ask about Pac-Man game um so I just ask about Pac-Man game um so I just ask about Pac-Man game
+user Facebook uh working production just okay uh working production just okay
+so based on that uh it gives a so based on that uh it gives a so based on that uh it gives a
+constitutional um sector which called constitutional um sector which called constitutional um sector which called
+seat out of or every other components in seat out of or every other components in seat out of or every other components in
+the system refers back to it. Okay. So the system refers back to it. Okay. So the system refers back to it. Okay. So
+um basically there is some orchestrator um basically there is some orchestrator um basically there is some orchestrator
+in the runtime center of our brass and in the runtime center of our brass and in the runtime center of our brass and
+it takes a seed and transform into it takes a seed and transform into it takes a seed and transform into
+execute work and um you can look at the execute work and um you can look at the execute work and um you can look at the
+um the amount of the ambiguity disc. So um the amount of the ambiguity disc. So um the amount of the ambiguity disc. So
+um um um
+basically um if those uh uh uh the the basically um if those uh uh uh the the basically um if those uh uh uh the the
+the the ambiguity score has been low the the ambiguity score has been low the the ambiguity score has been low
+lowered uh with a specific criteria lowered uh with a specific criteria lowered uh with a specific criteria
+score then it says that it is um like score then it says that it is um like score then it says that it is um like
+okay to execute the plan right so that's okay to execute the plan right so that's okay to execute the plan right so that's
+an honest assessment of maturity of your an honest assessment of maturity of your an honest assessment of maturity of your
+plan. So like plan. So like plan. So like
+basically it tries to make sure that you basically it tries to make sure that you basically it tries to make sure that you
+write the uh like correct requirements write the uh like correct requirements write the uh like correct requirements
+you have correct um communication with you have correct um communication with you have correct um communication with
+your agent so that it improves the uh your agent so that it improves the uh your agent so that it improves the uh
+chance of getting things done. Okay. So chance of getting things done. Okay. So chance of getting things done. Okay. So
+you can think like this is like the best you can think like this is like the best you can think like this is like the best
+user ask mode. Okay. Last but not least, I just want to and u Last but not least, I just want to and u
+wrap up this today's presentation uh to wrap up this today's presentation uh to wrap up this today's presentation uh to
+introduce open gateway. So like open introduce open gateway. So like open introduce open gateway. So like open
+gateway is like uh my my startup AI gateway is like uh my my startup AI gateway is like uh my my startup AI
+tries to uh push like um multimodel tries to uh push like um multimodel tries to uh push like um multimodel
+provider. You can think of this like provider. You can think of this like provider. You can think of this like
+open lower right. So the most important open lower right. So the most important open lower right. So the most important
+thing here is that uh it is very well thing here is that uh it is very well thing here is that uh it is very well
+suited into the multi-h harness suited into the multi-h harness suited into the multi-h harness
+engineering. So then you can just engineering. So then you can just engineering. So then you can just
+clearly look at what kinds of models clearly look at what kinds of models clearly look at what kinds of models
+being supported and what kinds of being supported and what kinds of being supported and what kinds of
+harness being traced and um it's pretty harness being traced and um it's pretty harness being traced and um it's pretty
+resilience on the failure of the mo resilience on the failure of the mo resilience on the failure of the mo
+multi-providers and then you can just multi-providers and then you can just multi-providers and then you can just
+clearly look at what happens under the clearly look at what happens under the clearly look at what happens under the
+hood. So um yeah we are trying to uh hood. So um yeah we are trying to uh hood. So um yeah we are trying to uh
+launch this uh product because we have launch this uh product because we have launch this uh product because we have
+the lot of experience on uh adapt the lot of experience on uh adapt the lot of experience on uh adapt
+adjusting specific uh harness behaviors adjusting specific uh harness behaviors adjusting specific uh harness behaviors
+into models. So that I think like open into models. So that I think like open into models. So that I think like open
+gateway provided by psionic AI is well gateway provided by psionic AI is well gateway provided by psionic AI is well
+suited into your um product development. suited into your um product development. suited into your um product development.
+So uh we are trying to um do some like So uh we are trying to um do some like So uh we are trying to um do some like
+uh events for those are meta uh events for those are meta uh events for those are meta
+participant. So I uh I just want to give participant. So I uh I just want to give participant. So I uh I just want to give
+up 20 uh bucks uh uh credit gift to the up 20 uh bucks uh uh credit gift to the up 20 uh bucks uh uh credit gift to the
+participants of this today's meetup. So participants of this today's meetup. So participants of this today's meetup. So
+like please sign up here and then after like please sign up here and then after like please sign up here and then after
+that just give me like email address so that just give me like email address so that just give me like email address so
+that it would be uh nice to kind of get that it would be uh nice to kind of get that it would be uh nice to kind of get
+some of the craft for you. Okay. I will some of the craft for you. Okay. I will some of the craft for you. Okay. I will
+post the domains for you the um open post the domains for you the um open post the domains for you the um open
+gateway sign. I im I will just like let gateway sign. I im I will just like let gateway sign. I im I will just like let
+the Daniel want to have those link on on the Daniel want to have those link on on the Daniel want to have those link on on
+and the other open source link that I and the other open source link that I and the other open source link that I
+have demo today. Okay. So after this uh have demo today. Okay. So after this uh have demo today. Okay. So after this uh
+meetup uh I will give you a form to uh meetup uh I will give you a form to uh meetup uh I will give you a form to uh
+type in the email address and you can type in the email address and you can type in the email address and you can
+get cla get cla get cla
+okay. So uh thank you for the uh okay. So uh thank you for the uh okay. So uh thank you for the uh
+invitation today and um it would be invitation today and um it would be invitation today and um it would be
+better to see you in the um IRM mode and better to see you in the um IRM mode and better to see you in the um IRM mode and
+I think I will be down on the network I think I will be down on the network I think I will be down on the network
+school for on April. So let's see you up school for on April. So let's see you up school for on April. So let's see you up
+there. Thank you very much. 
