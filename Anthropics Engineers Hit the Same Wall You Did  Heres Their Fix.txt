@@ -1,0 +1,353 @@
+So, the people who built Claude So, the people who built Claude
+published a blog post admitting their published a blog post admitting their published a blog post admitting their
+own agent breaks the same way yours own agent breaks the same way yours own agent breaks the same way yours
+does, and their fix looks almost exactly does, and their fix looks almost exactly does, and their fix looks almost exactly
+like something you've probably already like something you've probably already like something you've probably already
+started building. You just didn't know started building. You just didn't know started building. You just didn't know
+it yet. Just real quick, I'm Daniel. it yet. Just real quick, I'm Daniel. it yet. Just real quick, I'm Daniel.
+Been deep in iOS for over eight years. Been deep in iOS for over eight years. Been deep in iOS for over eight years.
+Freelanced, bounced between client Freelanced, bounced between client Freelanced, bounced between client
+projects, all of that. And then dubdub projects, all of that. And then dubdub projects, all of that. And then dubdub
+25 hit and I just went that's it going 25 hit and I just went that's it going 25 hit and I just went that's it going
+solo. Since then I've crafted over 15 of solo. Since then I've crafted over 15 of solo. Since then I've crafted over 15 of
+my own apps all swift UI all shipped in my own apps all swift UI all shipped in my own apps all swift UI all shipped in
+public. And it's not about cranking out public. And it's not about cranking out public. And it's not about cranking out
+quick MVPs or dumping AI slop onto the quick MVPs or dumping AI slop onto the quick MVPs or dumping AI slop onto the
+app store. It's about building things app store. It's about building things app store. It's about building things
+that actually hold up and scale and all that actually hold up and scale and all that actually hold up and scale and all
+of that. And every system, every of that. And every system, every of that. And every system, every
+workflow, every file, it lives on workflow, every file, it lives on workflow, every file, it lives on
+Crafter's Lab. my actual home base, not Crafter's Lab. my actual home base, not Crafter's Lab. my actual home base, not
+a tutorial site, not some AI clone farm. a tutorial site, not some AI clone farm. a tutorial site, not some AI clone farm.
+It's built for solo devs who use AI like It's built for solo devs who use AI like It's built for solo devs who use AI like
+a real teammate, not like a vending a real teammate, not like a vending a real teammate, not like a vending
+machine you press and hope. If you're machine you press and hope. If you're machine you press and hope. If you're
+serious about building with care and serious about building with care and serious about building with care and
+actually leveling up your craft, you'll actually leveling up your craft, you'll actually leveling up your craft, you'll
+feel right at home. And if you're still feel right at home. And if you're still feel right at home. And if you're still
+on Patreon, huge thanks. Uh, but heads on Patreon, huge thanks. Uh, but heads on Patreon, huge thanks. Uh, but heads
+up, everything's moved to up, everything's moved to up, everything's moved to
+crafterslab.dev. crafterslab.dev. crafterslab.dev.
+That's where the crew lives now. come That's where the crew lives now. come That's where the crew lives now. come
+build with us. Okay, so right here and build with us. Okay, so right here and build with us. Okay, so right here and
+I'm scrolling through this post on I'm scrolling through this post on I'm scrolling through this post on
+screen. Anthropic lays out the core screen. Anthropic lays out the core screen. Anthropic lays out the core
+problem. When an agent works in problem. When an agent works in problem. When an agent works in
+sessions, every new session starts with sessions, every new session starts with sessions, every new session starts with
+zero memory. They describe it like a dev zero memory. They describe it like a dev zero memory. They describe it like a dev
+team where every new engineer shows up team where every new engineer shows up team where every new engineer shows up
+with no clue what happened on the last with no clue what happened on the last with no clue what happened on the last
+shift. And I'm reading that going, shift. And I'm reading that going, shift. And I'm reading that going,
+"Yeah, that's my life. That's every solo "Yeah, that's my life. That's every solo "Yeah, that's my life. That's every solo
+dev's life with Claude code. And if dev's life with Claude code. And if dev's life with Claude code. And if
+you've ever closed a session, come back you've ever closed a session, come back you've ever closed a session, come back
+the next morning, started fresh, and the next morning, started fresh, and the next morning, started fresh, and
+watched Claude just wander poking at watched Claude just wander poking at watched Claude just wander poking at
+files, reading random stuff, heading in files, reading random stuff, heading in files, reading random stuff, heading in
+a completely different direction than a completely different direction than a completely different direction than
+where you left off. You know exactly where you left off. You know exactly where you left off. You know exactly
+what I'm talking about. You're sitting what I'm talking about. You're sitting what I'm talking about. You're sitting
+there like, "Dude, we literally decided there like, "Dude, we literally decided there like, "Dude, we literally decided
+this already." But it doesn't know that. this already." But it doesn't know that. this already." But it doesn't know that.
+It can't know that because the context It can't know that because the context It can't know that because the context
+window reset and everything's gone. And window reset and everything's gone. And window reset and everything's gone. And
+honestly, I think most solo devs just honestly, I think most solo devs just honestly, I think most solo devs just
+accept this. They go, "Yeah, that's how accept this. They go, "Yeah, that's how accept this. They go, "Yeah, that's how
+it works. I'll just reexlain it works. I'll just reexlain it works. I'll just reexlain
+everything." And I mean, I don't think everything." And I mean, I don't think everything." And I mean, I don't think
+that's good enough. I actually think that's good enough. I actually think that's good enough. I actually think
+that's the single biggest time sync in that's the single biggest time sync in that's the single biggest time sync in
+the entire claude code workflow right the entire claude code workflow right the entire claude code workflow right
+now, but maybe it's something else for now, but maybe it's something else for now, but maybe it's something else for
+you. I don't know. So, here's what you. I don't know. So, here's what you. I don't know. So, here's what
+Anthropic did about it. They built what Anthropic did about it. They built what Anthropic did about it. They built what
+they call an initializer agent first they call an initializer agent first they call an initializer agent first
+session only. Its whole job is to set up session only. Its whole job is to set up session only. Its whole job is to set up
+the environment. Write an init.sh the environment. Write an init.sh the environment. Write an init.sh
+script. Create a progress tracking file. script. Create a progress tracking file. script. Create a progress tracking file.
+Make that first git commit so that when Make that first git commit so that when Make that first git commit so that when
+the next session fires up the coding the next session fires up the coding the next session fires up the coding
+agent, has something to land on, it agent, has something to land on, it agent, has something to land on, it
+reads the progress file, checks the JIT reads the progress file, checks the JIT reads the progress file, checks the JIT
+history, and immediately knows where history, and immediately knows where history, and immediately knows where
+things stand. No guessing, no wasted things stand. No guessing, no wasted things stand. No guessing, no wasted
+context. And I'm staring at this part of context. And I'm staring at this part of context. And I'm staring at this part of
+the article going, "Wait, that's the article going, "Wait, that's the article going, "Wait, that's
+claude.md? That is literally what claude.md? That is literally what claude.md? That is literally what
+claude.md and progress.md do?" Like, claude.md and progress.md do?" Like, claude.md and progress.md do?" Like,
+actually, hold on. Am I am I just seeing actually, hold on. Am I am I just seeing actually, hold on. Am I am I just seeing
+what I want to see here? Because I've what I want to see here? Because I've what I want to see here? Because I've
+been building these files for months and been building these files for months and been building these files for months and
+maybe I'm projecting, but no, I maybe I'm projecting, but no, I maybe I'm projecting, but no, I
+genuinely think this is the same genuinely think this is the same genuinely think this is the same
+pattern. You write a claw.md that points pattern. You write a claw.md that points pattern. You write a claw.md that points
+to your architecture docs, your rules, to your architecture docs, your rules, to your architecture docs, your rules,
+your decisions. You write a progress.md your decisions. You write a progress.md your decisions. You write a progress.md
+that tracks what's been done, what's in that tracks what's been done, what's in that tracks what's been done, what's in
+flight, what's next. And every new flight, what's next. And every new flight, what's next. And every new
+session starts by reading those files. session starts by reading those files. session starts by reading those files.
+Same principle, same result. I actually Same principle, same result. I actually Same principle, same result. I actually
+have all of my MD files documented in my have all of my MD files documented in my have all of my MD files documented in my
+playbook, the actual files I use on real playbook, the actual files I use on real playbook, the actual files I use on real
+shipping projects. and and it's kind of shipping projects. and and it's kind of shipping projects. and and it's kind of
+wild uh how close they map to what wild uh how close they map to what wild uh how close they map to what
+Anthropic describes here. But here's the Anthropic describes here. But here's the Anthropic describes here. But here's the
+thing that really got me. And look, I thing that really got me. And look, I thing that really got me. And look, I
+don't care what anyone says. This is the don't care what anyone says. This is the don't care what anyone says. This is the
+most important takeaway from this entire most important takeaway from this entire most important takeaway from this entire
+article. Anthropic is doing this with article. Anthropic is doing this with article. Anthropic is doing this with
+their own model. The people who built their own model. The people who built their own model. The people who built
+Claude are admitting that Claude can't Claude are admitting that Claude can't Claude are admitting that Claude can't
+just figure it out on its own across just figure it out on its own across just figure it out on its own across
+sessions. It needs external memory. It sessions. It needs external memory. It sessions. It needs external memory. It
+needs uh files that persist outside the needs uh files that persist outside the needs uh files that persist outside the
+context window. So if you're still open context window. So if you're still open context window. So if you're still open
+and clawed code sessions, cold uh no and clawed code sessions, cold uh no and clawed code sessions, cold uh no
+docs, no progress file, no session docs, no progress file, no session docs, no progress file, no session
+handoff system, uh you're fighting a handoff system, uh you're fighting a handoff system, uh you're fighting a
+problem that even Anthropic couldn't problem that even Anthropic couldn't problem that even Anthropic couldn't
+solve without structure. The model is solve without structure. The model is solve without structure. The model is
+not the fix. The harness around the not the fix. The harness around the not the fix. The harness around the
+model is the fix. And uh yeah, I know model is the fix. And uh yeah, I know model is the fix. And uh yeah, I know
+setting up MD files feels like overhead setting up MD files feels like overhead setting up MD files feels like overhead
+when you just want to code. I get it. when you just want to code. I get it. when you just want to code. I get it.
+But this article is basically uh But this article is basically uh But this article is basically uh
+Anthropic telling you we had to do it, Anthropic telling you we had to do it, Anthropic telling you we had to do it,
+too. So, I'm not sure where that leaves too. So, I'm not sure where that leaves too. So, I'm not sure where that leaves
+you if you haven't started yet, but it's you if you haven't started yet, but it's you if you haven't started yet, but it's
+worth sitting with. Okay, so that's the worth sitting with. Okay, so that's the worth sitting with. Okay, so that's the
+context loss thing. But here's where it context loss thing. But here's where it context loss thing. But here's where it
+gets interesting because even after you gets interesting because even after you gets interesting because even after you
+solve the memory problem, there's a solve the memory problem, there's a solve the memory problem, there's a
+whole other way your agent can go whole other way your agent can go whole other way your agent can go
+sideways and uh you ever give Claude a sideways and uh you ever give Claude a sideways and uh you ever give Claude a
+simple feature request and then just simple feature request and then just simple feature request and then just
+watch it in real time, start watch it in real time, start watch it in real time, start
+restructuring your entire project, it restructuring your entire project, it restructuring your entire project, it
+rewrites files you didn't mention, add rewrites files you didn't mention, add rewrites files you didn't mention, add
+stuff you didn't ask for, tries to build stuff you didn't ask for, tries to build stuff you didn't ask for, tries to build
+the entire thing in one heroic pass, and the entire thing in one heroic pass, and the entire thing in one heroic pass, and
+then it hits the context limit and just then it hits the context limit and just then it hits the context limit and just
+stops mid-implementation stops mid-implementation stops mid-implementation
+half-finish feature files in some weird half-finish feature files in some weird half-finish feature files in some weird
+in between state and the next session in between state and the next session in between state and the next session
+comes in and goes, "What happened here?" comes in and goes, "What happened here?" comes in and goes, "What happened here?"
+and spends its entire window cleaning up and spends its entire window cleaning up and spends its entire window cleaning up
+the mess instead of making progress. Not the mess instead of making progress. Not the mess instead of making progress. Not
+going to lie, this part of the article going to lie, this part of the article going to lie, this part of the article
+made me feel better about my own sanity made me feel better about my own sanity made me feel better about my own sanity
+because I thought I was doing something because I thought I was doing something because I thought I was doing something
+wrong. Turns out Anthropic hit the exact wrong. Turns out Anthropic hit the exact wrong. Turns out Anthropic hit the exact
+same wall even with Opus 4.5. Their same wall even with Opus 4.5. Their same wall even with Opus 4.5. Their
+agent tried to oneshot the whole app, agent tried to oneshot the whole app, agent tried to oneshot the whole app,
+ran out of context midimplementation, ran out of context midimplementation, ran out of context midimplementation,
+left the codebase in this limbo state left the codebase in this limbo state left the codebase in this limbo state
+where the next agent had to guess at where the next agent had to guess at where the next agent had to guess at
+what was going on. And their fix, this what was going on. And their fix, this what was going on. And their fix, this
+is the part you can steal today, is a is the part you can steal today, is a is the part you can steal today, is a
+featureless file, JSON format. Every featureless file, JSON format. Every featureless file, JSON format. Every
+single feature the app needs laid out single feature the app needs laid out single feature the app needs laid out
+and every single one starts as failing. and every single one starts as failing. and every single one starts as failing.
+The agent picks one, works on that one, The agent picks one, works on that one, The agent picks one, works on that one,
+commits, updates progress, moves on. commits, updates progress, moves on. commits, updates progress, moves on.
+That's it. And I know, I know that That's it. And I know, I know that That's it. And I know, I know that
+sounds almost too simple. Like really, a sounds almost too simple. Like really, a sounds almost too simple. Like really, a
+JSON file, that's the fix. But and JSON file, that's the fix. But and JSON file, that's the fix. But and
+honestly, I think that's exactly why honestly, I think that's exactly why honestly, I think that's exactly why
+most people won't do it. It doesn't feel most people won't do it. It doesn't feel most people won't do it. It doesn't feel
+sophisticated enough. You know what I sophisticated enough. You know what I sophisticated enough. You know what I
+mean? And meanwhile, their agents are mean? And meanwhile, their agents are mean? And meanwhile, their agents are
+still going rogue on every session. The still going rogue on every session. The still going rogue on every session. The
+problem isn't that Claude can't code. problem isn't that Claude can't code. problem isn't that Claude can't code.
+The problem is that Claude doesn't know The problem is that Claude doesn't know The problem is that Claude doesn't know
+when to stop. It sees the whole project when to stop. It sees the whole project when to stop. It sees the whole project
+and goes, "Oh, I can do all of this." and goes, "Oh, I can do all of this." and goes, "Oh, I can do all of this."
+and then it can't. And without something and then it can't. And without something and then it can't. And without something
+explicit forcing incremental progress, explicit forcing incremental progress, explicit forcing incremental progress,
+it will always default to trying to do it will always default to trying to do it will always default to trying to do
+everything at once every single time. everything at once every single time. everything at once every single time.
+Now, here's the detail that actually Now, here's the detail that actually Now, here's the detail that actually
+blew my mind a little. And uh I'm blew my mind a little. And uh I'm blew my mind a little. And uh I'm
+curious if you'd do this differently. curious if you'd do this differently. curious if you'd do this differently.
+They use JSON instead of markdown for They use JSON instead of markdown for They use JSON instead of markdown for
+the feature list. Why? Because the model the feature list. Why? Because the model the feature list. Why? Because the model
+is less likely to mess with JSON. With a is less likely to mess with JSON. With a is less likely to mess with JSON. With a
+markdown checklist, Claude will happily markdown checklist, Claude will happily markdown checklist, Claude will happily
+rewrite the whole thing, reorganize it, rewrite the whole thing, reorganize it, rewrite the whole thing, reorganize it,
+add new items. With Jason, it treats it add new items. With Jason, it treats it add new items. With Jason, it treats it
+more carefully. It edits the passes more carefully. It edits the passes more carefully. It edits the passes
+field and leaves the rest alone. And uh field and leaves the rest alone. And uh field and leaves the rest alone. And uh
+I think that's actually Wait, is that a I think that's actually Wait, is that a I think that's actually Wait, is that a
+general principle? Like should we be general principle? Like should we be general principle? Like should we be
+thinking about file formats as a control thinking about file formats as a control thinking about file formats as a control
+mechanism for our agents? Because if mechanism for our agents? Because if mechanism for our agents? Because if
+that's true, it changes how you design that's true, it changes how you design that's true, it changes how you design
+your whole repo doc setup. I'm still your whole repo doc setup. I'm still your whole repo doc setup. I'm still
+chewing on that one. But for what it's chewing on that one. But for what it's chewing on that one. But for what it's
+worth, it feels important. So yeah, worth, it feels important. So yeah, worth, it feels important. So yeah,
+don't let your agent yolo the whole don't let your agent yolo the whole don't let your agent yolo the whole
+project. Give it a list. Make it work project. Give it a list. Make it work project. Give it a list. Make it work
+through that list one at a time. And if through that list one at a time. And if through that list one at a time. And if
+you've already been doing something like you've already been doing something like you've already been doing something like
+this and it's working or not working, I this and it's working or not working, I this and it's working or not working, I
+I genuinely want to know because I'm I genuinely want to know because I'm I genuinely want to know because I'm
+still experimenting with how granular still experimenting with how granular still experimenting with how granular
+the list should be and I don't think the list should be and I don't think the list should be and I don't think
+there's a clean answer yet. Okay, so there's a clean answer yet. Okay, so there's a clean answer yet. Okay, so
+there's one more thing in this article there's one more thing in this article there's one more thing in this article
+and honestly this is the one that hit me and honestly this is the one that hit me and honestly this is the one that hit me
+the hardest because even after you solve the hardest because even after you solve the hardest because even after you solve
+context loss, even after you get context loss, even after you get context loss, even after you get
+incremental progress working, your incremental progress working, your incremental progress working, your
+agent's still going to find a way to agent's still going to find a way to agent's still going to find a way to
+mess with you. And I already know if mess with you. And I already know if mess with you. And I already know if
+you've been using clawed code for more you've been using clawed code for more you've been using clawed code for more
+than a week, you've been burned by this. than a week, you've been burned by this. than a week, you've been burned by this.
+The agent says it's done. It marks the The agent says it's done. It marks the The agent says it's done. It marks the
+feature as complete. writes this feature as complete. writes this feature as complete. writes this
+confident little summary about what it confident little summary about what it confident little summary about what it
+accomplished and then you actually go accomplished and then you actually go accomplished and then you actually go
+test it and it doesn't work or it half test it and it doesn't work or it half test it and it doesn't work or it half
+works or it works in the happy path but works or it works in the happy path but works or it works in the happy path but
+falls apart the second you do anything falls apart the second you do anything falls apart the second you do anything
+slightly unexpected and you're sitting slightly unexpected and you're sitting slightly unexpected and you're sitting
+there like you told me this was done. there like you told me this was done. there like you told me this was done.
+You literally wrote a paragraph about You literally wrote a paragraph about You literally wrote a paragraph about
+how done it is and now nothing works. I how done it is and now nothing works. I how done it is and now nothing works. I
+mean that feeling I don't think anyone mean that feeling I don't think anyone mean that feeling I don't think anyone
+talks about how frustrating that talks about how frustrating that talks about how frustrating that
+actually is because it's not just a bug actually is because it's not just a bug actually is because it's not just a bug
+right it's a trust issue and once you right it's a trust issue and once you right it's a trust issue and once you
+stop trusting your agents output you stop trusting your agents output you stop trusting your agents output you
+start checking everything and then start checking everything and then start checking everything and then
+what's the point of the agent what's the point of the agent what's the point of the agent
+found the same thing without explicit found the same thing without explicit found the same thing without explicit
+prompting for endto-end testing Claude prompting for endto-end testing Claude prompting for endto-end testing Claude
+would make code changes run some unit would make code changes run some unit would make code changes run some unit
+tests maybe hit the dev server with a tests maybe hit the dev server with a tests maybe hit the dev server with a
+curl command see a 200 response and go curl command see a 200 response and go curl command see a 200 response and go
+done. Feature complete. But the actual done. Feature complete. But the actual done. Feature complete. But the actual
+user experience broken. And the agent user experience broken. And the agent user experience broken. And the agent
+had no idea because it never tested it had no idea because it never tested it had no idea because it never tested it
+the way a real person would use it. the way a real person would use it. the way a real person would use it.
+Their fix was browser automation. Their fix was browser automation. Their fix was browser automation.
+Puppeteer through an MCP server. They Puppeteer through an MCP server. They Puppeteer through an MCP server. They
+told Claude, "Test this like a human. told Claude, "Test this like a human. told Claude, "Test this like a human.
+Open the browser. Click the buttons. Open the browser. Click the buttons. Open the browser. Click the buttons.
+Fill in the forms. Actually look at Fill in the forms. Actually look at Fill in the forms. Actually look at
+what's on screen." And honestly, the what's on screen." And honestly, the what's on screen." And honestly, the
+results were dramatically better. No results were dramatically better. No results were dramatically better. No
+joke. But here's my question, and I joke. But here's my question, and I joke. But here's my question, and I
+genuinely don't have a clean answer for genuinely don't have a clean answer for genuinely don't have a clean answer for
+this. What about native apps? What about this. What about native apps? What about this. What about native apps? What about
+Swift UI? We don't have Puppeteer for Swift UI? We don't have Puppeteer for Swift UI? We don't have Puppeteer for
+iOS. We've got Xcode MCP for previews iOS. We've got Xcode MCP for previews iOS. We've got Xcode MCP for previews
+and build logs. Sure, but full endtoend and build logs. Sure, but full endtoend and build logs. Sure, but full endtoend
+testing like a user. That's still a gap. testing like a user. That's still a gap. testing like a user. That's still a gap.
+And I don't know if anyone's really And I don't know if anyone's really And I don't know if anyone's really
+solved that yet for mobile. If you have, solved that yet for mobile. If you have, solved that yet for mobile. If you have,
+seriously, tell me because I'm stuck on seriously, tell me because I'm stuck on seriously, tell me because I'm stuck on
+this one. And then there's the other this one. And then there's the other this one. And then there's the other
+half of their fix, and this is the part half of their fix, and this is the part half of their fix, and this is the part
+I keep thinking about. They use strongly I keep thinking about. They use strongly I keep thinking about. They use strongly
+worded instructions. Things like, it is worded instructions. Things like, it is worded instructions. Things like, it is
+unacceptable to remove or edit tests. unacceptable to remove or edit tests. unacceptable to remove or edit tests.
+And look, I think most solo devs are way And look, I think most solo devs are way And look, I think most solo devs are way
+too polite to their agents. like too polite to their agents. like too polite to their agents. like
+genuinely you're writing your claude.md genuinely you're writing your claude.md genuinely you're writing your claude.md
+going please try to avoid modifying the going please try to avoid modifying the going please try to avoid modifying the
+test files if possible and claude reads test files if possible and claude reads test files if possible and claude reads
+that and goes well the test was wrong so that and goes well the test was wrong so that and goes well the test was wrong so
+I updated it found a reason because you I updated it found a reason because you I updated it found a reason because you
+gave it room to find a reason but with gave it room to find a reason but with gave it room to find a reason but with
+hard non-negotiable language it actually hard non-negotiable language it actually hard non-negotiable language it actually
+respects the boundary the more explicit respects the boundary the more explicit respects the boundary the more explicit
+and firm the rule the more the model and firm the rule the more the model and firm the rule the more the model
+treats it like a wall instead of a treats it like a wall instead of a treats it like a wall instead of a
+suggestion And yeah, I'm not sure that's suggestion And yeah, I'm not sure that's suggestion And yeah, I'm not sure that's
+always the right move. Part of me always the right move. Part of me always the right move. Part of me
+wonders if there's a version of this wonders if there's a version of this wonders if there's a version of this
+where you're too strict and the agent where you're too strict and the agent where you're too strict and the agent
+can't adapt when it actually should. can't adapt when it actually should. can't adapt when it actually should.
+Like, what if the test genuinely is Like, what if the test genuinely is Like, what if the test genuinely is
+wrong? Hm. But right now, I'd rather be wrong? Hm. But right now, I'd rather be wrong? Hm. But right now, I'd rather be
+too firm than too soft. That's where too firm than too soft. That's where too firm than too soft. That's where
+I've landed. I'm not fully confident I've landed. I'm not fully confident I've landed. I'm not fully confident
+about it, but the alternative uh the about it, but the alternative uh the about it, but the alternative uh the
+agent rewriting its own success criteria agent rewriting its own success criteria agent rewriting its own success criteria
+is way worse. Your agent doesn't have is way worse. Your agent doesn't have is way worse. Your agent doesn't have
+feelings. It has a system prompt. And I feelings. It has a system prompt. And I feelings. It has a system prompt. And I
+think how you write that prompt matters think how you write that prompt matters think how you write that prompt matters
+more than which model you're running. more than which model you're running. more than which model you're running.
+That might be controversial, but I That might be controversial, but I That might be controversial, but I
+believe it. So yeah, if you're still believe it. So yeah, if you're still believe it. So yeah, if you're still
+here, honestly, you're a legend. And here, honestly, you're a legend. And here, honestly, you're a legend. And
+here's what I keep coming back to with here's what I keep coming back to with here's what I keep coming back to with
+this article. The people who built the this article. The people who built the this article. The people who built the
+model, uh, the actual engineers at model, uh, the actual engineers at model, uh, the actual engineers at
+Anthropic ran into the same three Anthropic ran into the same three Anthropic ran into the same three
+problems every solo dev hits, context problems every solo dev hits, context problems every solo dev hits, context
+loss between sessions, the agent trying loss between sessions, the agent trying loss between sessions, the agent trying
+to do everything at once, and the agent to do everything at once, and the agent to do everything at once, and the agent
+lying about being done. And their lying about being done. And their lying about being done. And their
+solution is files, progress files, solution is files, progress files, solution is files, progress files,
+feature lists, get history, explicit feature lists, get history, explicit feature lists, get history, explicit
+testing, firm instructions. That's it. testing, firm instructions. That's it. testing, firm instructions. That's it.
+That's the whole thing. No magic, just That's the whole thing. No magic, just That's the whole thing. No magic, just
+structure. And I think that's kind of structure. And I think that's kind of structure. And I think that's kind of
+actually no. It's extremely validating actually no. It's extremely validating actually no. It's extremely validating
+for anyone who's been building MD files for anyone who's been building MD files for anyone who's been building MD files
+and session systems and thinking maybe and session systems and thinking maybe and session systems and thinking maybe
+I'm over complicating this. You're not. I'm over complicating this. You're not. I'm over complicating this. You're not.
+Anthropic literally had to do the same Anthropic literally had to do the same Anthropic literally had to do the same
+thing. And you know, if you want to see thing. And you know, if you want to see thing. And you know, if you want to see
+exactly how I set all of this up in exactly how I set all of this up in exactly how I set all of this up in
+practice, every MD file, every harness practice, every MD file, every harness practice, every MD file, every harness
+pattern, every agent workflow I actually pattern, every agent workflow I actually pattern, every agent workflow I actually
+use on real shipping apps, that's all on use on real shipping apps, that's all on use on real shipping apps, that's all on
+crafterslab.dev. It's not a tutorial crafterslab.dev. It's not a tutorial crafterslab.dev. It's not a tutorial
+dump, not some content mill. It's my dump, not some content mill. It's my dump, not some content mill. It's my
+real home base built for solo devs who real home base built for solo devs who real home base built for solo devs who
+take AI seriously as a teammate and take AI seriously as a teammate and take AI seriously as a teammate and
+actually care about the craft. Inside actually care about the craft. Inside actually care about the craft. Inside
+you get full video walkthroughs with you get full video walkthroughs with you get full video walkthroughs with
+real downloadable resources, stuff you real downloadable resources, stuff you real downloadable resources, stuff you
+can grab and drop right into your Claude can grab and drop right into your Claude can grab and drop right into your Claude
+code setup today. Skills, workflows, code setup today. Skills, workflows, code setup today. Skills, workflows,
+breakdowns of how I wire everything breakdowns of how I wire everything breakdowns of how I wire everything
+together. And the community digs into together. And the community digs into together. And the community digs into
+it, too. Comments, followups, people it, too. Comments, followups, people it, too. Comments, followups, people
+sharing their own setups and going back sharing their own setups and going back sharing their own setups and going back
+and forth on what's working. You know and forth on what's working. You know and forth on what's working. You know
+what I mean? It's an actual what I mean? It's an actual what I mean? It's an actual
+conversation, not a one-way feed. But conversation, not a one-way feed. But conversation, not a one-way feed. But
+the real depth is in the notion team the real depth is in the notion team the real depth is in the notion team
+spaces. My playbook has every app I'm spaces. My playbook has every app I'm spaces. My playbook has every app I'm
+building. All the MD files, the prompts, building. All the MD files, the prompts, building. All the MD files, the prompts,
+the decision docs, the session notes, the decision docs, the session notes, the decision docs, the session notes,
+live, messy, unfiltered. You see the live, messy, unfiltered. You see the live, messy, unfiltered. You see the
+whole process, not some polished whole process, not some polished whole process, not some polished
+highlight reel. And yeah, Swift brain is highlight reel. And yeah, Swift brain is highlight reel. And yeah, Swift brain is
+in there, too. curated Swift UI vault, in there, too. curated Swift UI vault, in there, too. curated Swift UI vault,
+deep dive keynotes, private event deep dive keynotes, private event deep dive keynotes, private event
+sessions, code I actually use to sessions, code I actually use to sessions, code I actually use to
+fine-tune how my agents work, real stuff fine-tune how my agents work, real stuff fine-tune how my agents work, real stuff
+that's not sitting in any public that's not sitting in any public that's not sitting in any public
+training data. And then there's Ops Lab, training data. And then there's Ops Lab, training data. And then there's Ops Lab,
+all my AI agent instructions, Notion all my AI agent instructions, Notion all my AI agent instructions, Notion
+templates, clawed code skills, templates, clawed code skills, templates, clawed code skills,
+workflows, automations, workflows, automations, workflows, automations,
+ready for you to copy, tear apart, and ready for you to copy, tear apart, and ready for you to copy, tear apart, and
+rebuild for your own stack. The whole rebuild for your own stack. The whole rebuild for your own stack. The whole
+point is keeping your indie dev toolkit point is keeping your indie dev toolkit point is keeping your indie dev toolkit
+connected so you're never building in a connected so you're never building in a connected so you're never building in a
+vacuum even when you're solo at the vacuum even when you're solo at the vacuum even when you're solo at the
+keyboard. So yeah, crew still small, keyboard. So yeah, crew still small, keyboard. So yeah, crew still small,
+still hands-on. If you want in before still hands-on. If you want in before still hands-on. If you want in before
+things scale and prices start moving, things scale and prices start moving, things scale and prices start moving,
+now is kind of the sweet spot. It now is kind of the sweet spot. It now is kind of the sweet spot. It
+genuinely feels more like a private dev genuinely feels more like a private dev genuinely feels more like a private dev
+lounge than anything else. Would love to lounge than anything else. Would love to lounge than anything else. Would love to
+see you in there. Keep crafting, keep see you in there. Keep crafting, keep see you in there. Keep crafting, keep
+harnessing, and don't let your agent run harnessing, and don't let your agent run harnessing, and don't let your agent run
+the show. Peace. 

@@ -1,0 +1,359 @@
+These past two months, the AI community These past two months, the AI community
+has already realized that MCPs have a has already realized that MCPs have a has already realized that MCPs have a
+huge problem. And due to this, the huge problem. And due to this, the huge problem. And due to this, the
+community has actually come up with some community has actually come up with some community has actually come up with some
+solutions. But all of the solutions have solutions. But all of the solutions have solutions. But all of the solutions have
+huge gaps. A while back, we made a video huge gaps. A while back, we made a video huge gaps. A while back, we made a video
+on Docker's solution, which we on Docker's solution, which we on Docker's solution, which we
+considered the best solution to the MCP considered the best solution to the MCP considered the best solution to the MCP
+problem until now. Docker released code problem until now. Docker released code problem until now. Docker released code
+mode, which lets agents write JavaScript mode, which lets agents write JavaScript mode, which lets agents write JavaScript
+code that calls MCP tools directly. And code that calls MCP tools directly. And code that calls MCP tools directly. And
+this solved the problem where MCP tools this solved the problem where MCP tools this solved the problem where MCP tools
+consume a lot of context by having the consume a lot of context by having the consume a lot of context by having the
+tool and description exposed in the tool and description exposed in the tool and description exposed in the
+context window. So if you are working context window. So if you are working context window. So if you are working
+with a lot of MCPs, your context window with a lot of MCPs, your context window with a lot of MCPs, your context window
+will be bloated with unnecessary tools will be bloated with unnecessary tools will be bloated with unnecessary tools
+out of which most of them aren't even out of which most of them aren't even out of which most of them aren't even
+needed most of the time. But with the needed most of the time. But with the needed most of the time. But with the
+Docker MCP gateway, you were locked into Docker MCP gateway, you were locked into Docker MCP gateway, you were locked into
+the MCPS Docker had configured and there the MCPS Docker had configured and there the MCPS Docker had configured and there
+were limits on local and remote MCPs. were limits on local and remote MCPs. were limits on local and remote MCPs.
+Also, you weren't able to save those Also, you weren't able to save those Also, you weren't able to save those
+custom tools as functions. All of this custom tools as functions. All of this custom tools as functions. All of this
+was triggered when Cloudflare identified was triggered when Cloudflare identified was triggered when Cloudflare identified
+this issue and proposed a solution to this issue and proposed a solution to this issue and proposed a solution to
+have these tools exist as executable have these tools exist as executable have these tools exist as executable
+code rather than having them sit in the code rather than having them sit in the code rather than having them sit in the
+context window. Anthropic who were the context window. Anthropic who were the context window. Anthropic who were the
+original architects of this protocol original architects of this protocol original architects of this protocol
+acknowledged this gap in their product acknowledged this gap in their product acknowledged this gap in their product
+and followed up by releasing a paper and followed up by releasing a paper and followed up by releasing a paper
+highlighting this exact issue. After highlighting this exact issue. After highlighting this exact issue. After
+this, people started taking this problem this, people started taking this problem this, people started taking this problem
+seriously and started exploring seriously and started exploring seriously and started exploring
+solutions. But their solution of solutions. But their solution of solutions. But their solution of
+converting every tool into a TypeScript converting every tool into a TypeScript converting every tool into a TypeScript
+file also has gaps. With a lot of MCPs file also has gaps. With a lot of MCPs file also has gaps. With a lot of MCPs
+connected, you have to convert each one connected, you have to convert each one connected, you have to convert each one
+to code individually and you also need to code individually and you also need to code individually and you also need
+to spend a lot of time to make sure that to spend a lot of time to make sure that to spend a lot of time to make sure that
+none of them fail in the process. But none of them fail in the process. But none of them fail in the process. But
+since this became an acknowledged since this became an acknowledged since this became an acknowledged
+problem, people are still trying to problem, people are still trying to problem, people are still trying to
+bring out better solutions. And this is bring out better solutions. And this is bring out better solutions. And this is
+when we found this new tool called MCP2 when we found this new tool called MCP2 when we found this new tool called MCP2
+CLI. MCP2 CLI solves the context bloat CLI. MCP2 CLI solves the context bloat CLI. MCP2 CLI solves the context bloat
+problem that MCPs have by actually problem that MCPs have by actually problem that MCPs have by actually
+turning all of the MCP servers into CLI turning all of the MCP servers into CLI turning all of the MCP servers into CLI
+tools that you can run through bash tools that you can run through bash tools that you can run through bash
+commands. Now, we primarily use cloud commands. Now, we primarily use cloud commands. Now, we primarily use cloud
+code in our team and it actually has a code in our team and it actually has a code in our team and it actually has a
+CLI flag that aims to solve a part of CLI flag that aims to solve a part of CLI flag that aims to solve a part of
+this problem. That tool solves the this problem. That tool solves the this problem. That tool solves the
+initial MCP context bloat problem by not initial MCP context bloat problem by not initial MCP context bloat problem by not
+exposing all of the tools up front in exposing all of the tools up front in exposing all of the tools up front in
+the context window, but it allows Claude the context window, but it allows Claude the context window, but it allows Claude
+code to dynamically load each tool as code to dynamically load each tool as code to dynamically load each tool as
+needed. But that still leaves out the needed. But that still leaves out the needed. But that still leaves out the
+other issue in claude code. As you other issue in claude code. As you other issue in claude code. As you
+probably know, MCPs return their outputs probably know, MCPs return their outputs probably know, MCPs return their outputs
+directly in the context window. And in directly in the context window. And in directly in the context window. And in
+case there is a large output returned by case there is a large output returned by case there is a large output returned by
+the MCP tool, it remains in the context the MCP tool, it remains in the context the MCP tool, it remains in the context
+window anyway, leading to unnecessary window anyway, leading to unnecessary window anyway, leading to unnecessary
+context window bloat. Now, you might context window bloat. Now, you might context window bloat. Now, you might
+also have heard about other open-source also have heard about other open-source also have heard about other open-source
+tools such as CLI hub that target the tools such as CLI hub that target the tools such as CLI hub that target the
+same problem, but they are inefficient same problem, but they are inefficient same problem, but they are inefficient
+because they convert them at build time because they convert them at build time because they convert them at build time
+and not at runtime. So, what does and not at runtime. So, what does and not at runtime. So, what does
+runtime conversion actually mean? It runtime conversion actually mean? It runtime conversion actually mean? It
+means the tool gets converted into a means the tool gets converted into a means the tool gets converted into a
+bash command at the moment it's actually bash command at the moment it's actually bash command at the moment it's actually
+called. Now, this might seem all right, called. Now, this might seem all right, called. Now, this might seem all right,
+but what happens when the original MCP but what happens when the original MCP but what happens when the original MCP
+itself gets updated? Because this tool itself gets updated? Because this tool itself gets updated? Because this tool
+builds up its MCP tools at runtime, any builds up its MCP tools at runtime, any builds up its MCP tools at runtime, any
+change in the actual MCP is change in the actual MCP is change in the actual MCP is
+automatically reflected in the converted automatically reflected in the converted automatically reflected in the converted
+tool. This wouldn't have been possible tool. This wouldn't have been possible tool. This wouldn't have been possible
+if we were building tools at build time. if we were building tools at build time. if we were building tools at build time.
+In that case, we would have had to In that case, we would have had to In that case, we would have had to
+manually fetch and update the tool manually fetch and update the tool manually fetch and update the tool
+ourselves every single time. But you ourselves every single time. But you ourselves every single time. But you
+might think that converting the same might think that converting the same might think that converting the same
+tool every time it's called would make tool every time it's called would make tool every time it's called would make
+repeated calls slow. That's where the repeated calls slow. That's where the repeated calls slow. That's where the
+caching mechanism comes in, which caching mechanism comes in, which caching mechanism comes in, which
+they've built into the tool. It saves they've built into the tool. It saves they've built into the tool. It saves
+all of the MCP tools in a cache with a 1 all of the MCP tools in a cache with a 1 all of the MCP tools in a cache with a 1
+hour time to live by default. So all of hour time to live by default. So all of hour time to live by default. So all of
+the frequently used MCP tools go right the frequently used MCP tools go right the frequently used MCP tools go right
+into a cache and stay there for 1 hour. into a cache and stay there for 1 hour. into a cache and stay there for 1 hour.
+And from there, the agent can get the And from there, the agent can get the And from there, the agent can get the
+tools with faster retrieval without tools with faster retrieval without tools with faster retrieval without
+sacrificing the runtime flexibility. sacrificing the runtime flexibility. sacrificing the runtime flexibility.
+Now, this tool is built right on top of Now, this tool is built right on top of Now, this tool is built right on top of
+the MCP Python SDK, the same one every the MCP Python SDK, the same one every the MCP Python SDK, the same one every
+MCP server actually uses underneath. So, MCP server actually uses underneath. So, MCP server actually uses underneath. So,
+with all of the MCP tool calls it runs, with all of the MCP tool calls it runs, with all of the MCP tool calls it runs,
+it simply executes them as bash it simply executes them as bash it simply executes them as bash
+commands, and only injects the response commands, and only injects the response commands, and only injects the response
+into the agents context window when it's into the agents context window when it's into the agents context window when it's
+asked to. It also handles open API and asked to. It also handles open API and asked to. It also handles open API and
+REST APIs through the same CLI REST APIs through the same CLI REST APIs through the same CLI
+interface, meaning any existing API that interface, meaning any existing API that interface, meaning any existing API that
+doesn't have an MCP server can still be doesn't have an MCP server can still be doesn't have an MCP server can still be
+used the exact same way. Without this used the exact same way. Without this used the exact same way. Without this
+tool, you're limited in what type of tool, you're limited in what type of tool, you're limited in what type of
+MCPS you can actually connect to. Other MCPS you can actually connect to. Other MCPS you can actually connect to. Other
+similar solutions don't usually give you similar solutions don't usually give you similar solutions don't usually give you
+flexibility to work with all types of flexibility to work with all types of flexibility to work with all types of
+MCPS all in one place. To back up their MCPS all in one place. To back up their MCPS all in one place. To back up their
+claims on token efficiency, they ran an claims on token efficiency, they ran an claims on token efficiency, they ran an
+automated test suite using Tik Token, automated test suite using Tik Token, automated test suite using Tik Token,
+the Python library for counting tokens. the Python library for counting tokens. the Python library for counting tokens.
+When they tested it, the tool was much When they tested it, the tool was much When they tested it, the tool was much
+cheaper and had much faster execution. cheaper and had much faster execution. cheaper and had much faster execution.
+So, you don't just have to take our word So, you don't just have to take our word So, you don't just have to take our word
+for this one. This one actually had the for this one. This one actually had the for this one. This one actually had the
+numbers behind it. You can either numbers behind it. You can either numbers behind it. You can either
+install it on your system using pip or install it on your system using pip or install it on your system using pip or
+run it without installing. We chose to run it without installing. We chose to run it without installing. We chose to
+run it without installing because it run it without installing because it run it without installing because it
+keeps the working environment clean. And keeps the working environment clean. And keeps the working environment clean. And
+they've also provided a skill that helps they've also provided a skill that helps they've also provided a skill that helps
+agents work with this tool better. It agents work with this tool better. It agents work with this tool better. It
+lays out the core workflow and gives lays out the core workflow and gives lays out the core workflow and gives
+examples of the bash commands for examples of the bash commands for examples of the bash commands for
+different tasks like authentication and different tasks like authentication and different tasks like authentication and
+caching that your agent doesn't have the caching that your agent doesn't have the caching that your agent doesn't have the
+context for. But before we move context for. But before we move context for. But before we move
+forwards, let's have a word by our forwards, let's have a word by our forwards, let's have a word by our
+sponsor, Orchids. Most AI builders sponsor, Orchids. Most AI builders sponsor, Orchids. Most AI builders
+handle simple mock-ups well, but they handle simple mock-ups well, but they handle simple mock-ups well, but they
+fail when you need complex logic or fail when you need complex logic or fail when you need complex logic or
+multifile structures. That's where multifile structures. That's where multifile structures. That's where
+Orchids comes in. The first AI agent Orchids comes in. The first AI agent Orchids comes in. The first AI agent
+that can build and deploy any app on any that can build and deploy any app on any that can build and deploy any app on any
+stack directly from your environment. stack directly from your environment. stack directly from your environment.
+You can bring your own subscription to You can bring your own subscription to You can bring your own subscription to
+run models at cost using your existing run models at cost using your existing run models at cost using your existing
+chat GPT, Claude or Gemini accounts, chat GPT, Claude or Gemini accounts, chat GPT, Claude or Gemini accounts,
+even GitHub copilot. It is built to even GitHub copilot. It is built to even GitHub copilot. It is built to
+handle any app on any stack. You aren't handle any app on any stack. You aren't handle any app on any stack. You aren't
+limited to just the web. You can build limited to just the web. You can build limited to just the web. You can build
+and deploy everything from mobile apps and deploy everything from mobile apps and deploy everything from mobile apps
+and Chrome extensions to complex AI and Chrome extensions to complex AI and Chrome extensions to complex AI
+agents and Slack bots. Check out these agents and Slack bots. Check out these agents and Slack bots. Check out these
+builds. A fully working openclaw setup builds. A fully working openclaw setup builds. A fully working openclaw setup
+managing complex hardware level logic, a managing complex hardware level logic, a managing complex hardware level logic, a
+functional Bloomberg terminal processing functional Bloomberg terminal processing functional Bloomberg terminal processing
+massive live data feeds in real time and massive live data feeds in real time and massive live data feeds in real time and
+native mobile apps like this building native mobile apps like this building native mobile apps like this building
+identifier that leverages your devices identifier that leverages your devices identifier that leverages your devices
+camera feed directly. Click the link in camera feed directly. Click the link in camera feed directly. Click the link in
+the pinned comment and start building. the pinned comment and start building. the pinned comment and start building.
+Plus, use the code march 15 for 15% off Plus, use the code march 15 for 15% off Plus, use the code march 15 for 15% off
+your plan. Just like you, we also want your plan. Just like you, we also want your plan. Just like you, we also want
+to get rich and one way is to notice a to get rich and one way is to notice a to get rich and one way is to notice a
+gap in the market. And that's when we gap in the market. And that's when we gap in the market. And that's when we
+came across this golden idea, Grinder came across this golden idea, Grinder came across this golden idea, Grinder
+but for horses. But jokes aside, but for horses. But jokes aside, but for horses. But jokes aside,
+building large-scale products requires a building large-scale products requires a building large-scale products requires a
+lot of MCP tools because they have a lot lot of MCP tools because they have a lot lot of MCP tools because they have a lot
+of dependencies and they bloat the of dependencies and they bloat the of dependencies and they bloat the
+context window fast. We connected the context window fast. We connected the context window fast. We connected the
+agent to the Superbase MCP using MCP to agent to the Superbase MCP using MCP to agent to the Superbase MCP using MCP to
+CLI because that was the back-end CLI because that was the back-end CLI because that was the back-end
+infrastructure we were using. Now you infrastructure we were using. Now you infrastructure we were using. Now you
+don't have to configure anything don't have to configure anything don't have to configure anything
+manually because of the skill we manually because of the skill we manually because of the skill we
+installed earlier. That skill handles installed earlier. That skill handles installed earlier. That skill handles
+everything on its own and configures the everything on its own and configures the everything on its own and configures the
+MCPs for you. But before installing it MCPs for you. But before installing it MCPs for you. But before installing it
+head first, you need to get the access head first, you need to get the access head first, you need to get the access
+tokens of whichever MCP you are using tokens of whichever MCP you are using tokens of whichever MCP you are using
+because if you don't do so, you'll run because if you don't do so, you'll run because if you don't do so, you'll run
+into errors like we did after which we into errors like we did after which we into errors like we did after which we
+got our access token generated and gave got our access token generated and gave got our access token generated and gave
+it to Claude to add it. Once configured it to Claude to add it. Once configured it to Claude to add it. Once configured
+correctly, you should be seeing the correctly, you should be seeing the correctly, you should be seeing the
+tools available for use. Now, you might tools available for use. Now, you might tools available for use. Now, you might
+think that if this tool runs as a bash think that if this tool runs as a bash think that if this tool runs as a bash
+command, it's not safe to have sensitive command, it's not safe to have sensitive command, it's not safe to have sensitive
+data like API keys and access tokens in data like API keys and access tokens in data like API keys and access tokens in
+it because they could be exposed when it because they could be exposed when it because they could be exposed when
+processes are listed. But this tool adds processes are listed. But this tool adds processes are listed. But this tool adds
+a protection layer. It doesn't put a protection layer. It doesn't put a protection layer. It doesn't put
+sensitive data in the command line sensitive data in the command line sensitive data in the command line
+arguments. Instead, it handles them arguments. Instead, it handles them arguments. Instead, it handles them
+through environment variables or it through environment variables or it through environment variables or it
+references a file path where the access references a file path where the access references a file path where the access
+tokens are saved or it uses a secret tokens are saved or it uses a secret tokens are saved or it uses a secret
+manager that injects them at runtime. manager that injects them at runtime. manager that injects them at runtime.
+So, it's secure to run. Similar to the So, it's secure to run. Similar to the So, it's secure to run. Similar to the
+superbase connection, we connected the superbase connection, we connected the superbase connection, we connected the
+GitHub MCP for version control, the GitHub MCP for version control, the GitHub MCP for version control, the
+Puppeteer MCP for browser testing, and Puppeteer MCP for browser testing, and Puppeteer MCP for browser testing, and
+the context 7 MCP for grounding the the context 7 MCP for grounding the the context 7 MCP for grounding the
+agent with proper documentation so that agent with proper documentation so that agent with proper documentation so that
+it works with updated docs. Once all the it works with updated docs. Once all the it works with updated docs. Once all the
+MCPs were connected, we asked Claude to MCPs were connected, we asked Claude to MCPs were connected, we asked Claude to
+verify everything. It confirmed that we verify everything. It confirmed that we verify everything. It confirmed that we
+had all four MCPs connected, 78 tools in had all four MCPs connected, 78 tools in had all four MCPs connected, 78 tools in
+total in our case. Also, if you are total in our case. Also, if you are total in our case. Also, if you are
+enjoying our content, consider pressing enjoying our content, consider pressing enjoying our content, consider pressing
+the hype button because it helps us the hype button because it helps us the hype button because it helps us
+create more content like this and reach create more content like this and reach create more content like this and reach
+out to more people. Now, once we were out to more people. Now, once we were out to more people. Now, once we were
+actually connected, it was time to start actually connected, it was time to start actually connected, it was time to start
+implementing the app incrementally. We implementing the app incrementally. We implementing the app incrementally. We
+started with connecting the client side started with connecting the client side started with connecting the client side
+code to the Superbase back end. When code to the Superbase back end. When code to the Superbase back end. When
+Claude ran the MCP to CLI command to Claude ran the MCP to CLI command to Claude ran the MCP to CLI command to
+create the project, we noticed that did create the project, we noticed that did create the project, we noticed that did
+not put the access token directly into not put the access token directly into not put the access token directly into
+the tool call. Instead, it referred to the tool call. Instead, it referred to the tool call. Instead, it referred to
+ourv.local at the project level for the ourv.local at the project level for the ourv.local at the project level for the
+token. It created the project, set token. It created the project, set token. It created the project, set
+everything up, and added in the logic everything up, and added in the logic everything up, and added in the logic
+for connecting in the code. But we for connecting in the code. But we for connecting in the code. But we
+noticed that it used the middleware file noticed that it used the middleware file noticed that it used the middleware file
+for the session refresh logic, and it for the session refresh logic, and it for the session refresh logic, and it
+shouldn't have been using that because shouldn't have been using that because shouldn't have been using that because
+it's deprecated. The new version of it's deprecated. The new version of it's deprecated. The new version of
+Nex.js used the proxy and we knew this Nex.js used the proxy and we knew this Nex.js used the proxy and we knew this
+would give us an error when we actually would give us an error when we actually would give us an error when we actually
+ran the app. This just shows that ran the app. This just shows that ran the app. This just shows that
+connecting tools is not enough to make connecting tools is not enough to make connecting tools is not enough to make
+the agent listen to the tools and the agent listen to the tools and the agent listen to the tools and
+actually use them when needed. So we actually use them when needed. So we actually use them when needed. So we
+created a claw.md and told it to use the created a claw.md and told it to use the created a claw.md and told it to use the
+context 7mcp before writing any code so context 7mcp before writing any code so context 7mcp before writing any code so
+this wouldn't happen again. That way it this wouldn't happen again. That way it this wouldn't happen again. That way it
+knows it should refer to the context 7 knows it should refer to the context 7 knows it should refer to the context 7
+mcp before implementation. Once it had mcp before implementation. Once it had mcp before implementation. Once it had
+finished adding tables and setting up finished adding tables and setting up finished adding tables and setting up
+authentication on superbase, we pointed authentication on superbase, we pointed authentication on superbase, we pointed
+out the deprecated middleware warning to out the deprecated middleware warning to out the deprecated middleware warning to
+claude so that it could correct it. claude so that it could correct it. claude so that it could correct it.
+After we told it to, it finally used the After we told it to, it finally used the After we told it to, it finally used the
+context 7 MCP to pull in the context 7 MCP to pull in the context 7 MCP to pull in the
+documentation and resolve the issue documentation and resolve the issue documentation and resolve the issue
+properly. But when we were exploring properly. But when we were exploring properly. But when we were exploring
+this tool further, we found out that this tool further, we found out that this tool further, we found out that
+there was a better way to handle these there was a better way to handle these there was a better way to handle these
+issues than creating a claw.md file. issues than creating a claw.md file. issues than creating a claw.md file.
+Skills are better because their Skills are better because their Skills are better because their
+descriptions are loaded directly into descriptions are loaded directly into descriptions are loaded directly into
+the agents context. So, it already knows the agents context. So, it already knows the agents context. So, it already knows
+what tools are available and when to use what tools are available and when to use what tools are available and when to use
+them rather than us just dumping them rather than us just dumping them rather than us just dumping
+instructions into claude.mmd and hoping instructions into claude.mmd and hoping instructions into claude.mmd and hoping
+it reads them. So, we asked it to create it reads them. So, we asked it to create it reads them. So, we asked it to create
+a skill for all of the MCPS we had a skill for all of the MCPS we had a skill for all of the MCPS we had
+connected. Claude then created skills connected. Claude then created skills connected. Claude then created skills
+for each MCP. Each one detailed what for each MCP. Each one detailed what for each MCP. Each one detailed what
+tools it had, how to use them, and when tools it had, how to use them, and when tools it had, how to use them, and when
+to use them. With that in place, we to use them. With that in place, we to use them. With that in place, we
+moved to the next problem. But what we moved to the next problem. But what we moved to the next problem. But what we
+had was purely far from functional. The had was purely far from functional. The had was purely far from functional. The
+feedback from the horses told us that feedback from the horses told us that feedback from the horses told us that
+they were getting impatient because they they were getting impatient because they they were getting impatient because they
+were unable to chat directly on the were unable to chat directly on the were unable to chat directly on the
+platform. So, we asked Claude to make platform. So, we asked Claude to make platform. So, we asked Claude to make
+the chat functional for the project on the chat functional for the project on the chat functional for the project on
+top of the UI. When we tested it top of the UI. When we tested it top of the UI. When we tested it
+ourselves, the messages didn't load and ourselves, the messages didn't load and ourselves, the messages didn't load and
+only showed a loading screen. So, we only showed a loading screen. So, we only showed a loading screen. So, we
+asked it to use the Puppeteer MCP to asked it to use the Puppeteer MCP to asked it to use the Puppeteer MCP to
+test the message flow. We had it check test the message flow. We had it check test the message flow. We had it check
+itself because an agent that can click itself because an agent that can click itself because an agent that can click
+and scroll and interact with its own UI and scroll and interact with its own UI and scroll and interact with its own UI
+catches things that static code review catches things that static code review catches things that static code review
+never can. For testing purposes, it never can. For testing purposes, it never can. For testing purposes, it
+created two users, but it couldn't created two users, but it couldn't created two users, but it couldn't
+maintain session data across tool calls maintain session data across tool calls maintain session data across tool calls
+since each one spun up a new browser since each one spun up a new browser since each one spun up a new browser
+instance. The number of tools it used instance. The number of tools it used instance. The number of tools it used
+and the time it took to work in a and the time it took to work in a and the time it took to work in a
+headless browser made us realize headless browser made us realize headless browser made us realize
+something. A better option would be to something. A better option would be to something. A better option would be to
+just let the MCP handle it. It was much just let the MCP handle it. It was much just let the MCP handle it. It was much
+faster and took far less time than the 7 faster and took far less time than the 7 faster and took far less time than the 7
+minutes we wasted on such a simple task. minutes we wasted on such a simple task. minutes we wasted on such a simple task.
+We prefer using Claude's own browser We prefer using Claude's own browser We prefer using Claude's own browser
+extension that works better with more extension that works better with more extension that works better with more
+capabilities and is able to retain capabilities and is able to retain capabilities and is able to retain
+sessions better for end-to-end testings sessions better for end-to-end testings sessions better for end-to-end testings
+like these. And MCPs run as persistent like these. And MCPs run as persistent like these. And MCPs run as persistent
+processes which is why they're able to processes which is why they're able to processes which is why they're able to
+maintain state across the entire maintain state across the entire maintain state across the entire
+session. This tool also provides control session. This tool also provides control session. This tool also provides control
+over the output format like JSON and raw over the output format like JSON and raw over the output format like JSON and raw
+output. It also supports tune the token output. It also supports tune the token output. It also supports tune the token
+efficient coding format for LLM efficient coding format for LLM efficient coding format for LLM
+consumption. When we work with MCPS like consumption. When we work with MCPS like consumption. When we work with MCPS like
+context 7, they usually return a huge context 7, they usually return a huge context 7, they usually return a huge
+chunk of output directly into the chunk of output directly into the chunk of output directly into the
+context window. To prevent that, we context window. To prevent that, we context window. To prevent that, we
+added in the claude.m MD file that added in the claude.m MD file that added in the claude.m MD file that
+whenever it uses the context 7 MCP, it whenever it uses the context 7 MCP, it whenever it uses the context 7 MCP, it
+should use the tune format for output. should use the tune format for output. should use the tune format for output.
+It's an efficient format because it It's an efficient format because it It's an efficient format because it
+combines indentation and CSV style combines indentation and CSV style combines indentation and CSV style
+lists, compacting large information into lists, compacting large information into lists, compacting large information into
+much smaller chunks as compared to JSON much smaller chunks as compared to JSON much smaller chunks as compared to JSON
+and YAML. This way, you don't waste any and YAML. This way, you don't waste any and YAML. This way, you don't waste any
+tokens unnecessarily. But the biggest tokens unnecessarily. But the biggest tokens unnecessarily. But the biggest
+unlock came from something that wasn't unlock came from something that wasn't unlock came from something that wasn't
+even possible when MCPs were handled even possible when MCPs were handled even possible when MCPs were handled
+natively by agents. If you remember, natively by agents. If you remember, natively by agents. If you remember,
+cursor released a context editing cursor released a context editing cursor released a context editing
+workflow inside its product. They workflow inside its product. They workflow inside its product. They
+treated MCP results as files and let the treated MCP results as files and let the treated MCP results as files and let the
+agent use bash scripts like Grep for agent use bash scripts like Grep for agent use bash scripts like Grep for
+pattern matching to extract data. We pattern matching to extract data. We pattern matching to extract data. We
+covered that in our previous video. We covered that in our previous video. We covered that in our previous video. We
+tried to implement this idea in other tried to implement this idea in other tried to implement this idea in other
+coding agents, but since MCPS are coding agents, but since MCPS are coding agents, but since MCPS are
+handled natively by agents, we weren't handled natively by agents, we weren't handled natively by agents, we weren't
+able to get much out of it. But now with able to get much out of it. But now with able to get much out of it. But now with
+this CLI, it's possible because MCPS are this CLI, it's possible because MCPS are this CLI, it's possible because MCPS are
+treated as bash command tools. So we treated as bash command tools. So we treated as bash command tools. So we
+added an instruction in the cloud.MD added an instruction in the cloud.MD added an instruction in the cloud.MD
+file that whenever any MCP tool produces file that whenever any MCP tool produces file that whenever any MCP tool produces
+a large output, instead of loading it a large output, instead of loading it a large output, instead of loading it
+into the context window, it should into the context window, it should into the context window, it should
+redirect it to a file at the path we redirect it to a file at the path we redirect it to a file at the path we
+specified. We were tracking this specified. We were tracking this specified. We were tracking this
+project's progress through a project's progress through a project's progress through a
+progress.json file. After adding the progress.json file. After adding the progress.json file. After adding the
+instruction, we asked Claude to instruction, we asked Claude to instruction, we asked Claude to
+implement one feature from the list. It implement one feature from the list. It implement one feature from the list. It
+then used the context 7mcp for tool then used the context 7mcp for tool then used the context 7mcp for tool
+calls, but instead of dumping the output calls, but instead of dumping the output calls, but instead of dumping the output
+to the context window, it piped it to a to the context window, it piped it to a to the context window, it piped it to a
+file and used GP to extract the data and file and used GP to extract the data and file and used GP to extract the data and
+complete the implementation. The complete the implementation. The complete the implementation. The
+claude.md file with all the best claude.md file with all the best claude.md file with all the best
+practices to use this tool is available practices to use this tool is available practices to use this tool is available
+in AIAS Pro. For those who don't know, in AIAS Pro. For those who don't know, in AIAS Pro. For those who don't know,
+it's our recently launched community it's our recently launched community it's our recently launched community
+where you get readytouse templates that where you get readytouse templates that where you get readytouse templates that
+you can plug directly into your you can plug directly into your you can plug directly into your
+projects. For this video and all projects. For this video and all projects. For this video and all
+previous ones, if you found value in previous ones, if you found value in previous ones, if you found value in
+what we do and want to support the what we do and want to support the what we do and want to support the
+channel, this is the best way to do it. channel, this is the best way to do it. channel, this is the best way to do it.
+the links in the description. That the links in the description. That the links in the description. That
+brings us to the end of this video. If brings us to the end of this video. If brings us to the end of this video. If
+you'd like to support the channel and you'd like to support the channel and you'd like to support the channel and
+help us keep making videos like this, help us keep making videos like this, help us keep making videos like this,
+you can do so by using the super thanks you can do so by using the super thanks you can do so by using the super thanks
+button below. As always, thank you for button below. As always, thank you for button below. As always, thank you for
+watching and I'll see you in the next watching and I'll see you in the next watching and I'll see you in the next
+one. 
