@@ -1,0 +1,308 @@
+If you've been hearing harness If you've been hearing harness
+engineering everywhere lately and your engineering everywhere lately and your engineering everywhere lately and your
+first thought is, "Okay, so this is first thought is, "Okay, so this is first thought is, "Okay, so this is
+probably just prompt engineering with a probably just prompt engineering with a probably just prompt engineering with a
+nicer name." That's the first nicer name." That's the first nicer name." That's the first
+misconception to kill. It's not. And misconception to kill. It's not. And misconception to kill. It's not. And
+it's not just a new term. And the reason it's not just a new term. And the reason it's not just a new term. And the reason
+this matters is not just vocabulary this matters is not just vocabulary this matters is not just vocabulary
+either. It tells you where AI is either. It tells you where AI is either. It tells you where AI is
+actually heading. By the end of this actually heading. By the end of this actually heading. By the end of this
+video, you should be able to tell the video, you should be able to tell the video, you should be able to tell the
+difference between prom engineering, difference between prom engineering, difference between prom engineering,
+context engineering, and hardness context engineering, and hardness context engineering, and hardness
+engineering. And more importantly, why engineering. And more importantly, why engineering. And more importantly, why
+the industry suddenly started caring the industry suddenly started caring the industry suddenly started caring
+about this. Now, what changed is pretty about this. Now, what changed is pretty about this. Now, what changed is pretty
+simple. Agents got good enough to be simple. Agents got good enough to be simple. Agents got good enough to be
+useful, but not reliable enough to trust useful, but not reliable enough to trust useful, but not reliable enough to trust
+on their own. That's the entire story. on their own. That's the entire story. on their own. That's the entire story.
+Agents got good enough to be both useful Agents got good enough to be both useful Agents got good enough to be both useful
+and dangerous. They now can do more than and dangerous. They now can do more than and dangerous. They now can do more than
+generating text or tokens. Useful enough generating text or tokens. Useful enough generating text or tokens. Useful enough
+that people started letting them write that people started letting them write that people started letting them write
+serious code, make real tool calls, and serious code, make real tool calls, and serious code, make real tool calls, and
+operate across long tasks. Dangerous operate across long tasks. Dangerous operate across long tasks. Dangerous
+enough that if you wrap them in nothing enough that if you wrap them in nothing enough that if you wrap them in nothing
+but a loop and a dream, they would but a loop and a dream, they would but a loop and a dream, they would
+confidently make the same stupid confidently make the same stupid confidently make the same stupid
+mistakes again and again. Even I am mistakes again and again. Even I am mistakes again and again. Even I am
+guilty of letting cloud code or even guilty of letting cloud code or even guilty of letting cloud code or even
+cloud co-work loop for way too long cloud co-work loop for way too long cloud co-work loop for way too long
+sometimes before actually looking into sometimes before actually looking into sometimes before actually looking into
+what it's actually doing as I was doing what it's actually doing as I was doing what it's actually doing as I was doing
+something else in parallel like doing a something else in parallel like doing a something else in parallel like doing a
+set in the gym which is totally not set in the gym which is totally not set in the gym which is totally not
+optimal to be working at the same time optimal to be working at the same time optimal to be working at the same time
+but still we do that we let agents work but still we do that we let agents work but still we do that we let agents work
+by themselves and that's really where by themselves and that's really where by themselves and that's really where
+harness engineering came from it came harness engineering came from it came harness engineering came from it came
+from pain it came from people realizing from pain it came from people realizing from pain it came from people realizing
+that once the model is capable enough that once the model is capable enough that once the model is capable enough
+the bottleneck stops being can it the bottleneck stops being can it the bottleneck stops being can it
+generate [clears throat] code it becomes generate [clears throat] code it becomes generate [clears throat] code it becomes
+can I make it behave reliably inside a can I make it behave reliably inside a can I make it behave reliably inside a
+real system I can control the cleanest real system I can control the cleanest real system I can control the cleanest
+way to think about it is that prompt way to think about it is that prompt way to think about it is that prompt
+engineering is what to ask context engineering is what to ask context engineering is what to ask context
+engineering is what to send the model so engineering is what to send the model so engineering is what to send the model so
+that it can answer confidently and that it can answer confidently and that it can answer confidently and
+harness engineering is how the whole harness engineering is how the whole harness engineering is how the whole
+thing operates not just the tok tokens thing operates not just the tok tokens thing operates not just the tok tokens
+in the context, but the environment in the context, but the environment in the context, but the environment
+around the model or even around the around the model or even around the around the model or even around the
+agent, the tools it can use, the agent, the tools it can use, the agent, the tools it can use, the
+permissions it has, the state it carries permissions it has, the state it carries permissions it has, the state it carries
+forward, the tests it has to pass, the forward, the tests it has to pass, the forward, the tests it has to pass, the
+logs you capture, the amount of retries, logs you capture, the amount of retries, logs you capture, the amount of retries,
+the checkpoints, the guardrails, the the checkpoints, the guardrails, the the checkpoints, the guardrails, the
+reviews and evils that stop the system reviews and evils that stop the system reviews and evils that stop the system
+from drifting into nonsense. Context from drifting into nonsense. Context from drifting into nonsense. Context
+engineering lives inside that and it engineering lives inside that and it engineering lives inside that and it
+still matters a lot but it is not the still matters a lot but it is not the still matters a lot but it is not the
+whole story. A bigger context window whole story. A bigger context window whole story. A bigger context window
+does not magically turn a flaky agent does not magically turn a flaky agent does not magically turn a flaky agent
+into a reliable system. The proof is into a reliable system. The proof is into a reliable system. The proof is
+that Opus 1 million context is actually that Opus 1 million context is actually that Opus 1 million context is actually
+hurting a lot of my work recently just hurting a lot of my work recently just hurting a lot of my work recently just
+because it costs way too much tokens. because it costs way too much tokens. because it costs way too much tokens.
+But anyways, that's not the goal of this But anyways, that's not the goal of this But anyways, that's not the goal of this
+video. The model is the engine. You video. The model is the engine. You video. The model is the engine. You
+can't do much without it. But when you can't do much without it. But when you can't do much without it. But when you
+buy a car, it comes with it. You work on buy a car, it comes with it. You work on buy a car, it comes with it. You work on
+what you can bring value to. Context is what you can bring value to. Context is what you can bring value to. Context is
+part of that. The fuel, the oil change part of that. The fuel, the oil change part of that. The fuel, the oil change
+and dashboard information. It's the and dashboard information. It's the and dashboard information. It's the
+things you can easily optimize and things you can easily optimize and things you can easily optimize and
+control. The harness is the rest of the control. The harness is the rest of the control. The harness is the rest of the
+car. The steering, the brakes, the lane car. The steering, the brakes, the lane car. The steering, the brakes, the lane
+boundaries, maintenance schedules, boundaries, maintenance schedules, boundaries, maintenance schedules,
+warning lights, and the fact that the warning lights, and the fact that the warning lights, and the fact that the
+doors shouldn't fall off on the highway. doors shouldn't fall off on the highway. doors shouldn't fall off on the highway.
+If you only focus on the engine and If you only focus on the engine and If you only focus on the engine and
+fuel, you can still build a terrible fuel, you can still build a terrible fuel, you can still build a terrible
+car. You will drive, but it can be car. You will drive, but it can be car. You will drive, but it can be
+dangerous. This started becoming obvious dangerous. This started becoming obvious dangerous. This started becoming obvious
+around December 2025. And Carpathy was around December 2025. And Carpathy was around December 2025. And Carpathy was
+probably the first to talk about it with probably the first to talk about it with probably the first to talk about it with
+the inversion where his workflow went the inversion where his workflow went the inversion where his workflow went
+from mostly manual coding with a bit of from mostly manual coding with a bit of from mostly manual coding with a bit of
+agent help to mostly agent-driven coding agent help to mostly agent-driven coding agent help to mostly agent-driven coding
+with a bit of manual edits. That sounds with a bit of manual edits. That sounds with a bit of manual edits. That sounds
+like the story should be, "Oh, wow. the like the story should be, "Oh, wow. the like the story should be, "Oh, wow. the
+models won. We need to give them models won. We need to give them models won. We need to give them
+everything. But that's not really the everything. But that's not really the everything. But that's not really the
+story. The story is that the moment story. The story is that the moment story. The story is that the moment
+agents got coherent enough to do a lot, agents got coherent enough to do a lot, agents got coherent enough to do a lot,
+everyone also discovered how brittle everyone also discovered how brittle everyone also discovered how brittle
+they wear in real environments. This is they wear in real environments. This is they wear in real environments. This is
+why cursor and cloud code are so why cursor and cloud code are so why cursor and cloud code are so
+popular. It's because it's not only the popular. It's because it's not only the popular. It's because it's not only the
+model. And speaking of brittle, well, model. And speaking of brittle, well, model. And speaking of brittle, well,
+models would claim a feature was done models would claim a feature was done models would claim a feature was done
+without actually running the test or without actually running the test or without actually running the test or
+even without really having implemented even without really having implemented even without really having implemented
+the feature. Cloud Co-work even did that the feature. Cloud Co-work even did that the feature. Cloud Co-work even did that
+to me this morning. They often lose the to me this morning. They often lose the to me this morning. They often lose the
+plot over long tasks. They would make plot over long tasks. They would make plot over long tasks. They would make
+local fixes that broke architectural local fixes that broke architectural local fixes that broke architectural
+boundaries. they would get stuck in boundaries. they would get stuck in boundaries. they would get stuck in
+loops making tiny edits forever, which loops making tiny edits forever, which loops making tiny edits forever, which
+also stimulated a lot of research around also stimulated a lot of research around also stimulated a lot of research around
+compaction that I'd be happy to talk in compaction that I'd be happy to talk in compaction that I'd be happy to talk in
+an upcoming video. If you'd like, let me an upcoming video. If you'd like, let me an upcoming video. If you'd like, let me
+know. And so, Entropic was one of the know. And so, Entropic was one of the know. And so, Entropic was one of the
+clearest early signals here. Their clearest early signals here. Their clearest early signals here. Their
+longunning agents post was basically a longunning agents post was basically a longunning agents post was basically a
+blueprint for a world where agents work blueprint for a world where agents work blueprint for a world where agents work
+in shifts across sessions without native in shifts across sessions without native in shifts across sessions without native
+memory between context windows. So memory between context windows. So memory between context windows. So
+instead of pretending the model will instead of pretending the model will instead of pretending the model will
+just remember everything, they just remember everything, they just remember everything, they
+externalized memory into artifacts, a externalized memory into artifacts, a externalized memory into artifacts, a
+structured feature list, a progress log, structured feature list, a progress log, structured feature list, a progress log,
+get commits, an init script. They even get commits, an init script. They even get commits, an init script. They even
+split roles between an initializer agent split roles between an initializer agent split roles between an initializer agent
+and a coding agent. That's already and a coding agent. That's already and a coding agent. That's already
+harnessed thinking. You stop asking the harnessed thinking. You stop asking the harnessed thinking. You stop asking the
+model to be magically reliable and you model to be magically reliable and you model to be magically reliable and you
+start designing a system that makes start designing a system that makes start designing a system that makes
+reliability more plausible for the reliability more plausible for the reliability more plausible for the
+agent. We started coding around LLMs and agent. We started coding around LLMs and agent. We started coding around LLMs and
+agents instead of around existing agents instead of around existing agents instead of around existing
+systems. Then Mitchell Hashimoto gave systems. Then Mitchell Hashimoto gave systems. Then Mitchell Hashimoto gave
+the thing a name in early February 2026. the thing a name in early February 2026. the thing a name in early February 2026.
+And honestly, I think this framing is And honestly, I think this framing is And honestly, I think this framing is
+why the term stuck. Every time the agent why the term stuck. Every time the agent why the term stuck. Every time the agent
+makes a mistake, don't just hope it does makes a mistake, don't just hope it does makes a mistake, don't just hope it does
+better next time. Engineer the better next time. Engineer the better next time. Engineer the
+environment so it can't make that environment so it can't make that environment so it can't make that
+specific mistake the same way again. specific mistake the same way again. specific mistake the same way again.
+Improve the agents MD file based on Improve the agents MD file based on Improve the agents MD file based on
+actual bad behavior. Add scripts, actual bad behavior. Add scripts, actual bad behavior. Add scripts,
+llinters, checks, and tools so the agent llinters, checks, and tools so the agent llinters, checks, and tools so the agent
+can verify and fix its own work. That's can verify and fix its own work. That's can verify and fix its own work. That's
+a very important mindset shift because a very important mindset shift because a very important mindset shift because
+it moves the burden away from waiting it moves the burden away from waiting it moves the burden away from waiting
+for the next model release and back to for the next model release and back to for the next model release and back to
+the builder to us. We stop saying the the builder to us. We stop saying the the builder to us. We stop saying the
+model is just dumb. I give up and we model is just dumb. I give up and we model is just dumb. I give up and we
+start just building to improve models start just building to improve models start just building to improve models
+and adapt our tools and setup for it and adapt our tools and setup for it and adapt our tools and setup for it
+which can even be done by non-coders which can even be done by non-coders which can even be done by non-coders
+with better skill files and prompting in with better skill files and prompting in with better skill files and prompting in
+general iterating with the agents to do general iterating with the agents to do general iterating with the agents to do
+better each time you use it. For better each time you use it. For better each time you use it. For
+example, in each of my skills files in example, in each of my skills files in example, in each of my skills files in
+cloud code and in cloud cowork, I added cloud code and in cloud cowork, I added cloud code and in cloud cowork, I added
+a last step to reflect back on the whole a last step to reflect back on the whole a last step to reflect back on the whole
+interaction, on the whole exchange and interaction, on the whole exchange and interaction, on the whole exchange and
+digest and understand what I liked, what digest and understand what I liked, what digest and understand what I liked, what
+I edited, what I didn't like, so that it I edited, what I didn't like, so that it I edited, what I didn't like, so that it
+can tweak its own skill to be better can tweak its own skill to be better can tweak its own skill to be better
+next time. I also sometimes simply ask next time. I also sometimes simply ask next time. I also sometimes simply ask
+it to spend some time finding a better it to spend some time finding a better it to spend some time finding a better
+way to do a specific task and if it way to do a specific task and if it way to do a specific task and if it
+works, I ask it to change the skill works, I ask it to change the skill works, I ask it to change the skill
+according to that. It saved me tons and according to that. It saved me tons and according to that. It saved me tons and
+tons of tokens and time since I started tons of tokens and time since I started tons of tokens and time since I started
+doing this and my skills file and just doing this and my skills file and just doing this and my skills file and just
+the processes in general got way better the processes in general got way better the processes in general got way better
+over time. Then OpenAI made the whole over time. Then OpenAI made the whole over time. Then OpenAI made the whole
+thing impossible to ignore. Their recent thing impossible to ignore. Their recent thing impossible to ignore. Their recent
+report described building an internal report described building an internal report described building an internal
+product with roughly a million lines of product with roughly a million lines of product with roughly a million lines of
+code and zero manually written source code and zero manually written source code and zero manually written source
+code. Same for Cloud Code's creator who code. Same for Cloud Code's creator who code. Same for Cloud Code's creator who
+shared a tweet saying all past Cloud shared a tweet saying all past Cloud shared a tweet saying all past Cloud
+Code lines were pushed by Cloud Code Code lines were pushed by Cloud Code Code lines were pushed by Cloud Code
+itself. What matters there is not just itself. What matters there is not just itself. What matters there is not just
+the headline. It's what they had to the headline. It's what they had to the headline. It's what they had to
+build around the agents to make that build around the agents to make that build around the agents to make that
+possible. Structured repo documentations possible. Structured repo documentations possible. Structured repo documentations
+as a real source of truth. Agents MD as a real source of truth. Agents MD as a real source of truth. Agents MD
+files as maps, not a giant wall of text files as maps, not a giant wall of text files as maps, not a giant wall of text
+in a prompt. Layered architecture in a prompt. Layered architecture in a prompt. Layered architecture
+enforced by llinters and tests. Agent to enforced by llinters and tests. Agent to enforced by llinters and tests. Agent to
+agent review loops before merging. agent review loops before merging. agent review loops before merging.
+Background cleanup agents fixing drifts. Background cleanup agents fixing drifts. Background cleanup agents fixing drifts.
+And that's not just writing prompts. And that's not just writing prompts. And that's not just writing prompts.
+That's infrastructure design around That's infrastructure design around That's infrastructure design around
+agents. It's software engineering moving agents. It's software engineering moving agents. It's software engineering moving
+one level up. And this is where the link one level up. And this is where the link one level up. And this is where the link
+with context engineering becomes really with context engineering becomes really with context engineering becomes really
+useful because I think a lot of people useful because I think a lot of people useful because I think a lot of people
+are mixing these two terms up right now. are mixing these two terms up right now. are mixing these two terms up right now.
+Context engineering is about making the Context engineering is about making the Context engineering is about making the
+task plausibly solvable for the model in task plausibly solvable for the model in task plausibly solvable for the model in
+a given moment. You give it the proper a given moment. You give it the proper a given moment. You give it the proper
+text to be able to answer. So what text to be able to answer. So what text to be able to answer. So what
+information should be in the context information should be in the context information should be in the context
+window right now? What should be window right now? What should be window right now? What should be
+retrieved? What should be summarized? retrieved? What should be summarized? retrieved? What should be summarized?
+What should be evicted? That's real work What should be evicted? That's real work What should be evicted? That's real work
+and parts of it can be automated by the and parts of it can be automated by the and parts of it can be automated by the
+agent itself. It's one of the main agent itself. It's one of the main agent itself. It's one of the main
+reasons many systems improved beyond reasons many systems improved beyond reasons many systems improved beyond
+dump prompting. But a harness decides dump prompting. But a harness decides dump prompting. But a harness decides
+when the context gets loaded, which when the context gets loaded, which when the context gets loaded, which
+tools are available, which actions are tools are available, which actions are tools are available, which actions are
+allowed, how failures get handled, and allowed, how failures get handled, and allowed, how failures get handled, and
+what happens before anything gets called what happens before anything gets called what happens before anything gets called
+done. Your harness is the infrastructure done. Your harness is the infrastructure done. Your harness is the infrastructure
+you build around the model. So context you build around the model. So context you build around the model. So context
+engineering might make sure the model engineering might make sure the model engineering might make sure the model
+sees the right database schema and sees the right database schema and sees the right database schema and
+harness engineering is the reason it harness engineering is the reason it harness engineering is the reason it
+still has to run the llinter pass the still has to run the llinter pass the still has to run the llinter pass the
+test respect permissions and save test respect permissions and save test respect permissions and save
+progress so it doesn't forget the progress so it doesn't forget the progress so it doesn't forget the
+objective three turns later. One is what objective three turns later. One is what objective three turns later. One is what
+the model sees the other is how the the model sees the other is how the the model sees the other is how the
+system behaves. This also explains why system behaves. This also explains why system behaves. This also explains why
+people are talking about progressive people are talking about progressive people are talking about progressive
+disclosure so much. If you dump your disclosure so much. If you dump your disclosure so much. If you dump your
+entire company brain into one giant entire company brain into one giant entire company brain into one giant
+agent's file, the agent doesn't become agent's file, the agent doesn't become agent's file, the agent doesn't become
+wiser. Usually, it just becomes worse. wiser. Usually, it just becomes worse. wiser. Usually, it just becomes worse.
+More noise, more context rot, more More noise, more context rot, more More noise, more context rot, more
+things silently ignored. The better things silently ignored. The better things silently ignored. The better
+pattern seems to be a short map up front pattern seems to be a short map up front pattern seems to be a short map up front
+and deeper sources of truth pulled in and deeper sources of truth pulled in and deeper sources of truth pulled in
+only when needed. That's context only when needed. That's context only when needed. That's context
+engineering inside your harness. The engineering inside your harness. The engineering inside your harness. The
+harness decides what surface and when harness decides what surface and when harness decides what surface and when
+instead of treating the context window instead of treating the context window instead of treating the context window
+like a landfield. Now why does all of like a landfield. Now why does all of like a landfield. Now why does all of
+this matter beyond people building this matter beyond people building this matter beyond people building
+coding agents at all? Because this is coding agents at all? Because this is coding agents at all? Because this is
+starting to look like the new way starting to look like the new way starting to look like the new way
+software gets built. Not fully, not software gets built. Not fully, not software gets built. Not fully, not
+cleanly, and definitely not safely by cleanly, and definitely not safely by cleanly, and definitely not safely by
+default, but the direction is becoming default, but the direction is becoming default, but the direction is becoming
+clearer. Lang chain showed that by clearer. Lang chain showed that by clearer. Lang chain showed that by
+changing only the hardness, not the changing only the hardness, not the changing only the hardness, not the
+model, they could move a coding agent model, they could move a coding agent model, they could move a coding agent
+from outside the top 30 to top five on from outside the top 30 to top five on from outside the top 30 to top five on
+the benchmark terminal bench 2.0. Same the benchmark terminal bench 2.0. Same the benchmark terminal bench 2.0. Same
+model, better system, better harness. model, better system, better harness. model, better system, better harness.
+Stripe reportedly has agents producing Stripe reportedly has agents producing Stripe reportedly has agents producing
+over a thousand merge pull requests per over a thousand merge pull requests per over a thousand merge pull requests per
+week, but inside isolated environments week, but inside isolated environments week, but inside isolated environments
+with hard CI limits and escalation with hard CI limits and escalation with hard CI limits and escalation
+rules. Data Doug pushed the ID further rules. Data Doug pushed the ID further rules. Data Doug pushed the ID further
+by treating production telemetry as part by treating production telemetry as part by treating production telemetry as part
+of the harness itself. If performance of the harness itself. If performance of the harness itself. If performance
+regresses, that signal goes back into regresses, that signal goes back into regresses, that signal goes back into
+the loop and that's not vibe coding. the loop and that's not vibe coding. the loop and that's not vibe coding.
+This is generate, validate, fix with This is generate, validate, fix with This is generate, validate, fix with
+observability throughout. And there is observability throughout. And there is observability throughout. And there is
+an even more important implication here. an even more important implication here. an even more important implication here.
+The programmer's job is shifting, not The programmer's job is shifting, not The programmer's job is shifting, not
+disappearing, shifting. Less time typing disappearing, shifting. Less time typing disappearing, shifting. Less time typing
+every line by hand. More time designing every line by hand. More time designing every line by hand. More time designing
+habitats where agents can do useful work habitats where agents can do useful work habitats where agents can do useful work
+without wrecking everything around them. without wrecking everything around them. without wrecking everything around them.
+More machine readable documentation, More machine readable documentation, More machine readable documentation,
+more evolves, more sandboxes, more more evolves, more sandboxes, more more evolves, more sandboxes, more
+permission boundaries, more structural permission boundaries, more structural permission boundaries, more structural
+tests, more logs, traces, and tests, more logs, traces, and tests, more logs, traces, and
+replayability. replayability. replayability.
+Prompting is the easiest part here. Prompting is the easiest part here. Prompting is the easiest part here.
+Reliability is the real work. And the Reliability is the real work. And the Reliability is the real work. And the
+honest version though is that none of honest version though is that none of honest version though is that none of
+this means agents are magically solved. this means agents are magically solved. this means agents are magically solved.
+Memory still breaks. Validation still Memory still breaks. Validation still Memory still breaks. Validation still
+misses things. Tool use still creates misses things. Tool use still creates misses things. Tool use still creates
+security risk. Harness depth is real security risk. Harness depth is real security risk. Harness depth is real
+because now your harness becomes its own because now your harness becomes its own because now your harness becomes its own
+product with its own bugs and drifts. product with its own bugs and drifts. product with its own bugs and drifts.
+And human attention becomes the real And human attention becomes the real And human attention becomes the real
+scarce resource. If agents can generate scarce resource. If agents can generate scarce resource. If agents can generate
+way more output than humans can way more output than humans can way more output than humans can
+carefully inspect, then rigor has to carefully inspect, then rigor has to carefully inspect, then rigor has to
+move into the system itself. Since we move into the system itself. Since we move into the system itself. Since we
+cannot review everything manually cannot review everything manually cannot review everything manually
+forever, we need checks we trust. So we forever, we need checks we trust. So we forever, we need checks we trust. So we
+need to build environments that fail need to build environments that fail need to build environments that fail
+safely and we need traces that tell us safely and we need traces that tell us safely and we need traces that tell us
+why something went wrong. So when people why something went wrong. So when people why something went wrong. So when people
+ask where LLMs are heading, I think the ask where LLMs are heading, I think the ask where LLMs are heading, I think the
+better answer is that they are heading better answer is that they are heading better answer is that they are heading
+into systems into workflows, agents, into systems into workflows, agents, into systems into workflows, agents,
+runtimes and harnesses where more of the runtimes and harnesses where more of the runtimes and harnesses where more of the
+value comes from the orchestration value comes from the orchestration value comes from the orchestration
+constraints and feedback loops than from constraints and feedback loops than from constraints and feedback loops than from
+a prompt and a model that we share on a prompt and a model that we share on a prompt and a model that we share on
+social media. The future is probably social media. The future is probably social media. The future is probably
+less one genius model does everything less one genius model does everything less one genius model does everything
+and more models operating inside and more models operating inside and more models operating inside
+well-engineered environments that make well-engineered environments that make well-engineered environments that make
+them usable. And that's why harness them usable. And that's why harness them usable. And that's why harness
+engineering matters. It's not a trendy engineering matters. It's not a trendy engineering matters. It's not a trendy
+rename for prompting. It's what shows up rename for prompting. It's what shows up rename for prompting. It's what shows up
+when you stop demoing intelligence and when you stop demoing intelligence and when you stop demoing intelligence and
+start trying to ship it. Thanks for start trying to ship it. Thanks for start trying to ship it. Thanks for
+watching throughout. I hope this video watching throughout. I hope this video watching throughout. I hope this video
+was useful and if it was, please was useful and if it was, please was useful and if it was, please
+consider subscribing to see next week's 

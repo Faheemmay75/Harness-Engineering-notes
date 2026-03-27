@@ -1,0 +1,541 @@
+This document is a pattern language in This document is a pattern language in
+the Alexandrian sense, a vocabulary of the Alexandrian sense, a vocabulary of the Alexandrian sense, a vocabulary of
+named interconnected solutions to named interconnected solutions to named interconnected solutions to
+recurring structural problems in claude recurring structural problems in claude recurring structural problems in claude
+code development. Each pattern has a code development. Each pattern has a code development. Each pattern has a
+name, a problem statement that name, a problem statement that name, a problem statement that
+identifies the force's intention, a identifies the force's intention, a identifies the force's intention, a
+solution that resolves them, a solution that resolves them, a solution that resolves them, a
+structural specification, and explicit structural specification, and explicit structural specification, and explicit
+relationships to other patterns. relationships to other patterns. relationships to other patterns.
+Patterns are not templates to copy. They Patterns are not templates to copy. They Patterns are not templates to copy. They
+are compressed insights about how to are compressed insights about how to are compressed insights about how to
+resolve tensions that will recur resolve tensions that will recur resolve tensions that will recur
+regardless of domain. A pattern applied regardless of domain. A pattern applied regardless of domain. A pattern applied
+without understanding the forces it without understanding the forces it without understanding the forces it
+resolves produces shallow imitation. A resolves produces shallow imitation. A resolves produces shallow imitation. A
+pattern understood produces genuine pattern understood produces genuine pattern understood produces genuine
+variance appropriate to their context. variance appropriate to their context. variance appropriate to their context.
+We've identified 42 patterns of agent We've identified 42 patterns of agent We've identified 42 patterns of agent
+architecture across four zones from architecture across four zones from architecture across four zones from
+context and structural foundations to context and structural foundations to context and structural foundations to
+long-running applications. The key long-running applications. The key long-running applications. The key
+insight is that prompting is pros. Agent insight is that prompting is pros. Agent insight is that prompting is pros. Agent
+engineering is architecture. We achieve engineering is architecture. We achieve engineering is architecture. We achieve
+deterministic reliability through deterministic reliability through deterministic reliability through
+structural constraints. Taming the structural constraints. Taming the structural constraints. Taming the
+probabilistic machine involves applying probabilistic machine involves applying probabilistic machine involves applying
+an intent engineering harness to the an intent engineering harness to the an intent engineering harness to the
+probabilistic cloud. We force probabilistic cloud. We force probabilistic cloud. We force
+deterministic reliability out of deterministic reliability out of deterministic reliability out of
+creative models through deliberate creative models through deliberate creative models through deliberate
+intent engineering to avoid unreliable intent engineering to avoid unreliable intent engineering to avoid unreliable
+or brittle systems. Group one, or brittle systems. Group one, or brittle systems. Group one,
+structural foundations. The central structural foundations. The central structural foundations. The central
+tension in all agent system development tension in all agent system development tension in all agent system development
+is between the agents need for rich is between the agents need for rich is between the agents need for rich
+contextual connected knowledge and the contextual connected knowledge and the contextual connected knowledge and the
+hard constraint of the context window. hard constraint of the context window. hard constraint of the context window.
+Every structural decision in a skill Every structural decision in a skill Every structural decision in a skill
+repository is a negotiation between repository is a negotiation between repository is a negotiation between
+completeness and loadability. These completeness and loadability. These completeness and loadability. These
+foundational patterns establish the foundational patterns establish the foundational patterns establish the
+terms of that negotiation for all terms of that negotiation for all terms of that negotiation for all
+patterns that follow. patterns that follow. patterns that follow.
+Pattern one, flat skill catalog. Keep Pattern one, flat skill catalog. Keep Pattern one, flat skill catalog. Keep
+all skills as peer directories at a all skills as peer directories at a all skills as peer directories at a
+single depth. The catalog is always single depth. The catalog is always single depth. The catalog is always
+discoverable with one listing operation. discoverable with one listing operation. discoverable with one listing operation.
+Adding a capability means adding one Adding a capability means adding one Adding a capability means adding one
+directory. The structure has no registry directory. The structure has no registry directory. The structure has no registry
+to maintain, no import wiring, no parent to maintain, no import wiring, no parent to maintain, no import wiring, no parent
+child relationships to keep consistent. child relationships to keep consistent. child relationships to keep consistent.
+Pattern two, skill directory anatomy. Pattern two, skill directory anatomy. Pattern two, skill directory anatomy.
+Every skill is a directory. The Every skill is a directory. The Every skill is a directory. The
+directory contains exactly one required directory contains exactly one required directory contains exactly one required
+file skill.md and optional supporting file skill.md and optional supporting file skill.md and optional supporting
+files organized by type. The mandatory files organized by type. The mandatory files organized by type. The mandatory
+file is pure instruction. The optional file is pure instruction. The optional file is pure instruction. The optional
+files are pure reference, pure tooling files are pure reference, pure tooling files are pure reference, pure tooling
+or pure example, never a mix. The agent or pure example, never a mix. The agent or pure example, never a mix. The agent
+reads the instruction file. It reads reads the instruction file. It reads reads the instruction file. It reads
+supporting files only when the supporting files only when the supporting files only when the
+instruction directs it to. Pattern five, instruction directs it to. Pattern five, instruction directs it to. Pattern five,
+knowledge workflow separation. Skills knowledge workflow separation. Skills knowledge workflow separation. Skills
+contain procedure. Knowledge directories contain procedure. Knowledge directories contain procedure. Knowledge directories
+contain facts. The skill instructs the contain facts. The skill instructs the contain facts. The skill instructs the
+agent to read from the knowledge agent to read from the knowledge agent to read from the knowledge
+directory when it needs reference directory when it needs reference directory when it needs reference
+material. The knowledge directory never material. The knowledge directory never material. The knowledge directory never
+instructs. Pattern three, Yiml front instructs. Pattern three, Yiml front instructs. Pattern three, Yiml front
+matter contract. Every skill, command, matter contract. Every skill, command, matter contract. Every skill, command,
+and agent definition opens with a YL and agent definition opens with a YL and agent definition opens with a YL
+front matter block that contains exactly front matter block that contains exactly front matter block that contains exactly
+the fields the platform needs for the fields the platform needs for the fields the platform needs for
+routing, configuration, and life cycle routing, configuration, and life cycle routing, configuration, and life cycle
+management. The front matter is the management. The front matter is the management. The front matter is the
+interface. Everything below it is the interface. Everything below it is the interface. Everything below it is the
+implementation. Pattern four, implementation. Pattern four, implementation. Pattern four,
+description as trigger criteria. Write description as trigger criteria. Write description as trigger criteria. Write
+the description as activation criteria, the description as activation criteria, the description as activation criteria,
+not workflow summary. The description not workflow summary. The description not workflow summary. The description
+answers, when should this skill be answers, when should this skill be answers, when should this skill be
+activated, not what does this skill do? activated, not what does this skill do? activated, not what does this skill do?
+The body answers the second question. The body answers the second question. The body answers the second question.
+Group two, context engineering patterns. Group two, context engineering patterns. Group two, context engineering patterns.
+The agents world model is always The agents world model is always The agents world model is always
+incomplete. Context engineering patterns incomplete. Context engineering patterns incomplete. Context engineering patterns
+govern what information enters the govern what information enters the govern what information enters the
+context window, when it enters, and how context window, when it enters, and how context window, when it enters, and how
+it is structured so that the agent it is structured so that the agent it is structured so that the agent
+operates on ground truth rather than on operates on ground truth rather than on operates on ground truth rather than on
+stale training. The primary tension in stale training. The primary tension in stale training. The primary tension in
+this group is between completeness. The this group is between completeness. The this group is between completeness. The
+agent should know everything relevant agent should know everything relevant agent should know everything relevant
+and loadability. What does not fit in and loadability. What does not fit in and loadability. What does not fit in
+the context window cannot be used. the context window cannot be used. the context window cannot be used.
+Pattern six, three- tier knowledge Pattern six, three- tier knowledge Pattern six, three- tier knowledge
+loading. organize skill content into loading. organize skill content into loading. organize skill content into
+three tiers with different loading three tiers with different loading three tiers with different loading
+triggers. Tier one, metadata, is always triggers. Tier one, metadata, is always triggers. Tier one, metadata, is always
+loaded. It is the routing signal. Tier loaded. It is the routing signal. Tier loaded. It is the routing signal. Tier
+two, instructions, is loaded when the two, instructions, is loaded when the two, instructions, is loaded when the
+skill is activated. It is the skill is activated. It is the skill is activated. It is the
+operational guide. Tier three, operational guide. Tier three, operational guide. Tier three,
+resources, is loaded on demand during resources, is loaded on demand during resources, is loaded on demand during
+execution. It is the deep reference. execution. It is the deep reference. execution. It is the deep reference.
+Pattern seven, write to file, not Pattern seven, write to file, not Pattern seven, write to file, not
+context window. Large outputs are context window. Large outputs are context window. Large outputs are
+written to the file system immediately written to the file system immediately written to the file system immediately
+upon production. The context receives a upon production. The context receives a upon production. The context receives a
+summary only. Downstream steps read the summary only. Downstream steps read the summary only. Downstream steps read the
+file directly. Pattern 8, source file directly. Pattern 8, source file directly. Pattern 8, source
+[snorts] attributed state. Every value [snorts] attributed state. Every value [snorts] attributed state. Every value
+in a persistent state structure carries in a persistent state structure carries in a persistent state structure carries
+a source field identifying where it came a source field identifying where it came a source field identifying where it came
+from, the specific document, chapter, from, the specific document, chapter, from, the specific document, chapter,
+step, or observation that produced it. step, or observation that produced it. step, or observation that produced it.
+Conflicts are preserved as explicit Conflicts are preserved as explicit Conflicts are preserved as explicit
+unresolved entries rather than unresolved entries rather than unresolved entries rather than
+overwritten. Pattern nine, cross overwritten. Pattern nine, cross overwritten. Pattern nine, cross
+reference by name. Skills reference reference by name. Skills reference reference by name. Skills reference
+other skills by their registered name, other skills by their registered name, other skills by their registered name,
+not their file path. The name is the not their file path. The name is the not their file path. The name is the
+stable identifier. The path is a stable identifier. The path is a stable identifier. The path is a
+platform specific detail resolved at platform specific detail resolved at platform specific detail resolved at
+load time. Group one defines the load time. Group one defines the load time. Group one defines the
+physical infrastructure while group two physical infrastructure while group two physical infrastructure while group two
+dictates the logistical flow what enters dictates the logistical flow what enters dictates the logistical flow what enters
+the context window when it loads and how the context window when it loads and how the context window when it loads and how
+it is structured to prevent cognitive it is structured to prevent cognitive it is structured to prevent cognitive
+bloat. The context funnel in action bloat. The context funnel in action bloat. The context funnel in action
+shows how repository data is filtered. shows how repository data is filtered. shows how repository data is filtered.
+Tier one routing signals trigger the Tier one routing signals trigger the Tier one routing signals trigger the
+exact capability needed and tier 2 logic exact capability needed and tier 2 logic exact capability needed and tier 2 logic
+selectively pulls necessary tier 3 facts selectively pulls necessary tier 3 facts selectively pulls necessary tier 3 facts
+into the context window ensuring token into the context window ensuring token into the context window ensuring token
+efficiency synthesis. The rigid protects efficiency synthesis. The rigid protects efficiency synthesis. The rigid protects
+the fragile. The agents dynamic the fragile. The agents dynamic the fragile. The agents dynamic
+logistical flow relies entirely on logistical flow relies entirely on logistical flow relies entirely on
+static physical infrastructure. Rigid static physical infrastructure. Rigid static physical infrastructure. Rigid
+discipline is needed to keep the context discipline is needed to keep the context discipline is needed to keep the context
+window lean, ensuring the agents working window lean, ensuring the agents working window lean, ensuring the agents working
+memory is optimized for reasoning. That memory is optimized for reasoning. That memory is optimized for reasoning. That
+covers nine structural pillars of covers nine structural pillars of covers nine structural pillars of
+agentic systems. We now focus on group agentic systems. We now focus on group agentic systems. We now focus on group
+three, harness engineering, the physical three, harness engineering, the physical three, harness engineering, the physical
+control system, and group four, intent control system, and group four, intent control system, and group four, intent
+engineering, the psychological guidance engineering, the psychological guidance engineering, the psychological guidance
+system. Other core tensions of agentic system. Other core tensions of agentic system. Other core tensions of agentic
+systems include autonomy versus safety, systems include autonomy versus safety, systems include autonomy versus safety,
+flexibility versus predictability, and flexibility versus predictability, and flexibility versus predictability, and
+speed versus correctness. Patterns in speed versus correctness. Patterns in speed versus correctness. Patterns in
+groups three and four resolve these groups three and four resolve these groups three and four resolve these
+tensions by replacing abstract tensions by replacing abstract tensions by replacing abstract
+guidelines with hard structural limits. guidelines with hard structural limits. guidelines with hard structural limits.
+Group three, harness engineering Group three, harness engineering Group three, harness engineering
+patterns. The harness is the control patterns. The harness is the control patterns. The harness is the control
+system that makes raw LLM capability system that makes raw LLM capability system that makes raw LLM capability
+into reliable work. The central tensions into reliable work. The central tensions into reliable work. The central tensions
+in this group are between autonomy, the in this group are between autonomy, the in this group are between autonomy, the
+agent acts without interruption, and agent acts without interruption, and agent acts without interruption, and
+safety. The agent is checked before safety. The agent is checked before safety. The agent is checked before
+consequential action. Between consequential action. Between consequential action. Between
+flexibility, the agent adapts to context flexibility, the agent adapts to context flexibility, the agent adapts to context
+and predictability. The system behaves and predictability. The system behaves and predictability. The system behaves
+consistently. And between speed, the consistently. And between speed, the consistently. And between speed, the
+agent proceeds, and correctness, the agent proceeds, and correctness, the agent proceeds, and correctness, the
+agent verifies. Pattern 10. Explicit IO agent verifies. Pattern 10. Explicit IO agent verifies. Pattern 10. Explicit IO
+contract. Every skill declares its IO contract. Every skill declares its IO contract. Every skill declares its IO
+contract explicitly. Pre-ereads are contract explicitly. Pre-ereads are contract explicitly. Pre-ereads are
+listed before the process begins. Output listed before the process begins. Output listed before the process begins. Output
+locations are specified in an output locations are specified in an output locations are specified in an output
+contract section with exact file paths contract section with exact file paths contract section with exact file paths
+and formats. Pattern 11. Pipeline and formats. Pattern 11. Pipeline and formats. Pattern 11. Pipeline
+composition. Each skill or command's composition. Each skill or command's composition. Each skill or command's
+terminal state explicitly names the next terminal state explicitly names the next terminal state explicitly names the next
+step to invoke. The pipeline is declared step to invoke. The pipeline is declared step to invoke. The pipeline is declared
+in the skill bodies, not in a separate in the skill bodies, not in a separate in the skill bodies, not in a separate
+orchestration layer. Each unit is a orchestration layer. Each unit is a orchestration layer. Each unit is a
+relay baton. It does its work and hands relay baton. It does its work and hands relay baton. It does its work and hands
+off. Pattern 12. Checkpoint gated off. Pattern 12. Checkpoint gated off. Pattern 12. Checkpoint gated
+autonomy. Two complimentary mechanisms autonomy. Two complimentary mechanisms autonomy. Two complimentary mechanisms
+address these forces and must be address these forces and must be address these forces and must be
+selected based on task length, model selected based on task length, model selected based on task length, model
+characteristics, and the desired characteristics, and the desired characteristics, and the desired
+trade-off between continuity and clean trade-off between continuity and clean trade-off between continuity and clean
+slate freshness. Pattern 13. Bounded slate freshness. Pattern 13. Bounded slate freshness. Pattern 13. Bounded
+correction loop. Two loop configurations correction loop. Two loop configurations correction loop. Two loop configurations
+address these different contexts. In address these different contexts. In address these different contexts. In
+both cases, the loop requires a maximum both cases, the loop requires a maximum both cases, the loop requires a maximum
+iteration count, a blind re-evaluation iteration count, a blind re-evaluation iteration count, a blind re-evaluation
+rule, and a hard exit condition. The rule, and a hard exit condition. The rule, and a hard exit condition. The
+maximum iteration count and inflation maximum iteration count and inflation maximum iteration count and inflation
+assumptions differ significantly. assumptions differ significantly. assumptions differ significantly.
+Pattern 14. Writer is not evaluator. Pattern 14. Writer is not evaluator. Pattern 14. Writer is not evaluator.
+Separate the writer from the evaluator Separate the writer from the evaluator Separate the writer from the evaluator
+structurally and calibrate the evaluator structurally and calibrate the evaluator structurally and calibrate the evaluator
+explicitly toward skepticism. Separation explicitly toward skepticism. Separation explicitly toward skepticism. Separation
+addresses the investment problem. addresses the investment problem. addresses the investment problem.
+Calibration addresses the generosity Calibration addresses the generosity Calibration addresses the generosity
+problem. Both are required. Pattern 15. problem. Both are required. Pattern 15. problem. Both are required. Pattern 15.
+Deterministic creative split. Deterministic creative split. Deterministic creative split.
+Deterministic operations are handled by Deterministic operations are handled by Deterministic operations are handled by
+shell scripts. Creative and analytical shell scripts. Creative and analytical shell scripts. Creative and analytical
+operations are handled by the LLM. The operations are handled by the LLM. The operations are handled by the LLM. The
+division is enforced structurally. division is enforced structurally. division is enforced structurally.
+Deterministic operations appear only in Deterministic operations appear only in Deterministic operations appear only in
+bin/scripts, bin/scripts, bin/scripts,
+never in skill instruction bodies. never in skill instruction bodies. never in skill instruction bodies.
+Pattern 16. Agent facing error messages. Pattern 16. Agent facing error messages. Pattern 16. Agent facing error messages.
+All error output that may be consumed by All error output that may be consumed by All error output that may be consumed by
+an agent is rewritten to contain exactly an agent is rewritten to contain exactly an agent is rewritten to contain exactly
+two things. What went wrong? One two things. What went wrong? One two things. What went wrong? One
+sentence and what to do next. One to sentence and what to do next. One to sentence and what to do next. One to
+three steps. All technical noise is three steps. All technical noise is three steps. All technical noise is
+stripped. Pattern 17. Graceful stripped. Pattern 17. Graceful stripped. Pattern 17. Graceful
+degradation. Distinguish hard degradation. Distinguish hard degradation. Distinguish hard
+dependencies. The skill cannot function dependencies. The skill cannot function dependencies. The skill cannot function
+without them. Halt and explain from soft without them. Halt and explain from soft without them. Halt and explain from soft
+dependencies. The skill can function at dependencies. The skill can function at dependencies. The skill can function at
+reduced capability without them. Degrade reduced capability without them. Degrade reduced capability without them. Degrade
+and document. Provide explicit fallback and document. Provide explicit fallback and document. Provide explicit fallback
+instructions for every soft dependency. instructions for every soft dependency. instructions for every soft dependency.
+Group four. Intent engineering patterns. Group four. Intent engineering patterns. Group four. Intent engineering patterns.
+Intent patterns govern what the agent Intent patterns govern what the agent Intent patterns govern what the agent
+is, what it will not do, and how it is, what it will not do, and how it is, what it will not do, and how it
+remains aligned with its purpose under remains aligned with its purpose under remains aligned with its purpose under
+pressure. The central tension in this pressure. The central tension in this pressure. The central tension in this
+group is between the agents flexibility, group is between the agents flexibility, group is between the agents flexibility,
+adapting to context, and its fidelity, adapting to context, and its fidelity, adapting to context, and its fidelity,
+remaining aligned with intent. remaining aligned with intent. remaining aligned with intent.
+Flexibility without fidelity produces Flexibility without fidelity produces Flexibility without fidelity produces
+capable but unreliable behavior. capable but unreliable behavior. capable but unreliable behavior.
+Fidelity without flexibility produces Fidelity without flexibility produces Fidelity without flexibility produces
+brittle behavior that fails in brittle behavior that fails in brittle behavior that fails in
+unspecified contexts. These patterns unspecified contexts. These patterns unspecified contexts. These patterns
+resolve this tension through structure resolve this tension through structure resolve this tension through structure
+rather than repetition. Pattern 18, rather than repetition. Pattern 18, rather than repetition. Pattern 18,
+identity first prompting. Every skill identity first prompting. Every skill identity first prompting. Every skill
+and agent definition opens with an and agent definition opens with an and agent definition opens with an
+explicit identity statement that names explicit identity statement that names explicit identity statement that names
+what this skill is and what it is not. what this skill is and what it is not. what this skill is and what it is not.
+The is statement is affirmative and The is statement is affirmative and The is statement is affirmative and
+specific. The not statement closes the specific. The not statement closes the specific. The not statement closes the
+most likely colonization paths. Pattern most likely colonization paths. Pattern most likely colonization paths. Pattern
+19. Iron law. The most important 19. Iron law. The most important 19. Iron law. The most important
+behavioral constraints are stated as behavioral constraints are stated as behavioral constraints are stated as
+non-negotiable absolute rules in a non-negotiable absolute rules in a non-negotiable absolute rules in a
+visually distinct block. Each rule is visually distinct block. Each rule is visually distinct block. Each rule is
+stated in alllcaps. stated in alllcaps. stated in alllcaps.
+Each rule is immediately followed by Each rule is immediately followed by Each rule is immediately followed by
+explicit closures of the most likely explicit closures of the most likely explicit closures of the most likely
+rationalizations. Pattern 20. rationalizations. Pattern 20. rationalizations. Pattern 20.
+Rationalization prevention table. For Rationalization prevention table. For Rationalization prevention table. For
+each iron law, enumerate the most likely each iron law, enumerate the most likely each iron law, enumerate the most likely
+justifications an agent would construct justifications an agent would construct justifications an agent would construct
+for violating it and explicitly rebut for violating it and explicitly rebut for violating it and explicitly rebut
+each justification in a table. The table each justification in a table. The table each justification in a table. The table
+is generated from observed test is generated from observed test is generated from observed test
+failures. Each row represents an actual failures. Each row represents an actual failures. Each row represents an actual
+rationalization observed during skill rationalization observed during skill rationalization observed during skill
+development. Pattern 21. Numbered hard development. Pattern 21. Numbered hard development. Pattern 21. Numbered hard
+rules. Collect all behavioral rules. Collect all behavioral rules. Collect all behavioral
+constraints into a dedicated numbered constraints into a dedicated numbered constraints into a dedicated numbered
+hash rule section at the end of the hash rule section at the end of the hash rule section at the end of the
+skill. Number them. Write each as an skill. Number them. Write each as an skill. Number them. Write each as an
+imperative statement. This section imperative statement. This section imperative statement. This section
+functions as a self-verification functions as a self-verification functions as a self-verification
+checklist. The agent can scan it before checklist. The agent can scan it before checklist. The agent can scan it before
+marking completion. Pattern 22. marking completion. Pattern 22. marking completion. Pattern 22.
+Constitution s code. Encode project Constitution s code. Encode project Constitution s code. Encode project
+principles as a versioned machine principles as a versioned machine principles as a versioned machine
+checkable document using must should checkable document using must should checkable document using must should
+normative language. Version it with normative language. Version it with normative language. Version it with
+sever major for principle removal, minor sever major for principle removal, minor sever major for principle removal, minor
+for addition, patch for clarification. for addition, patch for clarification. for addition, patch for clarification.
+Run an analysis command that treats Run an analysis command that treats Run an analysis command that treats
+constitution violations as always constitution violations as always constitution violations as always
+critical when the constitution changes critical when the constitution changes critical when the constitution changes
+require explicit documentation of which require explicit documentation of which require explicit documentation of which
+templates and behaviors need updating. templates and behaviors need updating. templates and behaviors need updating.
+Pattern 23. Philosophy is code Pattern 23. Philosophy is code Pattern 23. Philosophy is code
+mechanically inject the core mechanically inject the core mechanically inject the core
+philosophical principles into every philosophical principles into every philosophical principles into every
+skill that should be governed by them skill that should be governed by them skill that should be governed by them
+via the preamble system. The philosophy via the preamble system. The philosophy via the preamble system. The philosophy
+is not read as a precursor. It is is not read as a precursor. It is is not read as a precursor. It is
+included as the opening context of every included as the opening context of every included as the opening context of every
+governed skill. This synthesis data governed skill. This synthesis data governed skill. This synthesis data
+moves predictably through reliably parts moves predictably through reliably parts moves predictably through reliably parts
+and the system is locked by unbreakable and the system is locked by unbreakable and the system is locked by unbreakable
+constraints. This summarizes patterns constraints. This summarizes patterns constraints. This summarizes patterns
+under the harness engineering category under the harness engineering category under the harness engineering category
+patterns 10 to 17 and patterns under the patterns 10 to 17 and patterns under the patterns 10 to 17 and patterns under the
+intent engineering category patterns 18 intent engineering category patterns 18 intent engineering category patterns 18
+to 23. to 23. to 23.
+Let's focus on the design patterns Let's focus on the design patterns Let's focus on the design patterns
+covering groups 5 6 and 7. Building covering groups 5 6 and 7. Building covering groups 5 6 and 7. Building
+reliable LLM agents requires shifting reliable LLM agents requires shifting reliable LLM agents requires shifting
+from prompt engineering to deterministic from prompt engineering to deterministic from prompt engineering to deterministic
+system architecture. These three groups system architecture. These three groups system architecture. These three groups
+govern probabilistic reasoning with govern probabilistic reasoning with govern probabilistic reasoning with
+engineering rigor. Structuring the engineering rigor. Structuring the engineering rigor. Structuring the
+agentic core is key. As capabilities agentic core is key. As capabilities agentic core is key. As capabilities
+grow, monolithic systems become grow, monolithic systems become grow, monolithic systems become
+untestable. Group five, agent system untestable. Group five, agent system untestable. Group five, agent system
+engineering patterns. These patterns engineering patterns. These patterns engineering patterns. These patterns
+govern the design, architecture, govern the design, architecture, govern the design, architecture,
+testing, and governance of the skill and testing, and governance of the skill and testing, and governance of the skill and
+agent system itself. Not what the agent agent system itself. Not what the agent agent system itself. Not what the agent
+does with external systems, but how the does with external systems, but how the does with external systems, but how the
+system the agent operates within is system the agent operates within is system the agent operates within is
+structured. The central tensions in this structured. The central tensions in this structured. The central tensions in this
+group are between scale, more agents, group are between scale, more agents, group are between scale, more agents,
+more skills, more capability, and more skills, more capability, and more skills, more capability, and
+coherence. The system remains coherence. The system remains coherence. The system remains
+understandable, testable, and governable understandable, testable, and governable understandable, testable, and governable
+as it grows. Pattern 24. Agent skill as it grows. Pattern 24. Agent skill as it grows. Pattern 24. Agent skill
+command triad. Problem. A system that command triad. Problem. A system that command triad. Problem. A system that
+conflates reasoning, who the agent is conflates reasoning, who the agent is conflates reasoning, who the agent is
+and how it thinks. knowledge, what the and how it thinks. knowledge, what the and how it thinks. knowledge, what the
+agent knows about a domain, and agent knows about a domain, and agent knows about a domain, and
+execution, the specific steps the agent execution, the specific steps the agent execution, the specific steps the agent
+follows for a task, produces components follows for a task, produces components follows for a task, produces components
+that are simultaneously hard to that are simultaneously hard to that are simultaneously hard to
+understand, hard to reuse, and hard to understand, hard to reuse, and hard to understand, hard to reuse, and hard to
+maintain. Solution: Formalize three maintain. Solution: Formalize three maintain. Solution: Formalize three
+distinct component types with explicitly distinct component types with explicitly distinct component types with explicitly
+different roles, and no overlap between different roles, and no overlap between different roles, and no overlap between
+them. Pattern 25. Sub aent context them. Pattern 25. Sub aent context them. Pattern 25. Sub aent context
+isolation. Every sub aent delegation isolation. Every sub aent delegation isolation. Every sub aent delegation
+uses a precisely scoped context uses a precisely scoped context uses a precisely scoped context
+injection. The sub agent receives a injection. The sub agent receives a injection. The sub agent receives a
+system prompt defining its role for this system prompt defining its role for this system prompt defining its role for this
+invocation. Explicit paths to the files invocation. Explicit paths to the files invocation. Explicit paths to the files
+it should read, a clearly stated task it should read, a clearly stated task it should read, a clearly stated task
+and a specified output location. It and a specified output location. It and a specified output location. It
+never receives raw session history. never receives raw session history. never receives raw session history.
+Pattern 26. Facade skill. A facade skill Pattern 26. Facade skill. A facade skill Pattern 26. Facade skill. A facade skill
+contains nothing except a dispatch to contains nothing except a dispatch to contains nothing except a dispatch to
+the complex pipeline. It is a thin the complex pipeline. It is a thin the complex pipeline. It is a thin
+wrapper 60 to 100 lines that does wrapper 60 to 100 lines that does wrapper 60 to 100 lines that does
+exactly three things. Validates exactly three things. Validates exactly three things. Validates
+preconditions, configures the agent preconditions, configures the agent preconditions, configures the agent
+invocation, and dispatches. The invocation, and dispatches. The invocation, and dispatches. The
+complexity lives in the agent. The complexity lives in the agent. The complexity lives in the agent. The
+facade lives at the entry point. Pattern facade lives at the entry point. Pattern facade lives at the entry point. Pattern
+27. JSON state machine with resume. 27. JSON state machine with resume. 27. JSON state machine with resume.
+Orchestrator commands maintain a JSON Orchestrator commands maintain a JSON Orchestrator commands maintain a JSON
+state file tracking, current phase, state file tracking, current phase, state file tracking, current phase,
+completed steps, files created, and completed steps, files created, and completed steps, files created, and
+timestamps. Every invocation checks for timestamps. Every invocation checks for timestamps. Every invocation checks for
+an existing state file and offers to an existing state file and offers to an existing state file and offers to
+resume from the last completed step. resume from the last completed step. resume from the last completed step.
+Pattern 27. JSON state machine with Pattern 27. JSON state machine with Pattern 27. JSON state machine with
+resume. Explicitly assign model tiers to resume. Explicitly assign model tiers to resume. Explicitly assign model tiers to
+agent roles based on the capability agent roles based on the capability agent roles based on the capability
+requirements of each role. Document the requirements of each role. Document the requirements of each role. Document the
+decision in the agent definition via the decision in the agent definition via the decision in the agent definition via the
+model front matter field. Group six model front matter field. Group six model front matter field. Group six
+composition patterns govern how skills, composition patterns govern how skills, composition patterns govern how skills,
+commands, agents, and plugins are commands, agents, and plugins are commands, agents, and plugins are
+combined into larger systems. The combined into larger systems. The combined into larger systems. The
+central tension in this group is between central tension in this group is between central tension in this group is between
+independence, each component stands independence, each component stands independence, each component stands
+alone, and integration. Components work alone, and integration. Components work alone, and integration. Components work
+together as a coherent whole. Strong together as a coherent whole. Strong together as a coherent whole. Strong
+composition patterns enable both. composition patterns enable both. composition patterns enable both.
+Pattern 29, file-based message passing. Pattern 29, file-based message passing. Pattern 29, file-based message passing.
+Each step in an orchestrated workflow Each step in an orchestrated workflow Each step in an orchestrated workflow
+writes its output to a specific file writes its output to a specific file writes its output to a specific file
+path declared in its explicit IO path declared in its explicit IO path declared in its explicit IO
+contract. The next step reads that file contract. The next step reads that file contract. The next step reads that file
+path at startup. No step passes its path at startup. No step passes its path at startup. No step passes its
+output to the next step through the output to the next step through the output to the next step through the
+context window. Pattern 30. Plugin as context window. Pattern 30. Plugin as context window. Pattern 30. Plugin as
+distribution unit. Bundle related distribution unit. Bundle related distribution unit. Bundle related
+agents, skills, and commands for a agents, skills, and commands for a agents, skills, and commands for a
+single domain into a plugin. A single single domain into a plugin. A single single domain into a plugin. A single
+installable unit with its own manifest installable unit with its own manifest installable unit with its own manifest
+version and description. Users install version and description. Users install version and description. Users install
+plugins, not individual components. The plugins, not individual components. The plugins, not individual components. The
+marketplace catalog describes plugins, marketplace catalog describes plugins, marketplace catalog describes plugins,
+not components. Pattern 31, layered not components. Pattern 31, layered not components. Pattern 31, layered
+template override. Templates resolve template override. Templates resolve template override. Templates resolve
+through a priority ordered chain. Custom through a priority ordered chain. Custom through a priority ordered chain. Custom
+templates override defaults without templates override defaults without templates override defaults without
+modifying them. Upstream updates reach modifying them. Upstream updates reach modifying them. Upstream updates reach
+uncustomized templates automatically. uncustomized templates automatically. uncustomized templates automatically.
+Group seven, testing patterns. Testing Group seven, testing patterns. Testing Group seven, testing patterns. Testing
+patterns address the most distinctive patterns address the most distinctive patterns address the most distinctive
+challenge in skill development. The test challenge in skill development. The test challenge in skill development. The test
+subject is probabilistic. A failing unit subject is probabilistic. A failing unit subject is probabilistic. A failing unit
+test is a deterministic discrepancy test is a deterministic discrepancy test is a deterministic discrepancy
+between specification and behavior. A between specification and behavior. A between specification and behavior. A
+failing skill test is an observation failing skill test is an observation failing skill test is an observation
+that the agent rationalized around a that the agent rationalized around a that the agent rationalized around a
+constraint or found an unexpected path constraint or found an unexpected path constraint or found an unexpected path
+through the instructions. The testing through the instructions. The testing through the instructions. The testing
+methodology must account for the methodology must account for the methodology must account for the
+probabilistic nature of the system under probabilistic nature of the system under probabilistic nature of the system under
+test. Pattern 32. TDD for skills. PPLY test. Pattern 32. TDD for skills. PPLY test. Pattern 32. TDD for skills. PPLY
+red green refactor to skill development. red green refactor to skill development. red green refactor to skill development.
+Red. Run the task without the skill. Red. Run the task without the skill. Red. Run the task without the skill.
+Observe the agents behavior. Document Observe the agents behavior. Document Observe the agents behavior. Document
+every rationalization and failure mode. every rationalization and failure mode. every rationalization and failure mode.
+Green. Write the skill to address the Green. Write the skill to address the Green. Write the skill to address the
+observed failures. Refactor. Run the observed failures. Refactor. Run the observed failures. Refactor. Run the
+skill. Observe remaining failures. Close skill. Observe remaining failures. Close skill. Observe remaining failures. Close
+new loopholes discovered during green new loopholes discovered during green new loopholes discovered during green
+execution. Pattern 33. Tiered testing execution. Pattern 33. Tiered testing execution. Pattern 33. Tiered testing
+pyramid. Apply three test tiers at pyramid. Apply three test tiers at pyramid. Apply three test tiers at
+different cadences and costs. Tier one different cadences and costs. Tier one different cadences and costs. Tier one
+runs continuously, free, immediate. Tier runs continuously, free, immediate. Tier runs continuously, free, immediate. Tier
+2 runs on significant changes, moderate 2 runs on significant changes, moderate 2 runs on significant changes, moderate
+cost, moderate time. Tier three runs on cost, moderate time. Tier three runs on cost, moderate time. Tier three runs on
+release candidates, higher cost, maximum release candidates, higher cost, maximum release candidates, higher cost, maximum
+assurance. Pattern 34, pressure assurance. Pattern 34, pressure assurance. Pattern 34, pressure
+scenario. Design test scenarios scenario. Design test scenarios scenario. Design test scenarios
+specifically intended to pressure the specifically intended to pressure the specifically intended to pressure the
+skills constraints. A pressure scenario skills constraints. A pressure scenario skills constraints. A pressure scenario
+presents the agent with a situation presents the agent with a situation presents the agent with a situation
+where violating the skills rules would where violating the skills rules would where violating the skills rules would
+be locally reasonable. The skill passes be locally reasonable. The skill passes be locally reasonable. The skill passes
+if the constraints hold under pressure. if the constraints hold under pressure. if the constraints hold under pressure.
+Group eight, distribution patterns. Group eight, distribution patterns. Group eight, distribution patterns.
+Distribution patterns govern how skills Distribution patterns govern how skills Distribution patterns govern how skills
+move from development to deployment move from development to deployment move from development to deployment
+across multiple platforms, across multiple platforms, across multiple platforms,
+organizations, and update cycles. The organizations, and update cycles. The organizations, and update cycles. The
+central tension in this group is between central tension in this group is between central tension in this group is between
+portability works everywhere and portability works everywhere and portability works everywhere and
+platform optimization uses platform platform optimization uses platform platform optimization uses platform
+capabilities fully. Validating capabilities fully. Validating capabilities fully. Validating
+probabilistic systems requires moving probabilistic systems requires moving probabilistic systems requires moving
+beyond the deterministic paradigm of beyond the deterministic paradigm of beyond the deterministic paradigm of
+input to expected output. Group 8 input to expected output. Group 8 input to expected output. Group 8
+testing adapts deterministic quality testing adapts deterministic quality testing adapts deterministic quality
+assurance to these probabilistic assurance to these probabilistic assurance to these probabilistic
+behaviors. The master agentic workflow behaviors. The master agentic workflow behaviors. The master agentic workflow
+schematic illustrates the synthesis of schematic illustrates the synthesis of schematic illustrates the synthesis of
+rigorous system boundaries. True agentic rigorous system boundaries. True agentic rigorous system boundaries. True agentic
+scaling comes from disciplined data scaling comes from disciplined data scaling comes from disciplined data
+passing and adversarial testing, not passing and adversarial testing, not passing and adversarial testing, not
+just better prompts. Group eight focuses just better prompts. Group eight focuses just better prompts. Group eight focuses
+on distribution patterns. These patterns on distribution patterns. These patterns on distribution patterns. These patterns
+manage how skills are deployed and manage how skills are deployed and manage how skills are deployed and
+updated across diverse platforms. Group updated across diverse platforms. Group updated across diverse platforms. Group
+9 covers longunning application 9 covers longunning application 9 covers longunning application
+patterns. These specifically tackle the patterns. These specifically tackle the patterns. These specifically tackle the
+challenges of autonomous coding sessions challenges of autonomous coding sessions challenges of autonomous coding sessions
+that run for hours and require complex that run for hours and require complex that run for hours and require complex
+scope management. Pattern 35, platform scope management. Pattern 35, platform scope management. Pattern 35, platform
+agnostic core. The skill libraries agnostic core. The skill libraries agnostic core. The skill libraries
+canonical form is pure markdown readable canonical form is pure markdown readable canonical form is pure markdown readable
+by any LLM on any platform. Platform by any LLM on any platform. Platform by any LLM on any platform. Platform
+specific configuration file paths tool specific configuration file paths tool specific configuration file paths tool
+names plug-in manifests lives in per names plug-in manifests lives in per names plug-in manifests lives in per
+host adapter directories that are host adapter directories that are host adapter directories that are
+generated from but do not modify the generated from but do not modify the generated from but do not modify the
+canonical source. Pattern 36 dual canonical source. Pattern 36 dual canonical source. Pattern 36 dual
+distribution channels. The same distribution channels. The same distribution channels. The same
+capability is distributed as both a capability is distributed as both a capability is distributed as both a
+slash command for platforms that support slash command for platforms that support slash command for platforms that support
+it and as a portable skill for platforms it and as a portable skill for platforms it and as a portable skill for platforms
+that do not. The capability is that do not. The capability is that do not. The capability is
+implemented once in the canonical form. implemented once in the canonical form. implemented once in the canonical form.
+The distribution channel is a packaging The distribution channel is a packaging The distribution channel is a packaging
+decision. Pattern 37. Generation decision. Pattern 37. Generation decision. Pattern 37. Generation
+metadata and audit trail. Every metadata and audit trail. Every metadata and audit trail. Every
+generated document includes a generated document includes a generated document includes a
+standardized footer recording its standardized footer recording its standardized footer recording its
+generation context. The footer is a generation context. The footer is a generation context. The footer is a
+small consistent structure appended to small consistent structure appended to small consistent structure appended to
+every output. Pattern 38. Generator every output. Pattern 38. Generator every output. Pattern 38. Generator
+evaluator iteration loop. run a evaluator iteration loop. run a evaluator iteration loop. run a
+structured loop in which a calibrated structured loop in which a calibrated structured loop in which a calibrated
+external evaluator provides specific external evaluator provides specific external evaluator provides specific
+critique after each generator pass and critique after each generator pass and critique after each generator pass and
+the generator makes an explicit the generator makes an explicit the generator makes an explicit
+strategic decision about whether to strategic decision about whether to strategic decision about whether to
+refine the current direction or pivot to refine the current direction or pivot to refine the current direction or pivot to
+a different approach entirely. The loop a different approach entirely. The loop a different approach entirely. The loop
+runs until either a quality threshold is runs until either a quality threshold is runs until either a quality threshold is
+met or the iteration budget is met or the iteration budget is met or the iteration budget is
+exhausted. Pattern 39. Context reset exhausted. Pattern 39. Context reset exhausted. Pattern 39. Context reset
+with structured handoff. At a defined with structured handoff. At a defined with structured handoff. At a defined
+trigger point, terminate the current trigger point, terminate the current trigger point, terminate the current
+agent session entirely. Prepare a agent session entirely. Prepare a agent session entirely. Prepare a
+structured handoff artifact that structured handoff artifact that structured handoff artifact that
+captures the complete necessary state captures the complete necessary state captures the complete necessary state
+for a new agent to resume the work. for a new agent to resume the work. for a new agent to resume the work.
+Spawn a fresh agent instance with the Spawn a fresh agent instance with the Spawn a fresh agent instance with the
+handoff artifact as its only context. handoff artifact as its only context. handoff artifact as its only context.
+The new agent inherits the task state The new agent inherits the task state The new agent inherits the task state
+without inheriting the context window without inheriting the context window without inheriting the context window
+history. Pattern 40. Evaluator as history. Pattern 40. Evaluator as history. Pattern 40. Evaluator as
+conditional investment. Treat the conditional investment. Treat the conditional investment. Treat the
+evaluator as a conditional investment evaluator as a conditional investment evaluator as a conditional investment
+rather than a fixed component. The rather than a fixed component. The rather than a fixed component. The
+evaluator is worth its cost when the evaluator is worth its cost when the evaluator is worth its cost when the
+task sits at or beyond the boundary of task sits at or beyond the boundary of task sits at or beyond the boundary of
+what the current model can do reliably what the current model can do reliably what the current model can do reliably
+solo. When the task falls within that solo. When the task falls within that solo. When the task falls within that
+boundary, omit the evaluator. Reassess boundary, omit the evaluator. Reassess boundary, omit the evaluator. Reassess
+this boundary at each significant model this boundary at each significant model this boundary at each significant model
+release. Pattern 41. Ambitious scope release. Pattern 41. Ambitious scope release. Pattern 41. Ambitious scope
+planner. Insert an explicit planner planner. Insert an explicit planner planner. Insert an explicit planner
+agent before the generator. Give the agent before the generator. Give the agent before the generator. Give the
+planner two directives. Expand planner two directives. Expand planner two directives. Expand
+ambitiously. Turn a one-s sentence ambitiously. Turn a one-s sentence ambitiously. Turn a one-s sentence
+prompt into a full product spec covering prompt into a full product spec covering prompt into a full product spec covering
+more features than the user explicitly more features than the user explicitly more features than the user explicitly
+requested. And stay high level. Specify requested. And stay high level. Specify requested. And stay high level. Specify
+deliverables and user stories, not deliverables and user stories, not deliverables and user stories, not
+technical implementation details. The technical implementation details. The technical implementation details. The
+planner's output is a product spec that planner's output is a product spec that planner's output is a product spec that
+the generator builds against. Technical the generator builds against. Technical the generator builds against. Technical
+decisions belong to the generator. decisions belong to the generator. decisions belong to the generator.
+Pattern 42. Harness assumption stress Pattern 42. Harness assumption stress Pattern 42. Harness assumption stress
+testing. Apply the minimum necessary testing. Apply the minimum necessary testing. Apply the minimum necessary
+complexity principle. Start with the complexity principle. Start with the complexity principle. Start with the
+simplest harness that could work and add simplest harness that could work and add simplest harness that could work and add
+components only when empirical testing components only when empirical testing components only when empirical testing
+demonstrates they are loadbearing. At demonstrates they are loadbearing. At demonstrates they are loadbearing. At
+each significant model release, identify each significant model release, identify each significant model release, identify
+which components encode assumptions which components encode assumptions which components encode assumptions
+about the previous model's limitations about the previous model's limitations about the previous model's limitations
+and test whether those limitations and test whether those limitations and test whether those limitations
+persist. The long run challenge. Single persist. The long run challenge. Single persist. The long run challenge. Single
+pass generation and basic memory models pass generation and basic memory models pass generation and basic memory models
+fail at scale. As work length increases, fail at scale. As work length increases, fail at scale. As work length increases,
+cognitive load degrades output quality cognitive load degrades output quality cognitive load degrades output quality
+exponentially. exponentially. exponentially.
+Surviving hours of autonomous execution Surviving hours of autonomous execution Surviving hours of autonomous execution
+requires deliberate engineered requires deliberate engineered requires deliberate engineered
+scaffolding. This ends the presentation scaffolding. This ends the presentation scaffolding. This ends the presentation
+of 45 design patterns discovered in of 45 design patterns discovered in of 45 design patterns discovered in
+agentic skills-based systems. If you agentic skills-based systems. If you agentic skills-based systems. If you
+liked the presentation, please smash liked the presentation, please smash liked the presentation, please smash
+both the like and subscribe buttons. 

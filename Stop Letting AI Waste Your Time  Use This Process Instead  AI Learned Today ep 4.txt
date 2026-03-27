@@ -1,0 +1,658 @@
+Hey everyone. Uh I'm Rufus and this is Hey everyone. Uh I'm Rufus and this is
+my colleague Daniela from Daytopian and my colleague Daniela from Daytopian and my colleague Daniela from Daytopian and
+this is AI learn today. uh where we this is AI learn today. uh where we this is AI learn today. uh where we
+explore a kind of pretty raw way you explore a kind of pretty raw way you explore a kind of pretty raw way you
+know our own experience of going through know our own experience of going through know our own experience of going through
+the AI revolution of what tools are the AI revolution of what tools are the AI revolution of what tools are
+working particularly with a focus well working particularly with a focus well working particularly with a focus well
+AI in general and also AI and data which AI in general and also AI and data which AI in general and also AI and data which
+is kind of dtopian's expertise is kind of dtopian's expertise is kind of dtopian's expertise
+and you know trying ourselves the and you know trying ourselves the and you know trying ourselves the
+questions we're coming up with how how questions we're coming up with how how questions we're coming up with how how
+you apply it in your life how you apply you apply it in your life how you apply you apply it in your life how you apply
+in an organization how you apply it um in an organization how you apply it um in an organization how you apply it um
+for work for doing whatever you want to for work for doing whatever you want to for work for doing whatever you want to
+do So, what would you like to talk about do So, what would you like to talk about do So, what would you like to talk about
+today, Daniela? today, Daniela? today, Daniela?
+&gt;&gt; I think what I'd like us to kick off &gt;&gt; I think what I'd like us to kick off &gt;&gt; I think what I'd like us to kick off
+today with is I spend a lot of time in today with is I spend a lot of time in today with is I spend a lot of time in
+charge or other AI tools nowadays and charge or other AI tools nowadays and charge or other AI tools nowadays and
+every time I explore an idea and every time I explore an idea and every time I explore an idea and
+sometimes I love brainstorming, just sometimes I love brainstorming, just sometimes I love brainstorming, just
+brainstorming with with the AI and the brainstorming with with the AI and the brainstorming with with the AI and the
+AI gives me, you know, more branches, AI gives me, you know, more branches, AI gives me, you know, more branches,
+more variations, more possibilities. So more variations, more possibilities. So more variations, more possibilities. So
+instead of instead of instead of
+reducing the complexity, reducing the complexity, reducing the complexity,
+I feel like I'm multiplying it. And I feel like I'm multiplying it. And I feel like I'm multiplying it. And
+and and the key problem is and and the key problem is and and the key problem is
+it just feels like the possibilities are it just feels like the possibilities are it just feels like the possibilities are
+are growing faster than my ability to are growing faster than my ability to are growing faster than my ability to
+execute or or decide. And then we can execute or or decide. And then we can execute or or decide. And then we can
+connect this to the other topic we connect this to the other topic we connect this to the other topic we
+briefly touched upon which is the memory briefly touched upon which is the memory briefly touched upon which is the memory
+and that the fact that AI keeps and that the fact that AI keeps and that the fact that AI keeps
+forgetting. forgetting. forgetting.
+Um so I think that that's the main thing Um so I think that that's the main thing Um so I think that that's the main thing
+we can start with and then see how it we can start with and then see how it we can start with and then see how it
+goes. goes. goes.
+&gt;&gt; Yeah. Oh great. So maybe do you have a &gt;&gt; Yeah. Oh great. So maybe do you have a &gt;&gt; Yeah. Oh great. So maybe do you have a
+concrete example in your mind? I think a concrete example in your mind? I think a concrete example in your mind? I think a
+good candidate could be creating an AI good candidate could be creating an AI good candidate could be creating an AI
+salesunnel for instance and automating salesunnel for instance and automating salesunnel for instance and automating
+it. Okay. And so it. Okay. And so it. Okay. And so
+imagine you know I'm I'm trying to build imagine you know I'm I'm trying to build imagine you know I'm I'm trying to build
+an AI powered salesunnel. Uh and it an AI powered salesunnel. Uh and it an AI powered salesunnel. Uh and it
+sounds straightforward you know there sounds straightforward you know there sounds straightforward you know there
+should be some steps something like I should be some steps something like I should be some steps something like I
+don't know you're capturing the leads don't know you're capturing the leads don't know you're capturing the leads
+you're qualifying following up you're qualifying following up you're qualifying following up
+conversions so on and so forth. But then conversions so on and so forth. But then conversions so on and so forth. But then
+I start very simple. what would the I start very simple. what would the I start very simple. what would the
+salesunnel look like or help me design salesunnel look like or help me design salesunnel look like or help me design
+an AI sales funnel and then AI starts an AI sales funnel and then AI starts an AI sales funnel and then AI starts
+giving me giving me giving me
+five different funnel structures um five different funnel structures um five different funnel structures um
+asking me questions uh to understand asking me questions uh to understand asking me questions uh to understand
+more about the context uh inbound versus more about the context uh inbound versus more about the context uh inbound versus
+outbound strategies it's giving me outbound strategies it's giving me outbound strategies it's giving me
+different channel approaches email different channel approaches email different channel approaches email
+versus chatbot versus some hybrid versus chatbot versus some hybrid versus chatbot versus some hybrid
+options and then so many different options and then so many different options and then so many different
+directions that I I get overwhelmed I directions that I I get overwhelmed I directions that I I get overwhelmed I
+don't know where to go cuz it I I I I don't know where to go cuz it I I I I don't know where to go cuz it I I I I
+want to answer all of these questions want to answer all of these questions want to answer all of these questions
+and I I want to get the clarity and I and I I want to get the clarity and I and I I want to get the clarity and I
+actually like a lot of the suggestions actually like a lot of the suggestions actually like a lot of the suggestions
+and then should I dig deeper into this and then should I dig deeper into this and then should I dig deeper into this
+suggestion but then I also wanted to suggestion but then I also wanted to suggestion but then I also wanted to
+look into the other thing and then I look into the other thing and then I look into the other thing and then I
+this is the moment where I start this is the moment where I start this is the moment where I start
+copy and pasting into documents copy and pasting into documents copy and pasting into documents
+especially if I want to capture especially if I want to capture especially if I want to capture
+something and I feel like I'm going to something and I feel like I'm going to something and I feel like I'm going to
+lose it. So that's a great example lose it. So that's a great example lose it. So that's a great example
+uh Daniela and it's kind of what I want uh Daniela and it's kind of what I want uh Daniela and it's kind of what I want
+to say we can call it like the diamond to say we can call it like the diamond to say we can call it like the diamond
+problem kind of opening up the kind of problem kind of opening up the kind of problem kind of opening up the kind of
+in the classic diamond you you start in the classic diamond you you start in the classic diamond you you start
+from a question or a problem and you from a question or a problem and you from a question or a problem and you
+start researching or ex you know start researching or ex you know start researching or ex you know
+exploring and then there's this point exploring and then there's this point exploring and then there's this point
+where you you know you've opened where you you know you've opened where you you know you've opened
+everything up and you then need you want everything up and you then need you want everything up and you then need you want
+to reconverge and to reconverge and to reconverge and
+&gt;&gt; that &gt;&gt; that &gt;&gt; that
+&gt;&gt; that's kind of the missing part you know &gt;&gt; that's kind of the missing part you know &gt;&gt; that's kind of the missing part you know
+and it also reminds me of the internet and it also reminds me of the internet and it also reminds me of the internet
+in general and Wikipedia and things like in general and Wikipedia and things like in general and Wikipedia and things like
+that being where I was wearing like I'm that being where I was wearing like I'm that being where I was wearing like I'm
+interested in some topic and then I end interested in some topic and then I end interested in some topic and then I end
+up on Wikipedia and then I found oh but up on Wikipedia and then I found oh but up on Wikipedia and then I found oh but
+there's a link to something interesting there's a link to something interesting there's a link to something interesting
+in this article and then before I know in this article and then before I know in this article and then before I know
+I'm like 10 links down and I'm like what I'm like 10 links down and I'm like what I'm like 10 links down and I'm like what
+was I you know what was I even trying to was I you know what was I even trying to was I you know what was I even trying to
+look at originally look at originally look at originally
+um and I you know do find that um can um and I you know do find that um can um and I you know do find that um can
+happen also with AI but because it's got happen also with AI but because it's got happen also with AI but because it's got
+such a big knowledge base and before I such a big knowledge base and before I such a big knowledge base and before I
+know it I'm like somewhere down some know it I'm like somewhere down some know it I'm like somewhere down some
+chain of exploration chain of exploration chain of exploration
+and I've kind of forgotten how that went and I've kind of forgotten how that went and I've kind of forgotten how that went
+back to the the beginning or I' I've back to the the beginning or I' I've back to the the beginning or I' I've
+lost track of that. And the other aspect lost track of that. And the other aspect lost track of that. And the other aspect
+you're saying is you kind of generate so you're saying is you kind of generate so you're saying is you kind of generate so
+many documents or research threads or many documents or research threads or many documents or research threads or
+kind of things and you kind of actually kind of things and you kind of actually kind of things and you kind of actually
+rather than ending up with an answer, rather than ending up with an answer, rather than ending up with an answer,
+you end up with like more materials you end up with like more materials you end up with like more materials
+&gt;&gt; that you need to digest than you had &gt;&gt; that you need to digest than you had &gt;&gt; that you need to digest than you had
+before. before. before.
+&gt;&gt; Um, &gt;&gt; Um, &gt;&gt; Um,
+&gt;&gt; exactly. This is this is describing it &gt;&gt; exactly. This is this is describing it &gt;&gt; exactly. This is this is describing it
+very well. very well. very well.
+&gt;&gt; My experience of AI &gt;&gt; My experience of AI &gt;&gt; My experience of AI
+even now when it it's got a lot lot even now when it it's got a lot lot even now when it it's got a lot lot
+better is that with generic questions better is that with generic questions better is that with generic questions
+&gt;&gt; um and we could pick even a more &gt;&gt; um and we could pick even a more &gt;&gt; um and we could pick even a more
+concrete one like the other day or even concrete one like the other day or even concrete one like the other day or even
+saying like I want a um basically to saying like I want a um basically to saying like I want a um basically to
+kind of organize all my photos on my kind of organize all my photos on my kind of organize all my photos on my
+hard disk and I need a tool for this you hard disk and I need a tool for this you hard disk and I need a tool for this you
+know you could pick any kind of things know you could pick any kind of things know you could pick any kind of things
+you tend to ask you tend to ask you tend to ask
+you get quite generic and not so useful you get quite generic and not so useful you get quite generic and not so useful
+responses and even ones which expand responses and even ones which expand responses and even ones which expand
+when you've got particularly a big when you've got particularly a big when you've got particularly a big
+problem like an AI salesunnel. Um problem like an AI salesunnel. Um problem like an AI salesunnel. Um
+because what I would some say is the AI because what I would some say is the AI because what I would some say is the AI
+is often synthesizing a lot of is often synthesizing a lot of is often synthesizing a lot of
+information. It's often going out on the information. It's often going out on the information. It's often going out on the
+internet and reading things and it internet and reading things and it internet and reading things and it
+itself is getting a bit overwhelmed itself is getting a bit overwhelmed itself is getting a bit overwhelmed
+often. often. often.
+And so you need some kind of there's two And so you need some kind of there's two And so you need some kind of there's two
+things I think you often need. One, you things I think you often need. One, you things I think you often need. One, you
+want some kind of process yourself for want some kind of process yourself for want some kind of process yourself for
+how this kind of work goes. how this kind of work goes. how this kind of work goes.
+Um Um Um
+and I'll come to that. you know, like and I'll come to that. you know, like and I'll come to that. you know, like
+the situation, complication, question, the situation, complication, question, the situation, complication, question,
+hypothesis, structure, you know, and hypothesis, structure, you know, and hypothesis, structure, you know, and
+other things about what you're trying to other things about what you're trying to other things about what you're trying to
+do. And then also, you want do. And then also, you want do. And then also, you want
+maybe the most important thing is kind maybe the most important thing is kind maybe the most important thing is kind
+of your own context. Generally, the more of your own context. Generally, the more of your own context. Generally, the more
+knowledge you as a user have um knowledge you as a user have um knowledge you as a user have um
+particularly like big picture knowledge particularly like big picture knowledge particularly like big picture knowledge
+about the domain and choices that you about the domain and choices that you about the domain and choices that you
+want to make, the better. And and even want to make, the better. And and even want to make, the better. And and even
+if you have some judgment, for example, if you have some judgment, for example, if you have some judgment, for example,
+if you know something roughly about how if you know something roughly about how if you know something roughly about how
+AI sales funnels should work, you're AI sales funnels should work, you're AI sales funnels should work, you're
+going to have a lot better job building going to have a lot better job building going to have a lot better job building
+one. Not you need to know the detail for one. Not you need to know the detail for one. Not you need to know the detail for
+your organization, but you can spot when your organization, but you can spot when your organization, but you can spot when
+it's making errors or guide it in ways it's making errors or guide it in ways it's making errors or guide it in ways
+you want it to go. Whereas if you know you want it to go. Whereas if you know you want it to go. Whereas if you know
+nothing, you're kind you can often be in nothing, you're kind you can often be in nothing, you're kind you can often be in
+a bit of trouble because basically it's a bit of trouble because basically it's a bit of trouble because basically it's
+not necess not necess not necess
+wrong, but it just won't you can't wrong, but it just won't you can't wrong, but it just won't you can't
+really direct it because you don't know really direct it because you don't know really direct it because you don't know
+what anything should look like. It's what anything should look like. It's what anything should look like. It's
+like trying to get it to build a house. like trying to get it to build a house. like trying to get it to build a house.
+Yes, it has all the knowledge of Yes, it has all the knowledge of Yes, it has all the knowledge of
+humanity online about how to build humanity online about how to build humanity online about how to build
+houses, but you knowing how should be houses, but you knowing how should be houses, but you knowing how should be
+built means you can spot when there are built means you can spot when there are built means you can spot when there are
+real errors like hey, there are no real errors like hey, there are no real errors like hey, there are no
+windows or um you know or but I wanted windows or um you know or but I wanted windows or um you know or but I wanted
+the house to be like this or maybe it's the house to be like this or maybe it's the house to be like this or maybe it's
+not any wrong. It's like oh but I not any wrong. It's like oh but I not any wrong. It's like oh but I
+actually knew I wanted the house like actually knew I wanted the house like actually knew I wanted the house like
+that. Um so and finally which comes to that. Um so and finally which comes to that. Um so and finally which comes to
+the memory point is like check the the memory point is like check the the memory point is like check the
+process of actually using the AI which I process of actually using the AI which I process of actually using the AI which I
+would call the way that you prompt the would call the way that you prompt the would call the way that you prompt the
+way you get it to ask you questions the way you get it to ask you questions the way you get it to ask you questions the
+way you get it to do basically do way you get it to do basically do way you get it to do basically do
+brainstorming and um the way that you do brainstorming and um the way that you do brainstorming and um the way that you do
+checkpointing for memory as you go checkpointing for memory as you go checkpointing for memory as you go
+through that process particularly for through that process particularly for through that process particularly for
+larger problems whether we're talking larger problems whether we're talking larger problems whether we're talking
+about building an app whether you're about building an app whether you're about building an app whether you're
+talking about doing strategic research talking about doing strategic research talking about doing strategic research
+any of these things you're going to any of these things you're going to any of these things you're going to
+exhaust the memory um of of the agent exhaust the memory um of of the agent exhaust the memory um of of the agent
+even things with very large context even things with very large context even things with very large context
+windows. Now I'm saying I've got a windows. Now I'm saying I've got a windows. Now I'm saying I've got a
+million token tok context window million token tok context window million token tok context window
+certainly now there's on Gemini's had certainly now there's on Gemini's had certainly now there's on Gemini's had
+that for a while claude now have it for that for a while claude now have it for that for a while claude now have it for
+max subscribers open AI opening up the max subscribers open AI opening up the max subscribers open AI opening up the
+truth is even like halfway to the truth is even like halfway to the truth is even like halfway to the
+context window there's often context window there's often context window there's often
+degradations in performance and things degradations in performance and things degradations in performance and things
+like that and then you get compaction like that and then you get compaction like that and then you get compaction
+and things happening so this ability to and things happening so this ability to and things happening so this ability to
+distill as you're going through the distill as you're going through the distill as you're going through the
+process useful insights from what you've process useful insights from what you've process useful insights from what you've
+done and kind of checkpoint that in so done and kind of checkpoint that in so done and kind of checkpoint that in so
+you're saving that to a disk basically you're saving that to a disk basically you're saving that to a disk basically
+files that can then be reread in fresh files that can then be reread in fresh files that can then be reread in fresh
+sessions is very is very helpful. Um sessions is very is very helpful. Um sessions is very is very helpful. Um
+it's also a good test because when you it's also a good test because when you it's also a good test because when you
+come to do other work later you can come to do other work later you can come to do other work later you can
+reboot in a clean way. But let's just reboot in a clean way. But let's just reboot in a clean way. But let's just
+start um start um start um
+very very briefly very very briefly very very briefly
+um and maybe I start in the midpoint um and maybe I start in the midpoint um and maybe I start in the midpoint
+actually on the last point of not just actually on the last point of not just actually on the last point of not just
+the checkpointing but how you prompt. So the checkpointing but how you prompt. So the checkpointing but how you prompt. So
+one is that a bunch of one is that a bunch of one is that a bunch of
+There are a bunch of brainstorming There are a bunch of brainstorming There are a bunch of brainstorming
+basically skills. So a skill, if you basically skills. So a skill, if you basically skills. So a skill, if you
+don't know what a skill is, a skill is a don't know what a skill is, a skill is a don't know what a skill is, a skill is a
+kind of prompt basically just to this is kind of prompt basically just to this is kind of prompt basically just to this is
+a prompt for the AI that's good at a prompt for the AI that's good at a prompt for the AI that's good at
+helping you do things. And they started helping you do things. And they started helping you do things. And they started
+really encoding was they worked out that really encoding was they worked out that really encoding was they worked out that
+it was much better if you had the AI it was much better if you had the AI it was much better if you had the AI
+agent, you know, work with you to dis agent, you know, work with you to dis agent, you know, work with you to dis
+create a kind of design document and a create a kind of design document and a create a kind of design document and a
+product requirement document uh and an product requirement document uh and an product requirement document uh and an
+implementation hand before you build implementation hand before you build implementation hand before you build
+rather than just say build me rather than just say build me rather than just say build me
+build me a stakes and ladders game. build me a stakes and ladders game. build me a stakes and ladders game.
+Um if you do this brainstorming at the Um if you do this brainstorming at the Um if you do this brainstorming at the
+beginning, it's a lot better basically beginning, it's a lot better basically beginning, it's a lot better basically
+for you because you actually do for you because you actually do for you because you actually do
+basically job requirement. you do job basically job requirement. you do job basically job requirement. you do job
+stories properly or whatever it is and stories properly or whatever it is and stories properly or whatever it is and
+for the AI and what's cool is those have for the AI and what's cool is those have for the AI and what's cool is those have
+got pretty refined and you can use them got pretty refined and you can use them got pretty refined and you can use them
+you don't need to just use them for you don't need to just use them for you don't need to just use them for
+coding you can use them for anything and coding you can use them for anything and coding you can use them for anything and
+for example there's a very popular one for example there's a very popular one for example there's a very popular one
+called superpowers from a guy called called superpowers from a guy called called superpowers from a guy called
+Jesse uh Obra superpowers on GitHub and Jesse uh Obra superpowers on GitHub and Jesse uh Obra superpowers on GitHub and
+they're now almost built in that Claude they're now almost built in that Claude they're now almost built in that Claude
+had this planning feature you know many had this planning feature you know many had this planning feature you know many
+of the AI coding harnesses like open of the AI coding harnesses like open of the AI coding harnesses like open
+code have this built in and code have this built in and code have this built in and
+you know in a in a simple way you know in a in a simple way you know in a in a simple way
+making you write out at the beginning making you write out at the beginning making you write out at the beginning
+like a a vision brainstorming what you like a a vision brainstorming what you like a a vision brainstorming what you
+actually want to do asking you multiple actually want to do asking you multiple actually want to do asking you multiple
+choice questions and you can prompt the choice questions and you can prompt the choice questions and you can prompt the
+AI to kind of do what these skills do AI to kind of do what these skills do AI to kind of do what these skills do
+and one of the most useful things is and one of the most useful things is and one of the most useful things is
+tell the AI to act as like a worldclass tell the AI to act as like a worldclass tell the AI to act as like a worldclass
+kind of business needs analyst for kind of business needs analyst for kind of business needs analyst for
+example about you know start out let's example about you know start out let's example about you know start out let's
+come to your concrete example rather come to your concrete example rather come to your concrete example rather
+than out say I want to build an AI co uh than out say I want to build an AI co uh than out say I want to build an AI co uh
+sales funnel we say listen I we've got sales funnel we say listen I we've got sales funnel we say listen I we've got
+this salesunnel. I want you first to this salesunnel. I want you first to this salesunnel. I want you first to
+help me analyze my business problem. And help me analyze my business problem. And help me analyze my business problem. And
+then we're going to build, you know, we then we're going to build, you know, we then we're going to build, you know, we
+want to use AI to improve our salesunnel want to use AI to improve our salesunnel want to use AI to improve our salesunnel
+handling, but I want you to first be a handling, but I want you to first be a handling, but I want you to first be a
+world-class kind of business analyst and world-class kind of business analyst and world-class kind of business analyst and
+kind of um, you know, strategic analyst. kind of um, you know, strategic analyst. kind of um, you know, strategic analyst.
+And I want you to ask me multiple choice And I want you to ask me multiple choice And I want you to ask me multiple choice
+questions, one at a time, questions, one at a time, questions, one at a time,
+to help me clarify our needs. And I want to help me clarify our needs. And I want to help me clarify our needs. And I want
+you to stop when you feel we've got a you to stop when you feel we've got a you to stop when you feel we've got a
+clear enough description of a problem to clear enough description of a problem to clear enough description of a problem to
+start moving towards researching a start moving towards researching a start moving towards researching a
+solution. But I want you to first do solution. But I want you to first do solution. But I want you to first do
+that. And you know um normally that will that. And you know um normally that will that. And you know um normally that will
+produce you a read me or a vision produce you a read me or a vision produce you a read me or a vision
+document or certain other documents that document or certain other documents that document or certain other documents that
+would even be the booting point of your would even be the booting point of your would even be the booting point of your
+next thing. So that would also be your next thing. So that would also be your next thing. So that would also be your
+like memory checkpoint at the end of like memory checkpoint at the end of like memory checkpoint at the end of
+that process. And I can't emphasize this that process. And I can't emphasize this that process. And I can't emphasize this
+enough I guess for me which is in my enough I guess for me which is in my enough I guess for me which is in my
+view doing this work which can often view doing this work which can often view doing this work which can often
+take an hour or two in my experience is take an hour or two in my experience is take an hour or two in my experience is
+you know you can oneshot things where you know you can oneshot things where you know you can oneshot things where
+you just like write one thing out and it you just like write one thing out and it you just like write one thing out and it
+will build something but for most will build something but for most will build something but for most
+interesting stuff you're doing in your interesting stuff you're doing in your interesting stuff you're doing in your
+organization this work and the thing is organization this work and the thing is organization this work and the thing is
+it does demand cognitive skills and and it does demand cognitive skills and and it does demand cognitive skills and and
+some knowledge of your business problem. some knowledge of your business problem. some knowledge of your business problem.
+uh you can kind of bootstrap sometimes uh you can kind of bootstrap sometimes uh you can kind of bootstrap sometimes
+by doing something very simple then by doing something very simple then by doing something very simple then
+going doing research and then coming going doing research and then coming going doing research and then coming
+back and doing the process. So that's back and doing the process. So that's back and doing the process. So that's
+point one and that that relates also to point one and that that relates also to point one and that that relates also to
+having business context for what you're having business context for what you're having business context for what you're
+doing. doing. doing.
+&gt;&gt; That's been very useful and and one &gt;&gt; That's been very useful and and one &gt;&gt; That's been very useful and and one
+thing that I've just been reflecting on thing that I've just been reflecting on thing that I've just been reflecting on
+while you were talking because I I tend while you were talking because I I tend while you were talking because I I tend
+to think a lot in general not just to think a lot in general not just to think a lot in general not just
+within the AI. I keep asking myself within the AI. I keep asking myself within the AI. I keep asking myself
+these many questions and going in these many questions and going in these many questions and going in
+different directions and exploring. So I different directions and exploring. So I different directions and exploring. So I
+I do tend to spend a lot of time in this I do tend to spend a lot of time in this I do tend to spend a lot of time in this
+brainstorming or getting the clarity brainstorming or getting the clarity brainstorming or getting the clarity
+phase. Um so I think what you're saying phase. Um so I think what you're saying phase. Um so I think what you're saying
+is making a lot of sense and is probably is making a lot of sense and is probably is making a lot of sense and is probably
+going to be useful for me and even to do going to be useful for me and even to do going to be useful for me and even to do
+some prep ahead of the actual session some prep ahead of the actual session some prep ahead of the actual session
+before using the AI. before using the AI. before using the AI.
+&gt;&gt; Just to say I would say that diving in &gt;&gt; Just to say I would say that diving in &gt;&gt; Just to say I would say that diving in
+is very attractive in my experience. is very attractive in my experience. is very attractive in my experience.
+The more my greatest thing at the moment The more my greatest thing at the moment The more my greatest thing at the moment
+is just use it like actually very very is just use it like actually very very is just use it like actually very very
+early on and sometimes I overthink think early on and sometimes I overthink think early on and sometimes I overthink think
+about I would say because I can use it about I would say because I can use it about I would say because I can use it
+even at the very beginning you can say even at the very beginning you can say even at the very beginning you can say
+things like I don't know what I'm doing should I start this way or that way and should I start this way or that way and
+I find also asking it to guide me so I find also asking it to guide me so I find also asking it to guide me so
+what I also find is when there are for what I also find is when there are for what I also find is when there are for
+example multiple choice questions I example multiple choice questions I example multiple choice questions I
+don't know the answer I tell it to give don't know the answer I tell it to give don't know the answer I tell it to give
+me its recommendation and then actually me its recommendation and then actually me its recommendation and then actually
+I either might agree with it or it might I either might agree with it or it might I either might agree with it or it might
+prompt me to be realized like No, I prompt me to be realized like No, I prompt me to be realized like No, I
+don't want that. I wanted something don't want that. I wanted something don't want that. I wanted something
+else. Um, so here's maybe I could just else. Um, so here's maybe I could just else. Um, so here's maybe I could just
+very quickly share an example for very quickly share an example for very quickly share an example for
+building a little tool, a micro tool the building a little tool, a micro tool the building a little tool, a micro tool the
+other day. Um, which was um uh other day. Um, which was um uh other day. Um, which was um uh
+let me see. Uh, do I I don't I don't let me see. Uh, do I I don't I don't let me see. Uh, do I I don't I don't
+have I have that. I'm going to take the have I have that. I'm going to take the have I have that. I'm going to take the
+entire screen. Um, entire screen. Um, entire screen. Um,
+this was um building, you know, I'm this was um building, you know, I'm this was um building, you know, I'm
+building on the command line, but you building on the command line, but you building on the command line, but you
+could do this in claw desktop. You could could do this in claw desktop. You could could do this in claw desktop. You could
+do this in the the codeex tool from do this in the the codeex tool from do this in the the codeex tool from
+chat. chat. chat.
+&gt;&gt; But basically at the beginning I'm &gt;&gt; But basically at the beginning I'm &gt;&gt; But basically at the beginning I'm
+saying I have a problem which is I do a saying I have a problem which is I do a saying I have a problem which is I do a
+lot of writing with AI and I want it to lot of writing with AI and I want it to lot of writing with AI and I want it to
+sound like me and I'm just like sound like me and I'm just like sound like me and I'm just like
+outflowing here. Um and I'm and I had outflowing here. Um and I'm and I had outflowing here. Um and I'm and I had
+got some thought about this before it's got some thought about this before it's got some thought about this before it's
+true. And I said um but basically I'm true. And I said um but basically I'm true. And I said um but basically I'm
+just outflowing like I want to sound you just outflowing like I want to sound you just outflowing like I want to sound you
+know I um and I then tell it what I want know I um and I then tell it what I want know I um and I then tell it what I want
+you to do here first. What I want to you to do here first. What I want to you to do here first. What I want to
+even do here is I want you to write out even do here is I want you to write out even do here is I want you to write out
+the kind of need that we're describing the kind of need that we're describing the kind of need that we're describing
+here into the read me. So you see this here into the read me. So you see this here into the read me. So you see this
+I'm telling AI to play back to me what I'm telling AI to play back to me what I'm telling AI to play back to me what
+I've just kind of outflowed. What is the I've just kind of outflowed. What is the I've just kind of outflowed. What is the
+purpose of this here? It is to research purpose of this here? It is to research purpose of this here? It is to research
+I guess initially research how you do I guess initially research how you do I guess initially research how you do
+that with IA how you can prompt it and that with IA how you can prompt it and that with IA how you can prompt it and
+direct it. Ultimately I think we want to direct it. Ultimately I think we want to direct it. Ultimately I think we want to
+come up with some skill. So I do have come up with some skill. So I do have come up with some skill. So I do have
+some context knowledge here of like what some context knowledge here of like what some context knowledge here of like what
+the outcome is like I want an an agent the outcome is like I want an an agent the outcome is like I want an an agent
+skill. Um but if I didn't know that I skill. Um but if I didn't know that I skill. Um but if I didn't know that I
+could have said to him what do you think could have said to him what do you think could have said to him what do you think
+the outcome should be and actually ask the outcome should be and actually ask the outcome should be and actually ask
+it. And so then it's going to write out it. And so then it's going to write out it. And so then it's going to write out
+the readme and it will tell me the the readme and it will tell me the the readme and it will tell me the
+readme and and I'll and I'll read the readme and and I'll and I'll read the readme and and I'll and I'll read the
+readme and I'll be like, "Oh yeah, this readme and I'll be like, "Oh yeah, this readme and I'll be like, "Oh yeah, this
+sounds or even some of it's long tell it sounds or even some of it's long tell it sounds or even some of it's long tell it
+to distill the readme back to me." Um, to distill the readme back to me." Um, to distill the readme back to me." Um,
+and it even tells me it captured the and it even tells me it captured the and it even tells me it captured the
+core purpose like in one or two core purpose like in one or two core purpose like in one or two
+sentences. I'm like, "Yeah, that's sentences. I'm like, "Yeah, that's sentences. I'm like, "Yeah, that's
+right." You know, that's good. Um, and right." You know, that's good. Um, and right." You know, that's good. Um, and
+then I'm going to come to I'm say, then I'm going to come to I'm say, then I'm going to come to I'm say,
+"Okay, let's go and do research." So off "Okay, let's go and do research." So off "Okay, let's go and do research." So off
+it goes and does a whole bunch of it goes and does a whole bunch of it goes and does a whole bunch of
+research. Now, this is quite narrow. research. Now, this is quite narrow. research. Now, this is quite narrow.
+Um, Um, Um,
+&gt;&gt; but it is even going to ask me multiple &gt;&gt; but it is even going to ask me multiple &gt;&gt; but it is even going to ask me multiple
+choice questions about the research. choice questions about the research. choice questions about the research.
+&gt;&gt; And by the way, I would say one other &gt;&gt; And by the way, I would say one other &gt;&gt; And by the way, I would say one other
+comment is that my experience of the comment is that my experience of the comment is that my experience of the
+coding tools which you don't need to use coding tools which you don't need to use coding tools which you don't need to use
+for coding like Claude CLI um maybe for coding like Claude CLI um maybe for coding like Claude CLI um maybe
+because I've loaded the the because I've loaded the the because I've loaded the the
+brainstorming skills, I don't know brainstorming skills, I don't know brainstorming skills, I don't know
+whether it's that or codecs on the whether it's that or codecs on the whether it's that or codecs on the
+command line when I've loaded command line when I've loaded command line when I've loaded
+superpowers. superpowers. superpowers.
+Um they're a lot better in my experience Um they're a lot better in my experience Um they're a lot better in my experience
+than Claude or Chat GBT when you're just than Claude or Chat GBT when you're just than Claude or Chat GBT when you're just
+in the classic user mode where you just in the classic user mode where you just in the classic user mode where you just
+prompt you you know when they're in prompt you you know when they're in prompt you you know when they're in
+their normal um like desktop or or web their normal um like desktop or or web their normal um like desktop or or web
+app they some reason the CLI tools maybe app they some reason the CLI tools maybe app they some reason the CLI tools maybe
+because they're designed for coding are because they're designed for coding are because they're designed for coding are
+much better at doing this kind of like much better at doing this kind of like much better at doing this kind of like
+asking me questions at the beginning. asking me questions at the beginning. asking me questions at the beginning.
+&gt;&gt; Um &gt;&gt; Um &gt;&gt; Um
+&gt;&gt; so it's asking me like what should the &gt;&gt; so it's asking me like what should the &gt;&gt; so it's asking me like what should the
+output of this research look like? I'm output of this research look like? I'm output of this research look like? I'm
+saying a I'm giving it answers one saying a I'm giving it answers one saying a I'm giving it answers one
+should the research focus on any should the research focus on any should the research focus on any
+particular area and look here I don't particular area and look here I don't particular area and look here I don't
+even know I just say whatever you think even know I just say whatever you think even know I just say whatever you think
+is relevant I is relevant I is relevant I
+don't I don't care and then it goes off don't I don't care and then it goes off don't I don't care and then it goes off
+and does research it does a whole bunch and does research it does a whole bunch and does research it does a whole bunch
+of research and then it comes back and of research and then it comes back and of research and then it comes back and
+it writes a uh and I'm telling it to it writes a uh and I'm telling it to it writes a uh and I'm telling it to
+write a research document or something write a research document or something write a research document or something
+right and it writes this research right and it writes this research right and it writes this research
+document and it then tells me the document and it then tells me the document and it then tells me the
+summary of the research and I say okay summary of the research and I say okay summary of the research and I say okay
+um you know and I said and I'm at this um you know and I said and I'm at this um you know and I said and I'm at this
+point I'm like I often find another point I'm like I often find another point I'm like I often find another
+point about AI is it's quite useful to point about AI is it's quite useful to point about AI is it's quite useful to
+build things quite quickly but don't build things quite quickly but don't build things quite quickly but don't
+build the whole thing build a prototype build the whole thing build a prototype build the whole thing build a prototype
+or something simple and then you quite or something simple and then you quite or something simple and then you quite
+rapidly learn what was mistaken or rapidly learn what was mistaken or rapidly learn what was mistaken or
+worked in that you know it's quite cheap worked in that you know it's quite cheap worked in that you know it's quite cheap
+to build again so um I I then ask me to build again so um I I then ask me to build again so um I I then ask me
+some question about what I want to build some question about what I want to build some question about what I want to build
+like do I want to build a voice like do I want to build a voice like do I want to build a voice
+extractor or write like me skill and extractor or write like me skill and extractor or write like me skill and
+then we do that um and my other my my then we do that um and my other my my then we do that um and my other my my
+other rule for myself is whenever I other rule for myself is whenever I other rule for myself is whenever I
+start thinking Oh, maybe I'm not sure start thinking Oh, maybe I'm not sure start thinking Oh, maybe I'm not sure
+about this. Maybe I need to research about this. Maybe I need to research about this. Maybe I need to research
+this more. My general rule is to like this more. My general rule is to like this more. My general rule is to like
+know and actually get it built. Like get know and actually get it built. Like get know and actually get it built. Like get
+something built and try it something built and try it something built and try it
+&gt;&gt; because I learned so much more from that &gt;&gt; because I learned so much more from that &gt;&gt; because I learned so much more from that
+than like speculating about the perfect than like speculating about the perfect than like speculating about the perfect
+thing. So in the end, this did build the thing. So in the end, this did build the thing. So in the end, this did build the
+whole skill. Um and you know, even more whole skill. Um and you know, even more whole skill. Um and you know, even more
+was like there was a moment here like was like there was a moment here like was like there was a moment here like
+I'm sometimes get quite indecisive. I I'm sometimes get quite indecisive. I I'm sometimes get quite indecisive. I
+think maybe most people do. there's a think maybe most people do. there's a think maybe most people do. there's a
+point where I need to give it um text point where I need to give it um text point where I need to give it um text
+from me and I was like, "Oh my god, I'm from me and I was like, "Oh my god, I'm from me and I was like, "Oh my god, I'm
+gonna have to go and select my best gonna have to go and select my best gonna have to go and select my best
+writings." Like it wants my best writings." Like it wants my best writings." Like it wants my best
+writing. And then I just had this idea. writing. And then I just had this idea. writing. And then I just had this idea.
+I can just point it at my whole website. I can just point it at my whole website. I can just point it at my whole website.
+You know, this kind you do with AI that You know, this kind you do with AI that You know, this kind you do with AI that
+just point it to my website and say, just point it to my website and say, just point it to my website and say,
+"You go and find the best samples." You "You go and find the best samples." You "You go and find the best samples." You
+know, know, know,
+&gt;&gt; that's another thing that is very &gt;&gt; that's another thing that is very &gt;&gt; that's another thing that is very
+effective when you don't know. And just effective when you don't know. And just effective when you don't know. And just
+it went off and like found me five quite it went off and like found me five quite it went off and like found me five quite
+good essays actually. You know, saved me good essays actually. You know, saved me good essays actually. You know, saved me
+a whole bunch of time. But I just gave a whole bunch of time. But I just gave a whole bunch of time. But I just gave
+him my whole website to go through him my whole website to go through him my whole website to go through
+and you know then it came it you know it and you know then it came it you know it and you know then it came it you know it
+did this it wrote out my my kind of tone did this it wrote out my my kind of tone did this it wrote out my my kind of tone
+of voice. Now of voice. Now of voice. Now
+um um um
+I'm I'm I'm I'm I'm I'm
+um um um
+I'm saying all of that because that that I'm saying all of that because that that I'm saying all of that because that that
+that was a mini version. But if we went that was a mini version. But if we went that was a mini version. But if we went
+back to like the AI salesfunnel, you back to like the AI salesfunnel, you back to like the AI salesfunnel, you
+really want to start out by having it really want to start out by having it really want to start out by having it
+distill like it's going to ask you distill like it's going to ask you distill like it's going to ask you
+questions about data and like what is it questions about data and like what is it questions about data and like what is it
+that's actually happening today? Like that's actually happening today? Like that's actually happening today? Like
+without that context, building an AI without that context, building an AI without that context, building an AI
+salesunnel abstract like building it salesunnel abstract like building it salesunnel abstract like building it
+from scratch is actually not so helpful. from scratch is actually not so helpful. from scratch is actually not so helpful.
+I would be like much more like okay ask I would be like much more like okay ask I would be like much more like okay ask
+me questions to get clear on what's me questions to get clear on what's me questions to get clear on what's
+happening today. Let's identify some happening today. Let's identify some happening today. Let's identify some
+painoint. That's what a business analyst painoint. That's what a business analyst painoint. That's what a business analyst
+would do. Like what is your actual would do. Like what is your actual would do. Like what is your actual
+problem? A consultant. Okay, let's let's problem? A consultant. Okay, let's let's problem? A consultant. Okay, let's let's
+now zero down on that and like try and now zero down on that and like try and now zero down on that and like try and
+build an improvement to that and then build an improvement to that and then build an improvement to that and then
+iterate from there. Now, I'm I'm just iterate from there. Now, I'm I'm just iterate from there. Now, I'm I'm just
+saying I don't know whether the AI would saying I don't know whether the AI would saying I don't know whether the AI would
+say what I just said, but it would be say what I just said, but it would be say what I just said, but it would be
+the way I beginning the process would be the way I beginning the process would be the way I beginning the process would be
+like actually doing the business kind of like actually doing the business kind of like actually doing the business kind of
+context. Um, and then from there coming context. Um, and then from there coming context. Um, and then from there coming
+to do research about how we can improve to do research about how we can improve to do research about how we can improve
+it and then implementing it and I would it and then implementing it and I would it and then implementing it and I would
+be emphasizing on on to the AI as we be emphasizing on on to the AI as we be emphasizing on on to the AI as we
+went along which is we want to do went along which is we want to do went along which is we want to do
+something as a prototype. We want to do something as a prototype. We want to do something as a prototype. We want to do
+this fast. we want to learn. I don't this fast. we want to learn. I don't this fast. we want to learn. I don't
+want to be this is not a multi-month want to be this is not a multi-month want to be this is not a multi-month
+implement. I'm not writing a strategy implement. I'm not writing a strategy implement. I'm not writing a strategy
+document for a Fortune 500 company. So document for a Fortune 500 company. So document for a Fortune 500 company. So
+that's that's that's the kind of that's that's that's the kind of that's that's that's the kind of
+practical element that I find of it for practical element that I find of it for practical element that I find of it for
+me that then makes it a lot better. me that then makes it a lot better. me that then makes it a lot better.
+&gt;&gt; You're first of all, I like the part &gt;&gt; You're first of all, I like the part &gt;&gt; You're first of all, I like the part
+with the questions. Uh I I probably I with the questions. Uh I I probably I with the questions. Uh I I probably I
+probably want to try this out. I haven't probably want to try this out. I haven't probably want to try this out. I haven't
+so far tried it out but it sounds so far tried it out but it sounds so far tried it out but it sounds
+amazing because I'm I'm also finding it amazing because I'm I'm also finding it amazing because I'm I'm also finding it
+difficult sometimes to make a decision difficult sometimes to make a decision difficult sometimes to make a decision
+or restrain um the direction I'm going or restrain um the direction I'm going or restrain um the direction I'm going
+into but to introduce some sort of into but to introduce some sort of into but to introduce some sort of
+constraints um more explicitly maybe or constraints um more explicitly maybe or constraints um more explicitly maybe or
+even I don't know I was thinking even I don't know I was thinking even I don't know I was thinking
+um yeah I mean we all know the better um yeah I mean we all know the better um yeah I mean we all know the better
+the prompt the better the outcome will the prompt the better the outcome will the prompt the better the outcome will
+be be be
+&gt;&gt; yeah and you could but you can bootstrap &gt;&gt; yeah and you could but you can bootstrap &gt;&gt; yeah and you could but you can bootstrap
+what I'm trying to emphasize here by what I'm trying to emphasize here by what I'm trying to emphasize here by
+having the AI act like it's the business having the AI act like it's the business having the AI act like it's the business
+analyst and ask you questions about the analyst and ask you questions about the analyst and ask you questions about the
+business need and context of the you're business need and context of the you're business need and context of the you're
+creating those constraints you don't creating those constraints you don't creating those constraints you don't
+need to come with that knowledge you can need to come with that knowledge you can need to come with that knowledge you can
+simply boot but what's a mistake at the simply boot but what's a mistake at the simply boot but what's a mistake at the
+beginning I would say sometimes say beginning I would say sometimes say beginning I would say sometimes say
+build me an AI salesunnel build me an AI salesunnel build me an AI salesunnel
+&gt;&gt; well it will go off and just give you a &gt;&gt; well it will go off and just give you a &gt;&gt; well it will go off and just give you a
+generic answer generic answer generic answer
+&gt;&gt; generic yes &gt;&gt; generic yes &gt;&gt; generic yes
+&gt;&gt; internet and get confused because &gt;&gt; internet and get confused because &gt;&gt; internet and get confused because
+there's such there's such a big there's such there's such a big there's such there's such a big
+possibility whereas if you start telling possibility whereas if you start telling possibility whereas if you start telling
+it like I'm a startup of this size this it like I'm a startup of this size this it like I'm a startup of this size this
+is the kind of product we have this is is the kind of product we have this is is the kind of product we have this is
+the current setup we have this is what the current setup we have this is what the current setup we have this is what
+you you you
+you know we don't have a chat on our you know we don't have a chat on our you know we don't have a chat on our
+inter we don't have for example a chat inter we don't have for example a chat inter we don't have for example a chat
+bot on our website you know and you can bot on our website you know and you can bot on our website you know and you can
+give advice about whether you should do give advice about whether you should do give advice about whether you should do
+that but you have you've built a lot that but you have you've built a lot that but you have you've built a lot
+more useful constraint and context to more useful constraint and context to more useful constraint and context to
+give advice in give advice in give advice in
+&gt;&gt; yes definitely and I started investing &gt;&gt; yes definitely and I started investing &gt;&gt; yes definitely and I started investing
+more time into building the context in more time into building the context in more time into building the context in
+the beginning and I can see how this is the beginning and I can see how this is the beginning and I can see how this is
+helping and I think for the sales funnel helping and I think for the sales funnel helping and I think for the sales funnel
+in particular I didn't start with the in particular I didn't start with the in particular I didn't start with the
+generic prompt but um what I often do is generic prompt but um what I often do is generic prompt but um what I often do is
+I ask LGBT or whatever tool I'm using to I ask LGBT or whatever tool I'm using to I ask LGBT or whatever tool I'm using to
+do the CQA do the CQA do the CQA
+page with me. Yes, with me. Yes. page with me. Yes, with me. Yes. page with me. Yes, with me. Yes.
+&gt;&gt; Great. And that's fantastic. And that is &gt;&gt; Great. And that's fantastic. And that is &gt;&gt; Great. And that's fantastic. And that is
+really really useful. I I now call that really really useful. I I now call that really really useful. I I now call that
+the motivation MD document. I mean I the motivation MD document. I mean I the motivation MD document. I mean I
+rather than calling SCQ, I call it the rather than calling SCQ, I call it the rather than calling SCQ, I call it the
+motivation for why we're doing the motivation for why we're doing the motivation for why we're doing the
+project. project. project.
+Read me describes I have a vision or a Read me describes I have a vision or a Read me describes I have a vision or a
+read me document which describes the read me document which describes the read me document which describes the
+outcome. outcome. outcome.
+&gt;&gt; You know normally I want three documents &gt;&gt; You know normally I want three documents &gt;&gt; You know normally I want three documents
+at the beginning of project depending at the beginning of project depending at the beginning of project depending
+but basically or two I want a motivation but basically or two I want a motivation but basically or two I want a motivation
+which is the SCH which is often the which is the SCH which is often the which is the SCH which is often the
+business context and the need business context and the need business context and the need
+&gt;&gt; and I want a vision or a read me which &gt;&gt; and I want a vision or a read me which &gt;&gt; and I want a vision or a read me which
+says the outcome that I want. It's more says the outcome that I want. It's more says the outcome that I want. It's more
+like a richer volume of the hypothesis like a richer volume of the hypothesis like a richer volume of the hypothesis
+because sometimes I'm okay with just because sometimes I'm okay with just because sometimes I'm okay with just
+having the SCQ essentially in the having the SCQ essentially in the having the SCQ essentially in the
+motivation document. I don't know what motivation document. I don't know what motivation document. I don't know what
+there's no point doing a hypothesis there's no point doing a hypothesis there's no point doing a hypothesis
+because I all I have is the question. because I all I have is the question. because I all I have is the question.
+There's no point saying what the sales There's no point saying what the sales There's no point saying what the sales
+looks like yet because I haven't done looks like yet because I haven't done looks like yet because I haven't done
+the research. But often I build the the research. But often I build the the research. But often I build the
+motivation what I'm calling the motivation what I'm calling the motivation what I'm calling the
+motivation document because that's the motivation document because that's the motivation document because that's the
+SQ SQ SQ
+&gt;&gt; situation complication question. And &gt;&gt; situation complication question. And &gt;&gt; situation complication question. And
+then the read me or vision often I put then the read me or vision often I put then the read me or vision often I put
+it in read me. Later on in the project, it in read me. Later on in the project, it in read me. Later on in the project,
+the read me will become the actual like the read me will become the actual like the read me will become the actual like
+how to use this tool or what to do or how to use this tool or what to do or how to use this tool or what to do or
+the the executive briefing and the the the executive briefing and the the the executive briefing and the
+vision will stay in a document which was vision will stay in a document which was vision will stay in a document which was
+the vision of like what the you know the vision of like what the you know the vision of like what the you know
+what what we're trying to do here. But what what we're trying to do here. But what what we're trying to do here. But
+basically those two documents maybe we basically those two documents maybe we basically those two documents maybe we
+could just call the vision and the could just call the vision and the could just call the vision and the
+motivation. um the vision essentially motivation. um the vision essentially motivation. um the vision essentially
+the hypothesis the hypothesis the hypothesis
+often you know worked through are are often you know worked through are are often you know worked through are are
+the key starting points for then any the key starting points for then any the key starting points for then any
+implementation work when you're then implementation work when you're then implementation work when you're then
+going to go and actually task the AI not going to go and actually task the AI not going to go and actually task the AI not
+normally to go and implement directly normally to go and implement directly normally to go and implement directly
+then at that point it's like let's then at that point it's like let's then at that point it's like let's
+brainstorm an actual implementation plan brainstorm an actual implementation plan brainstorm an actual implementation plan
+you know given this how will we build it you know given this how will we build it you know given this how will we build it
+you know kind of thing um you know and you know kind of thing um you know and you know kind of thing um you know and
+in some cases you can short circuit that in some cases you can short circuit that in some cases you can short circuit that
+if you've already got that from some if you've already got that from some if you've already got that from some
+other process like if you're a very good other process like if you're a very good other process like if you're a very good
+coder and you already know what tool coder and you already know what tool coder and you already know what tool
+you're trying to build, you might just you're trying to build, you might just you're trying to build, you might just
+be able to write the read me. You don't be able to write the read me. You don't be able to write the read me. You don't
+need the motivation. You're just like, need the motivation. You're just like, need the motivation. You're just like,
+"Here's the read me. This is what I want "Here's the read me. This is what I want "Here's the read me. This is what I want
+my tool to look like at the end." And my tool to look like at the end." And my tool to look like at the end." And
+then you go off and you you basically then you go off and you you basically then you go off and you you basically
+brainstorm and plan and build. Um brainstorm and plan and build. Um brainstorm and plan and build. Um
+um but yeah, so that that that's uh and um but yeah, so that that that's uh and um but yeah, so that that that's uh and
+actually in Daytop we have an internal actually in Daytop we have an internal actually in Daytop we have an internal
+prompts repo uh datian prompts which I prompts repo uh datian prompts which I prompts repo uh datian prompts which I
+think actually has some of this think actually has some of this think actually has some of this
+instruction in it but not very well instruction in it but not very well instruction in it but not very well
+distilled into a skill yet. distilled into a skill yet. distilled into a skill yet.
+Anyway, I think for today that's pretty Anyway, I think for today that's pretty Anyway, I think for today that's pretty
+good and we could come to kind of memory good and we could come to kind of memory good and we could come to kind of memory
+in the next episode of why how you know in the next episode of why how you know in the next episode of why how you know
+AI memory and agent memory, but we've AI memory and agent memory, but we've AI memory and agent memory, but we've
+touched on it today. A crucial point I touched on it today. A crucial point I touched on it today. A crucial point I
+mentioned several points is you're mentioned several points is you're mentioned several points is you're
+getting the AI to write out during this getting the AI to write out during this getting the AI to write out during this
+process documents. I like markdown process documents. I like markdown process documents. I like markdown
+documents on my local disc, but you can documents on my local disc, but you can documents on my local disc, but you can
+use Google Docs, you could use Word use Google Docs, you could use Word use Google Docs, you could use Word
+documents, anything your agent can talk documents, anything your agent can talk documents, anything your agent can talk
+to that you like editing and reading in. to that you like editing and reading in. to that you like editing and reading in.
+um you know just markdown documents are um you know just markdown documents are um you know just markdown documents are
+super token efficient and so on. uh super token efficient and so on. uh super token efficient and so on. uh
+small call out the flower show here if small call out the flower show here if small call out the flower show here if
+you ever want to publish those markdown you ever want to publish those markdown you ever want to publish those markdown
+documents but basically documents but basically documents but basically
+um that that's even memory that's one um that that's even memory that's one um that that's even memory that's one
+way you're distilling this stuff way you're distilling this stuff way you're distilling this stuff
+capturing it so that you can reboot the capturing it so that you can reboot the capturing it so that you can reboot the
+agent again or the AI again with that agent again or the AI again with that agent again or the AI again with that
+context um and even for the AI agent it context um and even for the AI agent it context um and even for the AI agent it
+tends to even during the the process I tends to even during the the process I tends to even during the the process I
+can't I can't prove this but my sense is can't I can't prove this but my sense is can't I can't prove this but my sense is
+when it does that checkpointing and when it does that checkpointing and when it does that checkpointing and
+distills things it actually is helping distills things it actually is helping distills things it actually is helping
+the AI agent even in a given thread to the AI agent even in a given thread to the AI agent even in a given thread to
+sort have something that is a almost sort have something that is a almost sort have something that is a almost
+compaction like a kind of condensation compaction like a kind of condensation compaction like a kind of condensation
+of what it's already done so far in the of what it's already done so far in the of what it's already done so far in the
+thread. Um so you know I really thread. Um so you know I really thread. Um so you know I really
+recommend that tip. So anyway if you're recommend that tip. So anyway if you're recommend that tip. So anyway if you're
+liking these things uh and you want to liking these things uh and you want to liking these things uh and you want to
+hang out more with Daniela and I um hit hang out more with Daniela and I um hit hang out more with Daniela and I um hit
+subscribe follow along on the Daytopian subscribe follow along on the Daytopian subscribe follow along on the Daytopian
+channel mainly AI learn today at the channel mainly AI learn today at the channel mainly AI learn today at the
+present and also you can subscribe on present and also you can subscribe on present and also you can subscribe on
+Substack and we yeah and also post any Substack and we yeah and also post any Substack and we yeah and also post any
+questions or comments. We'd love to have questions or comments. We'd love to have questions or comments. We'd love to have
+ideas for future episodes. Also, your ideas for future episodes. Also, your ideas for future episodes. Also, your
+suggestions about how you do this kind suggestions about how you do this kind suggestions about how you do this kind
+of prompting. Love to know that. So, we of prompting. Love to know that. So, we of prompting. Love to know that. So, we
+look forward to hearing you next. look forward to hearing you next. look forward to hearing you next.
+Bye-bye from us today. Bye-bye from us today. Bye-bye from us today.
+&gt;&gt; Bye. 
